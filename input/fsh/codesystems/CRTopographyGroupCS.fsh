@@ -1,5 +1,6 @@
 CodeSystem: CRTopographyGroupCS
 Title: "CR - Topography Group"
+Description: "Topography group codes used in the Multiple Primary Tester data quality check. Groups are derived from topography codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Group 80 indicates an unspecified topography. These groups determine whether tumours at different sites should be considered duplicate or multiple primaries."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
 * ^experimental = false

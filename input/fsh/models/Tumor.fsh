@@ -1,5 +1,6 @@
 Logical: Tumor
 Title: "Tumor"
+Description: "Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case."
 Parent: Base
 * crIncidenceDate 0..1 date "CR - Incidence date"
   * ^code[+] = Dhis2DataElementsCS#c6EnHSAMUat

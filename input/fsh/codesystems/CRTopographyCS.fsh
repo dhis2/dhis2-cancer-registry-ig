@@ -1,5 +1,6 @@
 CodeSystem: CRTopographyCS
 Title: "CR - Topography"
+Description: "ICD-O-3 topography codes mapped from the CanReg5 topography dictionary (topography.tsv). These codes represent the anatomical site of the tumour origin. The topography field is implemented as a dependent dropdown list filtered by the selected Site. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
 * ^experimental = false

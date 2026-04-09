@@ -1,5 +1,6 @@
 Logical: Source
 Title: "Source"
+Description: "Source stage of the DHIS2 Cancer Registry tracker program. This repeatable stage records the documentation sources from which a cancer case has been notified to the registry. Each source represents a piece of documentation, such as a hospital record, pathology report, or death certificate, that supports the registration of a specific tumor. Sources are linked to a specific tumor via the Tumor Number."
 Parent: Base
 * crSourceTumorNumber 1..1 code "CR - Source: Tumor number"
 * crSourceTumorNumber from CRTumorNumberVS (required)

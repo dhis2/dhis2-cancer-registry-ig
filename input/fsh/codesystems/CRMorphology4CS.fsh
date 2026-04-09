@@ -1,5 +1,6 @@
 CodeSystem: CRMorphology4CS
 Title: "CR - Morphology4"
+Description: "ICD-O-3.2 morphology codes (first four digits) mapped from the CanReg5 morphology dictionary (morphology4.tsv). These codes represent the histological type of the neoplasm. Since the field is configured as a closed option set, validity of morphology values is guaranteed by the data entry interface. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
 * ^experimental = false

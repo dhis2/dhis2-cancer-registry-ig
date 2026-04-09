@@ -1,5 +1,6 @@
 CodeSystem: CRMorphologyFamilyCS
 Title: "CR - Morphology Family"
+Description: "Morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file. Each morphology code is assigned to a morphological family, which is used in the Sex-Morphology check (to identify rare sex-morphology combinations) and the Topography-Morphology check (to evaluate morphology-topography combinations against MUST and MUST-NOT lookup tables). Code 99 (N/A) indicates the family is accepted with any topography."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
 * ^experimental = false

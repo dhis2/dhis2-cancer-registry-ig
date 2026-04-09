@@ -1,5 +1,6 @@
 CodeSystem: CRPlaceholderSourceTypeCS
 Title: "CR - Placeholder: Source type"
+Description: "Placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect the source types relevant to the local registry context (e.g. hospital records, pathology laboratory reports, death certificates)."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
 * ^experimental = false

@@ -6,8 +6,13 @@
 id: dhis2.cancer.registry
 canonical: https://dhis2.org/fhir/cancer-registry
 name: DHIS2CancerRegistryIG
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+title: DHIS2 Cancer Registry Implementation Guide
+description: >-
+  This implementation guide defines the FHIR logical models and terminology for the DHIS2 Cancer Registry
+  metadata package, aligned with CanReg5 data standards developed by the International Agency for Research on
+  Cancer (IARC). The FHIR artifacts in this IG are generated from a DHIS2 Tracker program for individual-level cancer case registration
+  supporting population-based monitoring, with embedded data quality control checks based on CanReg5 validation
+  logic covering age, sex, topography, morphology, behaviour, grade and basis of diagnosis combinations.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html

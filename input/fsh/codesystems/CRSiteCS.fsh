@@ -1,5 +1,6 @@
 CodeSystem: CRSiteCS
 Title: "CR - Site"
+Description: "Anatomical site codes used to filter topography values in a dependent dropdown list. When a site is selected, only the topography codes valid for the chosen site are presented for selection, simplifying data entry for registry staff."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"
 * ^experimental = false

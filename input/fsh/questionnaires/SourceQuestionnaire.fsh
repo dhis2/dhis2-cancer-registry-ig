@@ -1,6 +1,7 @@
 Instance: SourceQuestionnaire
 InstanceOf: Questionnaire
 Title: "Source Questionnaire"
+Description: "Questionnaire for the Source stage of the DHIS2 Cancer Registry tracker program. Records the documentation sources from which a cancer case has been notified to the registry. Each source represents a piece of documentation (such as a hospital record, pathology report, or death certificate) linked to a specific tumor via the Tumor Number. Contains a visible Source section and a hidden TUMOURIDSOURCETABLE section used for CanReg5 data extraction."
 Usage: #definition
 * status = #draft
 * experimental = false

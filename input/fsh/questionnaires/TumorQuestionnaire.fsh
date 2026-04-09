@@ -1,6 +1,7 @@
 Instance: TumorQuestionnaire
 InstanceOf: Questionnaire
 Title: "Tumor Questionnaire"
+Description: "Questionnaire for the Tumor stage of the DHIS2 Cancer Registry tracker program. This is the central data collection component, structured into sections: Patient (demographics and geographic information), Tumor (core variables aligned with CanReg5 ICD-O-3.2 standards including site, topography, morphology, behaviour, basis of diagnosis, and grade), Check Status (triggers for executing data quality checks), Checks (hidden section storing individual check results for rare/invalid classifications), Morphology Topography Check (hidden section for topography-morphology validation), Multiple Primary Tester (hidden section for duplicate/multiple primary determination), Rare Status (confirmation of flagged rare cases by authorised supervisors), and Tumor ID (hidden section supporting CanReg5 data extraction)."
 Usage: #definition
 * status = #draft
 * experimental = false

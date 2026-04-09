@@ -1,5 +1,6 @@
 ValueSet: CRMorphologyGroupVS
 Title: "CR - Morphology Group value set"
+Description: "Value set of morphology group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"

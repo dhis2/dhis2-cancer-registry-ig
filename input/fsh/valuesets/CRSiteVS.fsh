@@ -1,5 +1,6 @@
 ValueSet: CRSiteVS
 Title: "CR - Site value set"
+Description: "Value set of anatomical site codes used to filter topography values in a dependent dropdown list for simplified data entry."
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset"
 * ^meta.profile[+] = "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"

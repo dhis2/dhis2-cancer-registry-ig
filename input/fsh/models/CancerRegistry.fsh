@@ -1,5 +1,6 @@
 Logical: CancerRegistry
 Title: "Cancer Registry"
+Description: "Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention."
 Parent: Base
 * crPatientId 1..1 string "CR - Patient ID"
   * ^code[+] = Dhis2TrackedEntityAttributesCS#hDEhIMZe07x
