@@ -53,6 +53,8 @@ pages:
     title: Data Quality Checks
   deployment.md:
     title: Deployment
+  profiles.md:
+    title: Profiles & Mappings
   references.md:
     title: References
   license.md:
@@ -84,6 +86,7 @@ menu:
   Home: index.html
   System Design: system-design.html
   Data Quality Checks: data-quality-checks.html
+  Profiles & Mappings: profiles.html
   Deployment: deployment.html
   References: references.html
   Artifacts: artifacts.html
