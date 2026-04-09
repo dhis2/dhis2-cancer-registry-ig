@@ -47,8 +47,16 @@ dependencies:
 pages:
   index.md:
     title: Home
-    license.md:
-      title: License
+  system-design.md:
+    title: System Design
+  data-quality-checks.md:
+    title: Data Quality Checks
+  deployment.md:
+    title: Deployment
+  references.md:
+    title: References
+  license.md:
+    title: License
   # email: test@example.org
 
   # The parameters property represents IG.definition.parameter. Rather
@@ -74,6 +82,10 @@ pages:
   # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  System Design: system-design.html
+  Data Quality Checks: data-quality-checks.html
+  Deployment: deployment.html
+  References: references.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
