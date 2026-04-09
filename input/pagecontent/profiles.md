@@ -2,9 +2,11 @@ This page documents the manually authored FHIR resource profiles, mappings, and 
 
 For the auto-generated artifacts (logical models, questionnaires, code systems, and value sets derived from the DHIS2 Cancer Registry metadata package), see the [Artifact Index](artifacts.html).
 
+(TODO)
+
 ### Generated vs Authored Artifacts
 
-### Architecture |
+### Architecture
 
 ### Resource Profiles
 
