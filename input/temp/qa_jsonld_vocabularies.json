@@ -1,0 +1,719 @@
+{
+  "component": "jsonld_vocabularies",
+  "timestamp": "2026-04-09T09:51:59.110816",
+  "status": "completed",
+  "summary": {
+    "total_successes": 57,
+    "total_warnings": 0,
+    "total_errors": 0,
+    "files_processed_count": 17,
+    "files_expected_count": 1,
+    "files_missing_count": 1,
+    "vocabularies_generated_count": 17,
+    "completion_timestamp": "2026-04-09T09:51:59.119566"
+  },
+  "details": {
+    "successes": [
+      {
+        "message": "Script started",
+        "timestamp": "2026-04-09T09:51:59.110870",
+        "details": {
+          "expansions_path": "output/expansions.json",
+          "output_directory": "output"
+        }
+      },
+      {
+        "message": "Used fallback method: loaded ValueSet/CodeSystem files directly",
+        "timestamp": "2026-04-09T09:51:59.112885"
+      },
+      {
+        "message": "Found FHIR Bundle",
+        "timestamp": "2026-04-09T09:51:59.112894",
+        "details": {
+          "resourceType": "Bundle"
+        }
+      },
+      {
+        "message": "Found 17 entries in Bundle",
+        "timestamp": "2026-04-09T09:51:59.112896",
+        "details": {
+          "entry_count": 17
+        }
+      },
+      {
+        "message": "Processing ValueSet CRSexVS",
+        "timestamp": "2026-04-09T09:51:59.112904",
+        "details": {
+          "valueset_id": "CRSexVS",
+          "entry_index": 0
+        }
+      },
+      {
+        "message": "Extracted 3 codes for ValueSet CRSexVS",
+        "timestamp": "2026-04-09T09:51:59.112913",
+        "details": {
+          "valueset_id": "CRSexVS",
+          "codes_count": 3
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRSexVS",
+        "timestamp": "2026-04-09T09:51:59.113131"
+      },
+      {
+        "message": "Processing ValueSet CRBasisDiagnosisVS",
+        "timestamp": "2026-04-09T09:51:59.113401",
+        "details": {
+          "valueset_id": "CRBasisDiagnosisVS",
+          "entry_index": 1
+        }
+      },
+      {
+        "message": "Extracted 10 codes for ValueSet CRBasisDiagnosisVS",
+        "timestamp": "2026-04-09T09:51:59.113415",
+        "details": {
+          "valueset_id": "CRBasisDiagnosisVS",
+          "codes_count": 10
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRBasisDiagnosisVS",
+        "timestamp": "2026-04-09T09:51:59.113428"
+      },
+      {
+        "message": "Processing ValueSet CRAddressVS",
+        "timestamp": "2026-04-09T09:51:59.113588",
+        "details": {
+          "valueset_id": "CRAddressVS",
+          "entry_index": 2
+        }
+      },
+      {
+        "message": "Extracted 3 codes for ValueSet CRAddressVS",
+        "timestamp": "2026-04-09T09:51:59.113598",
+        "details": {
+          "valueset_id": "CRAddressVS",
+          "codes_count": 3
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRAddressVS",
+        "timestamp": "2026-04-09T09:51:59.113605"
+      },
+      {
+        "message": "Processing ValueSet CRTopographyMorphologyKeyVS",
+        "timestamp": "2026-04-09T09:51:59.113726",
+        "details": {
+          "valueset_id": "CRTopographyMorphologyKeyVS",
+          "entry_index": 3
+        }
+      },
+      {
+        "message": "Extracted 3 codes for ValueSet CRTopographyMorphologyKeyVS",
+        "timestamp": "2026-04-09T09:51:59.113735",
+        "details": {
+          "valueset_id": "CRTopographyMorphologyKeyVS",
+          "codes_count": 3
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRTopographyMorphologyKeyVS",
+        "timestamp": "2026-04-09T09:51:59.113741"
+      },
+      {
+        "message": "Processing ValueSet CRTopographyGroupVS",
+        "timestamp": "2026-04-09T09:51:59.113846",
+        "details": {
+          "valueset_id": "CRTopographyGroupVS",
+          "entry_index": 4
+        }
+      },
+      {
+        "message": "Extracted 56 codes for ValueSet CRTopographyGroupVS",
+        "timestamp": "2026-04-09T09:51:59.113863",
+        "details": {
+          "valueset_id": "CRTopographyGroupVS",
+          "codes_count": 56
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRTopographyGroupVS",
+        "timestamp": "2026-04-09T09:51:59.113889"
+      },
+      {
+        "message": "Processing ValueSet CRGradeVS",
+        "timestamp": "2026-04-09T09:51:59.114224",
+        "details": {
+          "valueset_id": "CRGradeVS",
+          "entry_index": 5
+        }
+      },
+      {
+        "message": "Extracted 9 codes for ValueSet CRGradeVS",
+        "timestamp": "2026-04-09T09:51:59.114234",
+        "details": {
+          "valueset_id": "CRGradeVS",
+          "codes_count": 9
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRGradeVS",
+        "timestamp": "2026-04-09T09:51:59.114243"
+      },
+      {
+        "message": "Processing ValueSet CRTopographyVS",
+        "timestamp": "2026-04-09T09:51:59.114358",
+        "details": {
+          "valueset_id": "CRTopographyVS",
+          "entry_index": 6
+        }
+      },
+      {
+        "message": "Extracted 331 codes for ValueSet CRTopographyVS",
+        "timestamp": "2026-04-09T09:51:59.114404",
+        "details": {
+          "valueset_id": "CRTopographyVS",
+          "codes_count": 331
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRTopographyVS",
+        "timestamp": "2026-04-09T09:51:59.114531"
+      },
+      {
+        "message": "Processing ValueSet CRTumorNumberVS",
+        "timestamp": "2026-04-09T09:51:59.115551",
+        "details": {
+          "valueset_id": "CRTumorNumberVS",
+          "entry_index": 7
+        }
+      },
+      {
+        "message": "Extracted 10 codes for ValueSet CRTumorNumberVS",
+        "timestamp": "2026-04-09T09:51:59.115565",
+        "details": {
+          "valueset_id": "CRTumorNumberVS",
+          "codes_count": 10
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRTumorNumberVS",
+        "timestamp": "2026-04-09T09:51:59.115580"
+      },
+      {
+        "message": "Processing ValueSet CRMorphology4VS",
+        "timestamp": "2026-04-09T09:51:59.115694",
+        "details": {
+          "valueset_id": "CRMorphology4VS",
+          "entry_index": 8
+        }
+      },
+      {
+        "message": "Extracted 643 codes for ValueSet CRMorphology4VS",
+        "timestamp": "2026-04-09T09:51:59.115769",
+        "details": {
+          "valueset_id": "CRMorphology4VS",
+          "codes_count": 643
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRMorphology4VS",
+        "timestamp": "2026-04-09T09:51:59.116018"
+      },
+      {
+        "message": "Processing ValueSet CRSiteVS",
+        "timestamp": "2026-04-09T09:51:59.117887",
+        "details": {
+          "valueset_id": "CRSiteVS",
+          "entry_index": 9
+        }
+      },
+      {
+        "message": "Extracted 70 codes for ValueSet CRSiteVS",
+        "timestamp": "2026-04-09T09:51:59.117912",
+        "details": {
+          "valueset_id": "CRSiteVS",
+          "codes_count": 70
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRSiteVS",
+        "timestamp": "2026-04-09T09:51:59.117954"
+      },
+      {
+        "message": "Processing ValueSet CRPlaceholderSourceTypeVS",
+        "timestamp": "2026-04-09T09:51:59.118246",
+        "details": {
+          "valueset_id": "CRPlaceholderSourceTypeVS",
+          "entry_index": 10
+        }
+      },
+      {
+        "message": "Extracted 3 codes for ValueSet CRPlaceholderSourceTypeVS",
+        "timestamp": "2026-04-09T09:51:59.118255",
+        "details": {
+          "valueset_id": "CRPlaceholderSourceTypeVS",
+          "codes_count": 3
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRPlaceholderSourceTypeVS",
+        "timestamp": "2026-04-09T09:51:59.118262"
+      },
+      {
+        "message": "Processing ValueSet CRVitalStatusVS",
+        "timestamp": "2026-04-09T09:51:59.118362",
+        "details": {
+          "valueset_id": "CRVitalStatusVS",
+          "entry_index": 11
+        }
+      },
+      {
+        "message": "Extracted 3 codes for ValueSet CRVitalStatusVS",
+        "timestamp": "2026-04-09T09:51:59.118370",
+        "details": {
+          "valueset_id": "CRVitalStatusVS",
+          "codes_count": 3
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRVitalStatusVS",
+        "timestamp": "2026-04-09T09:51:59.118376"
+      },
+      {
+        "message": "Processing ValueSet CRMorphologyResultVS",
+        "timestamp": "2026-04-09T09:51:59.118467",
+        "details": {
+          "valueset_id": "CRMorphologyResultVS",
+          "entry_index": 12
+        }
+      },
+      {
+        "message": "Extracted 4 codes for ValueSet CRMorphologyResultVS",
+        "timestamp": "2026-04-09T09:51:59.118475",
+        "details": {
+          "valueset_id": "CRMorphologyResultVS",
+          "codes_count": 4
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRMorphologyResultVS",
+        "timestamp": "2026-04-09T09:51:59.118481"
+      },
+      {
+        "message": "Processing ValueSet CRMultiplePrimaryTestVS",
+        "timestamp": "2026-04-09T09:51:59.118577",
+        "details": {
+          "valueset_id": "CRMultiplePrimaryTestVS",
+          "entry_index": 13
+        }
+      },
+      {
+        "message": "Extracted 3 codes for ValueSet CRMultiplePrimaryTestVS",
+        "timestamp": "2026-04-09T09:51:59.118585",
+        "details": {
+          "valueset_id": "CRMultiplePrimaryTestVS",
+          "codes_count": 3
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRMultiplePrimaryTestVS",
+        "timestamp": "2026-04-09T09:51:59.118590"
+      },
+      {
+        "message": "Processing ValueSet CRMorphologyFamilyVS",
+        "timestamp": "2026-04-09T09:51:59.118686",
+        "details": {
+          "valueset_id": "CRMorphologyFamilyVS",
+          "entry_index": 14
+        }
+      },
+      {
+        "message": "Extracted 71 codes for ValueSet CRMorphologyFamilyVS",
+        "timestamp": "2026-04-09T09:51:59.118702",
+        "details": {
+          "valueset_id": "CRMorphologyFamilyVS",
+          "codes_count": 71
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRMorphologyFamilyVS",
+        "timestamp": "2026-04-09T09:51:59.118733"
+      },
+      {
+        "message": "Processing ValueSet CRMorphologyGroupVS",
+        "timestamp": "2026-04-09T09:51:59.119035",
+        "details": {
+          "valueset_id": "CRMorphologyGroupVS",
+          "entry_index": 15
+        }
+      },
+      {
+        "message": "Extracted 18 codes for ValueSet CRMorphologyGroupVS",
+        "timestamp": "2026-04-09T09:51:59.119047",
+        "details": {
+          "valueset_id": "CRMorphologyGroupVS",
+          "codes_count": 18
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRMorphologyGroupVS",
+        "timestamp": "2026-04-09T09:51:59.119060"
+      },
+      {
+        "message": "Processing ValueSet CRBehaviourVS",
+        "timestamp": "2026-04-09T09:51:59.119269",
+        "details": {
+          "valueset_id": "CRBehaviourVS",
+          "entry_index": 16
+        }
+      },
+      {
+        "message": "Extracted 4 codes for ValueSet CRBehaviourVS",
+        "timestamp": "2026-04-09T09:51:59.119278",
+        "details": {
+          "valueset_id": "CRBehaviourVS",
+          "codes_count": 4
+        }
+      },
+      {
+        "message": "Generated JSON-LD vocabulary for ValueSet CRBehaviourVS",
+        "timestamp": "2026-04-09T09:51:59.119284"
+      },
+      {
+        "message": "Generated 17 JSON-LD vocabularies",
+        "timestamp": "2026-04-09T09:51:59.119384",
+        "details": {
+          "vocabularies_generated": 17
+        }
+      },
+      {
+        "message": "Successfully generated 17 JSON-LD vocabularies in output",
+        "timestamp": "2026-04-09T09:51:59.119399",
+        "details": {
+          "vocabularies_count": 17,
+          "output_directory": "output",
+          "used_fallback": true
+        }
+      }
+    ],
+    "warnings": [],
+    "errors": [],
+    "files_processed": [
+      {
+        "file": "output/vocabulary/ValueSet-CRSexVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.113383",
+        "details": {
+          "valueset_id": "CRSexVS",
+          "codes_count": 3,
+          "vocab_size": 1028
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRBasisDiagnosisVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.113574",
+        "details": {
+          "valueset_id": "CRBasisDiagnosisVS",
+          "codes_count": 10,
+          "vocab_size": 2745
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRAddressVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.113713",
+        "details": {
+          "valueset_id": "CRAddressVS",
+          "codes_count": 3,
+          "vocab_size": 1090
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRTopographyMorphologyKeyVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.113834",
+        "details": {
+          "valueset_id": "CRTopographyMorphologyKeyVS",
+          "codes_count": 3,
+          "vocab_size": 1170
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRTopographyGroupVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.114215",
+        "details": {
+          "valueset_id": "CRTopographyGroupVS",
+          "codes_count": 56,
+          "vocab_size": 12431
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRGradeVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.114347",
+        "details": {
+          "valueset_id": "CRGradeVS",
+          "codes_count": 9,
+          "vocab_size": 2282
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRTopographyVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.115541",
+        "details": {
+          "valueset_id": "CRTopographyVS",
+          "codes_count": 331,
+          "vocab_size": 77277
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRTumorNumberVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.115685",
+        "details": {
+          "valueset_id": "CRTumorNumberVS",
+          "codes_count": 10,
+          "vocab_size": 2521
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRMorphology4VS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.117877",
+        "details": {
+          "valueset_id": "CRMorphology4VS",
+          "codes_count": 643,
+          "vocab_size": 161403
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRSiteVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.118236",
+        "details": {
+          "valueset_id": "CRSiteVS",
+          "codes_count": 70,
+          "vocab_size": 15521
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRPlaceholderSourceTypeVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.118354",
+        "details": {
+          "valueset_id": "CRPlaceholderSourceTypeVS",
+          "codes_count": 3,
+          "vocab_size": 1254
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRVitalStatusVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.118459",
+        "details": {
+          "valueset_id": "CRVitalStatusVS",
+          "codes_count": 3,
+          "vocab_size": 1083
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRMorphologyResultVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.118568",
+        "details": {
+          "valueset_id": "CRMorphologyResultVS",
+          "codes_count": 4,
+          "vocab_size": 1474
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRMultiplePrimaryTestVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.118677",
+        "details": {
+          "valueset_id": "CRMultiplePrimaryTestVS",
+          "codes_count": 3,
+          "vocab_size": 1270
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRMorphologyFamilyVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.119026",
+        "details": {
+          "valueset_id": "CRMorphologyFamilyVS",
+          "codes_count": 71,
+          "vocab_size": 17521
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRMorphologyGroupVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.119261",
+        "details": {
+          "valueset_id": "CRMorphologyGroupVS",
+          "codes_count": 18,
+          "vocab_size": 4889
+        }
+      },
+      {
+        "file": "output/vocabulary/ValueSet-CRBehaviourVS.jsonld",
+        "status": "success",
+        "timestamp": "2026-04-09T09:51:59.119381",
+        "details": {
+          "valueset_id": "CRBehaviourVS",
+          "codes_count": 4,
+          "vocab_size": 1298
+        }
+      }
+    ],
+    "files_expected": [
+      "output/expansions.json"
+    ],
+    "files_missing": [
+      "output/expansions.json"
+    ],
+    "vocabularies_generated": [
+      {
+        "valueset_id": "CRSexVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRSexVS.jsonld",
+        "codes_count": 3,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.113386"
+      },
+      {
+        "valueset_id": "CRBasisDiagnosisVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRBasisDiagnosisVS.jsonld",
+        "codes_count": 10,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.113577"
+      },
+      {
+        "valueset_id": "CRAddressVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRAddressVS.jsonld",
+        "codes_count": 3,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.113715"
+      },
+      {
+        "valueset_id": "CRTopographyMorphologyKeyVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRTopographyMorphologyKeyVS.jsonld",
+        "codes_count": 3,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.113836"
+      },
+      {
+        "valueset_id": "CRTopographyGroupVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRTopographyGroupVS.jsonld",
+        "codes_count": 56,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.114216"
+      },
+      {
+        "valueset_id": "CRGradeVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRGradeVS.jsonld",
+        "codes_count": 9,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.114349"
+      },
+      {
+        "valueset_id": "CRTopographyVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRTopographyVS.jsonld",
+        "codes_count": 331,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.115542"
+      },
+      {
+        "valueset_id": "CRTumorNumberVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRTumorNumberVS.jsonld",
+        "codes_count": 10,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.115687"
+      },
+      {
+        "valueset_id": "CRMorphology4VS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRMorphology4VS.jsonld",
+        "codes_count": 643,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.117878"
+      },
+      {
+        "valueset_id": "CRSiteVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRSiteVS.jsonld",
+        "codes_count": 70,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.118237"
+      },
+      {
+        "valueset_id": "CRPlaceholderSourceTypeVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRPlaceholderSourceTypeVS.jsonld",
+        "codes_count": 3,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.118355"
+      },
+      {
+        "valueset_id": "CRVitalStatusVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRVitalStatusVS.jsonld",
+        "codes_count": 3,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.118460"
+      },
+      {
+        "valueset_id": "CRMorphologyResultVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRMorphologyResultVS.jsonld",
+        "codes_count": 4,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.118569"
+      },
+      {
+        "valueset_id": "CRMultiplePrimaryTestVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRMultiplePrimaryTestVS.jsonld",
+        "codes_count": 3,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.118678"
+      },
+      {
+        "valueset_id": "CRMorphologyFamilyVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRMorphologyFamilyVS.jsonld",
+        "codes_count": 71,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.119027"
+      },
+      {
+        "valueset_id": "CRMorphologyGroupVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRMorphologyGroupVS.jsonld",
+        "codes_count": 18,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.119262"
+      },
+      {
+        "valueset_id": "CRBehaviourVS",
+        "jsonld_file": "output/vocabulary/ValueSet-CRBehaviourVS.jsonld",
+        "codes_count": 4,
+        "has_context": true,
+        "has_graph": true,
+        "timestamp": "2026-04-09T09:51:59.119383"
+      }
+    ]
+  }
+}
