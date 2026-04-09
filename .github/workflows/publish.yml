@@ -26,8 +26,8 @@ jobs:
       - name: Run the IG publisher
         uses: docker://hl7fhir/ig-publisher-base:latest
         with:
-          entrypoint: /bin/sh
-          args: -c "apt-get update && apt-get install -y python3 && java -jar ./input-cache/publisher.jar publisher -ig ."
+          entrypoint: /bin/bash
+          args: -lc "apt-get update && apt-get install -y python3 && java -jar ./input-cache/publisher.jar publisher -ig ."
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
