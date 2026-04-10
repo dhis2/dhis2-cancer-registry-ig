@@ -32,6 +32,7 @@ Description: "Encounter recording the Tumor stage event for primary breast carci
 * subject = Reference(ExampleCRPatient)
 * episodeOfCare = Reference(ExampleCRRegistrationEpisode)
 * period.start = "2026-01-01"
+* extension[rare].valueBoolean = false
 
 Instance: ExampleTopography
 InstanceOf: CRTopographyObservation

@@ -16,3 +16,5 @@ Description: "Encounter representing a single Tumor stage event in the DHIS2 Can
 * period MS
 * period.start MS
 * period.start ^short = "Event date of the tumor registration"
+* extension contains CRRareExtension named rare 0..1 MS
+* extension[rare] ^short = "Whether this tumor is classified as rare (IARC)"
