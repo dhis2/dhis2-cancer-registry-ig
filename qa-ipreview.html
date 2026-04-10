@@ -1,0 +1,1016 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>IP Review</title>
+    <link rel="stylesheet" href="fhir.css"/>
+  </head>
+  <body>
+<div id="smart-ci-build-banner" style="background:#fff3cd;color:#664d03;border-bottom:1px solid #ffda6a;padding:.5rem 1rem;font-size:.9rem;"><p style="margin:0;">CI build for version <strong>0.1.0</strong>. <br/><span  style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/64112b60cc67b2c18fa0b367ed5fc2459ca5d4a8"><code>64112b60</code></a>.</span></p></div>
+
+    <h2>Unattributed Code Systems</h2>
+    <ul>
+      <li>
+        <a href="Observation-ExampleBasisOfDiagnosis.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-ExampleBehaviour.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-ExampleGrade.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-ExampleMorphology.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-ExampleSite.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-ExampleTopography.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-ExampleTumorNumber.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS</code>        </a>
+      </li>
+      <li>
+        <a href="Observation-ExampleVitalStatus.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRVitalStatusCS</code>        </a>
+      </li>
+      <li>
+        <a href="StructureDefinition-cr-tumor-encounter.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type</code>        </a>
+      </li>
+      <li>
+        <a href="StructureDefinition-cr-vital-status-observation.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes</code>        </a>
+      </li>
+      <li>
+        <a href="StructureDefinition-Tumor.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs</code>        </a>
+      </li>
+      <li>
+        <a href="StructureDefinition-CancerRegistry.html">
+<code>https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs</code>        </a>
+      </li>
+    </ul>
+    <h2>Copyright Fragment</h2>
+    <p style="color: maroon">
+      <b>This fragment is not visible to the reader</b>
+    </p>
+    <div>
+      <p>This publication includes IP covered under the following statements.</p>
+
+      <ul>
+
+        <li>
+This material contains content from           <a href="http://loinc.org">LOINC</a>
+. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the           <a href="http://loinc.org/license">license</a>
+. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.          <div onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_1">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/5.5.0/CodeSystem-v3-loinc.html">LOINC</a>
+:                 <a href="StructureDefinition-cr-grade-observation.html">CRGradeObservation</a>
+ and                 <a href="Observation-ExampleGrade.html">Observation/ExampleGrade</a>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+        <li>
+This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see:           <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a>
+          <div onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2" data-fhir="generated">
+             <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span>
+          </div>
+          <div style="display: none" id="ipp2_2">
+
+            <ul>
+
+              <li>
+                <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v2-0203.html">identifierType</a>
+:                 <a href="StructureDefinition-cr-patient.html">CRPatient</a>
+ and                 <a href="Patient-ExampleCRPatient.html">Patient/ExampleCRPatient</a>
+              </li>
+
+              <li>
+                <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html">ActCode</a>
+:                 <a href="Encounter-ExampleFollowUpEncounter.html">Encounter/ExampleFollowUpEncounter</a>
+,                 <a href="Encounter-ExampleSourceEncounter.html">Encounter/ExampleSourceEncounter</a>
+ and                 <a href="Encounter-ExampleTumorEncounter.html">Encounter/ExampleTumorEncounter</a>
+              </li>
+
+
+            </ul>
+
+
+          </div>
+        </li>
+
+
+      </ul>
+
+
+    </div>
+    <h2>Copyright and Registered Trademark Uses</h2>
+    <ul>
+      <li>
+
+          hl7.fhir.us.hai: Healthcare Associated Infection Implementation Guide  &reg;&copy; HL7 |
+             
+                CC0
+         (        <a href="searchform.html">src</a>
+)
+      </li>
+      <li>
+
+    IG &copy; 2025+ DHIS2.  Package dhis2.cancer.registry#0.1.0 based on FHIR 4.0.1. Generated 2026-04-10
+    
+    
+                Links: Table of Contents |
+                 QA Report
+                 
+                
+| Version History | License
+    
+   (        <a href="toc.html">src</a>
+)
+      </li>
+      <li>
+DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main and changes regularly. See the Directory of published versions (        <a href="toc.html">src</a>
+)
+      </li>
+      <li>
+&copy; 2025 DHIS2 (        <a href="license.html">src</a>
+)
+      </li>
+    </ul>
+    <h2>External References</h2>
+    <table class="grid">
+      <tr>
+        <th>
+          <b>Type</b>
+        </th>
+        <th>
+          <b>Reference</b>
+        </th>
+        <th>
+          <b>Content</b>
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <a href="CodeSystem-CRAddressCS-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://dhis2.org/integration/fhir/">dhis2.org</a>
+        </td>
+        <td>
+
+              <a no-external="true" id="project-logo" href="https://dhis2.org/integration/fhir/">
+
+      <img src="assets/images/dhis2.png" alt="Project home" height="60"/>
+    
+          </a>
+
+  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CodeSystem-CRAddressCS-testing.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main">github.com</a>
+        </td>
+        <td>
+DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of           <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main">https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a>
+ and changes regularly. See the           <a href="https://dhis2.org/fhir/cancer-registry/history.html">Directory of published versions</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="CodeSystem-CRAddressCS-testing.html">web</a>
+        </td>
+        <td>
+          <a href="http://dhis2.org">dhis2.org</a>
+        </td>
+        <td>
+
+    IG &copy; 2025+           <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>
+.  Package dhis2.cancer.registry#0.1.0 based on           <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>
+. Generated           <span title="Fri, Apr 10, 2026 12:38+0000">2026-04-10</span>
+
+              <br/>
+
+              <span style="color: var(--footer-highlight-text-color)">
+
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="https://dhis2.org/fhir/cancer-registry/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    
+          </span>
+
+  
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45/src/canreg/common/qualitycontrol">github.com</a>
+        </td>
+        <td>
+One of the central features of the DHIS2 Cancer Registry toolkit is the implementation of data quality checks used in           <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45/src/canreg/common/qualitycontrol">CanReg5</a>
+ to assess the completeness and accuracy of registered cancer cases. These checks ensure that collected data meets the standards required for valid epidemiological analysis and international comparability.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html#checks">docs.dhis2.org</a>
+        </td>
+        <td>
+For the full design documentation, see the           <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html#checks">System Design Guide — Checks section</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeIncidenceDateBirthDate.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeIncidenceDateBirthDate.java">CheckAgeIncidenceDateBirthDate.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeMorphology.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeMorphology.java">CheckAgeMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopography.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopography.java">CheckAgeTopography.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopographyMorphology.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopographyMorphology.java">CheckAgeTopographyMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckBasis.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckBasis.java">CheckBasis.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckGrade.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckGrade.java">CheckGrade.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckMorphology.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckMorphology.java">CheckMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/lookup/MorphFam.txt">github.com</a>
+        </td>
+        <td>
+Identifies           <strong>rare</strong>
+ combinations of sex and morphology based on morphological families (from the CanReg5           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/lookup/MorphFam.txt">MorphFam.txt</a>
+ lookup):
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexMorphology.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexMorphology.java">CheckSexMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexTopography.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexTopography.java">CheckSexTopography.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/lookup/O3_10T.txt">github.com</a>
+        </td>
+        <td>
+Verifies that the topography code is a valid ICD-O-3 code, checked against the           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/lookup/O3_10T.txt">O3_10T.txt</a>
+ reference lookup. Like the morphology check, this does not require a program rule because the topography field is a closed option set.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopography.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopography.java">CheckTopography.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyBehaviour.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyBehaviour.java">CheckTopographyBehaviour.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyMorphology.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyMorphology.java">CheckTopographyMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/DefaultMultiplePrimaryTester.java">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 reference:</strong>
+           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/DefaultMultiplePrimaryTester.java">DefaultMultiplePrimaryTester.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeIncidenceDateBirthDate.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeIncidenceDateBirthDate.java">CheckAgeIncidenceDateBirthDate.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeMorphology.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeMorphology.java">CheckAgeMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopography.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopography.java">CheckAgeTopography.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopographyMorphology.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopographyMorphology.java">CheckAgeTopographyMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckBasis.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckBasis.java">CheckBasis.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckGrade.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckGrade.java">CheckGrade.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckMorphology.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckMorphology.java">CheckMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexMorphology.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexMorphology.java">CheckSexMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexTopography.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexTopography.java">CheckSexTopography.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopography.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopography.java">CheckTopography.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyBehaviour.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyBehaviour.java">CheckTopographyBehaviour.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyMorphology.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyMorphology.java">CheckTopographyMorphology.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="data-quality-checks.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/DefaultMultiplePrimaryTester.java">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/DefaultMultiplePrimaryTester.java">DefaultMultiplePrimaryTester.java</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="deployment.html">web</a>
+        </td>
+        <td>
+          <a href="https://implement.im.dhis2.org/cancer-registry-global/">implement.im.dhis2.org</a>
+        </td>
+        <td>
+          <strong>Demo instance:</strong>
+           <a href="https://implement.im.dhis2.org/cancer-registry-global/">https://implement.im.dhis2.org/cancer-registry-global/</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="deployment.html">web</a>
+        </td>
+        <td>
+          <a href="https://dhis2.org/metadata-downloads/">dhis2.org</a>
+        </td>
+        <td>
+          <strong>Metadata downloads:</strong>
+           <a href="https://dhis2.org/metadata-downloads/">https://dhis2.org/metadata-downloads/</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="deployment.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/installation.html">docs.dhis2.org</a>
+        </td>
+        <td>
+          <strong>Installation guide:</strong>
+           <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/installation.html">Cancer Registry Installation Guide</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="deployment.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/dhis2-health-data-toolkit/general-design-principles-for-health-packages/metadata-package-installation.html">docs.dhis2.org</a>
+        </td>
+        <td>
+          <strong>General metadata package installation:</strong>
+           <a href="https://docs.dhis2.org/en/implement/health/dhis2-health-data-toolkit/general-design-principles-for-health-packages/metadata-package-installation.html">DHIS2 Metadata Package Installation Guide</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="deployment.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">www.iacr.com.fr</a>
+        </td>
+        <td>
+A DHIS2 app is available for exporting cancer registry data from DHIS2 to           <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">CanReg5</a>
+ format. This enables countries to export their data for IARC reporting and analysis.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="deployment.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/dhis2/cancer-registry-app">github.com</a>
+        </td>
+        <td>
+          <strong>CanReg5 export app:</strong>
+           <a href="https://github.com/dhis2/cancer-registry-app">https://github.com/dhis2/cancer-registry-app</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">docs.dhis2.org</a>
+        </td>
+        <td>
+This implementation guide provides a FHIR-based representation of the           <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">DHIS2 Cancer Registry metadata package</a>
+, a toolkit designed to support population-based cancer registries in strengthening their routine data management processes and improving the quality, completeness, and timeliness of cancer case registration.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">www.iacr.com.fr</a>
+        </td>
+        <td>
+The DHIS2 Cancer Registry tracker is aligned with           <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">CanReg5</a>
+ data standards for individual-level cancer case registration, as defined by the           <a href="https://www.iarc.who.int/">International Agency for Research on Cancer (IARC)</a>
+. It includes FHIR logical models, terminology (code systems and value sets), and questionnaires that represent the tracker program configuration, including embedded data quality control checks based on CanReg5 validation logic.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.iarc.who.int/">www.iarc.who.int</a>
+        </td>
+        <td>
+The DHIS2 Cancer Registry tracker is aligned with           <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">CanReg5</a>
+ data standards for individual-level cancer case registration, as defined by the           <a href="https://www.iarc.who.int/">International Agency for Research on Cancer (IARC)</a>
+. It includes FHIR logical models, terminology (code systems and value sets), and questionnaires that represent the tracker program configuration, including embedded data quality control checks based on CanReg5 validation logic.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.vitalstrategies.org/">www.vitalstrategies.org</a>
+        </td>
+        <td>
+The toolkit has been developed with financial support from           <a href="https://www.vitalstrategies.org/">Vital Strategies</a>
+ and technical guidance from IARC.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">docs.dhis2.org</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">docs.dhis2.org — Cancer Registry Design</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/installation.html">docs.dhis2.org</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/installation.html">docs.dhis2.org — Cancer Registry Installation</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://implement.im.dhis2.org/cancer-registry-global/">implement.im.dhis2.org</a>
+        </td>
+        <td>
+          <a href="https://implement.im.dhis2.org/cancer-registry-global/">implement.im.dhis2.org/cancer-registry-global</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://dhis2.org/metadata-downloads/">dhis2.org</a>
+        </td>
+        <td>
+          <a href="https://dhis2.org/metadata-downloads/">dhis2.org/metadata-downloads</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/dhis2/cancer-registry-app">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/dhis2/cancer-registry-app">github.com/dhis2/cancer-registry-app</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">www.iacr.com.fr</a>
+        </td>
+        <td>
+          <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">IACR — CanReg5</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45">github.com/IARC-CSU/CanReg5</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="index.html">web</a>
+        </td>
+        <td>
+          <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Scientific-Publications/Cancer-Registration-Principles-And-Methods-2021">publications.iarc.who.int</a>
+        </td>
+        <td>
+          <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Scientific-Publications/Cancer-Registration-Principles-And-Methods-2021">Cancer Registration: Principles and Methods (IARC Scientific Publications No. 160)</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="license.html">web</a>
+        </td>
+        <td>
+          <a href="https://creativecommons.org/licenses/by/3.0/igo/">creativecommons.org</a>
+        </td>
+        <td>
+This is a human-readable summary of (and not a substitute for) the           <a href="https://creativecommons.org/licenses/by/3.0/igo/">license</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="license.html">web</a>
+        </td>
+        <td>
+          <a href="https://creativecommons.org/licenses/by/3.0/igo/">creativecommons.org</a>
+        </td>
+        <td>
+To view a copy of this license, visit           <a href="https://creativecommons.org/licenses/by/3.0/igo/">https://creativecommons.org/licenses/by/3.0/igo/</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">docs.dhis2.org</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">docs.dhis2.org</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/installation.html">docs.dhis2.org</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/installation.html">docs.dhis2.org</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">www.iacr.com.fr</a>
+        </td>
+        <td>
+          <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">iacr.com.fr — CanReg5</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5">github.com/IARC-CSU/CanReg5</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45/src/canreg/common/qualitycontrol">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45/src/canreg/common/qualitycontrol">github.com/IARC-CSU/CanReg5 — qualitycontrol</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45/src/canreg/common/resources/lookup">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45/src/canreg/common/resources/lookup">github.com/IARC-CSU/CanReg5 — lookup</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology">www.who.int</a>
+        </td>
+        <td>
+          <a href="https://www.who.int/standards/classifications/other-classifications/international-classification-of-diseases-for-oncology">who.int — ICD-O-3</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://ci5.iarc.who.int">ci5.iarc.who.int</a>
+        </td>
+        <td>
+Bray F, Colombet M, Mery L, Piñeros M, Znaor A, Zanetti R, Ferlay J, editors (2021).           <em>Cancer Incidence in Five Continents, Vol. XII.</em>
+ Lyon: International Agency for Research on Cancer. Available from:           <a href="https://ci5.iarc.who.int">https://ci5.iarc.who.int</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="references.html">web</a>
+        </td>
+        <td>
+          <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Technical-Publications/Planning-And-Developing-Population-Based-Cancer-Registration-In-Low--And-Middle-Income-Settings-2014">publications.iarc.who.int</a>
+        </td>
+        <td>
+Bray F, Znaor A, Cueva P, Korir A, Swaminathan R, Ullrich A, Wang SA, Mathers C (2014).           <em>Planning and Developing Population-Based Cancer Registration in Low- and Middle-Income Settings.</em>
+ Lyon: International Agency for Research on Cancer. IARC Technical Publication No. 43. Available from:           <a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Technical-Publications/Planning-And-Developing-Population-Based-Cancer-Registration-In-Low--And-Middle-Income-Settings-2014">https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Technical-Publications/Planning-And-Developing-Population-Based-Cancer-Registration-In-Low–And-Middle-Income-Settings-2014</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">docs.dhis2.org</a>
+        </td>
+        <td>
+This page describes the structure of the DHIS2 Cancer Registry Tracker program as represented in this implementation guide. For the full design documentation, see the           <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">System Design Guide</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://docs.dhis2.org/en/implement/health/dhis2-health-data-toolkit/common-metadata-library/design.html">docs.dhis2.org</a>
+        </td>
+        <td>
+The Tracked Entity Type for the Cancer Registry program is           <strong>Person</strong>
+. Each enrolled person represents an individual cancer patient registered in the population-based cancer registry. The TET is configured at the system level and may be shared with other DHIS2 tracker programs deployed within the same national instance, in line with standard           <a href="https://docs.dhis2.org/en/implement/health/dhis2-health-data-toolkit/common-metadata-library/design.html">DHIS2 implementation practice</a>
+.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/sex.tsv">github.com</a>
+        </td>
+        <td>
+Uses numeric codes (1=Male, 2=Female, 9=Unknown) mapped to the           <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/sex.tsv">CanReg5 sex dictionary</a>
+. These codes are referenced in multiple data quality checks.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/topography.tsv">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/topography.tsv">topography.tsv</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/morphology4.tsv">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/morphology4.tsv">morphology4.tsv</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/behaviour.tsv">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/behaviour.tsv">behaviour.tsv</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/basis.tsv">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/basis.tsv">basis.tsv</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="system-design.html">web</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/grade.tsv">github.com</a>
+        </td>
+        <td>
+          <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/grade.tsv">grade.tsv</a>
+        </td>
+      </tr>
+    </table>
+    <h2>Internal Images</h2>
+    <table class="grid">
+      <tr>
+        <td>
+tree-filter.png          <br/>
+          <img src="tree-filter.png" alt="tree-filter.png" width="600px" height="auto"/>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

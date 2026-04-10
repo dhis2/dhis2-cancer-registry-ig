@@ -1,0 +1,473 @@
+[{
+  "id" : "CRAddressCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS",
+  "version" : "0.1.0",
+  "name" : "CRAddressCS"
+},
+{
+  "id" : "CRBasisDiagnosisCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS",
+  "version" : "0.1.0",
+  "name" : "CRBasisDiagnosisCS"
+},
+{
+  "id" : "CRBehaviourCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS",
+  "version" : "0.1.0",
+  "name" : "CRBehaviourCS"
+},
+{
+  "id" : "CRGradeCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS",
+  "version" : "0.1.0",
+  "name" : "CRGradeCS"
+},
+{
+  "id" : "CRMorphology4CS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS",
+  "version" : "0.1.0",
+  "name" : "CRMorphology4CS"
+},
+{
+  "id" : "CRMorphologyFamilyCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyFamilyCS"
+},
+{
+  "id" : "CRMorphologyGroupCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyGroupCS"
+},
+{
+  "id" : "CRMorphologyResultCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyResultCS",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyResultCS"
+},
+{
+  "id" : "CRMultiplePrimaryTestCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMultiplePrimaryTestCS",
+  "version" : "0.1.0",
+  "name" : "CRMultiplePrimaryTestCS"
+},
+{
+  "id" : "CRPlaceholderSourceTypeCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS",
+  "version" : "0.1.0",
+  "name" : "CRPlaceholderSourceTypeCS"
+},
+{
+  "id" : "CRSexCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSexCS",
+  "version" : "0.1.0",
+  "name" : "CRSexCS"
+},
+{
+  "id" : "CRSiteCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS",
+  "version" : "0.1.0",
+  "name" : "CRSiteCS"
+},
+{
+  "id" : "CRTopographyCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS",
+  "version" : "0.1.0",
+  "name" : "CRTopographyCS"
+},
+{
+  "id" : "CRTopographyGroupCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS",
+  "version" : "0.1.0",
+  "name" : "CRTopographyGroupCS"
+},
+{
+  "id" : "CRTopographyMorphologyKeyCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyMorphologyKeyCS",
+  "version" : "0.1.0",
+  "name" : "CRTopographyMorphologyKeyCS"
+},
+{
+  "id" : "CRTumorNumberCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS",
+  "version" : "0.1.0",
+  "name" : "CRTumorNumberCS"
+},
+{
+  "id" : "CRVitalStatusCS",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRVitalStatusCS",
+  "version" : "0.1.0",
+  "name" : "CRVitalStatusCS"
+},
+{
+  "id" : "cr-encounter-type",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type",
+  "version" : "0.1.0",
+  "name" : "CREncounterTypeCS"
+},
+{
+  "id" : "cr-observation-codes",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes",
+  "version" : "0.1.0",
+  "name" : "CRObservationCodesCS"
+},
+{
+  "id" : "dhis2-data-elements-cs",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs",
+  "version" : "0.1.0",
+  "name" : "Dhis2DataElementsCS"
+},
+{
+  "id" : "dhis2-tracked-entity-attributes-cs",
+  "type" : "CodeSystem",
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+  "version" : "0.1.0",
+  "name" : "Dhis2TrackedEntityAttributesCS"
+},
+{
+  "id" : "dhis2.cancer.registry",
+  "type" : "ImplementationGuide",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ImplementationGuide/dhis2.cancer.registry",
+  "version" : "0.1.0",
+  "name" : "DHIS2CancerRegistryIG"
+},
+{
+  "id" : "FollowUpQuestionnaire",
+  "type" : "Questionnaire",
+  "url" : "https://dhis2.org/fhir/cancer-registry/Questionnaire/FollowUpQuestionnaire",
+  "version" : "0.1.0"
+},
+{
+  "id" : "SourceQuestionnaire",
+  "type" : "Questionnaire",
+  "url" : "https://dhis2.org/fhir/cancer-registry/Questionnaire/SourceQuestionnaire",
+  "version" : "0.1.0"
+},
+{
+  "id" : "TumorQuestionnaire",
+  "type" : "Questionnaire",
+  "url" : "https://dhis2.org/fhir/cancer-registry/Questionnaire/TumorQuestionnaire",
+  "version" : "0.1.0"
+},
+{
+  "id" : "CancerRegistry",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry",
+  "version" : "0.1.0",
+  "name" : "CancerRegistry"
+},
+{
+  "id" : "FollowUp",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/FollowUp",
+  "version" : "0.1.0",
+  "name" : "FollowUp"
+},
+{
+  "id" : "Source",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Source",
+  "version" : "0.1.0",
+  "name" : "Source"
+},
+{
+  "id" : "Tumor",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor",
+  "version" : "0.1.0",
+  "name" : "Tumor"
+},
+{
+  "id" : "cr-address-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-address-observation",
+  "version" : "0.1.0",
+  "name" : "CRAddressObservation"
+},
+{
+  "id" : "cr-age-at-incidence-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-age-at-incidence-observation",
+  "version" : "0.1.0",
+  "name" : "CRAgeAtIncidenceObservation"
+},
+{
+  "id" : "cr-basis-of-diagnosis-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-basis-of-diagnosis-observation",
+  "version" : "0.1.0",
+  "name" : "CRBasisOfDiagnosisObservation"
+},
+{
+  "id" : "cr-behaviour-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-behaviour-observation",
+  "version" : "0.1.0",
+  "name" : "CRBehaviourObservation"
+},
+{
+  "id" : "cr-cancer-registration-episode",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode",
+  "version" : "0.1.0",
+  "name" : "CRCancerRegistrationEpisode"
+},
+{
+  "id" : "cr-date-of-death-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-date-of-death-observation",
+  "version" : "0.1.0",
+  "name" : "CRDateOfDeathObservation"
+},
+{
+  "id" : "cr-followup-encounter",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-followup-encounter",
+  "version" : "0.1.0",
+  "name" : "CRFollowUpEncounter"
+},
+{
+  "id" : "cr-grade-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-grade-observation",
+  "version" : "0.1.0",
+  "name" : "CRGradeObservation"
+},
+{
+  "id" : "cr-incidence-date-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-incidence-date-observation",
+  "version" : "0.1.0",
+  "name" : "CRIncidenceDateObservation"
+},
+{
+  "id" : "cr-morphology-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-morphology-observation",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyObservation"
+},
+{
+  "id" : "cr-patient",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient",
+  "version" : "0.1.0",
+  "name" : "CRPatient"
+},
+{
+  "id" : "cr-rare",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-rare",
+  "version" : "0.1.0",
+  "name" : "CRRareExtension"
+},
+{
+  "id" : "cr-site-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-site-observation",
+  "version" : "0.1.0",
+  "name" : "CRSiteObservation"
+},
+{
+  "id" : "cr-source-encounter",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-encounter",
+  "version" : "0.1.0",
+  "name" : "CRSourceEncounter"
+},
+{
+  "id" : "cr-source-tumor-number-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-tumor-number-observation",
+  "version" : "0.1.0",
+  "name" : "CRSourceTumorNumberObservation"
+},
+{
+  "id" : "cr-source-type-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-type-observation",
+  "version" : "0.1.0",
+  "name" : "CRSourceTypeObservation"
+},
+{
+  "id" : "cr-topography-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-topography-observation",
+  "version" : "0.1.0",
+  "name" : "CRTopographyObservation"
+},
+{
+  "id" : "cr-tumor-encounter",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter",
+  "version" : "0.1.0",
+  "name" : "CRTumorEncounter"
+},
+{
+  "id" : "cr-tumor-number-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-number-observation",
+  "version" : "0.1.0",
+  "name" : "CRTumorNumberObservation"
+},
+{
+  "id" : "cr-vital-status-observation",
+  "type" : "StructureDefinition",
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-vital-status-observation",
+  "version" : "0.1.0",
+  "name" : "CRVitalStatusObservation"
+},
+{
+  "id" : "CRAddressVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS",
+  "version" : "0.1.0",
+  "name" : "CRAddressVS"
+},
+{
+  "id" : "CRBasisDiagnosisVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS",
+  "version" : "0.1.0",
+  "name" : "CRBasisDiagnosisVS"
+},
+{
+  "id" : "CRBehaviourVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBehaviourVS",
+  "version" : "0.1.0",
+  "name" : "CRBehaviourVS"
+},
+{
+  "id" : "CRGradeVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS",
+  "version" : "0.1.0",
+  "name" : "CRGradeVS"
+},
+{
+  "id" : "CRMorphology4VS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS",
+  "version" : "0.1.0",
+  "name" : "CRMorphology4VS"
+},
+{
+  "id" : "CRMorphologyFamilyVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyFamilyVS"
+},
+{
+  "id" : "CRMorphologyGroupVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyGroupVS"
+},
+{
+  "id" : "CRMorphologyResultVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyResultVS",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyResultVS"
+},
+{
+  "id" : "CRMultiplePrimaryTestVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS",
+  "version" : "0.1.0",
+  "name" : "CRMultiplePrimaryTestVS"
+},
+{
+  "id" : "CRPlaceholderSourceTypeVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRPlaceholderSourceTypeVS",
+  "version" : "0.1.0",
+  "name" : "CRPlaceholderSourceTypeVS"
+},
+{
+  "id" : "CRSexVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSexVS",
+  "version" : "0.1.0",
+  "name" : "CRSexVS"
+},
+{
+  "id" : "CRSiteVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS",
+  "version" : "0.1.0",
+  "name" : "CRSiteVS"
+},
+{
+  "id" : "CRTopographyGroupVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS",
+  "version" : "0.1.0",
+  "name" : "CRTopographyGroupVS"
+},
+{
+  "id" : "CRTopographyMorphologyKeyVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyMorphologyKeyVS",
+  "version" : "0.1.0",
+  "name" : "CRTopographyMorphologyKeyVS"
+},
+{
+  "id" : "CRTopographyVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyVS",
+  "version" : "0.1.0",
+  "name" : "CRTopographyVS"
+},
+{
+  "id" : "CRTumorNumberVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS",
+  "version" : "0.1.0",
+  "name" : "CRTumorNumberVS"
+},
+{
+  "id" : "CRVitalStatusVS",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRVitalStatusVS",
+  "version" : "0.1.0",
+  "name" : "CRVitalStatusVS"
+},
+{
+  "id" : "cr-encounter-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-encounter-type-vs",
+  "version" : "0.1.0",
+  "name" : "CREncounterTypeVS"
+},
+{
+  "id" : "cr-observation-codes-vs",
+  "type" : "ValueSet",
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-observation-codes-vs",
+  "version" : "0.1.0",
+  "name" : "CRObservationCodesVS"
+}]

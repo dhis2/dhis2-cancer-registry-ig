@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ExampleSourceTumorNumber",
+  "meta" : {
+    "profile" : ["https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-tumor-number-observation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleSourceTumorNumber</b></p><a name=\"ExampleSourceTumorNumber\"> </a><a name=\"hcExampleSourceTumorNumber\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-cr-source-tumor-number-observation.html\">Source Tumor Number</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes source-tumor-number}\">Source Tumor Number</span></p><p><b>subject</b>: <a href=\"Patient-ExampleCRPatient.html\">Jane Doe  Female, DoB: 1970-03-15 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleSourceEncounter.html\">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Source Notification; period = 2026-01-01 --&gt; (ongoing)</a></p><p><b>effective</b>: 2026-01-01</p><p><b>value</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS 01}\">01</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes",
+      "code" : "source-tumor-number"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleCRPatient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/ExampleSourceEncounter"
+  },
+  "effectiveDateTime" : "2026-01-01",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS",
+      "code" : "01",
+      "display" : "01"
+    }]
+  }
+}

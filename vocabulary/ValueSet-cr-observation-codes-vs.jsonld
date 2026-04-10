@@ -1,0 +1,95 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-04-10T12:40:13.853202Z",
+  "@graph": [
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#topography",
+      "name": "Topography",
+      "fhir:code": "topography",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#morphology",
+      "name": "Morphology",
+      "fhir:code": "morphology",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#behaviour",
+      "name": "Behaviour",
+      "fhir:code": "behaviour",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#basis-of-diagnosis",
+      "name": "Basis of Diagnosis",
+      "fhir:code": "basis-of-diagnosis",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#site",
+      "name": "Site",
+      "fhir:code": "site",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#incidence-date",
+      "name": "Incidence Date",
+      "fhir:code": "incidence-date",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#age-at-incidence",
+      "name": "Age at Incidence",
+      "fhir:code": "age-at-incidence",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#address",
+      "name": "Address",
+      "fhir:code": "address",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#tumor-number",
+      "name": "Tumor Number",
+      "fhir:code": "tumor-number",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#vital-status",
+      "name": "Vital Status",
+      "fhir:code": "vital-status",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#date-of-death",
+      "name": "Date of Death",
+      "fhir:code": "date-of-death",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#source-type",
+      "name": "Source Type",
+      "fhir:code": "source-type",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.jsonld#source-tumor-number",
+      "name": "Source Tumor Number",
+      "fhir:code": "source-tumor-number",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-cr-observation-codes"
+    }
+  ]
+}

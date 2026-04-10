@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Data Quality Checks - DHIS2 Cancer Registry Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+<!-- Placeholder for child template CSS declarations -->
+<!-- <link href="assets/css/colors.css" rel="stylesheet"/>! -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="system-design.html">System Design</a>
+  </li>
+  <li>
+    <a href="data-quality-checks.html">Data Quality Checks</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles &amp; Mappings</a>
+  </li>
+  <li>
+    <a href="deployment.html">Deployment</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://dhis2.org/integration/fhir/">
+      <img height="60" alt="Project home" src="assets/images/dhis2.png"/>
+    </a>
+  </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="80" alt="FHIR website" src="assets/images/fhir.png"/> </a>
+  </div>
+
+<!-- search icon - if you want -->
+<!--
+  <div id="hl7-search">
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+-->
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DHIS2 Cancer Registry Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Data Quality Checks</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main'>https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a> and changes regularly. See the <a href='https://dhis2.org/fhir/cancer-registry/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/64112b60cc67b2c18fa0b367ed5fc2459ca5d4a8"><code>64112b60</code></a>.</span></p><!--EndReleaseHeader-->
+  <h2>Data Quality Checks</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#overview" id="markdown-toc-overview">Overview</a></li>
+  <li><a href="#transversal-considerations" id="markdown-toc-transversal-considerations">Transversal Considerations</a></li>
+  <li><a href="#check-details" id="markdown-toc-check-details">Check Details</a></li>
+  <li><a href="#summary-of-checks" id="markdown-toc-summary-of-checks">Summary of Checks</a></li>
+</ul>
+
+</div>
+<p>One of the central features of the DHIS2 Cancer Registry toolkit is the implementation of data quality checks used in <a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45/src/canreg/common/qualitycontrol">CanReg5</a> to assess the completeness and accuracy of registered cancer cases. These checks ensure that collected data meets the standards required for valid epidemiological analysis and international comparability.</p>
+
+<p>For the full design documentation, see the <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html#checks">System Design Guide — Checks section</a>.</p>
+
+<h3 id="overview">Overview</h3>
+
+<p>The checks are implemented as DHIS2 program rules operating on data elements within the Tumor stage. Each check result is stored as a boolean data element in the hidden <strong>Checks</strong> section. Two summary classification elements — <strong>Rare</strong> and <strong>Invalid</strong> — aggregate the individual check results.</p>
+
+<p>When generating any analytical output, the following filters must always be applied to ensure analytical integrity:</p>
+
+<ul>
+  <li><strong>Run checks</strong> = true</li>
+  <li><strong>Rare</strong> = false, OR <strong>Rare</strong> = true AND <strong>Confirm rare status</strong> = true</li>
+  <li><strong>Invalid</strong> = false</li>
+</ul>
+
+<h3 id="transversal-considerations">Transversal Considerations</h3>
+
+<h4 id="value-types">Value Types</h4>
+
+<p>A key aspect of the correct implementation is the use of <strong>Number</strong> value types for data elements and option sets. This allows CanReg5 range conditions to be translated directly into DHIS2 program rule expressions without modification. For example, a CanReg5 condition such as <code class="language-plaintext highlighter-rouge">morphologyNumber &gt;= 8270 &amp;&amp; morphologyNumber &lt;= 8281</code> can be used as-is in DHIS2.</p>
+
+<h4 id="grouped-code-logic">Grouped Code Logic</h4>
+
+<p>Some CanReg5 checks group topography codes by dividing the code by 10. Since this is not natively supported in DHIS2 program rules, the equivalent logic is expressed as explicit range conditions. For example, <code class="language-plaintext highlighter-rouge">topographyGroup == 53</code> becomes <code class="language-plaintext highlighter-rouge">topography &gt;= 530 &amp;&amp; topography &lt;= 539</code>.</p>
+
+<h3 id="check-details">Check Details</h3>
+
+<h4 id="age--incidence-date--birth-date">Age — Incidence Date — Birth Date</h4>
+
+<p>Verifies that the entered age is consistent with the incidence date and date of birth. A warning is triggered if the entered age does not match the calculated value.</p>
+
+<ul>
+  <li><strong>Program rule:</strong> CR - Check age incidence date and date of birth</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeIncidenceDateBirthDate.java">CheckAgeIncidenceDateBirthDate.java</a></li>
+</ul>
+
+<h4 id="age--morphology">Age — Morphology</h4>
+
+<p>Identifies <strong>rare</strong> combinations of age and morphology. Examples include:</p>
+
+<ul>
+  <li>Age ≤ 25 and morphology is one of: 9730, 9823, 9890</li>
+  <li>Age ≥ 15 and morphology includes: 8910, 8960, 8961, 8962, 8970, 8981, 8991, 9072, 9470, 9490, 9500, 9687</li>
+  <li>
+    <p>Age &lt; 15 and morphology includes: 9724, 9732, 9823</p>
+  </li>
+  <li><strong>Program rule:</strong> CR - Rare Age Morphology</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeMorphology.java">CheckAgeMorphology.java</a></li>
+</ul>
+
+<h4 id="age--topography">Age — Topography</h4>
+
+<p>Identifies <strong>rare</strong> combinations of age and topography. Examples include:</p>
+
+<ul>
+  <li>Age &lt; 5 and topography 530–539 or 610–619</li>
+  <li>
+    <p>Age &lt; 20 and topography in ranges 150–159, 190–199, 200–209, 210–219, 230–239, 240–249, 384, 500–509, 530–549, 550–559</p>
+  </li>
+  <li><strong>Program rule:</strong> CR - Rare Age Topography</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopography.java">CheckAgeTopography.java</a></li>
+</ul>
+
+<h4 id="age--topography--morphology">Age — Topography — Morphology</h4>
+
+<p>Identifies <strong>rare</strong> combinations of age, topography, and morphology together. Examples include:</p>
+
+<ul>
+  <li>Age &lt; 40 and topography 610–619 and morphology 8140–8149</li>
+  <li>Age &lt; 20 and topography 170–179 and morphology &lt; 9590</li>
+  <li>Age &gt; 5 and morphology 9510 or 9512 and topography 690–699</li>
+  <li>
+    <p>Age &lt; 15 or age &gt; 45 and topography 580–589 and morphology 9100</p>
+  </li>
+  <li><strong>Program rule:</strong> CR - Rare Age Topography Morphology</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopographyMorphology.java">CheckAgeTopographyMorphology.java</a></li>
+</ul>
+
+<h4 id="basis-of-diagnosis">Basis of Diagnosis</h4>
+
+<p>Verifies that the basis of diagnosis is consistent with the morphology and topography. Basis codes are classified as:</p>
+
+<ul>
+  <li><strong>Non-microscopically confirmed:</strong> codes 0–4</li>
+  <li><strong>Microscopically confirmed:</strong> codes 5–8</li>
+  <li><strong>Unknown:</strong> code 9</li>
+</ul>
+
+<p>A set of morphology codes are accepted regardless of the basis of diagnosis. For all other morphology codes, if the basis is not microscopically confirmed, the result is <strong>Rare</strong>.</p>
+
+<ul>
+  <li><strong>Program rule:</strong> CR - Rare Basis</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckBasis.java">CheckBasis.java</a></li>
+</ul>
+
+<h4 id="grade">Grade</h4>
+
+<p>Verifies that the grade value is consistent with the behaviour and morphology:</p>
+
+<ul>
+  <li><strong>Non-malignant cases</strong> (behaviour ≠ 3): grade should be empty or coded as 9. Any other grade value returns <strong>Invalid</strong>.</li>
+  <li><strong>Malignant cases</strong> (behaviour = 3): grade is mandatory. If empty, returns <strong>Missing</strong>. If outside the valid range 1–9, returns <strong>Invalid</strong>.</li>
+  <li>
+    <p>Specific morphology-grade consistency rules are enforced (e.g. morphology 8331 must have grade 1; grade codes 5–8 are only valid for lymphomas/leukaemias where morphology ≥ 9590).</p>
+  </li>
+  <li><strong>Program rule:</strong> CR - Check Grade</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckGrade.java">CheckGrade.java</a></li>
+</ul>
+
+<h4 id="morphology">Morphology</h4>
+
+<p>Verifies that the morphology code is a valid ICD-O-3 code. In DHIS2, this check does not require a dedicated program rule because the morphology field is a closed option set — validity is guaranteed by the data entry interface.</p>
+
+<ul>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckMorphology.java">CheckMorphology.java</a></li>
+</ul>
+
+<h4 id="sex--morphology">Sex — Morphology</h4>
+
+<p>Identifies <strong>rare</strong> combinations of sex and morphology based on morphological families (from the CanReg5 <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/lookup/MorphFam.txt">MorphFam.txt</a> lookup):</p>
+
+<ul>
+  <li>Male with morphologies from families: Vulva/Vagina, Uterus, Ovary, Female genitalia, Placenta</li>
+  <li>Male with morphology 9084 and behaviour 3</li>
+  <li>
+    <p>Female with morphologies from families: Penis, Prostate/Testis</p>
+  </li>
+  <li><strong>Program rule:</strong> CR - Rare Sex Morphology</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexMorphology.java">CheckSexMorphology.java</a></li>
+</ul>
+
+<h4 id="sex--topography">Sex — Topography</h4>
+
+<p>Identifies <strong>invalid</strong> combinations of sex and topography — anatomically impossible cases:</p>
+
+<ul>
+  <li>Male with topography 510–589 (female genital organs)</li>
+  <li>
+    <p>Female with topography 600–639 (male genital organs)</p>
+  </li>
+  <li><strong>Program rule:</strong> CR - Invalid Sex Topography</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexTopography.java">CheckSexTopography.java</a></li>
+</ul>
+
+<h4 id="topography">Topography</h4>
+
+<p>Verifies that the topography code is a valid ICD-O-3 code, checked against the <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/lookup/O3_10T.txt">O3_10T.txt</a> reference lookup. Like the morphology check, this does not require a program rule because the topography field is a closed option set.</p>
+
+<ul>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopography.java">CheckTopography.java</a></li>
+</ul>
+
+<h4 id="topography--behaviour">Topography — Behaviour</h4>
+
+<p>Identifies <strong>rare</strong> combinations of topography and behaviour. Flags in situ behaviour (code 2) for topography sites where in situ tumours are considered rare:</p>
+
+<ul>
+  <li>
+    <p>Behaviour = 2 and topography in ranges: 400–409, 410–419, 420–429, 470–479, 490–499, 700–729</p>
+  </li>
+  <li><strong>Program rule:</strong> CR - Rare Topography Behaviour</li>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyBehaviour.java">CheckTopographyBehaviour.java</a></li>
+</ul>
+
+<h4 id="topography--morphology">Topography — Morphology</h4>
+
+<p>Identifies <strong>rare</strong> combinations of topography and morphology by evaluating the morphological family against two reference lookup tables:</p>
+
+<ul>
+  <li><strong>MUST list:</strong> combinations where a family <em>must</em> be associated with specific topography sites. If not found, the combination is rare.</li>
+  <li><strong>MUST-NOT list:</strong> combinations where a family <em>must not</em> be associated with specific topography sites. If found, the combination is rare.</li>
+</ul>
+
+<p>Each morphological family is assigned a key:</p>
+
+<ul>
+  <li><strong>NA (*):</strong> accepted with any topography, check passes.</li>
+  <li><strong>Plus (+):</strong> checked against the MUST list.</li>
+  <li><strong>Minus (−):</strong> checked against the MUST-NOT list.</li>
+</ul>
+
+<p>This is one of the most complex checks, requiring multiple intermediate program rules and calculated data elements. It requires a separate trigger — <strong>Run Topography Morphology check</strong>.</p>
+
+<ul>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyMorphology.java">CheckTopographyMorphology.java</a></li>
+</ul>
+
+<h4 id="multiple-primary-tester">Multiple Primary Tester</h4>
+
+<p>Determines whether two or more tumors registered for the same patient represent <strong>duplicate registrations</strong> or <strong>distinct multiple primary tumors</strong>. Unlike all other checks, this operates across tumor events and returns one of three values:</p>
+
+<ul>
+  <li><strong>Duplicate primary</strong></li>
+  <li><strong>Multiple primary</strong></li>
+  <li><strong>Unknown topography</strong></li>
+</ul>
+
+<p>The check evaluates <strong>Morphology Group</strong> and <strong>Topography Group</strong> values derived from the CanReg5 mapping logic. The evaluation follows this sequence:</p>
+
+<ol>
+  <li><strong>Morphology evaluation</strong> — compares current and previous morphology groups to determine if tumours are the same type.</li>
+  <li><strong>Topography evaluation</strong> — performed only when the morphology result is undecided; compares current and previous topography groups.</li>
+</ol>
+
+<p>This check requires a separate trigger — <strong>Run Multiple primary check</strong>.</p>
+
+<ul>
+  <li><strong>CanReg5 reference:</strong> <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/DefaultMultiplePrimaryTester.java">DefaultMultiplePrimaryTester.java</a></li>
+</ul>
+
+<h3 id="summary-of-checks">Summary of Checks</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Check</th>
+      <th>Variables</th>
+      <th>Result</th>
+      <th>CanReg5 Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Age — Incidence Date — Birth Date</td>
+      <td>Age, Incidence Date, Date of Birth</td>
+      <td>Warning</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeIncidenceDateBirthDate.java">CheckAgeIncidenceDateBirthDate.java</a></td>
+    </tr>
+    <tr>
+      <td>Age — Morphology</td>
+      <td>Age, Morphology</td>
+      <td>Rare</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeMorphology.java">CheckAgeMorphology.java</a></td>
+    </tr>
+    <tr>
+      <td>Age — Topography</td>
+      <td>Age, Topography</td>
+      <td>Rare</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopography.java">CheckAgeTopography.java</a></td>
+    </tr>
+    <tr>
+      <td>Age — Topography — Morphology</td>
+      <td>Age, Topography, Morphology</td>
+      <td>Rare</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckAgeTopographyMorphology.java">CheckAgeTopographyMorphology.java</a></td>
+    </tr>
+    <tr>
+      <td>Basis of Diagnosis</td>
+      <td>Basis, Morphology, Topography</td>
+      <td>Rare</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckBasis.java">CheckBasis.java</a></td>
+    </tr>
+    <tr>
+      <td>Grade</td>
+      <td>Behaviour, Morphology, Grade</td>
+      <td>Invalid</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckGrade.java">CheckGrade.java</a></td>
+    </tr>
+    <tr>
+      <td>Morphology</td>
+      <td>Morphology</td>
+      <td>OK (closed option set)</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckMorphology.java">CheckMorphology.java</a></td>
+    </tr>
+    <tr>
+      <td>Sex — Morphology</td>
+      <td>Sex, Morphology, Behaviour</td>
+      <td>Rare</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexMorphology.java">CheckSexMorphology.java</a></td>
+    </tr>
+    <tr>
+      <td>Sex — Topography</td>
+      <td>Sex, Topography</td>
+      <td>Invalid</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckSexTopography.java">CheckSexTopography.java</a></td>
+    </tr>
+    <tr>
+      <td>Topography</td>
+      <td>Topography</td>
+      <td>OK (closed option set)</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopography.java">CheckTopography.java</a></td>
+    </tr>
+    <tr>
+      <td>Topography — Behaviour</td>
+      <td>Topography, Behaviour</td>
+      <td>Rare</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyBehaviour.java">CheckTopographyBehaviour.java</a></td>
+    </tr>
+    <tr>
+      <td>Topography — Morphology</td>
+      <td>Topography, Morphology</td>
+      <td>Rare</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/CheckTopographyMorphology.java">CheckTopographyMorphology.java</a></td>
+    </tr>
+    <tr>
+      <td>Multiple Primary Tester</td>
+      <td>Morphology Group, Topography Group</td>
+      <td>Duplicate / Multiple / Unknown</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/qualitycontrol/DefaultMultiplePrimaryTester.java">DefaultMultiplePrimaryTester.java</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>.  Package dhis2.cancer.registry#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 12:38+0000">2026-04-10</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhis2.org/fhir/cancer-registry/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

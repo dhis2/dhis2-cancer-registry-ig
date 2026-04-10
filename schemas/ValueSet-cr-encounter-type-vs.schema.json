@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-encounter-type-vs.schema.json",
+  "title": "Cancer Registry Encounter Types Value Set Schema",
+  "description": "JSON Schema for Cancer Registry Encounter Types Value Set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type#tumor",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type#source",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type#follow-up"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the Cancer Registry Encounter Types Value Set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-cr-encounter-type-vs.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-encounter-type-vs.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-encounter-type-vs",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.713451"
+}

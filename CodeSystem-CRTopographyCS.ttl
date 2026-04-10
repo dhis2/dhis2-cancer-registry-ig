@@ -1,0 +1,1043 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CRTopographyCS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRTopographyCS</b></p><a name=\"CRTopographyCS\"> </a><a name=\"hcCRTopographyCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"CRTopographyCS-0\"> </a></td><td>External upper lip (000)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRTopographyCS-1\"> </a></td><td>External lower lip (001)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRTopographyCS-2\"> </a></td><td>External lip, NOS (002)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRTopographyCS-3\"> </a></td><td>Mucosa of upper lip (003)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"CRTopographyCS-4\"> </a></td><td>Mucosa of lower lip (004)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"CRTopographyCS-5\"> </a></td><td>Mucosa of lip, NOS (005)</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"CRTopographyCS-6\"> </a></td><td>Commissure of lip (006)</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"CRTopographyCS-8\"> </a></td><td>Overlapping lesion of lip (008)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"CRTopographyCS-9\"> </a></td><td>Lip, NOS (009)</td></tr><tr><td style=\"white-space:nowrap\">19<a name=\"CRTopographyCS-19\"> </a></td><td>Base of tongue, NOS (019)</td></tr><tr><td style=\"white-space:nowrap\">20<a name=\"CRTopographyCS-20\"> </a></td><td>Dorsal surface of tongue, NOS (020)</td></tr><tr><td style=\"white-space:nowrap\">21<a name=\"CRTopographyCS-21\"> </a></td><td>Border of tongue (021)</td></tr><tr><td style=\"white-space:nowrap\">22<a name=\"CRTopographyCS-22\"> </a></td><td>Ventral surface of tongue, NOS (022)</td></tr><tr><td style=\"white-space:nowrap\">23<a name=\"CRTopographyCS-23\"> </a></td><td>Anterior 2/3 of tongue, NOS (023)</td></tr><tr><td style=\"white-space:nowrap\">24<a name=\"CRTopographyCS-24\"> </a></td><td>Lingual tonsil (024)</td></tr><tr><td style=\"white-space:nowrap\">28<a name=\"CRTopographyCS-28\"> </a></td><td>Overlapping lesion of tongue (028)</td></tr><tr><td style=\"white-space:nowrap\">29<a name=\"CRTopographyCS-29\"> </a></td><td>Tongue, NOS (029)</td></tr><tr><td style=\"white-space:nowrap\">30<a name=\"CRTopographyCS-30\"> </a></td><td>Upper Gum (030)</td></tr><tr><td style=\"white-space:nowrap\">31<a name=\"CRTopographyCS-31\"> </a></td><td>Lower gum (031)</td></tr><tr><td style=\"white-space:nowrap\">39<a name=\"CRTopographyCS-39\"> </a></td><td>Gum, NOS (039)</td></tr><tr><td style=\"white-space:nowrap\">40<a name=\"CRTopographyCS-40\"> </a></td><td>Anterior floor of mouth (040)</td></tr><tr><td style=\"white-space:nowrap\">41<a name=\"CRTopographyCS-41\"> </a></td><td>Lateral floor of mouth (041)</td></tr><tr><td style=\"white-space:nowrap\">48<a name=\"CRTopographyCS-48\"> </a></td><td>Overlapping lesion of floor of mouth (048)</td></tr><tr><td style=\"white-space:nowrap\">49<a name=\"CRTopographyCS-49\"> </a></td><td>Floor of mouth, NOS (049)</td></tr><tr><td style=\"white-space:nowrap\">50<a name=\"CRTopographyCS-50\"> </a></td><td>Hard palate (050)</td></tr><tr><td style=\"white-space:nowrap\">51<a name=\"CRTopographyCS-51\"> </a></td><td>Soft palate, NOS (051)</td></tr><tr><td style=\"white-space:nowrap\">52<a name=\"CRTopographyCS-52\"> </a></td><td>Uvula (052)</td></tr><tr><td style=\"white-space:nowrap\">58<a name=\"CRTopographyCS-58\"> </a></td><td>Overlapping lesion of palate (058)</td></tr><tr><td style=\"white-space:nowrap\">59<a name=\"CRTopographyCS-59\"> </a></td><td>Palate, NOS (059)</td></tr><tr><td style=\"white-space:nowrap\">60<a name=\"CRTopographyCS-60\"> </a></td><td>Cheeck mucosa (060)</td></tr><tr><td style=\"white-space:nowrap\">61<a name=\"CRTopographyCS-61\"> </a></td><td>Vestibule of mouth (061)</td></tr><tr><td style=\"white-space:nowrap\">62<a name=\"CRTopographyCS-62\"> </a></td><td>Retromolar area (062)</td></tr><tr><td style=\"white-space:nowrap\">68<a name=\"CRTopographyCS-68\"> </a></td><td>Overlapping lesion of other and unspecified parts of mouth (068)</td></tr><tr><td style=\"white-space:nowrap\">69<a name=\"CRTopographyCS-69\"> </a></td><td>Mouth, NOS (069)</td></tr><tr><td style=\"white-space:nowrap\">79<a name=\"CRTopographyCS-79\"> </a></td><td>Parotid gland (079)</td></tr><tr><td style=\"white-space:nowrap\">80<a name=\"CRTopographyCS-80\"> </a></td><td>Submandibular gland (080)</td></tr><tr><td style=\"white-space:nowrap\">81<a name=\"CRTopographyCS-81\"> </a></td><td>Sublingual gland (081)</td></tr><tr><td style=\"white-space:nowrap\">88<a name=\"CRTopographyCS-88\"> </a></td><td>Overlapping lesion of major salivary glands (088)</td></tr><tr><td style=\"white-space:nowrap\">89<a name=\"CRTopographyCS-89\"> </a></td><td>Major salivary gland, NOS (089)</td></tr><tr><td style=\"white-space:nowrap\">90<a name=\"CRTopographyCS-90\"> </a></td><td>Tonsillar fossa (090)</td></tr><tr><td style=\"white-space:nowrap\">91<a name=\"CRTopographyCS-91\"> </a></td><td>Tonsillar pillar (091)</td></tr><tr><td style=\"white-space:nowrap\">98<a name=\"CRTopographyCS-98\"> </a></td><td>Overlapping lesion of tonsil (098)</td></tr><tr><td style=\"white-space:nowrap\">99<a name=\"CRTopographyCS-99\"> </a></td><td>Tonsil, NOS (099)</td></tr><tr><td style=\"white-space:nowrap\">100<a name=\"CRTopographyCS-100\"> </a></td><td>Vallecula (100)</td></tr><tr><td style=\"white-space:nowrap\">101<a name=\"CRTopographyCS-101\"> </a></td><td>Anterior surface of epiglottis (101)</td></tr><tr><td style=\"white-space:nowrap\">102<a name=\"CRTopographyCS-102\"> </a></td><td>Lateral wall of oropharynx (102)</td></tr><tr><td style=\"white-space:nowrap\">103<a name=\"CRTopographyCS-103\"> </a></td><td>Posterior wall of oropharynx (103)</td></tr><tr><td style=\"white-space:nowrap\">104<a name=\"CRTopographyCS-104\"> </a></td><td>Branchial cleft (104)</td></tr><tr><td style=\"white-space:nowrap\">108<a name=\"CRTopographyCS-108\"> </a></td><td>Overlapping lesions of oropharynx (108)</td></tr><tr><td style=\"white-space:nowrap\">109<a name=\"CRTopographyCS-109\"> </a></td><td>Oropharynx, NOS (109)</td></tr><tr><td style=\"white-space:nowrap\">110<a name=\"CRTopographyCS-110\"> </a></td><td>Superior wall of nasopharynx (110)</td></tr><tr><td style=\"white-space:nowrap\">111<a name=\"CRTopographyCS-111\"> </a></td><td>Posterior wall of nasopharynx (111)</td></tr><tr><td style=\"white-space:nowrap\">112<a name=\"CRTopographyCS-112\"> </a></td><td>Lateral wall of nasopharynx (112)</td></tr><tr><td style=\"white-space:nowrap\">113<a name=\"CRTopographyCS-113\"> </a></td><td>Anterior wall of nasopharynx (113)</td></tr><tr><td style=\"white-space:nowrap\">118<a name=\"CRTopographyCS-118\"> </a></td><td>Overlapping lesion of nasopharynx (118)</td></tr><tr><td style=\"white-space:nowrap\">119<a name=\"CRTopographyCS-119\"> </a></td><td>Nasopharynx, NOS (119)</td></tr><tr><td style=\"white-space:nowrap\">129<a name=\"CRTopographyCS-129\"> </a></td><td>Pyriform sinus (129)</td></tr><tr><td style=\"white-space:nowrap\">130<a name=\"CRTopographyCS-130\"> </a></td><td>Postcricoid region (130)</td></tr><tr><td style=\"white-space:nowrap\">131<a name=\"CRTopographyCS-131\"> </a></td><td>Hypopharyngeal aspect of aryepiglottic fold (131)</td></tr><tr><td style=\"white-space:nowrap\">132<a name=\"CRTopographyCS-132\"> </a></td><td>Posterior wall of hypopharynx (132)</td></tr><tr><td style=\"white-space:nowrap\">138<a name=\"CRTopographyCS-138\"> </a></td><td>Overlapping lesion of hypopharynx (138)</td></tr><tr><td style=\"white-space:nowrap\">139<a name=\"CRTopographyCS-139\"> </a></td><td>Hypopharynx, NOS (139)</td></tr><tr><td style=\"white-space:nowrap\">140<a name=\"CRTopographyCS-140\"> </a></td><td>Pharynx, NOS (140)</td></tr><tr><td style=\"white-space:nowrap\">141<a name=\"CRTopographyCS-141\"> </a></td><td>Laryngopharynx (OLD CODE) (141)</td></tr><tr><td style=\"white-space:nowrap\">142<a name=\"CRTopographyCS-142\"> </a></td><td>Waldeyer ring (142)</td></tr><tr><td style=\"white-space:nowrap\">148<a name=\"CRTopographyCS-148\"> </a></td><td>Overlapping lesion of lip, oral cavity and pharynx (148)</td></tr><tr><td style=\"white-space:nowrap\">150<a name=\"CRTopographyCS-150\"> </a></td><td>Cervical esophagus (150)</td></tr><tr><td style=\"white-space:nowrap\">151<a name=\"CRTopographyCS-151\"> </a></td><td>Thoracic esophagus (151)</td></tr><tr><td style=\"white-space:nowrap\">152<a name=\"CRTopographyCS-152\"> </a></td><td>Abdominal esophagus (152)</td></tr><tr><td style=\"white-space:nowrap\">153<a name=\"CRTopographyCS-153\"> </a></td><td>Upper third of esophagus (153)</td></tr><tr><td style=\"white-space:nowrap\">154<a name=\"CRTopographyCS-154\"> </a></td><td>Middle third of esophagus (154)</td></tr><tr><td style=\"white-space:nowrap\">155<a name=\"CRTopographyCS-155\"> </a></td><td>Lower third of esophagus (155)</td></tr><tr><td style=\"white-space:nowrap\">158<a name=\"CRTopographyCS-158\"> </a></td><td>Overlapping lesion of esophagus (158)</td></tr><tr><td style=\"white-space:nowrap\">159<a name=\"CRTopographyCS-159\"> </a></td><td>Esophagus, NOS (159)</td></tr><tr><td style=\"white-space:nowrap\">160<a name=\"CRTopographyCS-160\"> </a></td><td>Cardia, NOS (160)</td></tr><tr><td style=\"white-space:nowrap\">161<a name=\"CRTopographyCS-161\"> </a></td><td>Fundus of stomach (161)</td></tr><tr><td style=\"white-space:nowrap\">162<a name=\"CRTopographyCS-162\"> </a></td><td>Body of stomach (162)</td></tr><tr><td style=\"white-space:nowrap\">163<a name=\"CRTopographyCS-163\"> </a></td><td>Gastric antrum (163)</td></tr><tr><td style=\"white-space:nowrap\">164<a name=\"CRTopographyCS-164\"> </a></td><td>Pylorus (164)</td></tr><tr><td style=\"white-space:nowrap\">165<a name=\"CRTopographyCS-165\"> </a></td><td>Lesser curvature of stomach, NOS (165)</td></tr><tr><td style=\"white-space:nowrap\">166<a name=\"CRTopographyCS-166\"> </a></td><td>Greater curvature of stomach, NOS (166)</td></tr><tr><td style=\"white-space:nowrap\">168<a name=\"CRTopographyCS-168\"> </a></td><td>Overlapping lesion of stomach (168)</td></tr><tr><td style=\"white-space:nowrap\">169<a name=\"CRTopographyCS-169\"> </a></td><td>Stomach, NOS (169)</td></tr><tr><td style=\"white-space:nowrap\">170<a name=\"CRTopographyCS-170\"> </a></td><td>Duodenum (170)</td></tr><tr><td style=\"white-space:nowrap\">171<a name=\"CRTopographyCS-171\"> </a></td><td>Jejunum (171)</td></tr><tr><td style=\"white-space:nowrap\">172<a name=\"CRTopographyCS-172\"> </a></td><td>Ileum (172)</td></tr><tr><td style=\"white-space:nowrap\">173<a name=\"CRTopographyCS-173\"> </a></td><td>Meckel diverticulum (173)</td></tr><tr><td style=\"white-space:nowrap\">178<a name=\"CRTopographyCS-178\"> </a></td><td>Overlapping lesion of small intestine (178)</td></tr><tr><td style=\"white-space:nowrap\">179<a name=\"CRTopographyCS-179\"> </a></td><td>Small intestine, NOS (179)</td></tr><tr><td style=\"white-space:nowrap\">180<a name=\"CRTopographyCS-180\"> </a></td><td>Cecum (180)</td></tr><tr><td style=\"white-space:nowrap\">181<a name=\"CRTopographyCS-181\"> </a></td><td>Appendix (181)</td></tr><tr><td style=\"white-space:nowrap\">182<a name=\"CRTopographyCS-182\"> </a></td><td>Ascending colon (182)</td></tr><tr><td style=\"white-space:nowrap\">183<a name=\"CRTopographyCS-183\"> </a></td><td>Hepatic flexure of colon (183)</td></tr><tr><td style=\"white-space:nowrap\">184<a name=\"CRTopographyCS-184\"> </a></td><td>Transverse colon (184)</td></tr><tr><td style=\"white-space:nowrap\">185<a name=\"CRTopographyCS-185\"> </a></td><td>Splenic flexure of colon (185)</td></tr><tr><td style=\"white-space:nowrap\">186<a name=\"CRTopographyCS-186\"> </a></td><td>Descending colon (186)</td></tr><tr><td style=\"white-space:nowrap\">187<a name=\"CRTopographyCS-187\"> </a></td><td>Sigmoid colon (187)</td></tr><tr><td style=\"white-space:nowrap\">188<a name=\"CRTopographyCS-188\"> </a></td><td>Overlapping lesion of colon (188)</td></tr><tr><td style=\"white-space:nowrap\">189<a name=\"CRTopographyCS-189\"> </a></td><td>Colon, NOS (189)</td></tr><tr><td style=\"white-space:nowrap\">199<a name=\"CRTopographyCS-199\"> </a></td><td>Rectosigmoid junction (199)</td></tr><tr><td style=\"white-space:nowrap\">209<a name=\"CRTopographyCS-209\"> </a></td><td>Rectum, NOS (209)</td></tr><tr><td style=\"white-space:nowrap\">210<a name=\"CRTopographyCS-210\"> </a></td><td>Anus, NOS (210)</td></tr><tr><td style=\"white-space:nowrap\">211<a name=\"CRTopographyCS-211\"> </a></td><td>Anal canal (211)</td></tr><tr><td style=\"white-space:nowrap\">212<a name=\"CRTopographyCS-212\"> </a></td><td>Cloacogenic zone (212)</td></tr><tr><td style=\"white-space:nowrap\">218<a name=\"CRTopographyCS-218\"> </a></td><td>Overlapping lesion of rectum, anus and anal canal (218)</td></tr><tr><td style=\"white-space:nowrap\">220<a name=\"CRTopographyCS-220\"> </a></td><td>Liver (220)</td></tr><tr><td style=\"white-space:nowrap\">221<a name=\"CRTopographyCS-221\"> </a></td><td>intrahepatic bile duct (221)</td></tr><tr><td style=\"white-space:nowrap\">239<a name=\"CRTopographyCS-239\"> </a></td><td>Gallbladder (239)</td></tr><tr><td style=\"white-space:nowrap\">240<a name=\"CRTopographyCS-240\"> </a></td><td>Extrahepatic bile duct (240)</td></tr><tr><td style=\"white-space:nowrap\">241<a name=\"CRTopographyCS-241\"> </a></td><td>Ampulla of Vater (241)</td></tr><tr><td style=\"white-space:nowrap\">248<a name=\"CRTopographyCS-248\"> </a></td><td>Overlapping lesion of billiary tract (248)</td></tr><tr><td style=\"white-space:nowrap\">249<a name=\"CRTopographyCS-249\"> </a></td><td>Billiary tract, NOS (249)</td></tr><tr><td style=\"white-space:nowrap\">250<a name=\"CRTopographyCS-250\"> </a></td><td>Head of pancreas (250)</td></tr><tr><td style=\"white-space:nowrap\">251<a name=\"CRTopographyCS-251\"> </a></td><td>Body of pancreas (251)</td></tr><tr><td style=\"white-space:nowrap\">252<a name=\"CRTopographyCS-252\"> </a></td><td>Tail of pancreas (252)</td></tr><tr><td style=\"white-space:nowrap\">253<a name=\"CRTopographyCS-253\"> </a></td><td>Pancreatic duct (253)</td></tr><tr><td style=\"white-space:nowrap\">254<a name=\"CRTopographyCS-254\"> </a></td><td>Islets of Langerhans (254)</td></tr><tr><td style=\"white-space:nowrap\">257<a name=\"CRTopographyCS-257\"> </a></td><td>Other specified parts of pancreas (257)</td></tr><tr><td style=\"white-space:nowrap\">258<a name=\"CRTopographyCS-258\"> </a></td><td>Overlapping lesion of pancreas (258)</td></tr><tr><td style=\"white-space:nowrap\">259<a name=\"CRTopographyCS-259\"> </a></td><td>Pancreas, NOS (259)</td></tr><tr><td style=\"white-space:nowrap\">260<a name=\"CRTopographyCS-260\"> </a></td><td>Intestinal tract, NOS (260)</td></tr><tr><td style=\"white-space:nowrap\">268<a name=\"CRTopographyCS-268\"> </a></td><td>Overlapping lesion of digestive system (268)</td></tr><tr><td style=\"white-space:nowrap\">269<a name=\"CRTopographyCS-269\"> </a></td><td>Gastrointestinal tract, NOS (269)</td></tr><tr><td style=\"white-space:nowrap\">300<a name=\"CRTopographyCS-300\"> </a></td><td>Nasal cavity (300)</td></tr><tr><td style=\"white-space:nowrap\">301<a name=\"CRTopographyCS-301\"> </a></td><td>Middle ear (301)</td></tr><tr><td style=\"white-space:nowrap\">310<a name=\"CRTopographyCS-310\"> </a></td><td>Maxillary sinus (310)</td></tr><tr><td style=\"white-space:nowrap\">311<a name=\"CRTopographyCS-311\"> </a></td><td>Ethmoid sinus (311)</td></tr><tr><td style=\"white-space:nowrap\">312<a name=\"CRTopographyCS-312\"> </a></td><td>Frontal sinus (312)</td></tr><tr><td style=\"white-space:nowrap\">313<a name=\"CRTopographyCS-313\"> </a></td><td>Sphenoid sinus (313)</td></tr><tr><td style=\"white-space:nowrap\">318<a name=\"CRTopographyCS-318\"> </a></td><td>Overlapping lesion of accessory sinuses (318)</td></tr><tr><td style=\"white-space:nowrap\">319<a name=\"CRTopographyCS-319\"> </a></td><td>Accessory sinus, NOS (319)</td></tr><tr><td style=\"white-space:nowrap\">320<a name=\"CRTopographyCS-320\"> </a></td><td>Glottis (320)</td></tr><tr><td style=\"white-space:nowrap\">321<a name=\"CRTopographyCS-321\"> </a></td><td>Supraglottis (321)</td></tr><tr><td style=\"white-space:nowrap\">322<a name=\"CRTopographyCS-322\"> </a></td><td>Subglottis (322)</td></tr><tr><td style=\"white-space:nowrap\">323<a name=\"CRTopographyCS-323\"> </a></td><td>Laryngeal cartilage (323)</td></tr><tr><td style=\"white-space:nowrap\">328<a name=\"CRTopographyCS-328\"> </a></td><td>Overlapping lesion of larynx (328)</td></tr><tr><td style=\"white-space:nowrap\">329<a name=\"CRTopographyCS-329\"> </a></td><td>Larynx, NOS (329)</td></tr><tr><td style=\"white-space:nowrap\">339<a name=\"CRTopographyCS-339\"> </a></td><td>Trachea (339)</td></tr><tr><td style=\"white-space:nowrap\">340<a name=\"CRTopographyCS-340\"> </a></td><td>Main bronchus (340)</td></tr><tr><td style=\"white-space:nowrap\">341<a name=\"CRTopographyCS-341\"> </a></td><td>Upper lobe, lung (341)</td></tr><tr><td style=\"white-space:nowrap\">342<a name=\"CRTopographyCS-342\"> </a></td><td>Middle lobe, lung (342)</td></tr><tr><td style=\"white-space:nowrap\">343<a name=\"CRTopographyCS-343\"> </a></td><td>Lower lobe, lung (343)</td></tr><tr><td style=\"white-space:nowrap\">348<a name=\"CRTopographyCS-348\"> </a></td><td>Overlapping lesion of lung (348)</td></tr><tr><td style=\"white-space:nowrap\">349<a name=\"CRTopographyCS-349\"> </a></td><td>Lung, NOS (349)</td></tr><tr><td style=\"white-space:nowrap\">379<a name=\"CRTopographyCS-379\"> </a></td><td>Thymus (379)</td></tr><tr><td style=\"white-space:nowrap\">380<a name=\"CRTopographyCS-380\"> </a></td><td>Heart (380)</td></tr><tr><td style=\"white-space:nowrap\">381<a name=\"CRTopographyCS-381\"> </a></td><td>Anterior mediastinum (381)</td></tr><tr><td style=\"white-space:nowrap\">382<a name=\"CRTopographyCS-382\"> </a></td><td>Posterior mediastinum (382)</td></tr><tr><td style=\"white-space:nowrap\">383<a name=\"CRTopographyCS-383\"> </a></td><td>Mediastinum, NOS (383)</td></tr><tr><td style=\"white-space:nowrap\">384<a name=\"CRTopographyCS-384\"> </a></td><td>Pleura, NOS (384)</td></tr><tr><td style=\"white-space:nowrap\">388<a name=\"CRTopographyCS-388\"> </a></td><td>Overlapping lesion of heart, mediastinum and pleura (388)</td></tr><tr><td style=\"white-space:nowrap\">390<a name=\"CRTopographyCS-390\"> </a></td><td>Upper respiratory tract, NOS (390)</td></tr><tr><td style=\"white-space:nowrap\">398<a name=\"CRTopographyCS-398\"> </a></td><td>Overlapping lesion of respiratory system and intrathoracic organs (398)</td></tr><tr><td style=\"white-space:nowrap\">399<a name=\"CRTopographyCS-399\"> </a></td><td>Ill-defined sites within respiratory system (399)</td></tr><tr><td style=\"white-space:nowrap\">400<a name=\"CRTopographyCS-400\"> </a></td><td>Long bones of upper limb, scapula and associated joints (400)</td></tr><tr><td style=\"white-space:nowrap\">401<a name=\"CRTopographyCS-401\"> </a></td><td>Short bones of upper limb and associated joints (401)</td></tr><tr><td style=\"white-space:nowrap\">402<a name=\"CRTopographyCS-402\"> </a></td><td>Long bones of lower limb and associated joints (402)</td></tr><tr><td style=\"white-space:nowrap\">403<a name=\"CRTopographyCS-403\"> </a></td><td>Short bones of lower limb and associated joints (403)</td></tr><tr><td style=\"white-space:nowrap\">408<a name=\"CRTopographyCS-408\"> </a></td><td>Overlapping lesion of bones, joints and articular cartilage of limbs (408)</td></tr><tr><td style=\"white-space:nowrap\">409<a name=\"CRTopographyCS-409\"> </a></td><td>Bone of limb, NOS (409)</td></tr><tr><td style=\"white-space:nowrap\">410<a name=\"CRTopographyCS-410\"> </a></td><td>Bones of skull and face and associated joints (410)</td></tr><tr><td style=\"white-space:nowrap\">411<a name=\"CRTopographyCS-411\"> </a></td><td>Mandible (411)</td></tr><tr><td style=\"white-space:nowrap\">412<a name=\"CRTopographyCS-412\"> </a></td><td>Vertebral column (412)</td></tr><tr><td style=\"white-space:nowrap\">413<a name=\"CRTopographyCS-413\"> </a></td><td>Rib, sternum, clavicle and associated joints (413)</td></tr><tr><td style=\"white-space:nowrap\">414<a name=\"CRTopographyCS-414\"> </a></td><td>Pelvic bones, sacrum, coccyx and associated joints (414)</td></tr><tr><td style=\"white-space:nowrap\">418<a name=\"CRTopographyCS-418\"> </a></td><td>Overlapping lesion of bones, joints and articular cartilage (418)</td></tr><tr><td style=\"white-space:nowrap\">419<a name=\"CRTopographyCS-419\"> </a></td><td>Bone, NOS (419)</td></tr><tr><td style=\"white-space:nowrap\">420<a name=\"CRTopographyCS-420\"> </a></td><td>Blood (420)</td></tr><tr><td style=\"white-space:nowrap\">421<a name=\"CRTopographyCS-421\"> </a></td><td>Bone marrow (421)</td></tr><tr><td style=\"white-space:nowrap\">422<a name=\"CRTopographyCS-422\"> </a></td><td>Spleen (422)</td></tr><tr><td style=\"white-space:nowrap\">423<a name=\"CRTopographyCS-423\"> </a></td><td>Reticuloendothelial system, NOS (423)</td></tr><tr><td style=\"white-space:nowrap\">424<a name=\"CRTopographyCS-424\"> </a></td><td>Hematopoietic system, NOS (424)</td></tr><tr><td style=\"white-space:nowrap\">440<a name=\"CRTopographyCS-440\"> </a></td><td>Skin of lip, NOS (440)</td></tr><tr><td style=\"white-space:nowrap\">441<a name=\"CRTopographyCS-441\"> </a></td><td>Eyelid (441)</td></tr><tr><td style=\"white-space:nowrap\">442<a name=\"CRTopographyCS-442\"> </a></td><td>External ear (442)</td></tr><tr><td style=\"white-space:nowrap\">443<a name=\"CRTopographyCS-443\"> </a></td><td>Skin of other and unspecified parts of face (443)</td></tr><tr><td style=\"white-space:nowrap\">444<a name=\"CRTopographyCS-444\"> </a></td><td>Skin of scalp and neck (444)</td></tr><tr><td style=\"white-space:nowrap\">445<a name=\"CRTopographyCS-445\"> </a></td><td>Skin of trunk (445)</td></tr><tr><td style=\"white-space:nowrap\">446<a name=\"CRTopographyCS-446\"> </a></td><td>Skin of upper limb and shoulder (446)</td></tr><tr><td style=\"white-space:nowrap\">447<a name=\"CRTopographyCS-447\"> </a></td><td>Skin of lower limb and hip (447)</td></tr><tr><td style=\"white-space:nowrap\">448<a name=\"CRTopographyCS-448\"> </a></td><td>Overlapping lesion of skin (448)</td></tr><tr><td style=\"white-space:nowrap\">449<a name=\"CRTopographyCS-449\"> </a></td><td>Skin, NOS (449)</td></tr><tr><td style=\"white-space:nowrap\">470<a name=\"CRTopographyCS-470\"> </a></td><td>Peripheral nerves and autonomic nervous system of head, face, and neck (470)</td></tr><tr><td style=\"white-space:nowrap\">471<a name=\"CRTopographyCS-471\"> </a></td><td>Peripheral nerves and autonomic nervous system of upper limb and shoulder (471)</td></tr><tr><td style=\"white-space:nowrap\">472<a name=\"CRTopographyCS-472\"> </a></td><td>Peripheral nerves and autonomic nervous system of lower limb and hip (472)</td></tr><tr><td style=\"white-space:nowrap\">473<a name=\"CRTopographyCS-473\"> </a></td><td>Peripheral nerves and autonomic nervous system of thorax (473)</td></tr><tr><td style=\"white-space:nowrap\">474<a name=\"CRTopographyCS-474\"> </a></td><td>Peripheral nerves and autonomic nervous system of abdomen (474)</td></tr><tr><td style=\"white-space:nowrap\">475<a name=\"CRTopographyCS-475\"> </a></td><td>Peripheral nerves and autonomic nervous system of pelvis (475)</td></tr><tr><td style=\"white-space:nowrap\">476<a name=\"CRTopographyCS-476\"> </a></td><td>Peripheral nerves and autonomic nervous system of trunk, NOS (476)</td></tr><tr><td style=\"white-space:nowrap\">478<a name=\"CRTopographyCS-478\"> </a></td><td>Overlapping lesion of peripheral nerves and autonomic nervous system (478)</td></tr><tr><td style=\"white-space:nowrap\">479<a name=\"CRTopographyCS-479\"> </a></td><td>Autonomic nervous system, NOS (479)</td></tr><tr><td style=\"white-space:nowrap\">480<a name=\"CRTopographyCS-480\"> </a></td><td>Retroperitoneum (480)</td></tr><tr><td style=\"white-space:nowrap\">481<a name=\"CRTopographyCS-481\"> </a></td><td>Specified parts of peritoneum (481)</td></tr><tr><td style=\"white-space:nowrap\">482<a name=\"CRTopographyCS-482\"> </a></td><td>Peritoneum, NOS (482)</td></tr><tr><td style=\"white-space:nowrap\">488<a name=\"CRTopographyCS-488\"> </a></td><td>Overlapping lesion of retroperitoneum and peritoneum (488)</td></tr><tr><td style=\"white-space:nowrap\">490<a name=\"CRTopographyCS-490\"> </a></td><td>Connective, Subcutaneous and other soft tissues of head, face, and neck (490)</td></tr><tr><td style=\"white-space:nowrap\">491<a name=\"CRTopographyCS-491\"> </a></td><td>Connective, Subcutaneous and other soft tissues of upper limb and shoulder (491)</td></tr><tr><td style=\"white-space:nowrap\">492<a name=\"CRTopographyCS-492\"> </a></td><td>Connective, Subcutaneous and other soft tissues of lower limb and hip (492)</td></tr><tr><td style=\"white-space:nowrap\">493<a name=\"CRTopographyCS-493\"> </a></td><td>Connective, Subcutaneous and other soft tissues of thorax (493)</td></tr><tr><td style=\"white-space:nowrap\">494<a name=\"CRTopographyCS-494\"> </a></td><td>Connective, Subcutaneous and other soft tissues of abdomen (494)</td></tr><tr><td style=\"white-space:nowrap\">495<a name=\"CRTopographyCS-495\"> </a></td><td>Connective, Subcutaneous and other soft tissues of pelvis (495)</td></tr><tr><td style=\"white-space:nowrap\">496<a name=\"CRTopographyCS-496\"> </a></td><td>Connective, Subcutaneous and other soft tissues of trunk, NOS (496)</td></tr><tr><td style=\"white-space:nowrap\">498<a name=\"CRTopographyCS-498\"> </a></td><td>Overlapping lesion of connective, subcutaneous and other soft tissues (498)</td></tr><tr><td style=\"white-space:nowrap\">499<a name=\"CRTopographyCS-499\"> </a></td><td>Connective, Subcutaneous and other soft tissues, NOS (499)</td></tr><tr><td style=\"white-space:nowrap\">500<a name=\"CRTopographyCS-500\"> </a></td><td>Nipple (500)</td></tr><tr><td style=\"white-space:nowrap\">501<a name=\"CRTopographyCS-501\"> </a></td><td>Central portion of breast (501)</td></tr><tr><td style=\"white-space:nowrap\">502<a name=\"CRTopographyCS-502\"> </a></td><td>Upper-inner quadrant of breast (502)</td></tr><tr><td style=\"white-space:nowrap\">503<a name=\"CRTopographyCS-503\"> </a></td><td>Lower-inner quadrant of breast (503)</td></tr><tr><td style=\"white-space:nowrap\">504<a name=\"CRTopographyCS-504\"> </a></td><td>Upper-outer quadrant of breast (504)</td></tr><tr><td style=\"white-space:nowrap\">505<a name=\"CRTopographyCS-505\"> </a></td><td>Lower-outer quadrant of breast (505)</td></tr><tr><td style=\"white-space:nowrap\">506<a name=\"CRTopographyCS-506\"> </a></td><td>Axillary tail of breast (506)</td></tr><tr><td style=\"white-space:nowrap\">508<a name=\"CRTopographyCS-508\"> </a></td><td>Overlapping lesion of breast (508)</td></tr><tr><td style=\"white-space:nowrap\">509<a name=\"CRTopographyCS-509\"> </a></td><td>Breast, NOS (509)</td></tr><tr><td style=\"white-space:nowrap\">510<a name=\"CRTopographyCS-510\"> </a></td><td>Labium majus (510)</td></tr><tr><td style=\"white-space:nowrap\">511<a name=\"CRTopographyCS-511\"> </a></td><td>Labium minus (511)</td></tr><tr><td style=\"white-space:nowrap\">512<a name=\"CRTopographyCS-512\"> </a></td><td>Clitorus (512)</td></tr><tr><td style=\"white-space:nowrap\">518<a name=\"CRTopographyCS-518\"> </a></td><td>Overlapping lesion of vulva (518)</td></tr><tr><td style=\"white-space:nowrap\">519<a name=\"CRTopographyCS-519\"> </a></td><td>Vulva, NOS (519)</td></tr><tr><td style=\"white-space:nowrap\">529<a name=\"CRTopographyCS-529\"> </a></td><td>Vagina, NOS (529)</td></tr><tr><td style=\"white-space:nowrap\">530<a name=\"CRTopographyCS-530\"> </a></td><td>Endocervix (530)</td></tr><tr><td style=\"white-space:nowrap\">531<a name=\"CRTopographyCS-531\"> </a></td><td>Exocervix (531)</td></tr><tr><td style=\"white-space:nowrap\">538<a name=\"CRTopographyCS-538\"> </a></td><td>Overlapping lesion of cervix uteri (538)</td></tr><tr><td style=\"white-space:nowrap\">539<a name=\"CRTopographyCS-539\"> </a></td><td>Cervix uteri (539)</td></tr><tr><td style=\"white-space:nowrap\">540<a name=\"CRTopographyCS-540\"> </a></td><td>Isthmus uteri (540)</td></tr><tr><td style=\"white-space:nowrap\">541<a name=\"CRTopographyCS-541\"> </a></td><td>Endometrium (541)</td></tr><tr><td style=\"white-space:nowrap\">542<a name=\"CRTopographyCS-542\"> </a></td><td>Myometrium (542)</td></tr><tr><td style=\"white-space:nowrap\">543<a name=\"CRTopographyCS-543\"> </a></td><td>Fundus uteri (543)</td></tr><tr><td style=\"white-space:nowrap\">548<a name=\"CRTopographyCS-548\"> </a></td><td>Overlapping lesion of corpus uteri (548)</td></tr><tr><td style=\"white-space:nowrap\">549<a name=\"CRTopographyCS-549\"> </a></td><td>Corpus uteri (549)</td></tr><tr><td style=\"white-space:nowrap\">559<a name=\"CRTopographyCS-559\"> </a></td><td>Uterus, NOS (559)</td></tr><tr><td style=\"white-space:nowrap\">569<a name=\"CRTopographyCS-569\"> </a></td><td>Ovary (569)</td></tr><tr><td style=\"white-space:nowrap\">570<a name=\"CRTopographyCS-570\"> </a></td><td>Fallopian tube (570)</td></tr><tr><td style=\"white-space:nowrap\">571<a name=\"CRTopographyCS-571\"> </a></td><td>Broad ligament (571)</td></tr><tr><td style=\"white-space:nowrap\">572<a name=\"CRTopographyCS-572\"> </a></td><td>Round ligament (572)</td></tr><tr><td style=\"white-space:nowrap\">573<a name=\"CRTopographyCS-573\"> </a></td><td>Parametrium (573)</td></tr><tr><td style=\"white-space:nowrap\">574<a name=\"CRTopographyCS-574\"> </a></td><td>Uterine adnexa (574)</td></tr><tr><td style=\"white-space:nowrap\">577<a name=\"CRTopographyCS-577\"> </a></td><td>Other specified parts of female genital organs (577)</td></tr><tr><td style=\"white-space:nowrap\">578<a name=\"CRTopographyCS-578\"> </a></td><td>Overlapping lesion of female genital organs (578)</td></tr><tr><td style=\"white-space:nowrap\">579<a name=\"CRTopographyCS-579\"> </a></td><td>Female genital tract, NOS (579)</td></tr><tr><td style=\"white-space:nowrap\">589<a name=\"CRTopographyCS-589\"> </a></td><td>Placenta (589)</td></tr><tr><td style=\"white-space:nowrap\">600<a name=\"CRTopographyCS-600\"> </a></td><td>Prepuce (600)</td></tr><tr><td style=\"white-space:nowrap\">601<a name=\"CRTopographyCS-601\"> </a></td><td>Glans penis (601)</td></tr><tr><td style=\"white-space:nowrap\">602<a name=\"CRTopographyCS-602\"> </a></td><td>Body of penis (602)</td></tr><tr><td style=\"white-space:nowrap\">608<a name=\"CRTopographyCS-608\"> </a></td><td>Overlapping lesion of penis (608)</td></tr><tr><td style=\"white-space:nowrap\">609<a name=\"CRTopographyCS-609\"> </a></td><td>Penis, NOS (609)</td></tr><tr><td style=\"white-space:nowrap\">619<a name=\"CRTopographyCS-619\"> </a></td><td>Prostate gland (619)</td></tr><tr><td style=\"white-space:nowrap\">620<a name=\"CRTopographyCS-620\"> </a></td><td>Undescended testis (620)</td></tr><tr><td style=\"white-space:nowrap\">621<a name=\"CRTopographyCS-621\"> </a></td><td>Descended testis (621)</td></tr><tr><td style=\"white-space:nowrap\">629<a name=\"CRTopographyCS-629\"> </a></td><td>Testis, NOS (629)</td></tr><tr><td style=\"white-space:nowrap\">630<a name=\"CRTopographyCS-630\"> </a></td><td>Epididymis (630)</td></tr><tr><td style=\"white-space:nowrap\">631<a name=\"CRTopographyCS-631\"> </a></td><td>Spermatic cord (631)</td></tr><tr><td style=\"white-space:nowrap\">632<a name=\"CRTopographyCS-632\"> </a></td><td>Scrotum, NOS (632)</td></tr><tr><td style=\"white-space:nowrap\">637<a name=\"CRTopographyCS-637\"> </a></td><td>Other specified parts of male genital organs (637)</td></tr><tr><td style=\"white-space:nowrap\">638<a name=\"CRTopographyCS-638\"> </a></td><td>Overlapping lesion of male genital organs (638)</td></tr><tr><td style=\"white-space:nowrap\">639<a name=\"CRTopographyCS-639\"> </a></td><td>Male genital organs, NOS (639)</td></tr><tr><td style=\"white-space:nowrap\">649<a name=\"CRTopographyCS-649\"> </a></td><td>Kidney, NOS (649)</td></tr><tr><td style=\"white-space:nowrap\">659<a name=\"CRTopographyCS-659\"> </a></td><td>Renal pelvis (659)</td></tr><tr><td style=\"white-space:nowrap\">669<a name=\"CRTopographyCS-669\"> </a></td><td>Ureter (669)</td></tr><tr><td style=\"white-space:nowrap\">670<a name=\"CRTopographyCS-670\"> </a></td><td>Trigone of bladder (670)</td></tr><tr><td style=\"white-space:nowrap\">671<a name=\"CRTopographyCS-671\"> </a></td><td>Dome of bladder (671)</td></tr><tr><td style=\"white-space:nowrap\">672<a name=\"CRTopographyCS-672\"> </a></td><td>Lateral wall of bladder (672)</td></tr><tr><td style=\"white-space:nowrap\">673<a name=\"CRTopographyCS-673\"> </a></td><td>Anterior wall of bladder (673)</td></tr><tr><td style=\"white-space:nowrap\">674<a name=\"CRTopographyCS-674\"> </a></td><td>Posterior wall of bladder (674)</td></tr><tr><td style=\"white-space:nowrap\">675<a name=\"CRTopographyCS-675\"> </a></td><td>Bladder neck (675)</td></tr><tr><td style=\"white-space:nowrap\">676<a name=\"CRTopographyCS-676\"> </a></td><td>Ureteric orifice (676)</td></tr><tr><td style=\"white-space:nowrap\">677<a name=\"CRTopographyCS-677\"> </a></td><td>Urachus (677)</td></tr><tr><td style=\"white-space:nowrap\">678<a name=\"CRTopographyCS-678\"> </a></td><td>Overlapping lesion of bladder (678)</td></tr><tr><td style=\"white-space:nowrap\">679<a name=\"CRTopographyCS-679\"> </a></td><td>Bladder, NOS (679)</td></tr><tr><td style=\"white-space:nowrap\">680<a name=\"CRTopographyCS-680\"> </a></td><td>Urethra (680)</td></tr><tr><td style=\"white-space:nowrap\">681<a name=\"CRTopographyCS-681\"> </a></td><td>Paraurethral gland (681)</td></tr><tr><td style=\"white-space:nowrap\">688<a name=\"CRTopographyCS-688\"> </a></td><td>Overlapping lesion of urinary organs (688)</td></tr><tr><td style=\"white-space:nowrap\">689<a name=\"CRTopographyCS-689\"> </a></td><td>Urinary system, NOS (689)</td></tr><tr><td style=\"white-space:nowrap\">690<a name=\"CRTopographyCS-690\"> </a></td><td>Conjunctiva (690)</td></tr><tr><td style=\"white-space:nowrap\">691<a name=\"CRTopographyCS-691\"> </a></td><td>Cornea, NOS (691)</td></tr><tr><td style=\"white-space:nowrap\">692<a name=\"CRTopographyCS-692\"> </a></td><td>Retina (692)</td></tr><tr><td style=\"white-space:nowrap\">693<a name=\"CRTopographyCS-693\"> </a></td><td>Choroid (693)</td></tr><tr><td style=\"white-space:nowrap\">694<a name=\"CRTopographyCS-694\"> </a></td><td>Ciliary body (694)</td></tr><tr><td style=\"white-space:nowrap\">695<a name=\"CRTopographyCS-695\"> </a></td><td>Lacrimal gland (695)</td></tr><tr><td style=\"white-space:nowrap\">696<a name=\"CRTopographyCS-696\"> </a></td><td>Orbit, NOS (696)</td></tr><tr><td style=\"white-space:nowrap\">698<a name=\"CRTopographyCS-698\"> </a></td><td>Overlapping lesion of eye and adnexa (698)</td></tr><tr><td style=\"white-space:nowrap\">699<a name=\"CRTopographyCS-699\"> </a></td><td>Eye, NOS (699)</td></tr><tr><td style=\"white-space:nowrap\">700<a name=\"CRTopographyCS-700\"> </a></td><td>Cerebral meninges (700)</td></tr><tr><td style=\"white-space:nowrap\">701<a name=\"CRTopographyCS-701\"> </a></td><td>Spinal meninges (701)</td></tr><tr><td style=\"white-space:nowrap\">709<a name=\"CRTopographyCS-709\"> </a></td><td>Meninges, NOS (709)</td></tr><tr><td style=\"white-space:nowrap\">710<a name=\"CRTopographyCS-710\"> </a></td><td>Cerebrum (710)</td></tr><tr><td style=\"white-space:nowrap\">711<a name=\"CRTopographyCS-711\"> </a></td><td>Frontal lobe (711)</td></tr><tr><td style=\"white-space:nowrap\">712<a name=\"CRTopographyCS-712\"> </a></td><td>Temporal lobe (712)</td></tr><tr><td style=\"white-space:nowrap\">713<a name=\"CRTopographyCS-713\"> </a></td><td>Parietal lobe (713)</td></tr><tr><td style=\"white-space:nowrap\">714<a name=\"CRTopographyCS-714\"> </a></td><td>Occipital lobe (714)</td></tr><tr><td style=\"white-space:nowrap\">715<a name=\"CRTopographyCS-715\"> </a></td><td>Ventricle, NOS (715)</td></tr><tr><td style=\"white-space:nowrap\">716<a name=\"CRTopographyCS-716\"> </a></td><td>Cerebellum, NOS (716)</td></tr><tr><td style=\"white-space:nowrap\">717<a name=\"CRTopographyCS-717\"> </a></td><td>Brain stem (717)</td></tr><tr><td style=\"white-space:nowrap\">718<a name=\"CRTopographyCS-718\"> </a></td><td>Overlapping lesion of brain (718)</td></tr><tr><td style=\"white-space:nowrap\">719<a name=\"CRTopographyCS-719\"> </a></td><td>Brain, NOS (719)</td></tr><tr><td style=\"white-space:nowrap\">720<a name=\"CRTopographyCS-720\"> </a></td><td>Spinal cord (720)</td></tr><tr><td style=\"white-space:nowrap\">721<a name=\"CRTopographyCS-721\"> </a></td><td>Cauda equina (721)</td></tr><tr><td style=\"white-space:nowrap\">722<a name=\"CRTopographyCS-722\"> </a></td><td>Olfactory nerve (722)</td></tr><tr><td style=\"white-space:nowrap\">723<a name=\"CRTopographyCS-723\"> </a></td><td>Optic nerve (723)</td></tr><tr><td style=\"white-space:nowrap\">724<a name=\"CRTopographyCS-724\"> </a></td><td>Acoustic nerve (724)</td></tr><tr><td style=\"white-space:nowrap\">725<a name=\"CRTopographyCS-725\"> </a></td><td>Cranial nerve, NOS (725)</td></tr><tr><td style=\"white-space:nowrap\">728<a name=\"CRTopographyCS-728\"> </a></td><td>Overlapping lesion of brain and central nervous system (728)</td></tr><tr><td style=\"white-space:nowrap\">729<a name=\"CRTopographyCS-729\"> </a></td><td>Nervous system, NOS (729)</td></tr><tr><td style=\"white-space:nowrap\">739<a name=\"CRTopographyCS-739\"> </a></td><td>Thyroid gland (739)</td></tr><tr><td style=\"white-space:nowrap\">740<a name=\"CRTopographyCS-740\"> </a></td><td>Cortex of adrenal gland (740)</td></tr><tr><td style=\"white-space:nowrap\">741<a name=\"CRTopographyCS-741\"> </a></td><td>Medulla of adrenal gland (741)</td></tr><tr><td style=\"white-space:nowrap\">749<a name=\"CRTopographyCS-749\"> </a></td><td>Adrenal gland, NOS (749)</td></tr><tr><td style=\"white-space:nowrap\">750<a name=\"CRTopographyCS-750\"> </a></td><td>Parathyroid gland (750)</td></tr><tr><td style=\"white-space:nowrap\">751<a name=\"CRTopographyCS-751\"> </a></td><td>Pituitary gland (751)</td></tr><tr><td style=\"white-space:nowrap\">752<a name=\"CRTopographyCS-752\"> </a></td><td>Craniopharyngeal duct (752)</td></tr><tr><td style=\"white-space:nowrap\">753<a name=\"CRTopographyCS-753\"> </a></td><td>Pineal gland (753)</td></tr><tr><td style=\"white-space:nowrap\">754<a name=\"CRTopographyCS-754\"> </a></td><td>Carotid body (754)</td></tr><tr><td style=\"white-space:nowrap\">755<a name=\"CRTopographyCS-755\"> </a></td><td>Aortic body and other paraganglia (755)</td></tr><tr><td style=\"white-space:nowrap\">758<a name=\"CRTopographyCS-758\"> </a></td><td>Overlapping lesion of endocrine glands and related structures (758)</td></tr><tr><td style=\"white-space:nowrap\">759<a name=\"CRTopographyCS-759\"> </a></td><td>Endocrine gland, NOS (759)</td></tr><tr><td style=\"white-space:nowrap\">760<a name=\"CRTopographyCS-760\"> </a></td><td>Head, face or neck, NOS (760)</td></tr><tr><td style=\"white-space:nowrap\">761<a name=\"CRTopographyCS-761\"> </a></td><td>Thorax, NOS (761)</td></tr><tr><td style=\"white-space:nowrap\">762<a name=\"CRTopographyCS-762\"> </a></td><td>Abdomen, NOS (762)</td></tr><tr><td style=\"white-space:nowrap\">763<a name=\"CRTopographyCS-763\"> </a></td><td>Pelvis, NOS (763)</td></tr><tr><td style=\"white-space:nowrap\">764<a name=\"CRTopographyCS-764\"> </a></td><td>Upper limb, NOS (764)</td></tr><tr><td style=\"white-space:nowrap\">765<a name=\"CRTopographyCS-765\"> </a></td><td>Lower limb, NOS (765)</td></tr><tr><td style=\"white-space:nowrap\">767<a name=\"CRTopographyCS-767\"> </a></td><td>Other ill-defined sites (767)</td></tr><tr><td style=\"white-space:nowrap\">768<a name=\"CRTopographyCS-768\"> </a></td><td>Overlapping lesion of ill-defined sites (768)</td></tr><tr><td style=\"white-space:nowrap\">770<a name=\"CRTopographyCS-770\"> </a></td><td>Lymph nodes of head, face and neck (770)</td></tr><tr><td style=\"white-space:nowrap\">771<a name=\"CRTopographyCS-771\"> </a></td><td>Intrathoracic lymph nodes (771)</td></tr><tr><td style=\"white-space:nowrap\">772<a name=\"CRTopographyCS-772\"> </a></td><td>Intra-abdominal lymph nodes (772)</td></tr><tr><td style=\"white-space:nowrap\">773<a name=\"CRTopographyCS-773\"> </a></td><td>Lymph nodes of axilla or arm (773)</td></tr><tr><td style=\"white-space:nowrap\">774<a name=\"CRTopographyCS-774\"> </a></td><td>Lymph nodes of inguinal region or leg (774)</td></tr><tr><td style=\"white-space:nowrap\">775<a name=\"CRTopographyCS-775\"> </a></td><td>Pelvic lymph nodes (775)</td></tr><tr><td style=\"white-space:nowrap\">778<a name=\"CRTopographyCS-778\"> </a></td><td>Lymph nodes of multiple regions (778)</td></tr><tr><td style=\"white-space:nowrap\">779<a name=\"CRTopographyCS-779\"> </a></td><td>Lymph node, NOS (779)</td></tr><tr><td style=\"white-space:nowrap\">809<a name=\"CRTopographyCS-809\"> </a></td><td>Unknown primary site (809)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRTopographyCS"] ; # 
+  fhir:title [ fhir:v "CR - Topography"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-10T12:38:15+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ICD-O-3 topography codes mapped from the CanReg5 topography dictionary (topography.tsv). These codes represent the anatomical site of the tumour origin. The topography field is implemented as a dependent dropdown list filtered by the selected Site. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "331"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "0" ] ;
+     fhir:display [ fhir:v "External upper lip (000)" ]
+  ] [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "External lower lip (001)" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "External lip, NOS (002)" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Mucosa of upper lip (003)" ]
+  ] [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Mucosa of lower lip (004)" ]
+  ] [
+     fhir:code [ fhir:v "5" ] ;
+     fhir:display [ fhir:v "Mucosa of lip, NOS (005)" ]
+  ] [
+     fhir:code [ fhir:v "6" ] ;
+     fhir:display [ fhir:v "Commissure of lip (006)" ]
+  ] [
+     fhir:code [ fhir:v "8" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of lip (008)" ]
+  ] [
+     fhir:code [ fhir:v "9" ] ;
+     fhir:display [ fhir:v "Lip, NOS (009)" ]
+  ] [
+     fhir:code [ fhir:v "19" ] ;
+     fhir:display [ fhir:v "Base of tongue, NOS (019)" ]
+  ] [
+     fhir:code [ fhir:v "20" ] ;
+     fhir:display [ fhir:v "Dorsal surface of tongue, NOS (020)" ]
+  ] [
+     fhir:code [ fhir:v "21" ] ;
+     fhir:display [ fhir:v "Border of tongue (021)" ]
+  ] [
+     fhir:code [ fhir:v "22" ] ;
+     fhir:display [ fhir:v "Ventral surface of tongue, NOS (022)" ]
+  ] [
+     fhir:code [ fhir:v "23" ] ;
+     fhir:display [ fhir:v "Anterior 2/3 of tongue, NOS (023)" ]
+  ] [
+     fhir:code [ fhir:v "24" ] ;
+     fhir:display [ fhir:v "Lingual tonsil (024)" ]
+  ] [
+     fhir:code [ fhir:v "28" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of tongue (028)" ]
+  ] [
+     fhir:code [ fhir:v "29" ] ;
+     fhir:display [ fhir:v "Tongue, NOS (029)" ]
+  ] [
+     fhir:code [ fhir:v "30" ] ;
+     fhir:display [ fhir:v "Upper Gum (030)" ]
+  ] [
+     fhir:code [ fhir:v "31" ] ;
+     fhir:display [ fhir:v "Lower gum (031)" ]
+  ] [
+     fhir:code [ fhir:v "39" ] ;
+     fhir:display [ fhir:v "Gum, NOS (039)" ]
+  ] [
+     fhir:code [ fhir:v "40" ] ;
+     fhir:display [ fhir:v "Anterior floor of mouth (040)" ]
+  ] [
+     fhir:code [ fhir:v "41" ] ;
+     fhir:display [ fhir:v "Lateral floor of mouth (041)" ]
+  ] [
+     fhir:code [ fhir:v "48" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of floor of mouth (048)" ]
+  ] [
+     fhir:code [ fhir:v "49" ] ;
+     fhir:display [ fhir:v "Floor of mouth, NOS (049)" ]
+  ] [
+     fhir:code [ fhir:v "50" ] ;
+     fhir:display [ fhir:v "Hard palate (050)" ]
+  ] [
+     fhir:code [ fhir:v "51" ] ;
+     fhir:display [ fhir:v "Soft palate, NOS (051)" ]
+  ] [
+     fhir:code [ fhir:v "52" ] ;
+     fhir:display [ fhir:v "Uvula (052)" ]
+  ] [
+     fhir:code [ fhir:v "58" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of palate (058)" ]
+  ] [
+     fhir:code [ fhir:v "59" ] ;
+     fhir:display [ fhir:v "Palate, NOS (059)" ]
+  ] [
+     fhir:code [ fhir:v "60" ] ;
+     fhir:display [ fhir:v "Cheeck mucosa (060)" ]
+  ] [
+     fhir:code [ fhir:v "61" ] ;
+     fhir:display [ fhir:v "Vestibule of mouth (061)" ]
+  ] [
+     fhir:code [ fhir:v "62" ] ;
+     fhir:display [ fhir:v "Retromolar area (062)" ]
+  ] [
+     fhir:code [ fhir:v "68" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of other and unspecified parts of mouth (068)" ]
+  ] [
+     fhir:code [ fhir:v "69" ] ;
+     fhir:display [ fhir:v "Mouth, NOS (069)" ]
+  ] [
+     fhir:code [ fhir:v "79" ] ;
+     fhir:display [ fhir:v "Parotid gland (079)" ]
+  ] [
+     fhir:code [ fhir:v "80" ] ;
+     fhir:display [ fhir:v "Submandibular gland (080)" ]
+  ] [
+     fhir:code [ fhir:v "81" ] ;
+     fhir:display [ fhir:v "Sublingual gland (081)" ]
+  ] [
+     fhir:code [ fhir:v "88" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of major salivary glands (088)" ]
+  ] [
+     fhir:code [ fhir:v "89" ] ;
+     fhir:display [ fhir:v "Major salivary gland, NOS (089)" ]
+  ] [
+     fhir:code [ fhir:v "90" ] ;
+     fhir:display [ fhir:v "Tonsillar fossa (090)" ]
+  ] [
+     fhir:code [ fhir:v "91" ] ;
+     fhir:display [ fhir:v "Tonsillar pillar (091)" ]
+  ] [
+     fhir:code [ fhir:v "98" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of tonsil (098)" ]
+  ] [
+     fhir:code [ fhir:v "99" ] ;
+     fhir:display [ fhir:v "Tonsil, NOS (099)" ]
+  ] [
+     fhir:code [ fhir:v "100" ] ;
+     fhir:display [ fhir:v "Vallecula (100)" ]
+  ] [
+     fhir:code [ fhir:v "101" ] ;
+     fhir:display [ fhir:v "Anterior surface of epiglottis (101)" ]
+  ] [
+     fhir:code [ fhir:v "102" ] ;
+     fhir:display [ fhir:v "Lateral wall of oropharynx (102)" ]
+  ] [
+     fhir:code [ fhir:v "103" ] ;
+     fhir:display [ fhir:v "Posterior wall of oropharynx (103)" ]
+  ] [
+     fhir:code [ fhir:v "104" ] ;
+     fhir:display [ fhir:v "Branchial cleft (104)" ]
+  ] [
+     fhir:code [ fhir:v "108" ] ;
+     fhir:display [ fhir:v "Overlapping lesions of oropharynx (108)" ]
+  ] [
+     fhir:code [ fhir:v "109" ] ;
+     fhir:display [ fhir:v "Oropharynx, NOS (109)" ]
+  ] [
+     fhir:code [ fhir:v "110" ] ;
+     fhir:display [ fhir:v "Superior wall of nasopharynx (110)" ]
+  ] [
+     fhir:code [ fhir:v "111" ] ;
+     fhir:display [ fhir:v "Posterior wall of nasopharynx (111)" ]
+  ] [
+     fhir:code [ fhir:v "112" ] ;
+     fhir:display [ fhir:v "Lateral wall of nasopharynx (112)" ]
+  ] [
+     fhir:code [ fhir:v "113" ] ;
+     fhir:display [ fhir:v "Anterior wall of nasopharynx (113)" ]
+  ] [
+     fhir:code [ fhir:v "118" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of nasopharynx (118)" ]
+  ] [
+     fhir:code [ fhir:v "119" ] ;
+     fhir:display [ fhir:v "Nasopharynx, NOS (119)" ]
+  ] [
+     fhir:code [ fhir:v "129" ] ;
+     fhir:display [ fhir:v "Pyriform sinus (129)" ]
+  ] [
+     fhir:code [ fhir:v "130" ] ;
+     fhir:display [ fhir:v "Postcricoid region (130)" ]
+  ] [
+     fhir:code [ fhir:v "131" ] ;
+     fhir:display [ fhir:v "Hypopharyngeal aspect of aryepiglottic fold (131)" ]
+  ] [
+     fhir:code [ fhir:v "132" ] ;
+     fhir:display [ fhir:v "Posterior wall of hypopharynx (132)" ]
+  ] [
+     fhir:code [ fhir:v "138" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of hypopharynx (138)" ]
+  ] [
+     fhir:code [ fhir:v "139" ] ;
+     fhir:display [ fhir:v "Hypopharynx, NOS (139)" ]
+  ] [
+     fhir:code [ fhir:v "140" ] ;
+     fhir:display [ fhir:v "Pharynx, NOS (140)" ]
+  ] [
+     fhir:code [ fhir:v "141" ] ;
+     fhir:display [ fhir:v "Laryngopharynx (OLD CODE) (141)" ]
+  ] [
+     fhir:code [ fhir:v "142" ] ;
+     fhir:display [ fhir:v "Waldeyer ring (142)" ]
+  ] [
+     fhir:code [ fhir:v "148" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of lip, oral cavity and pharynx (148)" ]
+  ] [
+     fhir:code [ fhir:v "150" ] ;
+     fhir:display [ fhir:v "Cervical esophagus (150)" ]
+  ] [
+     fhir:code [ fhir:v "151" ] ;
+     fhir:display [ fhir:v "Thoracic esophagus (151)" ]
+  ] [
+     fhir:code [ fhir:v "152" ] ;
+     fhir:display [ fhir:v "Abdominal esophagus (152)" ]
+  ] [
+     fhir:code [ fhir:v "153" ] ;
+     fhir:display [ fhir:v "Upper third of esophagus (153)" ]
+  ] [
+     fhir:code [ fhir:v "154" ] ;
+     fhir:display [ fhir:v "Middle third of esophagus (154)" ]
+  ] [
+     fhir:code [ fhir:v "155" ] ;
+     fhir:display [ fhir:v "Lower third of esophagus (155)" ]
+  ] [
+     fhir:code [ fhir:v "158" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of esophagus (158)" ]
+  ] [
+     fhir:code [ fhir:v "159" ] ;
+     fhir:display [ fhir:v "Esophagus, NOS (159)" ]
+  ] [
+     fhir:code [ fhir:v "160" ] ;
+     fhir:display [ fhir:v "Cardia, NOS (160)" ]
+  ] [
+     fhir:code [ fhir:v "161" ] ;
+     fhir:display [ fhir:v "Fundus of stomach (161)" ]
+  ] [
+     fhir:code [ fhir:v "162" ] ;
+     fhir:display [ fhir:v "Body of stomach (162)" ]
+  ] [
+     fhir:code [ fhir:v "163" ] ;
+     fhir:display [ fhir:v "Gastric antrum (163)" ]
+  ] [
+     fhir:code [ fhir:v "164" ] ;
+     fhir:display [ fhir:v "Pylorus (164)" ]
+  ] [
+     fhir:code [ fhir:v "165" ] ;
+     fhir:display [ fhir:v "Lesser curvature of stomach, NOS (165)" ]
+  ] [
+     fhir:code [ fhir:v "166" ] ;
+     fhir:display [ fhir:v "Greater curvature of stomach, NOS (166)" ]
+  ] [
+     fhir:code [ fhir:v "168" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of stomach (168)" ]
+  ] [
+     fhir:code [ fhir:v "169" ] ;
+     fhir:display [ fhir:v "Stomach, NOS (169)" ]
+  ] [
+     fhir:code [ fhir:v "170" ] ;
+     fhir:display [ fhir:v "Duodenum (170)" ]
+  ] [
+     fhir:code [ fhir:v "171" ] ;
+     fhir:display [ fhir:v "Jejunum (171)" ]
+  ] [
+     fhir:code [ fhir:v "172" ] ;
+     fhir:display [ fhir:v "Ileum (172)" ]
+  ] [
+     fhir:code [ fhir:v "173" ] ;
+     fhir:display [ fhir:v "Meckel diverticulum (173)" ]
+  ] [
+     fhir:code [ fhir:v "178" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of small intestine (178)" ]
+  ] [
+     fhir:code [ fhir:v "179" ] ;
+     fhir:display [ fhir:v "Small intestine, NOS (179)" ]
+  ] [
+     fhir:code [ fhir:v "180" ] ;
+     fhir:display [ fhir:v "Cecum (180)" ]
+  ] [
+     fhir:code [ fhir:v "181" ] ;
+     fhir:display [ fhir:v "Appendix (181)" ]
+  ] [
+     fhir:code [ fhir:v "182" ] ;
+     fhir:display [ fhir:v "Ascending colon (182)" ]
+  ] [
+     fhir:code [ fhir:v "183" ] ;
+     fhir:display [ fhir:v "Hepatic flexure of colon (183)" ]
+  ] [
+     fhir:code [ fhir:v "184" ] ;
+     fhir:display [ fhir:v "Transverse colon (184)" ]
+  ] [
+     fhir:code [ fhir:v "185" ] ;
+     fhir:display [ fhir:v "Splenic flexure of colon (185)" ]
+  ] [
+     fhir:code [ fhir:v "186" ] ;
+     fhir:display [ fhir:v "Descending colon (186)" ]
+  ] [
+     fhir:code [ fhir:v "187" ] ;
+     fhir:display [ fhir:v "Sigmoid colon (187)" ]
+  ] [
+     fhir:code [ fhir:v "188" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of colon (188)" ]
+  ] [
+     fhir:code [ fhir:v "189" ] ;
+     fhir:display [ fhir:v "Colon, NOS (189)" ]
+  ] [
+     fhir:code [ fhir:v "199" ] ;
+     fhir:display [ fhir:v "Rectosigmoid junction (199)" ]
+  ] [
+     fhir:code [ fhir:v "209" ] ;
+     fhir:display [ fhir:v "Rectum, NOS (209)" ]
+  ] [
+     fhir:code [ fhir:v "210" ] ;
+     fhir:display [ fhir:v "Anus, NOS (210)" ]
+  ] [
+     fhir:code [ fhir:v "211" ] ;
+     fhir:display [ fhir:v "Anal canal (211)" ]
+  ] [
+     fhir:code [ fhir:v "212" ] ;
+     fhir:display [ fhir:v "Cloacogenic zone (212)" ]
+  ] [
+     fhir:code [ fhir:v "218" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of rectum, anus and anal canal (218)" ]
+  ] [
+     fhir:code [ fhir:v "220" ] ;
+     fhir:display [ fhir:v "Liver (220)" ]
+  ] [
+     fhir:code [ fhir:v "221" ] ;
+     fhir:display [ fhir:v "intrahepatic bile duct (221)" ]
+  ] [
+     fhir:code [ fhir:v "239" ] ;
+     fhir:display [ fhir:v "Gallbladder (239)" ]
+  ] [
+     fhir:code [ fhir:v "240" ] ;
+     fhir:display [ fhir:v "Extrahepatic bile duct (240)" ]
+  ] [
+     fhir:code [ fhir:v "241" ] ;
+     fhir:display [ fhir:v "Ampulla of Vater (241)" ]
+  ] [
+     fhir:code [ fhir:v "248" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of billiary tract (248)" ]
+  ] [
+     fhir:code [ fhir:v "249" ] ;
+     fhir:display [ fhir:v "Billiary tract, NOS (249)" ]
+  ] [
+     fhir:code [ fhir:v "250" ] ;
+     fhir:display [ fhir:v "Head of pancreas (250)" ]
+  ] [
+     fhir:code [ fhir:v "251" ] ;
+     fhir:display [ fhir:v "Body of pancreas (251)" ]
+  ] [
+     fhir:code [ fhir:v "252" ] ;
+     fhir:display [ fhir:v "Tail of pancreas (252)" ]
+  ] [
+     fhir:code [ fhir:v "253" ] ;
+     fhir:display [ fhir:v "Pancreatic duct (253)" ]
+  ] [
+     fhir:code [ fhir:v "254" ] ;
+     fhir:display [ fhir:v "Islets of Langerhans (254)" ]
+  ] [
+     fhir:code [ fhir:v "257" ] ;
+     fhir:display [ fhir:v "Other specified parts of pancreas (257)" ]
+  ] [
+     fhir:code [ fhir:v "258" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of pancreas (258)" ]
+  ] [
+     fhir:code [ fhir:v "259" ] ;
+     fhir:display [ fhir:v "Pancreas, NOS (259)" ]
+  ] [
+     fhir:code [ fhir:v "260" ] ;
+     fhir:display [ fhir:v "Intestinal tract, NOS (260)" ]
+  ] [
+     fhir:code [ fhir:v "268" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of digestive system (268)" ]
+  ] [
+     fhir:code [ fhir:v "269" ] ;
+     fhir:display [ fhir:v "Gastrointestinal tract, NOS (269)" ]
+  ] [
+     fhir:code [ fhir:v "300" ] ;
+     fhir:display [ fhir:v "Nasal cavity (300)" ]
+  ] [
+     fhir:code [ fhir:v "301" ] ;
+     fhir:display [ fhir:v "Middle ear (301)" ]
+  ] [
+     fhir:code [ fhir:v "310" ] ;
+     fhir:display [ fhir:v "Maxillary sinus (310)" ]
+  ] [
+     fhir:code [ fhir:v "311" ] ;
+     fhir:display [ fhir:v "Ethmoid sinus (311)" ]
+  ] [
+     fhir:code [ fhir:v "312" ] ;
+     fhir:display [ fhir:v "Frontal sinus (312)" ]
+  ] [
+     fhir:code [ fhir:v "313" ] ;
+     fhir:display [ fhir:v "Sphenoid sinus (313)" ]
+  ] [
+     fhir:code [ fhir:v "318" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of accessory sinuses (318)" ]
+  ] [
+     fhir:code [ fhir:v "319" ] ;
+     fhir:display [ fhir:v "Accessory sinus, NOS (319)" ]
+  ] [
+     fhir:code [ fhir:v "320" ] ;
+     fhir:display [ fhir:v "Glottis (320)" ]
+  ] [
+     fhir:code [ fhir:v "321" ] ;
+     fhir:display [ fhir:v "Supraglottis (321)" ]
+  ] [
+     fhir:code [ fhir:v "322" ] ;
+     fhir:display [ fhir:v "Subglottis (322)" ]
+  ] [
+     fhir:code [ fhir:v "323" ] ;
+     fhir:display [ fhir:v "Laryngeal cartilage (323)" ]
+  ] [
+     fhir:code [ fhir:v "328" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of larynx (328)" ]
+  ] [
+     fhir:code [ fhir:v "329" ] ;
+     fhir:display [ fhir:v "Larynx, NOS (329)" ]
+  ] [
+     fhir:code [ fhir:v "339" ] ;
+     fhir:display [ fhir:v "Trachea (339)" ]
+  ] [
+     fhir:code [ fhir:v "340" ] ;
+     fhir:display [ fhir:v "Main bronchus (340)" ]
+  ] [
+     fhir:code [ fhir:v "341" ] ;
+     fhir:display [ fhir:v "Upper lobe, lung (341)" ]
+  ] [
+     fhir:code [ fhir:v "342" ] ;
+     fhir:display [ fhir:v "Middle lobe, lung (342)" ]
+  ] [
+     fhir:code [ fhir:v "343" ] ;
+     fhir:display [ fhir:v "Lower lobe, lung (343)" ]
+  ] [
+     fhir:code [ fhir:v "348" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of lung (348)" ]
+  ] [
+     fhir:code [ fhir:v "349" ] ;
+     fhir:display [ fhir:v "Lung, NOS (349)" ]
+  ] [
+     fhir:code [ fhir:v "379" ] ;
+     fhir:display [ fhir:v "Thymus (379)" ]
+  ] [
+     fhir:code [ fhir:v "380" ] ;
+     fhir:display [ fhir:v "Heart (380)" ]
+  ] [
+     fhir:code [ fhir:v "381" ] ;
+     fhir:display [ fhir:v "Anterior mediastinum (381)" ]
+  ] [
+     fhir:code [ fhir:v "382" ] ;
+     fhir:display [ fhir:v "Posterior mediastinum (382)" ]
+  ] [
+     fhir:code [ fhir:v "383" ] ;
+     fhir:display [ fhir:v "Mediastinum, NOS (383)" ]
+  ] [
+     fhir:code [ fhir:v "384" ] ;
+     fhir:display [ fhir:v "Pleura, NOS (384)" ]
+  ] [
+     fhir:code [ fhir:v "388" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of heart, mediastinum and pleura (388)" ]
+  ] [
+     fhir:code [ fhir:v "390" ] ;
+     fhir:display [ fhir:v "Upper respiratory tract, NOS (390)" ]
+  ] [
+     fhir:code [ fhir:v "398" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of respiratory system and intrathoracic organs (398)" ]
+  ] [
+     fhir:code [ fhir:v "399" ] ;
+     fhir:display [ fhir:v "Ill-defined sites within respiratory system (399)" ]
+  ] [
+     fhir:code [ fhir:v "400" ] ;
+     fhir:display [ fhir:v "Long bones of upper limb, scapula and associated joints (400)" ]
+  ] [
+     fhir:code [ fhir:v "401" ] ;
+     fhir:display [ fhir:v "Short bones of upper limb and associated joints (401)" ]
+  ] [
+     fhir:code [ fhir:v "402" ] ;
+     fhir:display [ fhir:v "Long bones of lower limb and associated joints (402)" ]
+  ] [
+     fhir:code [ fhir:v "403" ] ;
+     fhir:display [ fhir:v "Short bones of lower limb and associated joints (403)" ]
+  ] [
+     fhir:code [ fhir:v "408" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of bones, joints and articular cartilage of limbs (408)" ]
+  ] [
+     fhir:code [ fhir:v "409" ] ;
+     fhir:display [ fhir:v "Bone of limb, NOS (409)" ]
+  ] [
+     fhir:code [ fhir:v "410" ] ;
+     fhir:display [ fhir:v "Bones of skull and face and associated joints (410)" ]
+  ] [
+     fhir:code [ fhir:v "411" ] ;
+     fhir:display [ fhir:v "Mandible (411)" ]
+  ] [
+     fhir:code [ fhir:v "412" ] ;
+     fhir:display [ fhir:v "Vertebral column (412)" ]
+  ] [
+     fhir:code [ fhir:v "413" ] ;
+     fhir:display [ fhir:v "Rib, sternum, clavicle and associated joints (413)" ]
+  ] [
+     fhir:code [ fhir:v "414" ] ;
+     fhir:display [ fhir:v "Pelvic bones, sacrum, coccyx and associated joints (414)" ]
+  ] [
+     fhir:code [ fhir:v "418" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of bones, joints and articular cartilage (418)" ]
+  ] [
+     fhir:code [ fhir:v "419" ] ;
+     fhir:display [ fhir:v "Bone, NOS (419)" ]
+  ] [
+     fhir:code [ fhir:v "420" ] ;
+     fhir:display [ fhir:v "Blood (420)" ]
+  ] [
+     fhir:code [ fhir:v "421" ] ;
+     fhir:display [ fhir:v "Bone marrow (421)" ]
+  ] [
+     fhir:code [ fhir:v "422" ] ;
+     fhir:display [ fhir:v "Spleen (422)" ]
+  ] [
+     fhir:code [ fhir:v "423" ] ;
+     fhir:display [ fhir:v "Reticuloendothelial system, NOS (423)" ]
+  ] [
+     fhir:code [ fhir:v "424" ] ;
+     fhir:display [ fhir:v "Hematopoietic system, NOS (424)" ]
+  ] [
+     fhir:code [ fhir:v "440" ] ;
+     fhir:display [ fhir:v "Skin of lip, NOS (440)" ]
+  ] [
+     fhir:code [ fhir:v "441" ] ;
+     fhir:display [ fhir:v "Eyelid (441)" ]
+  ] [
+     fhir:code [ fhir:v "442" ] ;
+     fhir:display [ fhir:v "External ear (442)" ]
+  ] [
+     fhir:code [ fhir:v "443" ] ;
+     fhir:display [ fhir:v "Skin of other and unspecified parts of face (443)" ]
+  ] [
+     fhir:code [ fhir:v "444" ] ;
+     fhir:display [ fhir:v "Skin of scalp and neck (444)" ]
+  ] [
+     fhir:code [ fhir:v "445" ] ;
+     fhir:display [ fhir:v "Skin of trunk (445)" ]
+  ] [
+     fhir:code [ fhir:v "446" ] ;
+     fhir:display [ fhir:v "Skin of upper limb and shoulder (446)" ]
+  ] [
+     fhir:code [ fhir:v "447" ] ;
+     fhir:display [ fhir:v "Skin of lower limb and hip (447)" ]
+  ] [
+     fhir:code [ fhir:v "448" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of skin (448)" ]
+  ] [
+     fhir:code [ fhir:v "449" ] ;
+     fhir:display [ fhir:v "Skin, NOS (449)" ]
+  ] [
+     fhir:code [ fhir:v "470" ] ;
+     fhir:display [ fhir:v "Peripheral nerves and autonomic nervous system of head, face, and neck (470)" ]
+  ] [
+     fhir:code [ fhir:v "471" ] ;
+     fhir:display [ fhir:v "Peripheral nerves and autonomic nervous system of upper limb and shoulder (471)" ]
+  ] [
+     fhir:code [ fhir:v "472" ] ;
+     fhir:display [ fhir:v "Peripheral nerves and autonomic nervous system of lower limb and hip (472)" ]
+  ] [
+     fhir:code [ fhir:v "473" ] ;
+     fhir:display [ fhir:v "Peripheral nerves and autonomic nervous system of thorax (473)" ]
+  ] [
+     fhir:code [ fhir:v "474" ] ;
+     fhir:display [ fhir:v "Peripheral nerves and autonomic nervous system of abdomen (474)" ]
+  ] [
+     fhir:code [ fhir:v "475" ] ;
+     fhir:display [ fhir:v "Peripheral nerves and autonomic nervous system of pelvis (475)" ]
+  ] [
+     fhir:code [ fhir:v "476" ] ;
+     fhir:display [ fhir:v "Peripheral nerves and autonomic nervous system of trunk, NOS (476)" ]
+  ] [
+     fhir:code [ fhir:v "478" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of peripheral nerves and autonomic nervous system (478)" ]
+  ] [
+     fhir:code [ fhir:v "479" ] ;
+     fhir:display [ fhir:v "Autonomic nervous system, NOS (479)" ]
+  ] [
+     fhir:code [ fhir:v "480" ] ;
+     fhir:display [ fhir:v "Retroperitoneum (480)" ]
+  ] [
+     fhir:code [ fhir:v "481" ] ;
+     fhir:display [ fhir:v "Specified parts of peritoneum (481)" ]
+  ] [
+     fhir:code [ fhir:v "482" ] ;
+     fhir:display [ fhir:v "Peritoneum, NOS (482)" ]
+  ] [
+     fhir:code [ fhir:v "488" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of retroperitoneum and peritoneum (488)" ]
+  ] [
+     fhir:code [ fhir:v "490" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues of head, face, and neck (490)" ]
+  ] [
+     fhir:code [ fhir:v "491" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues of upper limb and shoulder (491)" ]
+  ] [
+     fhir:code [ fhir:v "492" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues of lower limb and hip (492)" ]
+  ] [
+     fhir:code [ fhir:v "493" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues of thorax (493)" ]
+  ] [
+     fhir:code [ fhir:v "494" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues of abdomen (494)" ]
+  ] [
+     fhir:code [ fhir:v "495" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues of pelvis (495)" ]
+  ] [
+     fhir:code [ fhir:v "496" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues of trunk, NOS (496)" ]
+  ] [
+     fhir:code [ fhir:v "498" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of connective, subcutaneous and other soft tissues (498)" ]
+  ] [
+     fhir:code [ fhir:v "499" ] ;
+     fhir:display [ fhir:v "Connective, Subcutaneous and other soft tissues, NOS (499)" ]
+  ] [
+     fhir:code [ fhir:v "500" ] ;
+     fhir:display [ fhir:v "Nipple (500)" ]
+  ] [
+     fhir:code [ fhir:v "501" ] ;
+     fhir:display [ fhir:v "Central portion of breast (501)" ]
+  ] [
+     fhir:code [ fhir:v "502" ] ;
+     fhir:display [ fhir:v "Upper-inner quadrant of breast (502)" ]
+  ] [
+     fhir:code [ fhir:v "503" ] ;
+     fhir:display [ fhir:v "Lower-inner quadrant of breast (503)" ]
+  ] [
+     fhir:code [ fhir:v "504" ] ;
+     fhir:display [ fhir:v "Upper-outer quadrant of breast (504)" ]
+  ] [
+     fhir:code [ fhir:v "505" ] ;
+     fhir:display [ fhir:v "Lower-outer quadrant of breast (505)" ]
+  ] [
+     fhir:code [ fhir:v "506" ] ;
+     fhir:display [ fhir:v "Axillary tail of breast (506)" ]
+  ] [
+     fhir:code [ fhir:v "508" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of breast (508)" ]
+  ] [
+     fhir:code [ fhir:v "509" ] ;
+     fhir:display [ fhir:v "Breast, NOS (509)" ]
+  ] [
+     fhir:code [ fhir:v "510" ] ;
+     fhir:display [ fhir:v "Labium majus (510)" ]
+  ] [
+     fhir:code [ fhir:v "511" ] ;
+     fhir:display [ fhir:v "Labium minus (511)" ]
+  ] [
+     fhir:code [ fhir:v "512" ] ;
+     fhir:display [ fhir:v "Clitorus (512)" ]
+  ] [
+     fhir:code [ fhir:v "518" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of vulva (518)" ]
+  ] [
+     fhir:code [ fhir:v "519" ] ;
+     fhir:display [ fhir:v "Vulva, NOS (519)" ]
+  ] [
+     fhir:code [ fhir:v "529" ] ;
+     fhir:display [ fhir:v "Vagina, NOS (529)" ]
+  ] [
+     fhir:code [ fhir:v "530" ] ;
+     fhir:display [ fhir:v "Endocervix (530)" ]
+  ] [
+     fhir:code [ fhir:v "531" ] ;
+     fhir:display [ fhir:v "Exocervix (531)" ]
+  ] [
+     fhir:code [ fhir:v "538" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of cervix uteri (538)" ]
+  ] [
+     fhir:code [ fhir:v "539" ] ;
+     fhir:display [ fhir:v "Cervix uteri (539)" ]
+  ] [
+     fhir:code [ fhir:v "540" ] ;
+     fhir:display [ fhir:v "Isthmus uteri (540)" ]
+  ] [
+     fhir:code [ fhir:v "541" ] ;
+     fhir:display [ fhir:v "Endometrium (541)" ]
+  ] [
+     fhir:code [ fhir:v "542" ] ;
+     fhir:display [ fhir:v "Myometrium (542)" ]
+  ] [
+     fhir:code [ fhir:v "543" ] ;
+     fhir:display [ fhir:v "Fundus uteri (543)" ]
+  ] [
+     fhir:code [ fhir:v "548" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of corpus uteri (548)" ]
+  ] [
+     fhir:code [ fhir:v "549" ] ;
+     fhir:display [ fhir:v "Corpus uteri (549)" ]
+  ] [
+     fhir:code [ fhir:v "559" ] ;
+     fhir:display [ fhir:v "Uterus, NOS (559)" ]
+  ] [
+     fhir:code [ fhir:v "569" ] ;
+     fhir:display [ fhir:v "Ovary (569)" ]
+  ] [
+     fhir:code [ fhir:v "570" ] ;
+     fhir:display [ fhir:v "Fallopian tube (570)" ]
+  ] [
+     fhir:code [ fhir:v "571" ] ;
+     fhir:display [ fhir:v "Broad ligament (571)" ]
+  ] [
+     fhir:code [ fhir:v "572" ] ;
+     fhir:display [ fhir:v "Round ligament (572)" ]
+  ] [
+     fhir:code [ fhir:v "573" ] ;
+     fhir:display [ fhir:v "Parametrium (573)" ]
+  ] [
+     fhir:code [ fhir:v "574" ] ;
+     fhir:display [ fhir:v "Uterine adnexa (574)" ]
+  ] [
+     fhir:code [ fhir:v "577" ] ;
+     fhir:display [ fhir:v "Other specified parts of female genital organs (577)" ]
+  ] [
+     fhir:code [ fhir:v "578" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of female genital organs (578)" ]
+  ] [
+     fhir:code [ fhir:v "579" ] ;
+     fhir:display [ fhir:v "Female genital tract, NOS (579)" ]
+  ] [
+     fhir:code [ fhir:v "589" ] ;
+     fhir:display [ fhir:v "Placenta (589)" ]
+  ] [
+     fhir:code [ fhir:v "600" ] ;
+     fhir:display [ fhir:v "Prepuce (600)" ]
+  ] [
+     fhir:code [ fhir:v "601" ] ;
+     fhir:display [ fhir:v "Glans penis (601)" ]
+  ] [
+     fhir:code [ fhir:v "602" ] ;
+     fhir:display [ fhir:v "Body of penis (602)" ]
+  ] [
+     fhir:code [ fhir:v "608" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of penis (608)" ]
+  ] [
+     fhir:code [ fhir:v "609" ] ;
+     fhir:display [ fhir:v "Penis, NOS (609)" ]
+  ] [
+     fhir:code [ fhir:v "619" ] ;
+     fhir:display [ fhir:v "Prostate gland (619)" ]
+  ] [
+     fhir:code [ fhir:v "620" ] ;
+     fhir:display [ fhir:v "Undescended testis (620)" ]
+  ] [
+     fhir:code [ fhir:v "621" ] ;
+     fhir:display [ fhir:v "Descended testis (621)" ]
+  ] [
+     fhir:code [ fhir:v "629" ] ;
+     fhir:display [ fhir:v "Testis, NOS (629)" ]
+  ] [
+     fhir:code [ fhir:v "630" ] ;
+     fhir:display [ fhir:v "Epididymis (630)" ]
+  ] [
+     fhir:code [ fhir:v "631" ] ;
+     fhir:display [ fhir:v "Spermatic cord (631)" ]
+  ] [
+     fhir:code [ fhir:v "632" ] ;
+     fhir:display [ fhir:v "Scrotum, NOS (632)" ]
+  ] [
+     fhir:code [ fhir:v "637" ] ;
+     fhir:display [ fhir:v "Other specified parts of male genital organs (637)" ]
+  ] [
+     fhir:code [ fhir:v "638" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of male genital organs (638)" ]
+  ] [
+     fhir:code [ fhir:v "639" ] ;
+     fhir:display [ fhir:v "Male genital organs, NOS (639)" ]
+  ] [
+     fhir:code [ fhir:v "649" ] ;
+     fhir:display [ fhir:v "Kidney, NOS (649)" ]
+  ] [
+     fhir:code [ fhir:v "659" ] ;
+     fhir:display [ fhir:v "Renal pelvis (659)" ]
+  ] [
+     fhir:code [ fhir:v "669" ] ;
+     fhir:display [ fhir:v "Ureter (669)" ]
+  ] [
+     fhir:code [ fhir:v "670" ] ;
+     fhir:display [ fhir:v "Trigone of bladder (670)" ]
+  ] [
+     fhir:code [ fhir:v "671" ] ;
+     fhir:display [ fhir:v "Dome of bladder (671)" ]
+  ] [
+     fhir:code [ fhir:v "672" ] ;
+     fhir:display [ fhir:v "Lateral wall of bladder (672)" ]
+  ] [
+     fhir:code [ fhir:v "673" ] ;
+     fhir:display [ fhir:v "Anterior wall of bladder (673)" ]
+  ] [
+     fhir:code [ fhir:v "674" ] ;
+     fhir:display [ fhir:v "Posterior wall of bladder (674)" ]
+  ] [
+     fhir:code [ fhir:v "675" ] ;
+     fhir:display [ fhir:v "Bladder neck (675)" ]
+  ] [
+     fhir:code [ fhir:v "676" ] ;
+     fhir:display [ fhir:v "Ureteric orifice (676)" ]
+  ] [
+     fhir:code [ fhir:v "677" ] ;
+     fhir:display [ fhir:v "Urachus (677)" ]
+  ] [
+     fhir:code [ fhir:v "678" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of bladder (678)" ]
+  ] [
+     fhir:code [ fhir:v "679" ] ;
+     fhir:display [ fhir:v "Bladder, NOS (679)" ]
+  ] [
+     fhir:code [ fhir:v "680" ] ;
+     fhir:display [ fhir:v "Urethra (680)" ]
+  ] [
+     fhir:code [ fhir:v "681" ] ;
+     fhir:display [ fhir:v "Paraurethral gland (681)" ]
+  ] [
+     fhir:code [ fhir:v "688" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of urinary organs (688)" ]
+  ] [
+     fhir:code [ fhir:v "689" ] ;
+     fhir:display [ fhir:v "Urinary system, NOS (689)" ]
+  ] [
+     fhir:code [ fhir:v "690" ] ;
+     fhir:display [ fhir:v "Conjunctiva (690)" ]
+  ] [
+     fhir:code [ fhir:v "691" ] ;
+     fhir:display [ fhir:v "Cornea, NOS (691)" ]
+  ] [
+     fhir:code [ fhir:v "692" ] ;
+     fhir:display [ fhir:v "Retina (692)" ]
+  ] [
+     fhir:code [ fhir:v "693" ] ;
+     fhir:display [ fhir:v "Choroid (693)" ]
+  ] [
+     fhir:code [ fhir:v "694" ] ;
+     fhir:display [ fhir:v "Ciliary body (694)" ]
+  ] [
+     fhir:code [ fhir:v "695" ] ;
+     fhir:display [ fhir:v "Lacrimal gland (695)" ]
+  ] [
+     fhir:code [ fhir:v "696" ] ;
+     fhir:display [ fhir:v "Orbit, NOS (696)" ]
+  ] [
+     fhir:code [ fhir:v "698" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of eye and adnexa (698)" ]
+  ] [
+     fhir:code [ fhir:v "699" ] ;
+     fhir:display [ fhir:v "Eye, NOS (699)" ]
+  ] [
+     fhir:code [ fhir:v "700" ] ;
+     fhir:display [ fhir:v "Cerebral meninges (700)" ]
+  ] [
+     fhir:code [ fhir:v "701" ] ;
+     fhir:display [ fhir:v "Spinal meninges (701)" ]
+  ] [
+     fhir:code [ fhir:v "709" ] ;
+     fhir:display [ fhir:v "Meninges, NOS (709)" ]
+  ] [
+     fhir:code [ fhir:v "710" ] ;
+     fhir:display [ fhir:v "Cerebrum (710)" ]
+  ] [
+     fhir:code [ fhir:v "711" ] ;
+     fhir:display [ fhir:v "Frontal lobe (711)" ]
+  ] [
+     fhir:code [ fhir:v "712" ] ;
+     fhir:display [ fhir:v "Temporal lobe (712)" ]
+  ] [
+     fhir:code [ fhir:v "713" ] ;
+     fhir:display [ fhir:v "Parietal lobe (713)" ]
+  ] [
+     fhir:code [ fhir:v "714" ] ;
+     fhir:display [ fhir:v "Occipital lobe (714)" ]
+  ] [
+     fhir:code [ fhir:v "715" ] ;
+     fhir:display [ fhir:v "Ventricle, NOS (715)" ]
+  ] [
+     fhir:code [ fhir:v "716" ] ;
+     fhir:display [ fhir:v "Cerebellum, NOS (716)" ]
+  ] [
+     fhir:code [ fhir:v "717" ] ;
+     fhir:display [ fhir:v "Brain stem (717)" ]
+  ] [
+     fhir:code [ fhir:v "718" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of brain (718)" ]
+  ] [
+     fhir:code [ fhir:v "719" ] ;
+     fhir:display [ fhir:v "Brain, NOS (719)" ]
+  ] [
+     fhir:code [ fhir:v "720" ] ;
+     fhir:display [ fhir:v "Spinal cord (720)" ]
+  ] [
+     fhir:code [ fhir:v "721" ] ;
+     fhir:display [ fhir:v "Cauda equina (721)" ]
+  ] [
+     fhir:code [ fhir:v "722" ] ;
+     fhir:display [ fhir:v "Olfactory nerve (722)" ]
+  ] [
+     fhir:code [ fhir:v "723" ] ;
+     fhir:display [ fhir:v "Optic nerve (723)" ]
+  ] [
+     fhir:code [ fhir:v "724" ] ;
+     fhir:display [ fhir:v "Acoustic nerve (724)" ]
+  ] [
+     fhir:code [ fhir:v "725" ] ;
+     fhir:display [ fhir:v "Cranial nerve, NOS (725)" ]
+  ] [
+     fhir:code [ fhir:v "728" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of brain and central nervous system (728)" ]
+  ] [
+     fhir:code [ fhir:v "729" ] ;
+     fhir:display [ fhir:v "Nervous system, NOS (729)" ]
+  ] [
+     fhir:code [ fhir:v "739" ] ;
+     fhir:display [ fhir:v "Thyroid gland (739)" ]
+  ] [
+     fhir:code [ fhir:v "740" ] ;
+     fhir:display [ fhir:v "Cortex of adrenal gland (740)" ]
+  ] [
+     fhir:code [ fhir:v "741" ] ;
+     fhir:display [ fhir:v "Medulla of adrenal gland (741)" ]
+  ] [
+     fhir:code [ fhir:v "749" ] ;
+     fhir:display [ fhir:v "Adrenal gland, NOS (749)" ]
+  ] [
+     fhir:code [ fhir:v "750" ] ;
+     fhir:display [ fhir:v "Parathyroid gland (750)" ]
+  ] [
+     fhir:code [ fhir:v "751" ] ;
+     fhir:display [ fhir:v "Pituitary gland (751)" ]
+  ] [
+     fhir:code [ fhir:v "752" ] ;
+     fhir:display [ fhir:v "Craniopharyngeal duct (752)" ]
+  ] [
+     fhir:code [ fhir:v "753" ] ;
+     fhir:display [ fhir:v "Pineal gland (753)" ]
+  ] [
+     fhir:code [ fhir:v "754" ] ;
+     fhir:display [ fhir:v "Carotid body (754)" ]
+  ] [
+     fhir:code [ fhir:v "755" ] ;
+     fhir:display [ fhir:v "Aortic body and other paraganglia (755)" ]
+  ] [
+     fhir:code [ fhir:v "758" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of endocrine glands and related structures (758)" ]
+  ] [
+     fhir:code [ fhir:v "759" ] ;
+     fhir:display [ fhir:v "Endocrine gland, NOS (759)" ]
+  ] [
+     fhir:code [ fhir:v "760" ] ;
+     fhir:display [ fhir:v "Head, face or neck, NOS (760)" ]
+  ] [
+     fhir:code [ fhir:v "761" ] ;
+     fhir:display [ fhir:v "Thorax, NOS (761)" ]
+  ] [
+     fhir:code [ fhir:v "762" ] ;
+     fhir:display [ fhir:v "Abdomen, NOS (762)" ]
+  ] [
+     fhir:code [ fhir:v "763" ] ;
+     fhir:display [ fhir:v "Pelvis, NOS (763)" ]
+  ] [
+     fhir:code [ fhir:v "764" ] ;
+     fhir:display [ fhir:v "Upper limb, NOS (764)" ]
+  ] [
+     fhir:code [ fhir:v "765" ] ;
+     fhir:display [ fhir:v "Lower limb, NOS (765)" ]
+  ] [
+     fhir:code [ fhir:v "767" ] ;
+     fhir:display [ fhir:v "Other ill-defined sites (767)" ]
+  ] [
+     fhir:code [ fhir:v "768" ] ;
+     fhir:display [ fhir:v "Overlapping lesion of ill-defined sites (768)" ]
+  ] [
+     fhir:code [ fhir:v "770" ] ;
+     fhir:display [ fhir:v "Lymph nodes of head, face and neck (770)" ]
+  ] [
+     fhir:code [ fhir:v "771" ] ;
+     fhir:display [ fhir:v "Intrathoracic lymph nodes (771)" ]
+  ] [
+     fhir:code [ fhir:v "772" ] ;
+     fhir:display [ fhir:v "Intra-abdominal lymph nodes (772)" ]
+  ] [
+     fhir:code [ fhir:v "773" ] ;
+     fhir:display [ fhir:v "Lymph nodes of axilla or arm (773)" ]
+  ] [
+     fhir:code [ fhir:v "774" ] ;
+     fhir:display [ fhir:v "Lymph nodes of inguinal region or leg (774)" ]
+  ] [
+     fhir:code [ fhir:v "775" ] ;
+     fhir:display [ fhir:v "Pelvic lymph nodes (775)" ]
+  ] [
+     fhir:code [ fhir:v "778" ] ;
+     fhir:display [ fhir:v "Lymph nodes of multiple regions (778)" ]
+  ] [
+     fhir:code [ fhir:v "779" ] ;
+     fhir:display [ fhir:v "Lymph node, NOS (779)" ]
+  ] [
+     fhir:code [ fhir:v "809" ] ;
+     fhir:display [ fhir:v "Unknown primary site (809)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

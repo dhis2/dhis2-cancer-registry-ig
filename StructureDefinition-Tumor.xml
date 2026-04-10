@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Tumor"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition Tumor</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor" title="Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case.">Tumor</a><a name="Tumor"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://build.fhir.org/types.html#Base">Base</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Tumor</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crIncidenceDate" title="CR - Incidence date">crIncidenceDate</a><a name="Tumor.crIncidenceDate"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#date">date</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Incidence date</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crAge" title="CR - Age">crAge</a><a name="Tumor.crAge"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">unsignedInt</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Age</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crAddress" title="CR - Address">crAddress</a><a name="Tumor.crAddress"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Address<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRAddressVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS" class="binding">CR - Address value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crTumorNumber" title="CR - Tumor number">crTumorNumber</a><a name="Tumor.crTumorNumber"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Tumor number<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRTumorNumberVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS" class="binding">CR - Tumor number value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crSite" title="CR - Site">crSite</a><a name="Tumor.crSite"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Site<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRSiteVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS" class="binding">CR - Site value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crTopography" title="CR - Topography">crTopography</a><a name="Tumor.crTopography"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Topography<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRTopographyVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyVS" class="binding">CR - Topography value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crMorphology" title="CR - Morphology">crMorphology</a><a name="Tumor.crMorphology"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Morphology<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRMorphology4VS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS" class="binding">CR - Morphology4 value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crBehaviour" title="CR - Behaviour">crBehaviour</a><a name="Tumor.crBehaviour"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Behaviour<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRBehaviourVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRBehaviourVS" class="binding">CR - Behaviour value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crBasisDiagnosis" title="CR - Basis diagnosis">crBasisDiagnosis</a><a name="Tumor.crBasisDiagnosis"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Basis diagnosis<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRBasisDiagnosisVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS" class="binding">CR - Basis diagnosis value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crGrade" title="CR - Grade">crGrade</a><a name="Tumor.crGrade"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Grade<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRGradeVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS" class="binding">CR - Grade value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRunChecks" title="CR - Checks: Run checks">crChecksRunChecks</a><a name="Tumor.crChecksRunChecks"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Run checks</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crRunTopographyMorphologyCheck" title="CR - Run Topography Morphology check">crRunTopographyMorphologyCheck</a><a name="Tumor.crRunTopographyMorphologyCheck"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Run Topography Morphology check</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crRunMultiplePrimaryCheck" title="CR - Run Multiple primary check">crRunMultiplePrimaryCheck</a><a name="Tumor.crRunMultiplePrimaryCheck"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Run Multiple primary check</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRareAgeMorphology" title="CR - Checks: Rare Age Morphology">crChecksRareAgeMorphology</a><a name="Tumor.crChecksRareAgeMorphology"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Rare Age Morphology</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRareAgeTopography" title="CR - Checks: Rare Age Topography">crChecksRareAgeTopography</a><a name="Tumor.crChecksRareAgeTopography"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Rare Age Topography</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRareAgeTopographyMorphology" title="CR - Checks: Rare Age Topography Morphology">crChecksRareAgeTopographyMorphology</a><a name="Tumor.crChecksRareAgeTopographyMorphology"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Rare Age Topography Morphology</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRareBasis" title="CR - Checks: Rare Basis">crChecksRareBasis</a><a name="Tumor.crChecksRareBasis"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Rare Basis</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksInvalidGrade" title="CR - Checks: Invalid Grade">crChecksInvalidGrade</a><a name="Tumor.crChecksInvalidGrade"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Invalid Grade</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRareSexMorphology" title="CR - Checks: Rare Sex Morphology">crChecksRareSexMorphology</a><a name="Tumor.crChecksRareSexMorphology"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Rare Sex Morphology</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksInvalidSexTopography" title="CR - Checks: Invalid Sex Topography">crChecksInvalidSexTopography</a><a name="Tumor.crChecksInvalidSexTopography"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Invalid Sex Topography</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRareTopographyBehaviour" title="CR - Checks: Rare Topography Behaviour">crChecksRareTopographyBehaviour</a><a name="Tumor.crChecksRareTopographyBehaviour"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Rare Topography Behaviour</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksRareTopographyMorphology" title="CR - Checks: Rare Topography Morphology">crChecksRareTopographyMorphology</a><a name="Tumor.crChecksRareTopographyMorphology"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Rare Topography Morphology</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crChecksMultiplePrimaryTestResult" title="CR - Checks: Multiple primary test result">crChecksMultiplePrimaryTestResult</a><a name="Tumor.crChecksMultiplePrimaryTestResult"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Checks: Multiple primary test result<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRMultiplePrimaryTestVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS" class="binding">CR - Multiple primary test value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crRare" title="CR - Rare">crRare</a><a name="Tumor.crRare"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Rare</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crInvalid" title="CR - Invalid">crInvalid</a><a name="Tumor.crInvalid"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Invalid</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crMorphologyFamily" title="CR - Morphology Family">crMorphologyFamily</a><a name="Tumor.crMorphologyFamily"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Morphology Family<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRMorphologyFamilyVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS" class="binding">CR - Morphology Family value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crTopographyMorphologyKey" title="CR - Topography Morphology key">crTopographyMorphologyKey</a><a name="Tumor.crTopographyMorphologyKey"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Topography Morphology key<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRTopographyMorphologyKeyVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyMorphologyKeyVS" class="binding">CR - Topography Morphology key value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPresentInTheMustList" title="CR - Present in the MUST list">crPresentInTheMustList</a><a name="Tumor.crPresentInTheMustList"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Present in the MUST list</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPresentInTheMustNotList" title="CR - Present in the MUST-NOT list">crPresentInTheMustNotList</a><a name="Tumor.crPresentInTheMustNotList"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Present in the MUST-NOT list</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crMorphologyGroup" title="CR - Morphology group">crMorphologyGroup</a><a name="Tumor.crMorphologyGroup"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Morphology group<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRMorphologyGroupVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS" class="binding">CR - Morphology Group value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPreviousMorphologyGroup" title="CR - Previous morphology group">crPreviousMorphologyGroup</a><a name="Tumor.crPreviousMorphologyGroup"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Previous morphology group<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRMorphologyGroupVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS" class="binding">CR - Morphology Group value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPreviousMorphologyGroupMultiple" title="CR - Previous morphology group (multiple)">crPreviousMorphologyGroupMultiple</a><a name="Tumor.crPreviousMorphologyGroupMultiple"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Previous morphology group (multiple)<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRMorphologyGroupVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS" class="binding">CR - Morphology Group value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crTopographyGroup" title="CR - Topography group">crTopographyGroup</a><a name="Tumor.crTopographyGroup"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Topography group<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRTopographyGroupVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS" class="binding">CR - Topography Group value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPreviousTopographyGroup" title="CR - Previous topography group">crPreviousTopographyGroup</a><a name="Tumor.crPreviousTopographyGroup"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Previous topography group<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRTopographyGroupVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS" class="binding">CR - Topography Group value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPreviousTopographyGroupMultiple" title="CR - Previous topography group (multiple)">crPreviousTopographyGroupMultiple</a><a name="Tumor.crPreviousTopographyGroupMultiple"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Previous topography group (multiple)<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRTopographyGroupVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS" class="binding">CR - Topography Group value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crMorphologyResult" title="CR - Morphology result">crMorphologyResult</a><a name="Tumor.crMorphologyResult"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Morphology result<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRMorphologyResultVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyResultVS" class="binding">CR - Morphology result value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crConfirmTheRareStatus" title="CR - Confirm the rare status">crConfirmTheRareStatus</a><a name="Tumor.crConfirmTheRareStatus"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Confirm the rare status</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crTumourid" title="CR - TUMOURID">crTumourid</a><a name="Tumor.crTumourid"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - TUMOURID</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPreviousTumorNumber" title="CR - Previous tumor number">crPreviousTumorNumber</a><a name="Tumor.crPreviousTumorNumber"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Previous tumor number<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-CRTumorNumberVS.html" title="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS" class="binding">CR - Tumor number value set</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-Tumor-definitions.html#Tumor.crPatientId" title="CR - Patient ID">crPatientId</a><a name="Tumor.crPatientId"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">CR - Patient ID</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor"/>
+  <version value="0.1.0"/>
+  <name value="Tumor"/>
+  <title value="Tumor"/>
+  <status value="draft"/>
+  <date value="2026-04-10T12:38:15+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case."/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="tumor-to-tumor-encounter"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter"/>
+    <name value="Mapping: Tumor → CRTumorEncounter"/>
+    <comment value="Maps the DHIS2 Cancer Registry Tumor stage event to a CRTumorEncounter. Individual data elements become Observations referencing this encounter."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-topography"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-topography-observation"/>
+    <name value="Mapping: Tumor crTopography → Topography Observation"/>
+    <comment value="Maps the CR - Topography data element to a CRTopographyObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-morphology"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-morphology-observation"/>
+    <name value="Mapping: Tumor crMorphology → Morphology Observation"/>
+    <comment value="Maps the CR - Morphology data element to a CRMorphologyObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-behaviour"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-behaviour-observation"/>
+    <name value="Mapping: Tumor crBehaviour → Behaviour Observation"/>
+    <comment value="Maps the CR - Behaviour data element to a CRBehaviourObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-grade"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-grade-observation"/>
+    <name value="Mapping: Tumor crGrade → Grade Observation"/>
+    <comment value="Maps the CR - Grade data element to a CRGradeObservation (LOINC 33732-9)."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-basis-diagnosis"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-basis-of-diagnosis-observation"/>
+    <name value="Mapping: Tumor crBasisDiagnosis → Basis of Diagnosis Observation"/>
+    <comment value="Maps the CR - Basis diagnosis data element to a CRBasisOfDiagnosisObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-site"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-site-observation"/>
+    <name value="Mapping: Tumor crSite → Site Observation"/>
+    <comment value="Maps the CR - Site data element to a CRSiteObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-incidence-date"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-incidence-date-observation"/>
+    <name value="Mapping: Tumor crIncidenceDate → Incidence Date Observation"/>
+    <comment value="Maps the CR - Incidence date data element to a CRIncidenceDateObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-age-at-incidence"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-age-at-incidence-observation"/>
+    <name value="Mapping: Tumor crAge → Age at Incidence Observation"/>
+    <comment value="Maps the CR - Age data element to a CRAgeAtIncidenceObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-address"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-address-observation"/>
+    <name value="Mapping: Tumor crAddress → Address Observation"/>
+    <comment value="Maps the CR - Address data element to a CRAddressObservation."/>
+  </mapping>
+  <mapping>
+    <identity value="tumor-to-tumor-number"/>
+    <uri value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-number-observation"/>
+    <name value="Mapping: Tumor crTumorNumber → Tumor Number Observation"/>
+    <comment value="Maps the CR - Tumor number data element to a CRTumorNumberObservation."/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="4.0.1"/>
+    </extension>
+    <element id="Tumor">
+      <path value="Tumor"/>
+      <short value="Tumor"/>
+      <definition value="Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <isModifier value="false"/>
+    </element>
+    <element id="Tumor.crIncidenceDate">
+      <path value="Tumor.crIncidenceDate"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="c6EnHSAMUat"/>
+      </code>
+      <short value="CR - Incidence date"/>
+      <definition value="CR - Incidence date"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crIncidenceDate"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="date"/>
+      </type>
+      <mapping>
+        <identity value="tumor-to-tumor-encounter"/>
+        <map value="Encounter.period.start"/>
+        <comment value="Also recorded as a CRIncidenceDateObservation"/>
+      </mapping>
+      <mapping>
+        <identity value="tumor-to-incidence-date"/>
+        <map value="Observation.valueDateTime"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crAge">
+      <path value="Tumor.crAge"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="tasm9QG8HaF"/>
+      </code>
+      <short value="CR - Age"/>
+      <definition value="CR - Age"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crAge"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+      <mapping>
+        <identity value="tumor-to-age-at-incidence"/>
+        <map value="Observation.valueInteger"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crAddress">
+      <path value="Tumor.crAddress"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="xcUBzN5QFXu"/>
+      </code>
+      <short value="CR - Address"/>
+      <definition value="CR - Address"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crAddress"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-address"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crTumorNumber">
+      <path value="Tumor.crTumorNumber"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="KgDQLAkC5ql"/>
+      </code>
+      <short value="CR - Tumor number"/>
+      <definition value="CR - Tumor number"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crTumorNumber"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-tumor-number"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crSite">
+      <path value="Tumor.crSite"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="LCSApBii8CI"/>
+      </code>
+      <short value="CR - Site"/>
+      <definition value="CR - Site"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crSite"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-site"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crTopography">
+      <path value="Tumor.crTopography"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="zw6Vwqnhvmh"/>
+      </code>
+      <short value="CR - Topography"/>
+      <definition value="CR - Topography"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crTopography"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-topography"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crMorphology">
+      <path value="Tumor.crMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="UkyyY1xukJg"/>
+      </code>
+      <short value="CR - Morphology"/>
+      <definition value="CR - Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crMorphology"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-morphology"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crBehaviour">
+      <path value="Tumor.crBehaviour"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="MMIuwJdjx8B"/>
+      </code>
+      <short value="CR - Behaviour"/>
+      <definition value="CR - Behaviour"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crBehaviour"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRBehaviourVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-behaviour"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crBasisDiagnosis">
+      <path value="Tumor.crBasisDiagnosis"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="uoyoNWrexbY"/>
+      </code>
+      <short value="CR - Basis diagnosis"/>
+      <definition value="CR - Basis diagnosis"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crBasisDiagnosis"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-basis-diagnosis"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crGrade">
+      <path value="Tumor.crGrade"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="ZMD8dwB3zOZ"/>
+      </code>
+      <short value="CR - Grade"/>
+      <definition value="CR - Grade"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crGrade"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-grade"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crChecksRunChecks">
+      <path value="Tumor.crChecksRunChecks"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="FlGHlAuG4Ly"/>
+      </code>
+      <short value="CR - Checks: Run checks"/>
+      <definition value="CR - Checks: Run checks"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRunChecks"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crRunTopographyMorphologyCheck">
+      <path value="Tumor.crRunTopographyMorphologyCheck"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="nFJ2MJ8Vxuj"/>
+      </code>
+      <short value="CR - Run Topography Morphology check"/>
+      <definition value="CR - Run Topography Morphology check"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crRunTopographyMorphologyCheck"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crRunMultiplePrimaryCheck">
+      <path value="Tumor.crRunMultiplePrimaryCheck"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="rqpqtJZto2L"/>
+      </code>
+      <short value="CR - Run Multiple primary check"/>
+      <definition value="CR - Run Multiple primary check"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crRunMultiplePrimaryCheck"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareAgeMorphology">
+      <path value="Tumor.crChecksRareAgeMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="mxfPEKn6kFt"/>
+      </code>
+      <short value="CR - Checks: Rare Age Morphology"/>
+      <definition value="CR - Checks: Rare Age Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRareAgeMorphology"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareAgeTopography">
+      <path value="Tumor.crChecksRareAgeTopography"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="rPvQffpxaEs"/>
+      </code>
+      <short value="CR - Checks: Rare Age Topography"/>
+      <definition value="CR - Checks: Rare Age Topography"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRareAgeTopography"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareAgeTopographyMorphology">
+      <path value="Tumor.crChecksRareAgeTopographyMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="Laax6wSBp2G"/>
+      </code>
+      <short value="CR - Checks: Rare Age Topography Morphology"/>
+      <definition value="CR - Checks: Rare Age Topography Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRareAgeTopographyMorphology"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareBasis">
+      <path value="Tumor.crChecksRareBasis"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="U8v95tUnazC"/>
+      </code>
+      <short value="CR - Checks: Rare Basis"/>
+      <definition value="CR - Checks: Rare Basis"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRareBasis"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksInvalidGrade">
+      <path value="Tumor.crChecksInvalidGrade"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="doB0rv08MIc"/>
+      </code>
+      <short value="CR - Checks: Invalid Grade"/>
+      <definition value="CR - Checks: Invalid Grade"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksInvalidGrade"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareSexMorphology">
+      <path value="Tumor.crChecksRareSexMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="FH09UKj7HMC"/>
+      </code>
+      <short value="CR - Checks: Rare Sex Morphology"/>
+      <definition value="CR - Checks: Rare Sex Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRareSexMorphology"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksInvalidSexTopography">
+      <path value="Tumor.crChecksInvalidSexTopography"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="wAmyuRZNNXC"/>
+      </code>
+      <short value="CR - Checks: Invalid Sex Topography"/>
+      <definition value="CR - Checks: Invalid Sex Topography"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksInvalidSexTopography"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareTopographyBehaviour">
+      <path value="Tumor.crChecksRareTopographyBehaviour"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="ugeBdJzYHVW"/>
+      </code>
+      <short value="CR - Checks: Rare Topography Behaviour"/>
+      <definition value="CR - Checks: Rare Topography Behaviour"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRareTopographyBehaviour"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareTopographyMorphology">
+      <path value="Tumor.crChecksRareTopographyMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="fdvzxz58nEE"/>
+      </code>
+      <short value="CR - Checks: Rare Topography Morphology"/>
+      <definition value="CR - Checks: Rare Topography Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksRareTopographyMorphology"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksMultiplePrimaryTestResult">
+      <path value="Tumor.crChecksMultiplePrimaryTestResult"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="VBkjlEwG4BE"/>
+      </code>
+      <short value="CR - Checks: Multiple primary test result"/>
+      <definition value="CR - Checks: Multiple primary test result"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crChecksMultiplePrimaryTestResult"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crRare">
+      <path value="Tumor.crRare"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="jTW2ljvoIc6"/>
+      </code>
+      <short value="CR - Rare"/>
+      <definition value="CR - Rare"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crRare"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mapping>
+        <identity value="tumor-to-tumor-encounter"/>
+        <map value="Encounter.extension('https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-rare').valueBoolean"/>
+        <comment value="Rare tumor classification flag"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crInvalid">
+      <path value="Tumor.crInvalid"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="TXtHNzrfmki"/>
+      </code>
+      <short value="CR - Invalid"/>
+      <definition value="CR - Invalid"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crInvalid"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crMorphologyFamily">
+      <path value="Tumor.crMorphologyFamily"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="RBu5b3A68mq"/>
+      </code>
+      <short value="CR - Morphology Family"/>
+      <definition value="CR - Morphology Family"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crMorphologyFamily"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crTopographyMorphologyKey">
+      <path value="Tumor.crTopographyMorphologyKey"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="XR1U9dr60xI"/>
+      </code>
+      <short value="CR - Topography Morphology key"/>
+      <definition value="CR - Topography Morphology key"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crTopographyMorphologyKey"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyMorphologyKeyVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPresentInTheMustList">
+      <path value="Tumor.crPresentInTheMustList"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="oZyJlKscN6G"/>
+      </code>
+      <short value="CR - Present in the MUST list"/>
+      <definition value="CR - Present in the MUST list"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPresentInTheMustList"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crPresentInTheMustNotList">
+      <path value="Tumor.crPresentInTheMustNotList"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="DyVH5Q3Qf0Q"/>
+      </code>
+      <short value="CR - Present in the MUST-NOT list"/>
+      <definition value="CR - Present in the MUST-NOT list"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPresentInTheMustNotList"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crMorphologyGroup">
+      <path value="Tumor.crMorphologyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="yt3gq8onyKb"/>
+      </code>
+      <short value="CR - Morphology group"/>
+      <definition value="CR - Morphology group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crMorphologyGroup"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousMorphologyGroup">
+      <path value="Tumor.crPreviousMorphologyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="eGWudq2aGpY"/>
+      </code>
+      <short value="CR - Previous morphology group"/>
+      <definition value="CR - Previous morphology group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPreviousMorphologyGroup"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousMorphologyGroupMultiple">
+      <path value="Tumor.crPreviousMorphologyGroupMultiple"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="dTbQZsduHT7"/>
+      </code>
+      <short value="CR - Previous morphology group (multiple)"/>
+      <definition value="CR - Previous morphology group (multiple)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPreviousMorphologyGroupMultiple"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crTopographyGroup">
+      <path value="Tumor.crTopographyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="RmzIYvxiBm4"/>
+      </code>
+      <short value="CR - Topography group"/>
+      <definition value="CR - Topography group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crTopographyGroup"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousTopographyGroup">
+      <path value="Tumor.crPreviousTopographyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="FyzoZsxRjjz"/>
+      </code>
+      <short value="CR - Previous topography group"/>
+      <definition value="CR - Previous topography group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPreviousTopographyGroup"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousTopographyGroupMultiple">
+      <path value="Tumor.crPreviousTopographyGroupMultiple"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="IhLiguJKuzz"/>
+      </code>
+      <short value="CR - Previous topography group (multiple)"/>
+      <definition value="CR - Previous topography group (multiple)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPreviousTopographyGroupMultiple"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crMorphologyResult">
+      <path value="Tumor.crMorphologyResult"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="n4IHuWceDlW"/>
+      </code>
+      <short value="CR - Morphology result"/>
+      <definition value="CR - Morphology result"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crMorphologyResult"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyResultVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crConfirmTheRareStatus">
+      <path value="Tumor.crConfirmTheRareStatus"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="z3JSu92EQhg"/>
+      </code>
+      <short value="CR - Confirm the rare status"/>
+      <definition value="CR - Confirm the rare status"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crConfirmTheRareStatus"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crTumourid">
+      <path value="Tumor.crTumourid"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="KwMs1DNVA0R"/>
+      </code>
+      <short value="CR - TUMOURID"/>
+      <definition value="CR - TUMOURID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crTumourid"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Tumor.crPreviousTumorNumber">
+      <path value="Tumor.crPreviousTumorNumber"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="OrVAWBySU43"/>
+      </code>
+      <short value="CR - Previous tumor number"/>
+      <definition value="CR - Previous tumor number"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPreviousTumorNumber"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPatientId">
+      <path value="Tumor.crPatientId"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="EMoLghRDW4A"/>
+      </code>
+      <short value="CR - Patient ID"/>
+      <definition value="CR - Patient ID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Tumor.crPatientId"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="Tumor">
+      <path value="Tumor"/>
+      <short value="Tumor"/>
+      <definition value="Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case."/>
+    </element>
+    <element id="Tumor.crIncidenceDate">
+      <path value="Tumor.crIncidenceDate"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="c6EnHSAMUat"/>
+      </code>
+      <short value="CR - Incidence date"/>
+      <definition value="CR - Incidence date"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="date"/>
+      </type>
+      <mapping>
+        <identity value="tumor-to-tumor-encounter"/>
+        <map value="Encounter.period.start"/>
+        <comment value="Also recorded as a CRIncidenceDateObservation"/>
+      </mapping>
+      <mapping>
+        <identity value="tumor-to-incidence-date"/>
+        <map value="Observation.valueDateTime"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crAge">
+      <path value="Tumor.crAge"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="tasm9QG8HaF"/>
+      </code>
+      <short value="CR - Age"/>
+      <definition value="CR - Age"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="unsignedInt"/>
+      </type>
+      <mapping>
+        <identity value="tumor-to-age-at-incidence"/>
+        <map value="Observation.valueInteger"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crAddress">
+      <path value="Tumor.crAddress"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="xcUBzN5QFXu"/>
+      </code>
+      <short value="CR - Address"/>
+      <definition value="CR - Address"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-address"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crTumorNumber">
+      <path value="Tumor.crTumorNumber"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="KgDQLAkC5ql"/>
+      </code>
+      <short value="CR - Tumor number"/>
+      <definition value="CR - Tumor number"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-tumor-number"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crSite">
+      <path value="Tumor.crSite"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="LCSApBii8CI"/>
+      </code>
+      <short value="CR - Site"/>
+      <definition value="CR - Site"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-site"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crTopography">
+      <path value="Tumor.crTopography"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="zw6Vwqnhvmh"/>
+      </code>
+      <short value="CR - Topography"/>
+      <definition value="CR - Topography"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-topography"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crMorphology">
+      <path value="Tumor.crMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="UkyyY1xukJg"/>
+      </code>
+      <short value="CR - Morphology"/>
+      <definition value="CR - Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-morphology"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crBehaviour">
+      <path value="Tumor.crBehaviour"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="MMIuwJdjx8B"/>
+      </code>
+      <short value="CR - Behaviour"/>
+      <definition value="CR - Behaviour"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRBehaviourVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-behaviour"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crBasisDiagnosis">
+      <path value="Tumor.crBasisDiagnosis"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="uoyoNWrexbY"/>
+      </code>
+      <short value="CR - Basis diagnosis"/>
+      <definition value="CR - Basis diagnosis"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-basis-diagnosis"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crGrade">
+      <path value="Tumor.crGrade"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="ZMD8dwB3zOZ"/>
+      </code>
+      <short value="CR - Grade"/>
+      <definition value="CR - Grade"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS"/>
+      </binding>
+      <mapping>
+        <identity value="tumor-to-grade"/>
+        <map value="Observation.valueCodeableConcept"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crChecksRunChecks">
+      <path value="Tumor.crChecksRunChecks"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="FlGHlAuG4Ly"/>
+      </code>
+      <short value="CR - Checks: Run checks"/>
+      <definition value="CR - Checks: Run checks"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crRunTopographyMorphologyCheck">
+      <path value="Tumor.crRunTopographyMorphologyCheck"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="nFJ2MJ8Vxuj"/>
+      </code>
+      <short value="CR - Run Topography Morphology check"/>
+      <definition value="CR - Run Topography Morphology check"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crRunMultiplePrimaryCheck">
+      <path value="Tumor.crRunMultiplePrimaryCheck"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="rqpqtJZto2L"/>
+      </code>
+      <short value="CR - Run Multiple primary check"/>
+      <definition value="CR - Run Multiple primary check"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareAgeMorphology">
+      <path value="Tumor.crChecksRareAgeMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="mxfPEKn6kFt"/>
+      </code>
+      <short value="CR - Checks: Rare Age Morphology"/>
+      <definition value="CR - Checks: Rare Age Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareAgeTopography">
+      <path value="Tumor.crChecksRareAgeTopography"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="rPvQffpxaEs"/>
+      </code>
+      <short value="CR - Checks: Rare Age Topography"/>
+      <definition value="CR - Checks: Rare Age Topography"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareAgeTopographyMorphology">
+      <path value="Tumor.crChecksRareAgeTopographyMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="Laax6wSBp2G"/>
+      </code>
+      <short value="CR - Checks: Rare Age Topography Morphology"/>
+      <definition value="CR - Checks: Rare Age Topography Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareBasis">
+      <path value="Tumor.crChecksRareBasis"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="U8v95tUnazC"/>
+      </code>
+      <short value="CR - Checks: Rare Basis"/>
+      <definition value="CR - Checks: Rare Basis"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksInvalidGrade">
+      <path value="Tumor.crChecksInvalidGrade"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="doB0rv08MIc"/>
+      </code>
+      <short value="CR - Checks: Invalid Grade"/>
+      <definition value="CR - Checks: Invalid Grade"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareSexMorphology">
+      <path value="Tumor.crChecksRareSexMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="FH09UKj7HMC"/>
+      </code>
+      <short value="CR - Checks: Rare Sex Morphology"/>
+      <definition value="CR - Checks: Rare Sex Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksInvalidSexTopography">
+      <path value="Tumor.crChecksInvalidSexTopography"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="wAmyuRZNNXC"/>
+      </code>
+      <short value="CR - Checks: Invalid Sex Topography"/>
+      <definition value="CR - Checks: Invalid Sex Topography"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareTopographyBehaviour">
+      <path value="Tumor.crChecksRareTopographyBehaviour"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="ugeBdJzYHVW"/>
+      </code>
+      <short value="CR - Checks: Rare Topography Behaviour"/>
+      <definition value="CR - Checks: Rare Topography Behaviour"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksRareTopographyMorphology">
+      <path value="Tumor.crChecksRareTopographyMorphology"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="fdvzxz58nEE"/>
+      </code>
+      <short value="CR - Checks: Rare Topography Morphology"/>
+      <definition value="CR - Checks: Rare Topography Morphology"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crChecksMultiplePrimaryTestResult">
+      <path value="Tumor.crChecksMultiplePrimaryTestResult"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="VBkjlEwG4BE"/>
+      </code>
+      <short value="CR - Checks: Multiple primary test result"/>
+      <definition value="CR - Checks: Multiple primary test result"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crRare">
+      <path value="Tumor.crRare"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="jTW2ljvoIc6"/>
+      </code>
+      <short value="CR - Rare"/>
+      <definition value="CR - Rare"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mapping>
+        <identity value="tumor-to-tumor-encounter"/>
+        <map value="Encounter.extension('https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-rare').valueBoolean"/>
+        <comment value="Rare tumor classification flag"/>
+      </mapping>
+    </element>
+    <element id="Tumor.crInvalid">
+      <path value="Tumor.crInvalid"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="TXtHNzrfmki"/>
+      </code>
+      <short value="CR - Invalid"/>
+      <definition value="CR - Invalid"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crMorphologyFamily">
+      <path value="Tumor.crMorphologyFamily"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="RBu5b3A68mq"/>
+      </code>
+      <short value="CR - Morphology Family"/>
+      <definition value="CR - Morphology Family"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crTopographyMorphologyKey">
+      <path value="Tumor.crTopographyMorphologyKey"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="XR1U9dr60xI"/>
+      </code>
+      <short value="CR - Topography Morphology key"/>
+      <definition value="CR - Topography Morphology key"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyMorphologyKeyVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPresentInTheMustList">
+      <path value="Tumor.crPresentInTheMustList"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="oZyJlKscN6G"/>
+      </code>
+      <short value="CR - Present in the MUST list"/>
+      <definition value="CR - Present in the MUST list"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crPresentInTheMustNotList">
+      <path value="Tumor.crPresentInTheMustNotList"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="DyVH5Q3Qf0Q"/>
+      </code>
+      <short value="CR - Present in the MUST-NOT list"/>
+      <definition value="CR - Present in the MUST-NOT list"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crMorphologyGroup">
+      <path value="Tumor.crMorphologyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="yt3gq8onyKb"/>
+      </code>
+      <short value="CR - Morphology group"/>
+      <definition value="CR - Morphology group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousMorphologyGroup">
+      <path value="Tumor.crPreviousMorphologyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="eGWudq2aGpY"/>
+      </code>
+      <short value="CR - Previous morphology group"/>
+      <definition value="CR - Previous morphology group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousMorphologyGroupMultiple">
+      <path value="Tumor.crPreviousMorphologyGroupMultiple"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="dTbQZsduHT7"/>
+      </code>
+      <short value="CR - Previous morphology group (multiple)"/>
+      <definition value="CR - Previous morphology group (multiple)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crTopographyGroup">
+      <path value="Tumor.crTopographyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="RmzIYvxiBm4"/>
+      </code>
+      <short value="CR - Topography group"/>
+      <definition value="CR - Topography group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousTopographyGroup">
+      <path value="Tumor.crPreviousTopographyGroup"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="FyzoZsxRjjz"/>
+      </code>
+      <short value="CR - Previous topography group"/>
+      <definition value="CR - Previous topography group"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPreviousTopographyGroupMultiple">
+      <path value="Tumor.crPreviousTopographyGroupMultiple"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="IhLiguJKuzz"/>
+      </code>
+      <short value="CR - Previous topography group (multiple)"/>
+      <definition value="CR - Previous topography group (multiple)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crMorphologyResult">
+      <path value="Tumor.crMorphologyResult"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="n4IHuWceDlW"/>
+      </code>
+      <short value="CR - Morphology result"/>
+      <definition value="CR - Morphology result"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyResultVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crConfirmTheRareStatus">
+      <path value="Tumor.crConfirmTheRareStatus"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="z3JSu92EQhg"/>
+      </code>
+      <short value="CR - Confirm the rare status"/>
+      <definition value="CR - Confirm the rare status"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+    </element>
+    <element id="Tumor.crTumourid">
+      <path value="Tumor.crTumourid"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="KwMs1DNVA0R"/>
+      </code>
+      <short value="CR - TUMOURID"/>
+      <definition value="CR - TUMOURID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+    <element id="Tumor.crPreviousTumorNumber">
+      <path value="Tumor.crPreviousTumorNumber"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="OrVAWBySU43"/>
+      </code>
+      <short value="CR - Previous tumor number"/>
+      <definition value="CR - Previous tumor number"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS"/>
+      </binding>
+    </element>
+    <element id="Tumor.crPatientId">
+      <path value="Tumor.crPatientId"/>
+      <code>
+        <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+        <code value="EMoLghRDW4A"/>
+      </code>
+      <short value="CR - Patient ID"/>
+      <definition value="CR - Patient ID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

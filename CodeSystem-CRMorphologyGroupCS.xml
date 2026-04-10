@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CRMorphologyGroupCS"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem CRMorphologyGroupCS</b></p><a name="CRMorphologyGroupCS"> </a><a name="hcCRMorphologyGroupCS"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html">CRMI Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">0<a name="CRMorphologyGroupCS-0"> </a></td><td>Invalid (0)</td></tr><tr><td style="white-space:nowrap">1<a name="CRMorphologyGroupCS-1"> </a></td><td>Squamous &amp; Transitional cell carcinomas (1)</td></tr><tr><td style="white-space:nowrap">2<a name="CRMorphologyGroupCS-2"> </a></td><td>Basal Cell carcinomas (2)</td></tr><tr><td style="white-space:nowrap">3<a name="CRMorphologyGroupCS-3"> </a></td><td>Adenocarcinomas (3)</td></tr><tr><td style="white-space:nowrap">4<a name="CRMorphologyGroupCS-4"> </a></td><td>Other specific Carcinomas (4)</td></tr><tr><td style="white-space:nowrap">5<a name="CRMorphologyGroupCS-5"> </a></td><td>Unspecified Carcinomas (5)</td></tr><tr><td style="white-space:nowrap">6<a name="CRMorphologyGroupCS-6"> </a></td><td>Sarcomas &amp; other soft tissue tumors (6)</td></tr><tr><td style="white-space:nowrap">7<a name="CRMorphologyGroupCS-7"> </a></td><td>Mesotheliomas (7)</td></tr><tr><td style="white-space:nowrap">8<a name="CRMorphologyGroupCS-8"> </a></td><td>Hematopoietic, lymphoid tissue: Myeloid (8)</td></tr><tr><td style="white-space:nowrap">9<a name="CRMorphologyGroupCS-9"> </a></td><td>Hematopoietic, lymphoid tissue: B-Cell (9)</td></tr><tr><td style="white-space:nowrap">10<a name="CRMorphologyGroupCS-10"> </a></td><td>Hematopoietic, lymphoid tissue: T-Cell, NK-Cell (10)</td></tr><tr><td style="white-space:nowrap">11<a name="CRMorphologyGroupCS-11"> </a></td><td>Hematopoietic, lymphoid tissue: Hodgkin Lymphoma (11)</td></tr><tr><td style="white-space:nowrap">12<a name="CRMorphologyGroupCS-12"> </a></td><td>Hematopoietic, lymphoid tissue: Mast-cell (12)</td></tr><tr><td style="white-space:nowrap">13<a name="CRMorphologyGroupCS-13"> </a></td><td>Hematopoietic, lymphoid tissue: Histiocytes, Accessory Lymphoid cells (13)</td></tr><tr><td style="white-space:nowrap">14<a name="CRMorphologyGroupCS-14"> </a></td><td>Hematopoietic, lymphoid tissue: Unspecified types (14)</td></tr><tr><td style="white-space:nowrap">15<a name="CRMorphologyGroupCS-15"> </a></td><td>Kaposi sarcoma (15)</td></tr><tr><td style="white-space:nowrap">16<a name="CRMorphologyGroupCS-16"> </a></td><td>Other specified (16)</td></tr><tr><td style="white-space:nowrap">17<a name="CRMorphologyGroupCS-17"> </a></td><td>Unspecified (17)</td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS"/>
+  <version value="0.1.0"/>
+  <name value="CRMorphologyGroupCS"/>
+  <title value="CR - Morphology Group"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-04-10T12:38:15+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Morphology group codes used in the Multiple Primary Tester data quality check. Groups are derived from morphology codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Groups 8-14 represent haematopoietic/lymphoid tissue subtypes (systemic groups). Group 0 indicates an invalid morphology, and group 17 indicates an unspecified morphology."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="18"/>
+  <concept>
+    <code value="0"/>
+    <display value="Invalid (0)"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="Squamous &amp; Transitional cell carcinomas (1)"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Basal Cell carcinomas (2)"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Adenocarcinomas (3)"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Other specific Carcinomas (4)"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="Unspecified Carcinomas (5)"/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="Sarcomas &amp; other soft tissue tumors (6)"/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="Mesotheliomas (7)"/>
+  </concept>
+  <concept>
+    <code value="8"/>
+    <display value="Hematopoietic, lymphoid tissue: Myeloid (8)"/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="Hematopoietic, lymphoid tissue: B-Cell (9)"/>
+  </concept>
+  <concept>
+    <code value="10"/>
+    <display value="Hematopoietic, lymphoid tissue: T-Cell, NK-Cell (10)"/>
+  </concept>
+  <concept>
+    <code value="11"/>
+    <display value="Hematopoietic, lymphoid tissue: Hodgkin Lymphoma (11)"/>
+  </concept>
+  <concept>
+    <code value="12"/>
+    <display value="Hematopoietic, lymphoid tissue: Mast-cell (12)"/>
+  </concept>
+  <concept>
+    <code value="13"/>
+    <display value="Hematopoietic, lymphoid tissue: Histiocytes, Accessory Lymphoid cells (13)"/>
+  </concept>
+  <concept>
+    <code value="14"/>
+    <display value="Hematopoietic, lymphoid tissue: Unspecified types (14)"/>
+  </concept>
+  <concept>
+    <code value="15"/>
+    <display value="Kaposi sarcoma (15)"/>
+  </concept>
+  <concept>
+    <code value="16"/>
+    <display value="Other specified (16)"/>
+  </concept>
+  <concept>
+    <code value="17"/>
+    <display value="Unspecified (17)"/>
+  </concept>
+</CodeSystem>

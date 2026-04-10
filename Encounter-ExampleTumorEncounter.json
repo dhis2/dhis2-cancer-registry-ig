@@ -1,0 +1,36 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "ExampleTumorEncounter",
+  "meta" : {
+    "profile" : ["https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter ExampleTumorEncounter</b></p><a name=\"ExampleTumorEncounter\"> </a><a name=\"hcExampleTumorEncounter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-cr-tumor-encounter.html\">Tumor Registration Encounter</a></p></div><p><b>Rare Tumor Classification</b>: false</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type tumor}\">Tumor Registration</span></p><p><b>subject</b>: <a href=\"Patient-ExampleCRPatient.html\">Jane Doe  Female, DoB: 1970-03-15 ( Medical record number)</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare-ExampleCRRegistrationEpisode.html\">EpisodeOfCare: status = active; period = 2026-01-01 --&gt; (ongoing)</a></p><p><b>period</b>: 2026-01-01 --&gt; (ongoing)</p></div>"
+  },
+  "extension" : [{
+    "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-rare",
+    "valueBoolean" : false
+  }],
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB",
+    "display" : "ambulatory"
+  },
+  "type" : [{
+    "coding" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type",
+      "code" : "tumor"
+    }]
+  }],
+  "subject" : {
+    "reference" : "Patient/ExampleCRPatient"
+  },
+  "episodeOfCare" : [{
+    "reference" : "EpisodeOfCare/ExampleCRRegistrationEpisode"
+  }],
+  "period" : {
+    "start" : "2026-01-01"
+  }
+}

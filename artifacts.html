@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Artifacts Summary - DHIS2 Cancer Registry Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+<!-- Placeholder for child template CSS declarations -->
+<!-- <link href="assets/css/colors.css" rel="stylesheet"/>! -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8.0"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="system-design.html">System Design</a>
+  </li>
+  <li>
+    <a href="data-quality-checks.html">Data Quality Checks</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles &amp; Mappings</a>
+  </li>
+  <li>
+    <a href="deployment.html">Deployment</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://dhis2.org/integration/fhir/">
+      <img height="60" alt="Project home" src="assets/images/dhis2.png"/>
+    </a>
+  </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="80" alt="FHIR website" src="assets/images/fhir.png"/> </a>
+  </div>
+
+<!-- search icon - if you want -->
+<!--
+  <div id="hl7-search">
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+-->
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DHIS2 Cancer Registry Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Artifacts Summary</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main'>https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a> and changes regularly. See the <a href='https://dhis2.org/fhir/cancer-registry/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/64112b60cc67b2c18fa0b367ed5fc2459ca5d4a8"><code>64112b60</code></a>.</span></p><!--EndReleaseHeader-->
+  <h2>Artifacts Summary</h2>
+  
+  
+  
+  <!--DO NOT EDIT THIS FILE - It is generated by https://github.com/HL7/ig-template-base/blob/master/scripts/createArtifactSummary.xslt and any changes made will be overwritten--><div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml"
+     class="markdown-toc">
+   <p>Contents:</p>
+   <ul>
+      <li>
+         <a href="#1">Structures: Logical Models</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Questionnaires</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
+      </li>
+   </ul>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:f="http://hl7.org/fhir"
+     xmlns:html="http://www.w3.org/1999/xhtml">
+   <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
+   <a name="1"> </a>
+   <h3>Structures: Logical Models </h3>
+    <p>These define data models that represent the domain covered by this implementation guide in more business-friendly terms than the underlying FHIR resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-CancerRegistry.html"
+                  title="StructureDefinition/CancerRegistry">Cancer Registry</a>
+            </td>
+            <td>
+<p>Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-FollowUp.html"
+                  title="StructureDefinition/FollowUp">Follow up</a>
+            </td>
+            <td>
+<p>Follow-up stage of the DHIS2 Cancer Registry tracker program. This repeatable stage records the follow-up status of the registered patient over time, capturing the date of last contact, the vital status, and, in cases where the status is death, the date of death. This stage is not associated with a specific tumor or source.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Source.html"
+                  title="StructureDefinition/Source">Source</a>
+            </td>
+            <td>
+<p>Source stage of the DHIS2 Cancer Registry tracker program. This repeatable stage records the documentation sources from which a cancer case has been notified to the registry. Each source represents a piece of documentation, such as a hospital record, pathology report, or death certificate, that supports the registration of a specific tumor. Sources are linked to a specific tumor via the Tumor Number.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-Tumor.html" title="StructureDefinition/Tumor">Tumor</a>
+            </td>
+            <td>
+<p>Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Structures: Questionnaires </h3>
+    <p>These define forms used by systems conforming to this implementation guide to capture or expose data to end users.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-FollowUpQuestionnaire.html"
+                  title="Questionnaire/FollowUpQuestionnaire">Follow up Questionnaire</a>
+            </td>
+            <td>
+<p>Questionnaire for the Follow-up stage of the DHIS2 Cancer Registry tracker program. Records the follow-up status of registered patients over time, capturing the date of last contact, vital status, and date of death when applicable. This stage is not associated with a specific tumor or source.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-SourceQuestionnaire.html"
+                  title="Questionnaire/SourceQuestionnaire">Source Questionnaire</a>
+            </td>
+            <td>
+<p>Questionnaire for the Source stage of the DHIS2 Cancer Registry tracker program. Records the documentation sources from which a cancer case has been notified to the registry. Each source represents a piece of documentation (such as a hospital record, pathology report, or death certificate) linked to a specific tumor via the Tumor Number. Contains a visible Source section and a hidden TUMOURIDSOURCETABLE section used for CanReg5 data extraction.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-TumorQuestionnaire.html"
+                  title="Questionnaire/TumorQuestionnaire">Tumor Questionnaire</a>
+            </td>
+            <td>
+<p>Questionnaire for the Tumor stage of the DHIS2 Cancer Registry tracker program. This is the central data collection component, structured into sections: Patient (demographics and geographic information), Tumor (core variables aligned with CanReg5 ICD-O-3.2 standards including site, topography, morphology, behaviour, basis of diagnosis, and grade), Check Status (triggers for executing data quality checks), Checks (hidden section storing individual check results for rare/invalid classifications), Morphology Topography Check (hidden section for topography-morphology validation), Multiple Primary Tester (hidden section for duplicate/multiple primary determination), Rare Status (confirmation of flagged rare cases by authorised supervisors), and Tumor ID (hidden section supporting CanReg5 data extraction).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
+   <h3>Structures: Resource Profiles </h3>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-address-observation.html"
+                  title="StructureDefinition/cr-address-observation">Address</a>
+            </td>
+            <td>
+<p>Administrative address code of the patient at incidence. Country-specific — must be localised. Corresponds to the CR - Address data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-age-at-incidence-observation.html"
+                  title="StructureDefinition/cr-age-at-incidence-observation">Age at Incidence</a>
+            </td>
+            <td>
+<p>Age of the patient at the date of incidence. Corresponds to the CR - Age data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-basis-of-diagnosis-observation.html"
+                  title="StructureDefinition/cr-basis-of-diagnosis-observation">Basis of Diagnosis</a>
+            </td>
+            <td>
+<p>How the cancer diagnosis was established, coded according to the ICD-O-3 basis of diagnosis classification (codes 0–9). Corresponds to the CR - Basis diagnosis data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-behaviour-observation.html"
+                  title="StructureDefinition/cr-behaviour-observation">Behaviour</a>
+            </td>
+            <td>
+<p>ICD-O-3 behaviour code of the neoplasm: 0=benign, 1=uncertain, 2=in situ, 3=malignant (primary site). Corresponds to the CR - Behaviour data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-cancer-registration-episode.html"
+                  title="StructureDefinition/cr-cancer-registration-episode">Cancer Registration EpisodeOfCare</a>
+            </td>
+            <td>
+<p>Episode of Care representing the overall enrollment of a patient in the cancer registry. Corresponds to the DHIS2 Cancer Registry tracker program enrollment. All stage-level Encounters (Tumor, Source, Follow-up) reference this episode.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-patient.html"
+                  title="StructureDefinition/cr-patient">Cancer Registry Patient</a>
+            </td>
+            <td>
+<p>Minimum patient profile for CanReg5-aligned population-based cancer registration. Requires a patient registration number (REGNO) of at least 8 characters following the CanReg5 CURRENT_DATE(yyyy)+SEQUENTIAL(####) convention, family name, administrative sex, and date of birth.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-date-of-death-observation.html"
+                  title="StructureDefinition/cr-date-of-death-observation">Date of Death</a>
+            </td>
+            <td>
+<p>Date of death of the cancer registry patient, recorded when the vital status is 'dead'. Corresponds to the CR - Date of death data element in the DHIS2 Cancer Registry Follow-up stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-followup-encounter.html"
+                  title="StructureDefinition/cr-followup-encounter">Follow-up Encounter</a>
+            </td>
+            <td>
+<p>Encounter representing a single Follow-up stage event in the DHIS2 Cancer Registry tracker program. Each follow-up contact with a registered patient to ascertain vital status is recorded as a separate encounter. Observations within this encounter capture the vital status, date of last contact, and optional date of death.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-grade-observation.html"
+                  title="StructureDefinition/cr-grade-observation">Histological Grade</a>
+            </td>
+            <td>
+<p>Histological grade (differentiation) of the tumour as defined in ICD-O-3. LOINC 33732-9. Grade codes: 1=well differentiated, 2=moderately differentiated, 3=poorly differentiated, 4=undifferentiated, 5–8=lymphomas/leukaemias, 9=not determined. Corresponds to the CR - Grade data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-incidence-date-observation.html"
+                  title="StructureDefinition/cr-incidence-date-observation">Incidence Date</a>
+            </td>
+            <td>
+<p>Date of incidence (diagnosis date) of the cancer case. Corresponds to the CR - Incidence date data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-morphology-observation.html"
+                  title="StructureDefinition/cr-morphology-observation">Morphology</a>
+            </td>
+            <td>
+<p>ICD-O-3 morphology code (4-digit histological type) of the neoplasm, e.g. 8500 = infiltrating duct carcinoma. Corresponds to the CR - Morphology data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-site-observation.html"
+                  title="StructureDefinition/cr-site-observation">Site</a>
+            </td>
+            <td>
+<p>Higher-level anatomical site grouping derived from the ICD-O-3 topography. Corresponds to the CR - Site data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-source-encounter.html"
+                  title="StructureDefinition/cr-source-encounter">Source Notification Encounter</a>
+            </td>
+            <td>
+<p>Encounter representing a single Source stage event in the DHIS2 Cancer Registry tracker program. Each documentation source (hospital record, pathology report, death certificate, etc.) that notifies the registry about a cancer case is recorded as a separate encounter. Observations within this encounter capture the source type and linked tumor number.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-source-tumor-number-observation.html"
+                  title="StructureDefinition/cr-source-tumor-number-observation">Source Tumor Number</a>
+            </td>
+            <td>
+<p>Tumor number that this source notification relates to. Links the source to a specific tumor within the patient's registration. Corresponds to the CR - Source: Tumor number data element in the DHIS2 Cancer Registry Source stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-source-type-observation.html"
+                  title="StructureDefinition/cr-source-type-observation">Source Type</a>
+            </td>
+            <td>
+<p>Type of documentation source that notified the cancer registry about a case (e.g. hospital, laboratory, death certificate). Country-specific — must be localised. Corresponds to the CR - Source Type data element in the DHIS2 Cancer Registry Source stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-topography-observation.html"
+                  title="StructureDefinition/cr-topography-observation">Topography</a>
+            </td>
+            <td>
+<p>ICD-O-3 topography code indicating the anatomical site of the primary tumour. Corresponds to the CR - Topography data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-tumor-number-observation.html"
+                  title="StructureDefinition/cr-tumor-number-observation">Tumor Number</a>
+            </td>
+            <td>
+<p>Sequential tumor number within the patient's registration (1–10). Corresponds to the CR - Tumor number data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-tumor-encounter.html"
+                  title="StructureDefinition/cr-tumor-encounter">Tumor Registration Encounter</a>
+            </td>
+            <td>
+<p>Encounter representing a single Tumor stage event in the DHIS2 Cancer Registry tracker program. Each time a tumour is registered for a patient, a new Encounter of this type is created. Observations for each data element (topography, morphology, behaviour, grade, basis of diagnosis, etc.) reference this Encounter.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-vital-status-observation.html"
+                  title="StructureDefinition/cr-vital-status-observation">Vital Status</a>
+            </td>
+            <td>
+<p>Follow-up vital status of the registered cancer patient (alive, dead, or unknown). Corresponds to the CR - Status data element in the DHIS2 Cancer Registry Follow-up stage.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="4"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-cr-rare.html"
+                  title="StructureDefinition/cr-rare">Rare Tumor Classification</a>
+            </td>
+            <td>
+<p>Indicates whether the registered tumor has been classified as rare according to the IARC/CanReg5 data quality checks. This is a computed flag derived from the topography-morphology combination evaluated against the IARC rare cancer reference tables. Corresponds to the CR - Rare data element in the DHIS2 Cancer Registry Tumor stage.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRAddressVS.html" title="ValueSet/CRAddressVS">CR - Address value set</a>
+            </td>
+            <td>
+<p>Value set of address codes containing placeholder values that must be customised prior to implementation to reflect the administrative geography of the country or region.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRBasisDiagnosisVS.html"
+                  title="ValueSet/CRBasisDiagnosisVS">CR - Basis diagnosis value set</a>
+            </td>
+            <td>
+<p>Value set of basis of diagnosis codes aligned with the CanReg5 basis dictionary. Codes 0-4 are non-microscopically confirmed, codes 5-8 are microscopically confirmed, and code 9 is unknown.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRBehaviourVS.html" title="ValueSet/CRBehaviourVS">CR - Behaviour value set</a>
+            </td>
+            <td>
+<p>Value set of tumour behaviour codes aligned with the CanReg5 ICD-O-3.2 behaviour dictionary, used in the Tumor stage to classify the biological behaviour of the neoplasm.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRGradeVS.html" title="ValueSet/CRGradeVS">CR - Grade value set</a>
+            </td>
+            <td>
+<p>Value set of tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Includes histological grades 1-4, lymphoma/leukaemia-specific codes 5-8, and unknown (9). Grade is mandatory only when behaviour is malignant (3).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRMorphologyFamilyVS.html"
+                  title="ValueSet/CRMorphologyFamilyVS">CR - Morphology Family value set</a>
+            </td>
+            <td>
+<p>Value set of morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file, used in the Sex-Morphology and Topography-Morphology data quality checks.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRMorphologyGroupVS.html"
+                  title="ValueSet/CRMorphologyGroupVS">CR - Morphology Group value set</a>
+            </td>
+            <td>
+<p>Value set of morphology group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRMorphologyResultVS.html"
+                  title="ValueSet/CRMorphologyResultVS">CR - Morphology result value set</a>
+            </td>
+            <td>
+<p>Value set of intermediate morphology evaluation result codes used in the Multiple Primary Tester check to determine whether to proceed to topography evaluation.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRMorphology4VS.html" title="ValueSet/CRMorphology4VS">CR - Morphology4 value set</a>
+            </td>
+            <td>
+<p>Value set of ICD-O-3.2 morphology codes (first four digits) mapped from the CanReg5 morphology dictionary, representing histological types of neoplasms.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRMultiplePrimaryTestVS.html"
+                  title="ValueSet/CRMultiplePrimaryTestVS">CR - Multiple primary test value set</a>
+            </td>
+            <td>
+<p>Value set of result codes for the Multiple Primary Tester data quality check, determining whether tumours are duplicate registrations, distinct multiple primaries, or have unknown topography.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRPlaceholderSourceTypeVS.html"
+                  title="ValueSet/CRPlaceholderSourceTypeVS">CR - Placeholder: Source type value set</a>
+            </td>
+            <td>
+<p>Value set of placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect local source types (e.g. hospital records, pathology reports, death certificates).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRSexVS.html" title="ValueSet/CRSexVS">CR - Sex value set</a>
+            </td>
+            <td>
+<p>Value set of sex codes aligned with the CanReg5 sex dictionary. These numeric codes are referenced in multiple data quality checks including Sex-Topography and Sex-Morphology checks.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRSiteVS.html" title="ValueSet/CRSiteVS">CR - Site value set</a>
+            </td>
+            <td>
+<p>Value set of anatomical site codes used to filter topography values in a dependent dropdown list for simplified data entry.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRTopographyGroupVS.html"
+                  title="ValueSet/CRTopographyGroupVS">CR - Topography Group value set</a>
+            </td>
+            <td>
+<p>Value set of topography group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRTopographyMorphologyKeyVS.html"
+                  title="ValueSet/CRTopographyMorphologyKeyVS">CR - Topography Morphology key value set</a>
+            </td>
+            <td>
+<p>Value set of keys used in the Topography-Morphology data quality check. NA (*) means accepted with any topography; Plus (+) means checked against the MUST list; Minus (-) means checked against the MUST-NOT list.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRTopographyVS.html" title="ValueSet/CRTopographyVS">CR - Topography value set</a>
+            </td>
+            <td>
+<p>Value set of ICD-O-3 topography codes mapped from the CanReg5 topography dictionary, representing anatomical sites of tumour origin.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRTumorNumberVS.html" title="ValueSet/CRTumorNumberVS">CR - Tumor number value set</a>
+            </td>
+            <td>
+<p>Value set of tumor number identifiers. Combined with the Patient ID, the Tumor Number forms the Tumor ID composite identifier that uniquely identifies a tumor record within the system.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-CRVitalStatusVS.html" title="ValueSet/CRVitalStatusVS">CR - Vital status value set</a>
+            </td>
+            <td>
+<p>Value set of vital status codes used in the Follow-up stage to record the current status of the registered patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-cr-encounter-type-vs.html"
+                  title="ValueSet/cr-encounter-type-vs">Cancer Registry Encounter Types Value Set</a>
+            </td>
+            <td>
+<p>Value set of encounter types for cancer registration stages.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-cr-observation-codes-vs.html"
+                  title="ValueSet/cr-observation-codes-vs">Cancer Registry Observation Codes Value Set</a>
+            </td>
+            <td>
+<p>Value set containing all cancer-registry-specific observation type codes.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRAddressCS.html" title="CodeSystem/CRAddressCS">CR - Address</a>
+            </td>
+            <td>
+<p>Address codes containing placeholder values that must be customised prior to implementation to reflect the administrative geography of the country or region. The recommended approach uses text-type data elements combined with dependent dropdown lists, aligning with the CanReg5 convention where the address variable is two characters in length encoding a combination of two administrative levels.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRBasisDiagnosisCS.html"
+                  title="CodeSystem/CRBasisDiagnosisCS">CR - Basis diagnosis</a>
+            </td>
+            <td>
+<p>Basis of diagnosis codes aligned with the CanReg5 basis dictionary. Codes 0-4 represent non-microscopically confirmed diagnoses (death certificate only, clinical, clinical investigation/ultrasound, surgery/autopsy, laboratory test). Codes 5-8 represent microscopically confirmed diagnoses (cytology, histology of metastasis, histology of primary, autopsy with histology). Code 9 represents unknown basis. Used in the Basis data quality check.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRBehaviourCS.html" title="CodeSystem/CRBehaviourCS">CR - Behaviour</a>
+            </td>
+            <td>
+<p>Tumour behaviour codes aligned with the CanReg5 ICD-O-3.2 behaviour dictionary. Used in the Tumor stage to classify the biological behaviour of the neoplasm. These codes are referenced in data quality checks including the Topography-Behaviour and Sex-Morphology checks. Codes must not be modified as they are mapped directly to CanReg5 standards.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRGradeCS.html" title="CodeSystem/CRGradeCS">CR - Grade</a>
+            </td>
+            <td>
+<p>Tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Codes 1-4 represent histological grade (well differentiated to undifferentiated/anaplastic). Codes 5-8 are reserved for lymphomas and leukaemias (T-cell, B-cell, Null cell, NK cell). Code 9 represents unknown/not stated. Grade is mandatory only when behaviour is malignant (3). These codes are used in the Grade data quality check.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRMorphologyFamilyCS.html"
+                  title="CodeSystem/CRMorphologyFamilyCS">CR - Morphology Family</a>
+            </td>
+            <td>
+<p>Morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file. Each morphology code is assigned to a morphological family, which is used in the Sex-Morphology check (to identify rare sex-morphology combinations) and the Topography-Morphology check (to evaluate morphology-topography combinations against MUST and MUST-NOT lookup tables). Code 99 (N/A) indicates the family is accepted with any topography.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRMorphologyGroupCS.html"
+                  title="CodeSystem/CRMorphologyGroupCS">CR - Morphology Group</a>
+            </td>
+            <td>
+<p>Morphology group codes used in the Multiple Primary Tester data quality check. Groups are derived from morphology codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Groups 8-14 represent haematopoietic/lymphoid tissue subtypes (systemic groups). Group 0 indicates an invalid morphology, and group 17 indicates an unspecified morphology.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRMorphologyResultCS.html"
+                  title="CodeSystem/CRMorphologyResultCS">CR - Morphology result</a>
+            </td>
+            <td>
+<p>Intermediate morphology evaluation result codes used in the Multiple Primary Tester check. When the morphology comparison between two tumours is inconclusive (undecided), the check proceeds to topography evaluation. 'Invalid' indicates one of the morphology groups is invalid (0). 'Go to topography' indicates the morphology evaluation was undecided and topography comparison is needed.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRMorphology4CS.html"
+                  title="CodeSystem/CRMorphology4CS">CR - Morphology4</a>
+            </td>
+            <td>
+<p>ICD-O-3.2 morphology codes (first four digits) mapped from the CanReg5 morphology dictionary (morphology4.tsv). These codes represent the histological type of the neoplasm. Since the field is configured as a closed option set, validity of morphology values is guaranteed by the data entry interface. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRMultiplePrimaryTestCS.html"
+                  title="CodeSystem/CRMultiplePrimaryTestCS">CR - Multiple primary test</a>
+            </td>
+            <td>
+<p>Result codes for the Multiple Primary Tester data quality check. This check determines whether two or more tumours registered for the same patient represent duplicate registrations of the same tumour or distinct multiple primary tumours, based on the CanReg5 DefaultMultiplePrimaryTester logic.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRPlaceholderSourceTypeCS.html"
+                  title="CodeSystem/CRPlaceholderSourceTypeCS">CR - Placeholder: Source type</a>
+            </td>
+            <td>
+<p>Placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect the source types relevant to the local registry context (e.g. hospital records, pathology laboratory reports, death certificates).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRSexCS.html" title="CodeSystem/CRSexCS">CR - Sex</a>
+            </td>
+            <td>
+<p>Sex codes aligned with the CanReg5 sex dictionary, using numeric codes. These codes are referenced in multiple data quality checks throughout the program, including the Sex-Topography and Sex-Morphology checks. Any modification to these codes or substitution with a differently coded option set would break the logic of those checks.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRSiteCS.html" title="CodeSystem/CRSiteCS">CR - Site</a>
+            </td>
+            <td>
+<p>Anatomical site codes used to filter topography values in a dependent dropdown list. When a site is selected, only the topography codes valid for the chosen site are presented for selection, simplifying data entry for registry staff.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRTopographyCS.html" title="CodeSystem/CRTopographyCS">CR - Topography</a>
+            </td>
+            <td>
+<p>ICD-O-3 topography codes mapped from the CanReg5 topography dictionary (topography.tsv). These codes represent the anatomical site of the tumour origin. The topography field is implemented as a dependent dropdown list filtered by the selected Site. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRTopographyGroupCS.html"
+                  title="CodeSystem/CRTopographyGroupCS">CR - Topography Group</a>
+            </td>
+            <td>
+<p>Topography group codes used in the Multiple Primary Tester data quality check. Groups are derived from topography codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Group 80 indicates an unspecified topography. These groups determine whether tumours at different sites should be considered duplicate or multiple primaries.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRTopographyMorphologyKeyCS.html"
+                  title="CodeSystem/CRTopographyMorphologyKeyCS">CR - Topography Morphology key</a>
+            </td>
+            <td>
+<p>Keys used in the Topography-Morphology data quality check to determine how each morphological family relates to topography. NA (*): the family is accepted with any topography. Plus (+): the family has a restricted set of expected topography sites checked against the MUST list. Minus (-): the family has a restricted set of prohibited topography sites checked against the MUST-NOT list.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRTumorNumberCS.html"
+                  title="CodeSystem/CRTumorNumberCS">CR - Tumor number</a>
+            </td>
+            <td>
+<p>Tumor number codes used as a unique identifier for each tumor within the registry. Combined with the Patient ID, the Tumor Number constitutes the Tumor ID (the composite identifier that uniquely identifies a tumor record). A validation mechanism prevents the same tumor number from being assigned to more than one tumor belonging to the same patient.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-CRVitalStatusCS.html"
+                  title="CodeSystem/CRVitalStatusCS">CR - Vital status</a>
+            </td>
+            <td>
+<p>Vital status codes used in the Follow-up stage to record the current status of the registered patient. When the status is 'Died', the date of death must also be recorded.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cr-encounter-type.html"
+                  title="CodeSystem/cr-encounter-type">Cancer Registry Encounter Types</a>
+            </td>
+            <td>
+<p>Encounter types representing the three repeatable program stages of the DHIS2 Cancer Registry tracker program.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-cr-observation-codes.html"
+                  title="CodeSystem/cr-observation-codes">Cancer Registry Observation Codes</a>
+            </td>
+            <td>
+<p>Code system defining observation type codes for cancer registry observations. Used where no standard LOINC code exists for cancer-registry-specific concepts.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-dhis2-data-elements-cs.html"
+                  title="CodeSystem/dhis2-data-elements-cs">DHIS2 Data Elements</a>
+            </td>
+            <td>
+<p>Code system for 47 unique DHIS2 data elements from all selected programs</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-dhis2-tracked-entity-attributes-cs.html"
+                  title="CodeSystem/dhis2-tracked-entity-attributes-cs">DHIS2 Tracked Entity Attributes</a>
+            </td>
+            <td>
+<p>Code system for 5 unique DHIS2 tracked entity attributes</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
+   <h3>Example: Example Instances </h3>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleAgeAtIncidence.html"
+                  title="Observation/ExampleAgeAtIncidence">Example Age at Incidence</a>
+            </td>
+            <td>
+<p>Age at incidence: 54 years.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleBasisOfDiagnosis.html"
+                  title="Observation/ExampleBasisOfDiagnosis">Example Basis of Diagnosis</a>
+            </td>
+            <td>
+<p>Basis of diagnosis observation: 7 — Histology of primary.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleBehaviour.html"
+                  title="Observation/ExampleBehaviour">Example Behaviour</a>
+            </td>
+            <td>
+<p>Behaviour observation: 3 — Malignant, primary site.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="EpisodeOfCare-ExampleCRRegistrationEpisode.html"
+                  title="EpisodeOfCare/ExampleCRRegistrationEpisode">Example Cancer Registration Episode</a>
+            </td>
+            <td>
+<p>Episode of care representing the patient's enrollment into the Cancer Registry programme.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-ExampleCRPatient.html" title="Patient/ExampleCRPatient">Example Cancer Registry Patient</a>
+            </td>
+            <td>
+<p>A 54-year-old female patient enrolled in the DHIS2 Cancer Registry.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-ExampleFollowUpEncounter.html"
+                  title="Encounter/ExampleFollowUpEncounter">Example Follow-up Encounter</a>
+            </td>
+            <td>
+<p>Encounter recording a 6-month follow-up contact.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleGrade.html" title="Observation/ExampleGrade">Example Grade</a>
+            </td>
+            <td>
+<p>Histological grade observation: Grade 2 — moderately differentiated.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleIncidenceDate.html"
+                  title="Observation/ExampleIncidenceDate">Example Incidence Date</a>
+            </td>
+            <td>
+<p>Incidence date observation: 2026-01-01.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleMorphology.html"
+                  title="Observation/ExampleMorphology">Example Morphology</a>
+            </td>
+            <td>
+<p>Morphology observation: 8500 — Infiltrating duct carcinoma, NOS.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleSite.html" title="Observation/ExampleSite">Example Site</a>
+            </td>
+            <td>
+<p>Site observation: Breast.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-ExampleSourceEncounter.html"
+                  title="Encounter/ExampleSourceEncounter">Example Source Encounter</a>
+            </td>
+            <td>
+<p>Encounter recording the Source stage event: hospital notification.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleSourceTumorNumber.html"
+                  title="Observation/ExampleSourceTumorNumber">Example Source Tumor Number</a>
+            </td>
+            <td>
+<p>Source links to tumor number 01.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleSourceType.html"
+                  title="Observation/ExampleSourceType">Example Source Type</a>
+            </td>
+            <td>
+<p>Source type: placeholder source type (to be localised).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleTopography.html"
+                  title="Observation/ExampleTopography">Example Topography</a>
+            </td>
+            <td>
+<p>Topography observation: C50.4 — Upper-outer quadrant of breast.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-ExampleTumorEncounter.html"
+                  title="Encounter/ExampleTumorEncounter">Example Tumor Encounter</a>
+            </td>
+            <td>
+<p>Encounter recording the Tumor stage event for primary breast carcinoma.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleTumorNumber.html"
+                  title="Observation/ExampleTumorNumber">Example Tumor Number</a>
+            </td>
+            <td>
+<p>Tumour number: 01 (first tumour registered for this patient).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Observation-ExampleVitalStatus.html"
+                  title="Observation/ExampleVitalStatus">Example Vital Status</a>
+            </td>
+            <td>
+<p>Patient alive at 6-month follow-up.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>.  Package dhis2.cancer.registry#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 12:38+0000">2026-04-10</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhis2.org/fhir/cancer-registry/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

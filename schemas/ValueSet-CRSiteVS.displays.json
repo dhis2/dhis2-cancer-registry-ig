@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRSiteVS.displays.json",
+  "title": "CR - Site value set Display Values",
+  "description": "Display values for CR - Site value set ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#0": {
+      "en": "Lip (00)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#1": {
+      "en": "Base of tongue (01)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#2": {
+      "en": "Other and unspecified parts of tongue (02)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#3": {
+      "en": "Gum (03)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#4": {
+      "en": "Floor of mouth (04)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#5": {
+      "en": "Palate (05)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#6": {
+      "en": "Other and unspecified parts of mouth (06)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#7": {
+      "en": "Parotid glanid (07)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#8": {
+      "en": "Other and unspecified major salivary glands (08)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#9": {
+      "en": "Tonsil (09)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#10": {
+      "en": "Oropharynx (10)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#11": {
+      "en": "Nasopharynx (11)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#12": {
+      "en": "Pyriform sinus (12)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#13": {
+      "en": "Hypopharynx (13)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#14": {
+      "en": "Other and ill-defined sites in lip, oral cavity and pharynx (14)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#15": {
+      "en": "Esophagus (15)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#16": {
+      "en": "Stomach (16)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#17": {
+      "en": "Small intestine (17)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#18": {
+      "en": "Colon (18)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#19": {
+      "en": "Rectosigmoid junction (19)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#20": {
+      "en": "Rectum (20)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#21": {
+      "en": "Anus and anal canal (21)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#22": {
+      "en": "Liver and intrahepatic bile ducts (22)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#23": {
+      "en": "Gallbladder (23)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#24": {
+      "en": "Other and unspecified parts of biliary tract (24)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#25": {
+      "en": "Pancreas (25)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#26": {
+      "en": "Other and ill-defined digestive organs (26)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#30": {
+      "en": "Nasal cavity and middle ear (30)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#31": {
+      "en": "Accessory sinuses (31)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#32": {
+      "en": "Larynx (32)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#33": {
+      "en": "Trachea (33)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#34": {
+      "en": "Bronchus and lung (34)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#37": {
+      "en": "Thymus (37)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#38": {
+      "en": "Heart, mediastinum, and pleura (38)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#39": {
+      "en": "Other and ill-defined sites within respiratory system amd intrathoracic organs (39)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#40": {
+      "en": "Bones, joints and articular cartilage of limbs (40)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#41": {
+      "en": "Bones, joints and articular cartilage of other and unspecified sites (41)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#42": {
+      "en": "Hematopoietic and reticuloendothelial systems (42)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#44": {
+      "en": "Skin (44)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#47": {
+      "en": "Peripheral nerves and autonomic nervous system (47)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#48": {
+      "en": "Retroperitoneum and peritoneum (48)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#49": {
+      "en": "Connective, subcutaneous and other soft tissues (49)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#50": {
+      "en": "Breast (50)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#51": {
+      "en": "Vulva (51)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#52": {
+      "en": "Vagina (52)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#53": {
+      "en": "Cervix uteri (53)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#54": {
+      "en": "Corpus uteri (54)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#55": {
+      "en": "Uterus, nos (55)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#56": {
+      "en": "Ovary (56)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#57": {
+      "en": "Other an unspecified female genital organs (57)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#58": {
+      "en": "Placenta (58)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#60": {
+      "en": "Penis (60)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#61": {
+      "en": "Prostate gland (61)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#62": {
+      "en": "Testis (62)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#63": {
+      "en": "Other and unspecified male genital organs (63)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#64": {
+      "en": "Kidney (64)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#65": {
+      "en": "Renal pelvis (65)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#66": {
+      "en": "Ureter (66)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#67": {
+      "en": "Bladder (67)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#68": {
+      "en": "Other and unspecified urinary organs (68)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#69": {
+      "en": "Eye and adnexa (69)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#70": {
+      "en": "Meninges (70)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#71": {
+      "en": "Brain (71)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#72": {
+      "en": "Spinal cord, cranial nerves, and other parts of central nervous system (72)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#73": {
+      "en": "Thyroid gland (73)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#74": {
+      "en": "Adrenal gland (74)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#75": {
+      "en": "Other endocrine glands and related structures (75)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#76": {
+      "en": "Other and ill-defined sites (76)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#77": {
+      "en": "Lymph nodes (77)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS#80": {
+      "en": "Unknown primary site (80)"
+    }
+  },
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.713710"
+}

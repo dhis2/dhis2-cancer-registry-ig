@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CRGradeCS"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem CRGradeCS</b></p><a name="CRGradeCS"> </a><a name="hcCRGradeCS"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html">CRMI Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">1<a name="CRGradeCS-1"> </a></td><td>Grade I (1)</td></tr><tr><td style="white-space:nowrap">2<a name="CRGradeCS-2"> </a></td><td>Grade II (2)</td></tr><tr><td style="white-space:nowrap">3<a name="CRGradeCS-3"> </a></td><td>Grade III (3)</td></tr><tr><td style="white-space:nowrap">4<a name="CRGradeCS-4"> </a></td><td>Grade IV (4)</td></tr><tr><td style="white-space:nowrap">5<a name="CRGradeCS-5"> </a></td><td>T-Cell (5)</td></tr><tr><td style="white-space:nowrap">6<a name="CRGradeCS-6"> </a></td><td>B-Cell (6)</td></tr><tr><td style="white-space:nowrap">7<a name="CRGradeCS-7"> </a></td><td>Null cell (7)</td></tr><tr><td style="white-space:nowrap">8<a name="CRGradeCS-8"> </a></td><td>NK cell (8)</td></tr><tr><td style="white-space:nowrap">9<a name="CRGradeCS-9"> </a></td><td>Unknown/Not Stated/NA (9)</td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS"/>
+  <version value="0.1.0"/>
+  <name value="CRGradeCS"/>
+  <title value="CR - Grade"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-04-10T12:38:15+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Codes 1-4 represent histological grade (well differentiated to undifferentiated/anaplastic). Codes 5-8 are reserved for lymphomas and leukaemias (T-cell, B-cell, Null cell, NK cell). Code 9 represents unknown/not stated. Grade is mandatory only when behaviour is malignant (3). These codes are used in the Grade data quality check."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="9"/>
+  <concept>
+    <code value="1"/>
+    <display value="Grade I (1)"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Grade II (2)"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Grade III (3)"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Grade IV (4)"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="T-Cell (5)"/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="B-Cell (6)"/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="Null cell (7)"/>
+  </concept>
+  <concept>
+    <code value="8"/>
+    <display value="NK cell (8)"/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="Unknown/Not Stated/NA (9)"/>
+  </concept>
+</CodeSystem>

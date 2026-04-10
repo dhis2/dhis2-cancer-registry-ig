@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>System Design - DHIS2 Cancer Registry Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+<!-- Placeholder for child template CSS declarations -->
+<!-- <link href="assets/css/colors.css" rel="stylesheet"/>! -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="system-design.html">System Design</a>
+  </li>
+  <li>
+    <a href="data-quality-checks.html">Data Quality Checks</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles &amp; Mappings</a>
+  </li>
+  <li>
+    <a href="deployment.html">Deployment</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://dhis2.org/integration/fhir/">
+      <img height="60" alt="Project home" src="assets/images/dhis2.png"/>
+    </a>
+  </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="80" alt="FHIR website" src="assets/images/fhir.png"/> </a>
+  </div>
+
+<!-- search icon - if you want -->
+<!--
+  <div id="hl7-search">
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+-->
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DHIS2 Cancer Registry Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>System Design</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main'>https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a> and changes regularly. See the <a href='https://dhis2.org/fhir/cancer-registry/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/64112b60cc67b2c18fa0b367ed5fc2459ca5d4a8"><code>64112b60</code></a>.</span></p><!--EndReleaseHeader-->
+  <h2>System Design</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#tracker-program-structure" id="markdown-toc-tracker-program-structure">Tracker Program Structure</a></li>
+  <li><a href="#tracked-entity-type" id="markdown-toc-tracked-entity-type">Tracked Entity Type</a></li>
+  <li><a href="#enrollment" id="markdown-toc-enrollment">Enrollment</a></li>
+  <li><a href="#tumor-stage" id="markdown-toc-tumor-stage">Tumor Stage</a></li>
+  <li><a href="#source-stage" id="markdown-toc-source-stage">Source Stage</a></li>
+  <li><a href="#follow-up-stage" id="markdown-toc-follow-up-stage">Follow-up Stage</a></li>
+  <li><a href="#user-groups" id="markdown-toc-user-groups">User Groups</a></li>
+</ul>
+
+</div>
+<p>This page describes the structure of the DHIS2 Cancer Registry Tracker program as represented in this implementation guide. For the full design documentation, see the <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">System Design Guide</a>.</p>
+
+<h3 id="tracker-program-structure">Tracker Program Structure</h3>
+
+<p>The Cancer Registry tracker is composed of an enrollment stage and three repeatable program stages:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Enrollment</strong></td>
+      <td>Captures basic demographic data about a person as Tracked Entity Attributes (TEAs). The Tracked Entity Type is 'Person'.</td>
+    </tr>
+    <tr>
+      <td><strong>Tumor</strong></td>
+      <td>Captures core clinical and epidemiological information related to each tumor. Repeatable.</td>
+    </tr>
+    <tr>
+      <td><strong>Source</strong></td>
+      <td>Records documentation sources associated with each tumor (e.g. hospital records, pathology reports, death certificates). Repeatable.</td>
+    </tr>
+    <tr>
+      <td><strong>Follow-up</strong></td>
+      <td>Records the follow-up status of the patient over time. Not linked to a specific tumor or source. Repeatable.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tracked-entity-type">Tracked Entity Type</h3>
+
+<p>The Tracked Entity Type for the Cancer Registry program is <strong>Person</strong>. Each enrolled person represents an individual cancer patient registered in the population-based cancer registry. The TET is configured at the system level and may be shared with other DHIS2 tracker programs deployed within the same national instance, in line with standard <a href="https://docs.dhis2.org/en/implement/health/dhis2-health-data-toolkit/common-metadata-library/design.html">DHIS2 implementation practice</a>.</p>
+
+<h3 id="enrollment">Enrollment</h3>
+
+<p>The enrollment stage captures the core patient demographic information required to register an individual in the cancer registry program. The attributes collected at enrollment represent the minimum dataset necessary for population-based cancer registration and have been mapped to the IARC standard data requirements.</p>
+
+<p>Five key tracked entity attributes are collected:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Attribute</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Patient ID</strong></td>
+      <td>Automatically generated using the CanReg5 convention: 8 characters in the form <code class="language-plaintext highlighter-rouge">CURRENT_DATE(yyyy)+SEQUENTIAL(####)</code>.</td>
+    </tr>
+    <tr>
+      <td><strong>Family Name</strong></td>
+      <td>Family name or last name, shared TEA across DHIS2 Tracker programs.</td>
+    </tr>
+    <tr>
+      <td><strong>Given Name</strong></td>
+      <td>Given name or first name, shared TEA across DHIS2 Tracker programs.</td>
+    </tr>
+    <tr>
+      <td><strong>Sex</strong></td>
+      <td>Uses numeric codes (1=Male, 2=Female, 9=Unknown) mapped to the <a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/sex.tsv">CanReg5 sex dictionary</a>. These codes are referenced in multiple data quality checks.</td>
+    </tr>
+    <tr>
+      <td><strong>Date of Birth</strong></td>
+      <td>Date of birth, can also be used when the date of birth is estimated.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="tumor-stage">Tumor Stage</h3>
+
+<p>The Tumor stage is the central component of the tracker program. It captures all key clinical and epidemiological information and is where the full set of <a href="data-quality-checks.html">data quality checks</a> is applied.</p>
+
+<p>The stage is structured into multiple sections:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Visibility</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Patient</td>
+      <td>Visible</td>
+      <td>Patient demographic and geographic information including incidence date, age, and address.</td>
+    </tr>
+    <tr>
+      <td>Tumor</td>
+      <td>Visible</td>
+      <td>Core tumor variables: tumor number, site, topography, morphology, behaviour, basis of diagnosis, and grade.</td>
+    </tr>
+    <tr>
+      <td>Check Status</td>
+      <td>Visible</td>
+      <td>Triggers for executing data quality checks (Run checks, Run Topography Morphology check, Run Multiple primary check).</td>
+    </tr>
+    <tr>
+      <td>Checks</td>
+      <td>Hidden</td>
+      <td>Stores the result of each individual data quality check as boolean data elements plus summary Rare/Invalid classifications.</td>
+    </tr>
+    <tr>
+      <td>Morphology Topography Check</td>
+      <td>Hidden</td>
+      <td>Intermediate data elements for the multi-step topography-morphology validation.</td>
+    </tr>
+    <tr>
+      <td>Multiple Primary Tester</td>
+      <td>Hidden</td>
+      <td>Intermediate data elements for the multi-step multiple primary determination.</td>
+    </tr>
+    <tr>
+      <td>Rare Status</td>
+      <td>Conditionally visible</td>
+      <td>Visible only when the tumor is classified as rare and only to authorised users who can confirm the rare status.</td>
+    </tr>
+    <tr>
+      <td>Tumor ID</td>
+      <td>Hidden</td>
+      <td>Stores identifiers needed for CanReg5 data extraction (Patient ID, TUMOURID, Previous Tumor Number).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="patient-section">Patient Section</h4>
+
+<p>The central date field is the <strong>Incidence Date</strong>, which is the reference date used for all analytical outputs in CanReg5. The <strong>Age</strong> must be entered manually and is verified against the date of birth and incidence date by a program rule.</p>
+
+<p>The <strong>Address</strong> field uses placeholder values that must be customised prior to implementation to reflect the administrative geography of the country or region.</p>
+
+<h4 id="tumor-section">Tumor Section</h4>
+
+<p>The tumor section captures the key variables for every cancer case, aligned with IARC standard data requirements. The option sets are mapped with the CanReg5 ICD-O-3.2 version:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>CanReg5 Dictionary Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Site / Topography</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/topography.tsv">topography.tsv</a></td>
+    </tr>
+    <tr>
+      <td>Morphology</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/morphology4.tsv">morphology4.tsv</a></td>
+    </tr>
+    <tr>
+      <td>Behaviour</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/behaviour.tsv">behaviour.tsv</a></td>
+    </tr>
+    <tr>
+      <td>Basis of Diagnosis</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/basis.tsv">basis.tsv</a></td>
+    </tr>
+    <tr>
+      <td>Grade</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/blob/release/R45/src/canreg/common/resources/dictionaries/grade.tsv">grade.tsv</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <strong>Tumor Number</strong> is a unique identifier for the tumor within the registry. Combined with the Patient ID, it forms the <strong>Tumor ID</strong> — the composite identifier that uniquely identifies a tumor record. A validation mechanism prevents the same tumor number from being assigned to more than one tumor belonging to the same patient.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> The option sets and their associated codes are mapped directly to the CanReg5 standards. It is critical that these codes are not modified during local implementation. Any alteration to the option codes will break the logic of the data quality checks.</p>
+</blockquote>
+
+<h4 id="mandatory-elements">Mandatory Elements</h4>
+
+<p>The only formally mandatory data element is the <strong>Tumor Number</strong>. However, in practice, all data elements in the patient and tumor sections must be populated for the data quality checks to execute correctly. The sole exception is the <strong>Grade</strong> field, which is not required when the behaviour code indicates a value other than malignant.</p>
+
+<h3 id="source-stage">Source Stage</h3>
+
+<p>The Source stage records the documentation sources from which a cancer case has been notified to the registry. Each source is linked to a specific tumor via the <strong>Tumor Number</strong>. If a tumor number selected in the source record has not been previously assigned in any tumor event for the same patient, an error message is displayed.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Section</th>
+      <th>Visibility</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Source</td>
+      <td>Visible</td>
+      <td>Source documentation details including tumor number, source date, and source type.</td>
+    </tr>
+    <tr>
+      <td>TUMOURIDSOURCETABLE</td>
+      <td>Hidden</td>
+      <td>Identifiers needed for CanReg5 data extraction (Patient ID, TUMOURIDSOURCETABLE).</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The <strong>Type of source</strong> field uses placeholder values that must be customised prior to implementation.</p>
+
+<h3 id="follow-up-stage">Follow-up Stage</h3>
+
+<p>The Follow-up stage records the follow-up status of the registered patient over time. It captures:</p>
+
+<ul>
+  <li><strong>Date of last contact</strong> — the date of last contact with or information about the patient.</li>
+  <li><strong>Status</strong> — the vital status of the patient (Alive, Died, Unknown).</li>
+  <li><strong>Date of death</strong> — recorded when the status is death.</li>
+</ul>
+
+<h3 id="user-groups">User Groups</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>User Group</th>
+      <th>Metadata</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CR - Admin</td>
+      <td>Can edit and view</td>
+      <td>No access</td>
+    </tr>
+    <tr>
+      <td>CR - Access</td>
+      <td>Can view only</td>
+      <td>Can view only</td>
+    </tr>
+    <tr>
+      <td>CR - Data capture</td>
+      <td>Can view only</td>
+      <td>Can capture and view</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>.  Package dhis2.cancer.registry#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 12:38+0000">2026-04-10</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhis2.org/fhir/cancer-registry/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

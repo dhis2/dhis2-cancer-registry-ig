@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRSexVS.schema.json",
+  "title": "CR - Sex value set Schema",
+  "description": "JSON Schema for CR - Sex value set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSexCS#1",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSexCS#2",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSexCS#9"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the CR - Sex value set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-CRSexVS.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRSexVS.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSexVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.717977"
+}

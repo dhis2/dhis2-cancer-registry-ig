@@ -1,0 +1,1971 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphology4VS.displays.json",
+  "title": "CR - Morphology4 value set Display Values",
+  "description": "Display values for CR - Morphology4 value set ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8000": {
+      "en": "Neoplasm, malignant (8000)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8001": {
+      "en": "Tumor cells, malignant (8001)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8002": {
+      "en": "Malignant tumor, small cell type (8002)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8003": {
+      "en": "Malignant tumor, giant cell type (8003)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8004": {
+      "en": "Malignant tumor, spindle cell type (8004)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8005": {
+      "en": "Malignant tumor, clear cell type (8005)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8010": {
+      "en": "Carcinoma, NOS (8010)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8011": {
+      "en": "Epithelioma, malignant (8011)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8012": {
+      "en": "Large cell carcinoma, NOS (8012)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8013": {
+      "en": "Large cell neuroendocrine carcinoma (8013)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8014": {
+      "en": "Large cell carcinoma with rhabdoid phenotype (8014)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8015": {
+      "en": "Glassy cell carcinoma (8015)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8020": {
+      "en": "Carcinoma, undifferentiated, NOS (8020)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8021": {
+      "en": "Carcinoma, anaplastic, NOS (8021)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8022": {
+      "en": "Pleomorphic carcinoma (8022)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8023": {
+      "en": "Nuclear protein in testis (NUT) associated carcinoma (8023)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8030": {
+      "en": "Giant cell and spindle cell carcinoma (8030)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8031": {
+      "en": "Giant cell carcinoma (8031)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8032": {
+      "en": "Spindle cell carcinoma, NOS (8032)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8033": {
+      "en": "Pseudosarcomatous carcinoma (8033)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8034": {
+      "en": "Polygonal cell carcinoma (8034)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8035": {
+      "en": "Carcinoma with osteoclast-like giant cells (8035)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8041": {
+      "en": "Small cell carcinoma, NOS (8041)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8042": {
+      "en": "Oat cell carcinoma (C34._) (8042)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8043": {
+      "en": "Small cell carcinoma, fusiform cell (8043)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8044": {
+      "en": "Small cell carcinoma, intermediate cell (8044)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8045": {
+      "en": "Combined small cell carcinoma (8045)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8046": {
+      "en": "Non-small cell carcinoma (C34._) (8046)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8050": {
+      "en": "Papillary carcinoma, NOS (8050)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8051": {
+      "en": "Verrucous carcinoma, NOS (8051)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8052": {
+      "en": "Papillary squamous cell carcinoma (8052)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8054": {
+      "en": "Warty carcinoma/dyskeratoma (8054)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8070": {
+      "en": "Squamous cell carcinoma, NOS (8070)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8071": {
+      "en": "Squamous cell carcinoma, keratinizing, NOS (8071)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8072": {
+      "en": "Squamous cell carcinoma, large cell, nonkeratinizing, NOS (8072)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8073": {
+      "en": "Squamous cell carcinoma, small cell, nonkeratinizing (8073)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8074": {
+      "en": "Squamous cell carcinoma, spindle cell (8074)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8075": {
+      "en": "Squamous cell carcinoma, adenoid (8075)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8076": {
+      "en": "Squamous cell carcinoma, microinvasive (8076)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8078": {
+      "en": "Squamous cell carcinoma with horn formation (8078)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8082": {
+      "en": "Lymphoepithelial carcinoma (8082)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8083": {
+      "en": "Basaloid squamous cell carcinoma (8083)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8084": {
+      "en": "Squamous cell carcinoma, clear cell type (8084)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8085": {
+      "en": "Squamous cell carcinoma, HPV-positive (8085)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8086": {
+      "en": "Squamous cell carcinoma, HPV-negative (8086)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8090": {
+      "en": "Basal cell carcinoma, NOS (C44._) (8090)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8091": {
+      "en": "Multifocal superficial basal cell carcinoma (C44._) (8091)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8092": {
+      "en": "Infiltrating basal cell carcinoma, NOS (C44._) (8092)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8093": {
+      "en": "Basal cell carcinoma, fibroepithelial (C44._) (8093)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8094": {
+      "en": "Basosquamous carcinoma (C44._) (8094)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8095": {
+      "en": "Metatypical carcinoma (C44._) (8095)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8097": {
+      "en": "Basal cell carcinoma, nodular (C44._) (8097)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8098": {
+      "en": "Adenoid basal carcinoma (C53._) (8098)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8102": {
+      "en": "Trichilemmocarcinoma (C44._) (8102)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8104": {
+      "en": "Pilar sheath acanthoma (C44._) (8104)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8110": {
+      "en": "Pilomatrix carcinoma (C44._) (8110)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8120": {
+      "en": "Transitional cell carcinoma (8120)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8121": {
+      "en": "Schneiderian carcinoma (C30.0, C31._) (8121)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8122": {
+      "en": "Transitional cell carcinoma, spindle cell (8122)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8123": {
+      "en": "Basaloid carcinoma (8123)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8124": {
+      "en": "Cloacogenic carcinoma (C21.2) (8124)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8130": {
+      "en": "Papillary transitional cell carcinoma (C67._) (8130)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8131": {
+      "en": "Transitional cell carcinoma, micropapillary (C67._) (8131)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8140": {
+      "en": "Adenocarcinoma, NOS (8140)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8141": {
+      "en": "Scirrhous adenocarcinoma (8141)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8142": {
+      "en": "Linitis plastica (C16._) (8142)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8143": {
+      "en": "Superficial spreading adenocarcinoma (8143)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8144": {
+      "en": "Adenocarcinoma, intestinal type (C16._) (8144)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8145": {
+      "en": "Carcinoma, diffuse type (C16._) (8145)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8147": {
+      "en": "Basal cell adenocarcinoma (8147)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8150": {
+      "en": "Pancreatic endocrine tumor, malignant (8150)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8151": {
+      "en": "Insulinoma, malignant (C25._) (8151)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8152": {
+      "en": "Glucagonoma, malignant (C25._) (8152)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8153": {
+      "en": "Gastrinoma, malignant (8153)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8154": {
+      "en": "Mixed pancreatic endocrine and exocrine tumor, malignant (C25._) (8154)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8155": {
+      "en": "Vipoma, malignant (8155)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8156": {
+      "en": "Somatostatinoma, malignant (8156)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8160": {
+      "en": "Cholangiocarcinoma (C22.1, C24.0) (8160)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8161": {
+      "en": "Bile duct cystadenocarcinoma (C22.1, C24.0) (8161)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8162": {
+      "en": "Klatskin tumor (C22.1, C24.0) (8162)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8163": {
+      "en": "Pancreatobiliary-type carcinoma (C24.1) (8163)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8170": {
+      "en": "Hepatocellular carcinoma, NOS (C22.0) (8170)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8171": {
+      "en": "Hepatocellular carcinoma, fibrolamellar (C22.0) (8171)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8172": {
+      "en": "Hepatocellular carcinoma, scirrhous (C22.0) (8172)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8173": {
+      "en": "Hepatocellular carcinoma, spindle cell variant (C22.0) (8173)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8174": {
+      "en": "Hepatocellular carcinoma, clear cell type (C22.0) (8174)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8175": {
+      "en": "Hepatocellular carcinoma, pleomorphic type (C22.0) (8175)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8180": {
+      "en": "Combined hepatocellular carcinoma and cholangiocarcinoma (C22.0) (8180)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8190": {
+      "en": "Trabecular adenocarcinoma (8190)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8200": {
+      "en": "Adenoid cystic carcinoma (8200)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8201": {
+      "en": "Cribriform carcinoma, NOS (8201)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8210": {
+      "en": "Adenocarcinoma in adenomatous polyp (8210)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8211": {
+      "en": "Tubular adenocarcinoma (8211)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8213": {
+      "en": "Serrated adenocarcinoma (8213)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8214": {
+      "en": "Parietal cell carcinoma (C16._) (8214)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8215": {
+      "en": "Adenocarcinoma of anal glands (C21.1) (8215)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8220": {
+      "en": "Adenocarcinoma in adenomatous polyposis coli (C18._) (8220)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8221": {
+      "en": "Adenocarcinoma in multiple adenomatous polyps (8221)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8230": {
+      "en": "Solid carcinoma, NOS (8230)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8231": {
+      "en": "Carcinoma simplex (8231)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8240": {
+      "en": "Carcinoid tumor, NOS (8240)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8241": {
+      "en": "Enterochromaffin cell carcinoid (8241)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8242": {
+      "en": "Enterochromaffin-like cell tumor, malignant (8242)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8243": {
+      "en": "Goblet cell carcinoid (8243)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8244": {
+      "en": "Mixed adenoneuroendocrine carcinoma (8244)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8245": {
+      "en": "Adenocarcinoid tumor (8245)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8246": {
+      "en": "Neuroendocrine carcinoma, NOS (8246)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8247": {
+      "en": "Merkel cell carcinoma (C44._) (8247)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8249": {
+      "en": "Atypical carcinoid tumor (8249)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8250": {
+      "en": "Bronchiolo-alveolar adenocarcinoma, NOS (C34._) (8250)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8251": {
+      "en": "Alveolar adenocarcinoma (C34._) (8251)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8252": {
+      "en": "Bronchiolo-alveolar carcinoma, non-mucinous (C34._) (8252)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8253": {
+      "en": "Bronchio-alveolar carcinoma, mucinous (C34._) (8253)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8254": {
+      "en": "Bronchio-alveolar carcinoma, mixed mucinous and non-mucinous (C34._) (8254)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8255": {
+      "en": "Adenocarcinoma with mixed subtypes (8255)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8256": {
+      "en": "Minimally invasive adenocarcinoma, non-mucinous (C34._) (8256)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8257": {
+      "en": "Minimally invasive adenocarcinoma, mucinous (C34._) (8257)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8260": {
+      "en": "Papillary adenocarcinoma, NOS (8260)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8261": {
+      "en": "Adenocarcinoma in villous adenoma (8261)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8262": {
+      "en": "Villous adenocarcinoma (8262)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8263": {
+      "en": "Adenocarcinoma in tubolovillous adenoma (8263)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8265": {
+      "en": "Micropapillary carcinoma, NOS (C18._, C19.9, C20.9) (8265)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8270": {
+      "en": "Chromophobe carcinoma (C75.1) (8270)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8272": {
+      "en": "Pituitary carcinoma, NOS (C75.1) (8272)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8273": {
+      "en": "Pituitary blastoma (C75.1) (8273)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8280": {
+      "en": "Acidophil carcinoma (C75.1) (8280)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8281": {
+      "en": "Mixed acidophil-basophil carcinoma (C75.1) (8281)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8290": {
+      "en": "Oxyphilic adenocarcinoma (8290)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8300": {
+      "en": "Basophil carcinoma (C75.1) (8300)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8310": {
+      "en": "Clear cell adenocarcinoma, NOS (8310)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8312": {
+      "en": "Renal cell carcinoma, NOS (C64.9) (8312)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8313": {
+      "en": "Clear cell adenocarcinofibroma (C56.9) (8313)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8314": {
+      "en": "Lipid-rich carcinoma (C50._) (8314)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8315": {
+      "en": "Glycogen-rich carcinoma (8315)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8316": {
+      "en": "Cyst-associated renal cell carcinoma (C64.9) (8316)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8317": {
+      "en": "Renal cell carcinoma, chromophobe type (C64.9) (8317)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8318": {
+      "en": "Renal cell carcinoma, sarcomatoid (C64.9) (8318)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8319": {
+      "en": "Collecting duct carcinoma (C64.9) (8319)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8320": {
+      "en": "Granular cell carcinoma (8320)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8322": {
+      "en": "Water-clear cell adenocarcinoma (C75.0) (8322)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8323": {
+      "en": "Mixed cell adenocarcinoma (8323)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8330": {
+      "en": "Follicular adenocarcinoma, NOS (C73.9) (8330)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8331": {
+      "en": "Follicular adenocarcinoma, well differentiated (C73.9) (8331)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8332": {
+      "en": "Follicular adenocarcinoma, trabecular (C73.9) (8332)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8333": {
+      "en": "Fetal adenocarcinoma (8333)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8335": {
+      "en": "Follicular carcinoma, minimally invasive (C73.9) (8335)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8337": {
+      "en": "Insular carcinoma (C73.9) (8337)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8339": {
+      "en": "Follicular carcinoma, encapsulated, angioinvasive (C73.9) (8339)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8340": {
+      "en": "Papillary carcinoma, follicular variant (C73.9) (8340)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8341": {
+      "en": "Papillary microcarcinoma (C73.9) (8341)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8342": {
+      "en": "Papillary carcinoma, oxyphilic cell (C73.9) (8342)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8343": {
+      "en": "Papillary carcinoma, encapsulated (C73.9) (8343)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8344": {
+      "en": "Papillary carcinoma, columnar cell (C73.9) (8344)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8345": {
+      "en": "Medullary carcinoma with amyloid stroma (C73.9) (8345)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8346": {
+      "en": "Mixed medullary-follicular carcinoma (C73.9) (8346)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8347": {
+      "en": "Mixed medullary-papillary carcinoma (C73.9) (8347)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8348": {
+      "en": "Well differentiated tumor of uncertain malignant potential (C73.9) (8348)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8349": {
+      "en": "Non-invasive follicular thyroid neoplasm with papillary-like nuclear features (NIFTP) (C73.9) (8349)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8350": {
+      "en": "Nonencapsulated sclerosing carcinoma (C73.9) (8350)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8370": {
+      "en": "Adrenal cortical carcinoma (C74.0) (8370)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8380": {
+      "en": "Endometrioid adenocarcinoma, NOS (8380)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8381": {
+      "en": "Endometrioid adenofibroma, malignant (8381)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8382": {
+      "en": "Endometrioid adenocarcinoma, secretory variant (8382)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8383": {
+      "en": "Endometrioid adenocarcinoma, ciliated cell variant (8383)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8384": {
+      "en": "Adenocarcinoma, endocervical type (8384)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8390": {
+      "en": "Skin appendage carcinoma (C44._) (8390)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8400": {
+      "en": "Sweat gland adenocarcinoma (C44._) (8400)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8401": {
+      "en": "Apocrine adenocarcinoma (8401)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8402": {
+      "en": "Nodular hidradenoma, malignant (C44._) (8402)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8403": {
+      "en": "Malignant eccrine spiradenoma (C44._) (8403)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8407": {
+      "en": "Sclerosing sweat duct carcinoma (C44._) (8407)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8408": {
+      "en": "Eccrine papillary adenocarcinoma (C44._) (8408)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8409": {
+      "en": "Eccrine poroma, malignant (8409)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8410": {
+      "en": "Sebaceous adenocarcinoma (C44._) (8410)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8413": {
+      "en": "Eccrine adenocarcinoma (C44._) (8413)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8420": {
+      "en": "Ceruminous adenocarcinoma (C44.2) (8420)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8430": {
+      "en": "Mucoepidermoid carcinoma (8430)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8440": {
+      "en": "Cystadenocarcinoma, NOS (8440)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8441": {
+      "en": "Serous cystadenocarcinoma, NOS (C56.9) (8441)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8450": {
+      "en": "Papillary cystadenocarcinoma, NOS (C56.9) (8450)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8452": {
+      "en": "Solid pseudopapillary carcinoma (C25._) (8452)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8453": {
+      "en": "Intraductal papillary-mucinous carcinoma, invasive (C25._) (8453)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8460": {
+      "en": "Papillary serous cystadenocarcinoma (C56.9) (8460)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8461": {
+      "en": "Serous surface papillary carcinoma (C56.9) (8461)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8470": {
+      "en": "Mucinous cystadenocarcinoma, NOS (C56.9) (8470)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8471": {
+      "en": "Papillary mucinous cystadenocarcinoma (C56.9) (8471)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8474": {
+      "en": "Seromucinous carcinoma (C56.9) (8474)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8480": {
+      "en": "Mucinous adenocarcinoma (8480)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8481": {
+      "en": "Mucin-producing adenocarcinoma (8481)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8482": {
+      "en": "Mucinous adenocarcinoma, endocervical type (8482)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8490": {
+      "en": "Signet ring cell carcinoma (8490)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8500": {
+      "en": "Infiltrating duct carcinoma, NOS (C50._) (8500)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8501": {
+      "en": "Comedocarcinoma, NOS (C50._) (8501)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8502": {
+      "en": "Secretory carcinoma of breast (C50._) (8502)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8503": {
+      "en": "Intraductal papillary adenocarcinoma with invasion (C50._) (8503)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8504": {
+      "en": "Intracystic carcinoma, NOS (8504)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8508": {
+      "en": "Cystic hypersecretory carcinoma (C50._) (8508)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8509": {
+      "en": "Solid papillary carcinoma with invasion (C50._) (8509)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8510": {
+      "en": "Medullary carcinoma, NOS (8510)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8512": {
+      "en": "Medullary carcinoma with lymphoid stroma (8512)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8513": {
+      "en": "Atypical medullary carcinoma (C50._) (8513)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8514": {
+      "en": "Duct carcinoma, desmoplastic type (8514)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8519": {
+      "en": "Lobular carcinoma in situ, pleomorphic (C50._) (8519)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8520": {
+      "en": "Lobular carcinoma, NOS (C50._) (8520)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8521": {
+      "en": "Infiltrating ductular carcinoma (C50._) (8521)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8522": {
+      "en": "Infiltrating duct and lobular carcinoma (C50._) (8522)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8523": {
+      "en": "Infiltrating duct mixed with other types of carcinoma (C50._) (8523)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8524": {
+      "en": "Infiltrating lobular mixed with other types of carcinoma (C50._) (8524)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8525": {
+      "en": "Polymorphous low grade adenocarcinoma (8525)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8530": {
+      "en": "Inflammatory carcinoma (C50._) (8530)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8540": {
+      "en": "Paget disease, mammary (C50._) (8540)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8541": {
+      "en": "Paget disease and infiltrating duct carcinoma of breast (C50._) (8541)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8542": {
+      "en": "Paget disease, extramammary (except Paget disease of bone) (8542)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8543": {
+      "en": "Paget disease and intraductal carcinoma of breast (C50._) (8543)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8550": {
+      "en": "Acinar cell carcinoma (8550)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8551": {
+      "en": "Acinar cell cystadenocarcinoma (8551)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8552": {
+      "en": "Mixed acinar-ductal carcinoma (8552)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8560": {
+      "en": "Adenosquamous carcinoma (8560)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8562": {
+      "en": "Epithelial-myoepithelial carcinoma (8562)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8563": {
+      "en": "Lymphadenoma (8563)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8570": {
+      "en": "Adenocarcinoma with squamous metaplasia (8570)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8571": {
+      "en": "Adenocarcinoma with cartilaginous and osseous metaplasia (8571)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8572": {
+      "en": "Adenocarcinoma with spindle cell metaplasia (8572)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8573": {
+      "en": "Adenocarcinoma with apocrine metaplasia (8573)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8574": {
+      "en": "Adenocarcinoma with neuroendocrine differentiation (8574)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8575": {
+      "en": "Metaplastic carcinoma, NOS (8575)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8576": {
+      "en": "Hepatoid adenocarcinoma (8576)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8580": {
+      "en": "Thymoma, malignant, NOS (C37.9) (8580)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8581": {
+      "en": "Thymoma, type A, malignant (C37.9) (8581)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8582": {
+      "en": "Thymoma, type AB, malignant (C37.9) (8582)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8583": {
+      "en": "Thymoma, type B1, malignant (C37.9) (8583)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8584": {
+      "en": "Thymoma, type B2, malignant (C37.9) (8584)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8585": {
+      "en": "Thymoma, type B3, malignant (C37.9) (8585)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8586": {
+      "en": "Thymic carcinoma, NOS (C37.9) (8586)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8588": {
+      "en": "Spindle epithelial tumor with thymus-like element (8588)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8589": {
+      "en": "Carcinoma showing thymus-like element (8589)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8594": {
+      "en": "Mixed germ cell-sex cord-stromal tumor, NOS (8594)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8600": {
+      "en": "Thecoma, malignant (C56.9) (8600)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8620": {
+      "en": "Granulosa cell tumor, malignant (C56.9) (8620)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8630": {
+      "en": "Androblastoma, malignant (8630)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8631": {
+      "en": "Sertoli-Leydig cell tumor, poorly differentiated (8631)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8634": {
+      "en": "Sertoli-Leydig cell tumor, poorly differentiated, with heterologous elements (8634)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8640": {
+      "en": "Sertoli cell carcinoma (C62._) (8640)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8643": {
+      "en": "Intratubular large cell hyalinizing Sertoli cell neoplasia (8643)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8650": {
+      "en": "Leydig cell tumor, malignant (C62._) (8650)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8670": {
+      "en": "Steroid cell tumor, malignant (8670)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8680": {
+      "en": "Paraganglioma, malignant (8680)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8693": {
+      "en": "Extra-adrenal paraganglioma, malignant (8693)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8700": {
+      "en": "Pheochromocytoma, malignant (C74.1) (8700)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8710": {
+      "en": "Glomangiosarcoma (8710)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8711": {
+      "en": "Glomus tumor, malignant (8711)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8714": {
+      "en": "Perivascular epithelioid tumor (8714)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8720": {
+      "en": "Malignant melanoma, NOS (except juvenile melanoma M-8721 (8720)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8721": {
+      "en": "Nodular melanoma (C44._) (8721)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8722": {
+      "en": "Balloon cell melanoma (C44._) (8722)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8723": {
+      "en": "Malignant melanoma, regressing (C44._) (8723)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8728": {
+      "en": "Meningeal melanomatosis (C70.9) (8728)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8730": {
+      "en": "Amelanotic melanoma (C44._) (8730)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8740": {
+      "en": "Malignant melanoma in junctional nevus (C44._) (8740)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8741": {
+      "en": "Malignant melanoma in precancerous melanosis (C44._) (8741)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8742": {
+      "en": "Lentigo maligna melanoma (C44._) (8742)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8743": {
+      "en": "Superficial spreading melanoma (C44._) (8743)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8744": {
+      "en": "Acral lentiginous melanoma, malignant (C44._) (8744)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8745": {
+      "en": "Desmoplastic melanoma, malignant (C44._) (8745)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8746": {
+      "en": "Mucosal lentiginous melanoma (8746)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8761": {
+      "en": "Malignant melanoma in giant pigmented nevus (C44._) (8761)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8770": {
+      "en": "Mixed epithelioid and spindle cell melanoma (8770)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8771": {
+      "en": "Epithelioid cell melanoma (8771)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8772": {
+      "en": "Spindle cell melanoma, NOS (8772)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8773": {
+      "en": "Spindle cell melanoma, type A (C69._) (8773)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8774": {
+      "en": "Spindle cell melanoma, type B (C69._) (8774)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8780": {
+      "en": "Blue nevus, malignant (C44._) (8780)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8800": {
+      "en": "Sarcoma, NOS (8800)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8801": {
+      "en": "Spindle cell sarcoma (8801)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8802": {
+      "en": "Giant cell sarcoma (except of bone M-9250) (8802)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8803": {
+      "en": "Small cell sarcoma (8803)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8804": {
+      "en": "Epithelioid sarcoma (8804)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8805": {
+      "en": "Undifferentiated sarcoma (8805)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8806": {
+      "en": "Desmoplastic small round cell tumor (8806)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8810": {
+      "en": "Fibrosarcoma, NOS (8810)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8811": {
+      "en": "Fibromyxosarcoma (8811)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8812": {
+      "en": "Periosteal fibrosarcoma (C40._, C41._) (8812)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8813": {
+      "en": "Fascial fibrosarcoma (8813)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8814": {
+      "en": "Infantile fibrosarcoma (8814)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8815": {
+      "en": "Solitary fibrous tumor, malignant (8815)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8816": {
+      "en": "Calcifying aponeurotic fibroma (8816)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8817": {
+      "en": "Calcifying fibrous tumor (8817)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8818": {
+      "en": "Fibrous dysplasia (8818)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8828": {
+      "en": "Nodular fasciitis (8828)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8830": {
+      "en": "Malignant fibrous histiocytoma (8830)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8832": {
+      "en": "Dermatofibrosarcoma, NOS (C44._) (8832)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8833": {
+      "en": "Pigmented dermatofibrosarcoma protuberans (C44._) (8833)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8840": {
+      "en": "Myxosarcoma (8840)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8850": {
+      "en": "Liposarcoma, NOS (8850)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8851": {
+      "en": "Lipoarcoma, well differentiated (8851)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8852": {
+      "en": "Myxoid liposarcoma (8852)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8853": {
+      "en": "Round cell liposarcoma (8853)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8854": {
+      "en": "Pleomorphic liposarcoma (8854)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8855": {
+      "en": "Mixed liposarcoma (8855)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8857": {
+      "en": "Fibroblastic liposarcoma (8857)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8858": {
+      "en": "Dedifferentiated liposarcoma (8858)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8890": {
+      "en": "Leiomyosarcoma, NOS (8890)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8891": {
+      "en": "Epithelioid leiomyosarcoma (8891)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8894": {
+      "en": "Angiomyosarcoma (8894)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8895": {
+      "en": "Myosarcoma (8895)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8896": {
+      "en": "Myxoid leiomyosarcoma (8896)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8900": {
+      "en": "Rhabdomyosarcoma, NOS (8900)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8901": {
+      "en": "Pleomorphic rhabdomyosarcoma, adult type (8901)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8902": {
+      "en": "Mixed type rhabdomyosarcoma (8902)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8910": {
+      "en": "Embryonal rhabdomyosarcoma, NOS (8910)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8912": {
+      "en": "Spindle cell rhabdomyosarcoma (8912)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8920": {
+      "en": "Alveolar rhabdomyosarcoma (8920)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8921": {
+      "en": "Rhabdomyosarcoma with ganglionic differentiation (8921)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8930": {
+      "en": "Endometrial stromal sarcoma, NOS (C54.1) (8930)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8931": {
+      "en": "Endometrial stromal sarcoma, low grade (C54.1) (8931)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8933": {
+      "en": "Adenosarcoma (8933)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8934": {
+      "en": "Carcinofibroma (8934)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8935": {
+      "en": "Stromal sarcoma, NOS (8935)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8936": {
+      "en": "Gastrointestinal stromal sarcoma (8936)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8940": {
+      "en": "Mixed tumor, malignant, NOS (8940)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8941": {
+      "en": "Carcinoma in pleomorphic adenoma (C07._, C08._) (8941)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8950": {
+      "en": "Mullerian mixed tumor (C54._) (8950)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8951": {
+      "en": "Mesodermal mixed tumor (8951)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8959": {
+      "en": "Malignant cystic nephroma (C64.9) (8959)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8960": {
+      "en": "Nephroblastoma, NOS (C64.9) (8960)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8963": {
+      "en": "Malignant rhabdoid tumor (8963)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8964": {
+      "en": "Clear cell sarcoma of kidney (C64.9) (8964)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8970": {
+      "en": "Hepatoblastoma (C22.0) (8970)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8971": {
+      "en": "Pancreatoblastoma (C25._) (8971)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8972": {
+      "en": "Pulmonary blastoma (C34._) (8972)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8973": {
+      "en": "Pleuropulmonary blastoma (8973)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8980": {
+      "en": "Carcinosarcoma, NOS (8980)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8981": {
+      "en": "Carcinosarcoma, embryonal (8981)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8982": {
+      "en": "Malignant myoepithelioma (8982)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8990": {
+      "en": "Mesenchymoma, malignant (8990)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8991": {
+      "en": "Embryonal sarcoma (8991)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#8992": {
+      "en": "Pulmonary hamartoma (C34._) (8992)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9000": {
+      "en": "Brenner tumor, malignant (C56.9) (9000)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9014": {
+      "en": "Serous adenocarcinofibroma (9014)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9015": {
+      "en": "Mucinous adenocarcinofibroma (9015)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9020": {
+      "en": "Phyllodes tumor, malignant (C50._) (9020)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9040": {
+      "en": "Synovial sarcoma, NOS (9040)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9041": {
+      "en": "Synovial sarcoma, spindle cell (9041)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9042": {
+      "en": "Synovial sarcoma, epithelioid cell (9042)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9043": {
+      "en": "Synovial sarcoma, biphasic (9043)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9044": {
+      "en": "Clear cell sarcoma, NOS (except of kidney M-8964) (9044)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9045": {
+      "en": "Biphenotypic sinonasal sarcoma (C30.0, C31._) (9045)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9050": {
+      "en": "Mesothelioma, malignant (9050)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9051": {
+      "en": "Fibrous mesothelioma, malignant (9051)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9052": {
+      "en": "Epithelioid mesothelioma, malignant (9052)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9053": {
+      "en": "Mesothelioma, biphasic, malignant (9053)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9060": {
+      "en": "Dysgerminoma (9060)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9061": {
+      "en": "Seminoma, NOS (C62._) (9061)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9062": {
+      "en": "Seminoma, anaplastic (C62._) (9062)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9063": {
+      "en": "Spermatocytic seminoma (C62._) (9063)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9064": {
+      "en": "Germinoma (9064)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9065": {
+      "en": "Germ cell tumor, nonseminomatous (C62._) (9065)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9070": {
+      "en": "Embryonal carcinoma, NOS (9070)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9071": {
+      "en": "Yolk sac tumor (9071)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9072": {
+      "en": "Polyembryoma (9072)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9080": {
+      "en": "Teratoma, malignant, NOS (9080)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9081": {
+      "en": "Teratocarcinoma (9081)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9082": {
+      "en": "Malignant teratoma, undifferentiated (9082)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9083": {
+      "en": "Malignant teratoma, intermediate (9083)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9084": {
+      "en": "Teratoma with malignant transformation (9084)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9085": {
+      "en": "Mixed germ cell tumor (9085)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9086": {
+      "en": "Germ cell tumor with associated hematological malignancy (9086)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9090": {
+      "en": "Struma ovarii, malignant (C56.9) (9090)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9100": {
+      "en": "Choriocarcinoma, NOS (9100)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9101": {
+      "en": "Choriocarcinoma combined with other germ cell elements (9101)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9102": {
+      "en": "Malignant teratoma, trophoblastic (9102)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9105": {
+      "en": "Trophoblastic tumor, epithelioid (9105)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9110": {
+      "en": "Mesonephroma, malignant (9110)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9120": {
+      "en": "Haemangiosarcoma (9120)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9124": {
+      "en": "Kupffer cell sarcoma (C22.0) (9124)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9126": {
+      "en": "Atypical vascular lesion (9126)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9130": {
+      "en": "Hemangioendothelioma, malignant (9130)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9133": {
+      "en": "Epithelioid hemangioendothelioma, malignant (9133)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9137": {
+      "en": "Intimal sarcoma/Myointimoma (9137)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9138": {
+      "en": "Pseudomyogenic (epithelioid sarcoma-like) hemangioendothelioma (9138)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9140": {
+      "en": "Kaposi sarcoma (9140)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9150": {
+      "en": "Hemangiopericytoma, malignant (9150)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9170": {
+      "en": "Lymphangiosarcoma (9170)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9180": {
+      "en": "Osteosarcoma, NOS (C40._,C41._) (9180)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9181": {
+      "en": "Chondroblastic osteosarcoma (C40._,C41._) (9181)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9182": {
+      "en": "Fibroblastic osteosarcoma (C40._,C41._) (9182)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9183": {
+      "en": "Telangiectatic osteosarcoma (C40._,C41._) (9183)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9184": {
+      "en": "Osteosarcoma in Paget disease of bone (C40._,C41._) (9184)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9185": {
+      "en": "Small cell osteosarcoma (C40._,C41._) (9185)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9186": {
+      "en": "Central osteosarcoma (C40._,C41._) (9186)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9187": {
+      "en": "Intraosseous well differentiated osteosarcoma (C40._,C41._) (9187)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9192": {
+      "en": "Parosteal osteosarcoma (C40._,C41._) (9192)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9193": {
+      "en": "Periosteal osteosarcoma (C40._,C41._) (9193)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9194": {
+      "en": "High grade surface osteosarcoma (C40._,C41._) (9194)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9195": {
+      "en": "Intracortical osteosarcoma (C40._,C41._) (9195)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9211": {
+      "en": "Osteochondromyxoma (9211)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9212": {
+      "en": "Bizarre parosteal osteochondromatous proliferation (9212)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9213": {
+      "en": "Subungual exostosis (9213)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9220": {
+      "en": "Chondrosarcoma, NOS (C40._,C41._) (9220)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9221": {
+      "en": "Juxtacortical chondrosarcoma (C40._,C41._) (9221)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9222": {
+      "en": "Atypical cartilaginous tumor (9222)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9230": {
+      "en": "Chondroblastoma, malignant (C40._,C41._) (9230)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9231": {
+      "en": "Myxoid chondrosarcoma (9231)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9240": {
+      "en": "Mesenchymal chondrosarcoma (9240)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9242": {
+      "en": "Clear cell chondrosarcoma (C40._,C41._) (9242)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9243": {
+      "en": "Dedifferentiated chondrosarcoma (C40._,C41._) (9243)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9250": {
+      "en": "Giant cell tumor of bone, malignant (C40._,C41._) (9250)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9251": {
+      "en": "Malignant giant cell tumor of soft parts (9251)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9252": {
+      "en": "Malignant tenosynovial giant cell tumor (C49._) (9252)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9260": {
+      "en": "Ewing sarcoma (9260)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9261": {
+      "en": "Adamantinoma of long bones (C40._) (9261)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9270": {
+      "en": "Odontogenic tumor, malignant (9270)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9290": {
+      "en": "Ameloblastic odontosarcoma (9290)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9310": {
+      "en": "Ameloblastoma, malignant (9310)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9330": {
+      "en": "Ameloblastic fibrosarcoma (9330)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9342": {
+      "en": "Odontogenic carcinosarcoma (9342)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9362": {
+      "en": "Pineoblastoma (C75.3) (9362)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9364": {
+      "en": "Peripheral neuroectodermal tumor (9364)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9365": {
+      "en": "Askin tumor (9365)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9370": {
+      "en": "Chordoma, NOS (9370)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9371": {
+      "en": "Chondroid chordoma (9371)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9372": {
+      "en": "Dedifferentiated chordoma (9372)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9380": {
+      "en": "Glioma, malignant (C71._) (9380)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9381": {
+      "en": "Gliomatosis cerebri (C71._) (9381)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9382": {
+      "en": "Mixed glioma (C71._) (9382)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9385": {
+      "en": "Diffuse midline glioma, H3 K27M-mutant (C71._) (9385)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9390": {
+      "en": "Choroid plexus carcinoma (C71.5) (9390)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9391": {
+      "en": "Ependymoma, NOS (C71._) (9391)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9392": {
+      "en": "Ependymoma, anaplastic (C71._) (9392)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9393": {
+      "en": "Papillary ependymoma (C71._) (9393)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9395": {
+      "en": "Papillary tumor of the pineal region (9395)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9396": {
+      "en": "Ependymoma, RELA fusion-positive (C71._) (9396)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9400": {
+      "en": "Astrocytoma, NOS (C71._) (9400)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9401": {
+      "en": "Astrocytoma, anaplastic (C71._) (9401)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9410": {
+      "en": "Protoplasmic astrocytoma (C71._) (9410)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9411": {
+      "en": "Gemistocytic astrocytoma (C71._) (9411)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9420": {
+      "en": "Fibrillary astrocytoma (C71._) (9420)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9423": {
+      "en": "Polar spongioblastoma (C71._) (9423)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9424": {
+      "en": "Pleomorphic xanthoastrocytoma (C71._) (9424)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9425": {
+      "en": "Pilomyxoid astrocytoma (9425)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9430": {
+      "en": "Astroblastoma (C71._) (9430)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9440": {
+      "en": "Glioblastoma (C71._) (9440)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9441": {
+      "en": "Giant cell glioblastoma (C71._) (9441)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9442": {
+      "en": "Gliosarcoma (C71._) (9442)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9445": {
+      "en": "Glioblastoma, IDH-mutant (C71._) (9445)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9450": {
+      "en": "Oligodendroglioma, NOS (C71._) (9450)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9451": {
+      "en": "Oligodendroglioma, anaplastic (C71._) (9451)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9460": {
+      "en": "Oligodendroblastoma (C71._) [obs] (9460)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9470": {
+      "en": "Medulloblastoma, NOS (C71.6) (9470)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9471": {
+      "en": "Desmoplastic nodular medulloblastoma (C71.6) (9471)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9472": {
+      "en": "Medullomyoblastoma (C71.6) (9472)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9473": {
+      "en": "Primitive neuroectodermal tumor, NOS (9473)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9474": {
+      "en": "Large cell medulloblastoma (C71.6) (9474)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9475": {
+      "en": "Medulloblastoma, WNT-activated, NOS (C71.6) (9475)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9476": {
+      "en": "Medulloblastoma, SHH-activated and TP53-mutant (C71.6) (9476)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9477": {
+      "en": "Medulloblastoma, non-WNT/non-SHH (C71.6) (9477)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9478": {
+      "en": "Embryonal tumor with multilayered rosettes with C19MC alteration (C71._) (9478)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9480": {
+      "en": "Cerebellar sarcoma, NOS (C71.6) [obs] (9480)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9490": {
+      "en": "Ganglioneuroblastoma (9490)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9500": {
+      "en": "Neuroblastoma, NOS (9500)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9501": {
+      "en": "Medulloepithelioma, NOS (9501)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9502": {
+      "en": "Teratoid medulloepithelioma (9502)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9503": {
+      "en": "Neuroepithelioma, NOS (9503)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9504": {
+      "en": "Spongioneuroblastoma (9504)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9505": {
+      "en": "Ganglioglioma, anaplastic (9505)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9508": {
+      "en": "Atypical teratoid/rhabdoid tumor (C71._) (9508)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9510": {
+      "en": "Retinoblastoma, NOS (C69.2) (9510)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9511": {
+      "en": "Retinoblastoma, differentiated (C69.2) (9511)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9512": {
+      "en": "Retinoblastoma, undifferentiated (C69.2) (9512)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9513": {
+      "en": "Retinoblastoma, diffuse (C69.2) (9513)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9520": {
+      "en": "Olfactory neurogenic tumor (9520)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9521": {
+      "en": "Olfactory neurocytoma (C30.0) (9521)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9522": {
+      "en": "Olfactory neuroblastoma (C30.0) (9522)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9523": {
+      "en": "Olfactory neuroepithelioma (C30.0) (9523)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9530": {
+      "en": "Meningioma, malignant (9530)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9538": {
+      "en": "Papillary meningioma (9538)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9539": {
+      "en": "Meningeal sarcomatosis (9539)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9540": {
+      "en": "Malignant peripheral nerve sheath tumor (9540)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9542": {
+      "en": "Malignant peripheral nerve sheath tumor, epithelioid (9542)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9560": {
+      "en": "Neurilemoma, malignant [obs] (9560)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9561": {
+      "en": "Malignant peripheral nerve sheath tumor with rhabdomyoblastic differentation (9561)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9563": {
+      "en": "Nerve sheath tumor, NOS (9563)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9571": {
+      "en": "Perineurioma, malignant (9571)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9580": {
+      "en": "Granular cell tumor, malignant (9580)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9581": {
+      "en": "Alveolar soft part sarcoma (9581)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9590": {
+      "en": "Malignant lymphoma, NOS (9590)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9591": {
+      "en": "Malignant lymphoma, non-Hodgkin, NOS (9591)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9596": {
+      "en": "Composite Hodgkin and non-Hodgkin lymphoma (9596)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9597": {
+      "en": "Primary cutaneous follicle centre lymphoma (9597)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9650": {
+      "en": "Hodgkin lymphoma, NOS (9650)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9651": {
+      "en": "Hodgkin lymphoma, lymphocyte-rich (9651)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9652": {
+      "en": "Hodgkin lymphoma, mixed cellularity, NOS (9652)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9653": {
+      "en": "Hodgkin lymphoma, lymphocyte depletion, NOS (9653)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9654": {
+      "en": "Hodgkin lymphoma, lymphocyte depletion, diffuse fibrosis (9654)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9655": {
+      "en": "Hodgkin lymphoma, lymphocyte depletion, reticular (9655)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9659": {
+      "en": "Hodgkin lymphoma, nodular lymphocyte predominance (9659)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9661": {
+      "en": "Hodgkin granuloma [obs] (9661)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9662": {
+      "en": "Hodgkin sarcoma [obs] (9662)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9663": {
+      "en": "Hodgkin lymphoma, nodular sclerosis, NOS (9663)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9664": {
+      "en": "Hodgkin lymphoma, nodular sclerosis, cellular phase (9664)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9665": {
+      "en": "Hodgkin lymphoma, nodular sclerosis, grade 1 (9665)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9667": {
+      "en": "Hodgkin lymphoma, nodular sclerosis, grade 2 (9667)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9670": {
+      "en": "Malignant lymphoma, small B lymphocytic, NOS (see also M-9823) (9670)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9671": {
+      "en": "Malignant lymphoma, lymphoplasmacytic (see also M-9761) (9671)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9673": {
+      "en": "Mantle cell lymphoma (Includes all variants: blastic, pleomorphic, small cell) (9673)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9675": {
+      "en": "Malignant lymphoma, mixed small and large cell, diffuse (see also M-9690) [obs] (9675)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9678": {
+      "en": "Primary effusion lymphoma (9678)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9679": {
+      "en": "Mediastinal (thymic) large B-cell lymphoma (C38.3) (9679)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9680": {
+      "en": "Malignant lymphoma, large B-cell, diffuse, NOS (9680)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9684": {
+      "en": "Malignant lymphoma, large B-cell, diffuse, immunoblastic, NOS (9684)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9687": {
+      "en": "Burkitt lymphoma, NOS (Includes all variants, see also M-9826) (9687)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9688": {
+      "en": "T-cell rich large B-cell lymphoma (9688)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9689": {
+      "en": "Splenic marginal zone B-cell lymphoma (C42.2) (9689)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9690": {
+      "en": "Follicular lymphoma, NOS (see also M-9675) (9690)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9691": {
+      "en": "Follicular lymphoma, grade 2 (9691)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9695": {
+      "en": "Follicular lymphoma, grade 1 (9695)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9698": {
+      "en": "Follicular lymphoma, grade 3 (9698)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9699": {
+      "en": "Marginal zone B-cell lymphoma, NOS (9699)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9700": {
+      "en": "Mycosis fungoides (C44._) (9700)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9701": {
+      "en": "Sezary syndrome (9701)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9702": {
+      "en": "Mature T-cell lymphoma, NOS (9702)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9705": {
+      "en": "Angioimmunoblastic T-cell lymphoma (9705)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9708": {
+      "en": "Subcutaneous panniculitis-like T-cell lymphoma (9708)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9709": {
+      "en": "Cutaneous T-cell lymphoma, NOS (C44._) (9709)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9712": {
+      "en": "Intravascular large B-cell lymphoma (C49.9) (9712)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9714": {
+      "en": "Anaplastic large cell lymphoma, T cell and Null cell type (9714)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9715": {
+      "en": "Anaplastic large cell lymphoma, ALK negative (9715)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9716": {
+      "en": "Hepatosplenic T-cell lymphoma (9716)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9717": {
+      "en": "Intestinal T-cell lymphoma (9717)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9718": {
+      "en": "Primary cutaneous CD30+ T-cell lymphoproliferative disorder (C44._) (9718)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9719": {
+      "en": "NK/T-cell lymphoma, nasal and nasal-type (9719)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9724": {
+      "en": "Systemic EBV positive T-cell lymphoproliferative disease of childhood (9724)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9725": {
+      "en": "Hydroa vacciniforme-like lymphoma (9725)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9726": {
+      "en": "Primary cutaneous gamma-delta T-cell lymphoma (9726)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9727": {
+      "en": "Precursor cell lymphoblastic lymphoma, NOS (see also M-9835) (9727)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9728": {
+      "en": "Precursor B-cell lymphoblastic lymphoma (see also M-9836) (9728)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9729": {
+      "en": "Precursor T-cell lymphoblastic lymphoma (see also M-9837) (9729)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9731": {
+      "en": "Plasmacytoma, NOS (9731)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9732": {
+      "en": "Multiple myeloma (C42.1) (9732)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9733": {
+      "en": "Plasma cell leukemia (C42.1) (9733)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9734": {
+      "en": "Plasmacytoma, extramedullary (not occurring in bone) (9734)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9735": {
+      "en": "Plasmablastic lymphoma (9735)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9737": {
+      "en": "ALK positive large B-cell lymphoma (9737)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9738": {
+      "en": "Large B-cell lymphoma arising in HHV8-associated multicentric Castleman disease (9738)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9740": {
+      "en": "Mast cell sarcoma (9740)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9741": {
+      "en": "Malignant mastocytosis (9741)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9742": {
+      "en": "Mast cell leukaemia (C42.1) (9742)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9749": {
+      "en": "Erdheim-Chester disease (9749)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9750": {
+      "en": "Malignant histiocytosis (9750)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9751": {
+      "en": "Langerhans cell histiocytosis, NOS (9751)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9754": {
+      "en": "Langerhans cell histiocytosis, disseminated (use 9751) [obs] (9754)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9755": {
+      "en": "Histiocytic sarcoma (9755)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9756": {
+      "en": "Langerhans cell sarcoma (9756)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9757": {
+      "en": "Interdigitating dendritic cell sarcoma (9757)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9758": {
+      "en": "Follicular dendritic cell sarcoma (9758)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9759": {
+      "en": "Fibroblastic reticular cell tumor (9759)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9760": {
+      "en": "Immunoproliferative disease, NOS (9760)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9761": {
+      "en": "Waldenstrom macroglobulinemia (C42.0) (see also M-9671) (9761)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9762": {
+      "en": "Heavy chain disease, NOS (9762)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9764": {
+      "en": "Immunoproliferative small intestinal disease (C17._) (9764)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9800": {
+      "en": "Leukemia, NOS (9800)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9801": {
+      "en": "Acute leukemia, NOS (9801)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9805": {
+      "en": "Acute biphenotypic leukemia (9805)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9806": {
+      "en": "Mixed phenotype acute leukemia with t(9;22)(q34;q11.2); BCR-ABL1 (9806)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9807": {
+      "en": "Mixed phenotype acute leukemia with t(v;11q23); MLL rearranged (9807)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9808": {
+      "en": "Mixed phenotype acute leukemia, B/myeloid, NOS (9808)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9809": {
+      "en": "Mixed phenotype acute leukemia, T/myeloid, NOS (9809)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9811": {
+      "en": "B lymphoblastic leukemia/lymphoma, NOS (9811)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9812": {
+      "en": "B lymphoblastic leukemia/lymphoma with t(9;22)(q34;q11.2); BCR-ABL1 (9812)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9813": {
+      "en": "B lymphoblastic leukemia/lymphoma with t(v;11q23); MLL rearranged (9813)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9814": {
+      "en": "B lymphoblastic leukemia/lymphoma with t(12;21)(p13;q22); TEL-AML1 (ETV6-RUNX1) (9814)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9815": {
+      "en": "B lymphoblastic leukemia/lymphoma with hyperdiploidy (9815)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9816": {
+      "en": "B lymphoblastic leukemia/lymphoma with hypodiploidy (Hypodiploid ALL) (9816)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9817": {
+      "en": "B lymphoblastic leukemia/lymphoma with t(5;14)(q31;q32); IL3-IGH (9817)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9818": {
+      "en": "B lymphoblastic leukemia/lymphoma with t(1;19)(q23;p13.3); E2A-PBX1 (TCF3-PBX1) (9818)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9819": {
+      "en": "B lymphoblastic leukemia/lymphoma, BCR-ABL1-like (9819)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9820": {
+      "en": "Lymphoid leukemia, NOS (9820)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9823": {
+      "en": "B-cell lymphocytic leukemia/small lymphocytic lymphoma (see also M-9670) (9823)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9826": {
+      "en": "Burkitt cell leukemia (see also M-9687) (9826)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9827": {
+      "en": "Adult T-cell leukemia/lymphoma (HTLV-1 positive) (includes all variants) (9827)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9831": {
+      "en": "T-cell large granular lymphocytic leukemia (9831)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9832": {
+      "en": "Prolymphocytic leukemia, NOS (9832)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9833": {
+      "en": "Prolymphocytic leukemia, B-cell type (9833)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9834": {
+      "en": "Prolymphocytic leukemia, T-cell type (9834)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9835": {
+      "en": "Precursor cell lymphoblastic leukemia, NOS (see also M-9727) (9835)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9836": {
+      "en": "Precursor B-cell lymphoblastic leukemia (see also M-9728) (9836)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9837": {
+      "en": "Precursor T-cell lymphoblastic leukemia (see also M-9729) (9837)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9840": {
+      "en": "Acute myeloid leukemia, M6 type (9840)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9860": {
+      "en": "Myeloid leukemia, NOS (9860)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9861": {
+      "en": "Acute myeloid leukemia, NOS (FAB or WHO type not specified, see also M-9930) (9861)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9863": {
+      "en": "Chronic myeloid leukemia, NOS (9863)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9865": {
+      "en": "Acute myeloid leukemia with t(6;9)(p23;q34); DEK-NUP214 (9865)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9866": {
+      "en": "Acute promyelocytic leukaemia, t(15;17)(q22;q11-12) (9866)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9867": {
+      "en": "Acute myelomonocytic leukemia (9867)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9869": {
+      "en": "Acute myeloid leukemia with inv(3)(q21q26.2) or t(3;3)(q21;q26.2); RPN1-EVI1 (9869)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9870": {
+      "en": "Acute basophilic leukaemia (9870)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9871": {
+      "en": "Acute myeloid leukemia with abnormal marrow eosinophils (includes all variants) (9871)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9872": {
+      "en": "Acute myeloid leukemia, minimal differentiation (9872)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9873": {
+      "en": "Acute myeloid leukemia without maturation (9873)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9874": {
+      "en": "Acute myeloid leukemia with maturation (9874)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9875": {
+      "en": "Chronic myelogenous leukemia, BCR-ABL positive (9875)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9876": {
+      "en": "Atypical chronic myeloid leukemia, BCR/ABL negative (9876)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9877": {
+      "en": "Acute myeloid leukemia with mutated NPM1 (9877)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9878": {
+      "en": "Acute myeloid leukemia with biallelic mutation of CEBPA (9878)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9879": {
+      "en": "Acute myeloid leukemia with mutated RUNX1 (9879)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9891": {
+      "en": "Acute monocytic leukemia (9891)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9895": {
+      "en": "Acute myeloid leukemia with myelodysplasia-related changes (9895)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9896": {
+      "en": "Acute myeloid leukaemia, t(8;21)(q22;q22) (9896)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9897": {
+      "en": "Acute myloid leukemia, 11q23 abnormalities (9897)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9898": {
+      "en": "Myeloid leukemia associated with Down Syndrome (9898)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9910": {
+      "en": "Acute megakaryoblastic leukaemia (9910)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9911": {
+      "en": "Acute myeloid leukemia (megakaryoblastic) with t(1;22)(p13;q13); RBM15-MKL1 (9911)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9912": {
+      "en": "Acute myleoid leukemia with BCR-ABL1 (9912)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9920": {
+      "en": "Therapy related myeloid neoplasm (9920)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9930": {
+      "en": "Myeloid sarcoma (see also M-9861) (9930)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9931": {
+      "en": "Acute panmyelosis with myelofibrosis (C42.1) (9931)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9940": {
+      "en": "Hairy cell leukemia (C42.1) (9940)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9945": {
+      "en": "Chronic myelomonocytic leukemia, NOS (9945)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9946": {
+      "en": "Juvenile myelomonocytic leukemia (9946)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9948": {
+      "en": "Aggressive NK-cell leukaemia (9948)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9950": {
+      "en": "Polycythemia vera (9950)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9960": {
+      "en": "Myeloproliferative neoplasm, NOS (9960)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9961": {
+      "en": "Primary myelofibrosis (9961)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9962": {
+      "en": "Essential thrombocythemia (9962)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9963": {
+      "en": "Chronic neutrophilic leukemia (9963)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9964": {
+      "en": "Chronic eosinophilic leukemia, NOS (9964)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9965": {
+      "en": "Myeloid and lymphoid neoplasms with PDGFRA rearrangement (9965)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9966": {
+      "en": "Myeloid neoplasms with PDGFRB rearrangement (9966)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9967": {
+      "en": "Myeloid and lymphoid neoplasms with FGFR1 abnormalities (9967)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9968": {
+      "en": "Myeloid or lymphoid neoplasm with PCM1-JAK2 (9968)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9971": {
+      "en": "Polymorphic post transplant lymphoproliferative disorder (9971)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9975": {
+      "en": "Myloproliferative neoplasm, unclassifiable (9975)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9980": {
+      "en": "Refractory anemia (9980)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9982": {
+      "en": "Refractory anemia with sideroblasts (9982)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9983": {
+      "en": "Refractory anemia with excess blasts (9983)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9984": {
+      "en": "Refractory anemia with excess blasts in transformation [obs] (9984)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9985": {
+      "en": "Refractory cytopenia with multilineage dysplasia (9985)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9986": {
+      "en": "Myelodysplastic syndrome with 5q deletion (5q-) syndrome (9986)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9987": {
+      "en": "Therapy-related myelodysplastic syndrome, NOS (9987)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9989": {
+      "en": "Myelodysplastic syndrome, NOS (9989)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9991": {
+      "en": "Refractory neutropenia (9991)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9992": {
+      "en": "Refractory thrombocytopenia (9992)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS#9993": {
+      "en": "Myelodysplastic syndrome with ring sideroblasts and multilineage dysplasia (9993)"
+    }
+  },
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.717795"
+}

@@ -1,0 +1,263 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CRMorphologyFamilyCS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRMorphologyFamilyCS</b></p><a name=\"CRMorphologyFamilyCS\"> </a><a name=\"hcCRMorphologyFamilyCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRMorphologyFamilyCS-1\"> </a></td><td>Salivary gland tumours (01)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRMorphologyFamilyCS-2\"> </a></td><td>Stomach tumours (02)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRMorphologyFamilyCS-3\"> </a></td><td>Small intestine tumours (03)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"CRMorphologyFamilyCS-4\"> </a></td><td>Colo-rectal tumours (04)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"CRMorphologyFamilyCS-5\"> </a></td><td>Anal tumours (05)</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"CRMorphologyFamilyCS-6\"> </a></td><td>Gastrointestinal tumours (06)</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"CRMorphologyFamilyCS-7\"> </a></td><td>Liver tumours (07)</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"CRMorphologyFamilyCS-8\"> </a></td><td>Biliary tumours (08)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"CRMorphologyFamilyCS-9\"> </a></td><td>Pancreatic tumours (09)</td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"CRMorphologyFamilyCS-10\"> </a></td><td>Olfactory tumours (10)</td></tr><tr><td style=\"white-space:nowrap\">11<a name=\"CRMorphologyFamilyCS-11\"> </a></td><td>Lung tumours (11)</td></tr><tr><td style=\"white-space:nowrap\">12<a name=\"CRMorphologyFamilyCS-12\"> </a></td><td>Mesotheliomas and pleuropulmonary blastomas (12)</td></tr><tr><td style=\"white-space:nowrap\">13<a name=\"CRMorphologyFamilyCS-13\"> </a></td><td>Thymus tumours (13)</td></tr><tr><td style=\"white-space:nowrap\">14<a name=\"CRMorphologyFamilyCS-14\"> </a></td><td>Cystic tumours of atrio-ventricular node (14)</td></tr><tr><td style=\"white-space:nowrap\">15<a name=\"CRMorphologyFamilyCS-15\"> </a></td><td>Askin tumours (15)</td></tr><tr><td style=\"white-space:nowrap\">16<a name=\"CRMorphologyFamilyCS-16\"> </a></td><td>Adamantinomas of long bones (16)</td></tr><tr><td style=\"white-space:nowrap\">17<a name=\"CRMorphologyFamilyCS-17\"> </a></td><td>Bone tumours (17)</td></tr><tr><td style=\"white-space:nowrap\">18<a name=\"CRMorphologyFamilyCS-18\"> </a></td><td>Haematopoietic tumours (18)</td></tr><tr><td style=\"white-space:nowrap\">19<a name=\"CRMorphologyFamilyCS-19\"> </a></td><td>Skin tumours (19)</td></tr><tr><td style=\"white-space:nowrap\">20<a name=\"CRMorphologyFamilyCS-20\"> </a></td><td>Tumours of skin and subcutaneous tissue (20)</td></tr><tr><td style=\"white-space:nowrap\">21<a name=\"CRMorphologyFamilyCS-21\"> </a></td><td>Breast tumours (21)</td></tr><tr><td style=\"white-space:nowrap\">22<a name=\"CRMorphologyFamilyCS-22\"> </a></td><td>Genital rhabdomyomas (22)</td></tr><tr><td style=\"white-space:nowrap\">23<a name=\"CRMorphologyFamilyCS-23\"> </a></td><td>Endometrial stromal sarcomas (23)</td></tr><tr><td style=\"white-space:nowrap\">24<a name=\"CRMorphologyFamilyCS-24\"> </a></td><td>Ovarian tumours (24)</td></tr><tr><td style=\"white-space:nowrap\">25<a name=\"CRMorphologyFamilyCS-25\"> </a></td><td>Placental tumours (25)</td></tr><tr><td style=\"white-space:nowrap\">26<a name=\"CRMorphologyFamilyCS-26\"> </a></td><td>Tumours of female genital organs (26)</td></tr><tr><td style=\"white-space:nowrap\">27<a name=\"CRMorphologyFamilyCS-27\"> </a></td><td>Queyrat erythroplasias (27)</td></tr><tr><td style=\"white-space:nowrap\">28<a name=\"CRMorphologyFamilyCS-28\"> </a></td><td>Testicular tumours (28)</td></tr><tr><td style=\"white-space:nowrap\">29<a name=\"CRMorphologyFamilyCS-29\"> </a></td><td>Renal tumours (29)</td></tr><tr><td style=\"white-space:nowrap\">30<a name=\"CRMorphologyFamilyCS-30\"> </a></td><td>Retinoblastomas (30)</td></tr><tr><td style=\"white-space:nowrap\">31<a name=\"CRMorphologyFamilyCS-31\"> </a></td><td>Naevi and melanomas of the eye (31)</td></tr><tr><td style=\"white-space:nowrap\">32<a name=\"CRMorphologyFamilyCS-32\"> </a></td><td>Meningeal tumours (32)</td></tr><tr><td style=\"white-space:nowrap\">33<a name=\"CRMorphologyFamilyCS-33\"> </a></td><td>Cerebellar tumours (33)</td></tr><tr><td style=\"white-space:nowrap\">34<a name=\"CRMorphologyFamilyCS-34\"> </a></td><td>Cerebral tumours (34)</td></tr><tr><td style=\"white-space:nowrap\">35<a name=\"CRMorphologyFamilyCS-35\"> </a></td><td>CNS tumours (35)</td></tr><tr><td style=\"white-space:nowrap\">36<a name=\"CRMorphologyFamilyCS-36\"> </a></td><td>Thyroid tumours (36)</td></tr><tr><td style=\"white-space:nowrap\">37<a name=\"CRMorphologyFamilyCS-37\"> </a></td><td>Adrenal tumours (37)</td></tr><tr><td style=\"white-space:nowrap\">38<a name=\"CRMorphologyFamilyCS-38\"> </a></td><td>Parathyroid tumours (38)</td></tr><tr><td style=\"white-space:nowrap\">39<a name=\"CRMorphologyFamilyCS-39\"> </a></td><td>Pituitary tumours (39)</td></tr><tr><td style=\"white-space:nowrap\">40<a name=\"CRMorphologyFamilyCS-40\"> </a></td><td>Pineal tumours (40)</td></tr><tr><td style=\"white-space:nowrap\">41<a name=\"CRMorphologyFamilyCS-41\"> </a></td><td>Carotid body tumours (41)</td></tr><tr><td style=\"white-space:nowrap\">42<a name=\"CRMorphologyFamilyCS-42\"> </a></td><td>Tumours of glomus jugulare/aortic body (42)</td></tr><tr><td style=\"white-space:nowrap\">43<a name=\"CRMorphologyFamilyCS-43\"> </a></td><td>Adenoid basal carcinomas (43)</td></tr><tr><td style=\"white-space:nowrap\">44<a name=\"CRMorphologyFamilyCS-44\"> </a></td><td>Gastrinomas, Somatostatinomas, Enteroglucagonomas (44)</td></tr><tr><td style=\"white-space:nowrap\">45<a name=\"CRMorphologyFamilyCS-45\"> </a></td><td>Oxyphilic adenocarcinomas (45)</td></tr><tr><td style=\"white-space:nowrap\">46<a name=\"CRMorphologyFamilyCS-46\"> </a></td><td>Papillary (cyst)adeno-carcinomas (46)</td></tr><tr><td style=\"white-space:nowrap\">47<a name=\"CRMorphologyFamilyCS-47\"> </a></td><td>Serous surface papillary carcinomas (47)</td></tr><tr><td style=\"white-space:nowrap\">48<a name=\"CRMorphologyFamilyCS-48\"> </a></td><td>Gonadal tumours (48)</td></tr><tr><td style=\"white-space:nowrap\">49<a name=\"CRMorphologyFamilyCS-49\"> </a></td><td>Naevi and Melanomas (49)</td></tr><tr><td style=\"white-space:nowrap\">50<a name=\"CRMorphologyFamilyCS-50\"> </a></td><td>Adenosarcomas and Mesonephromas (50)</td></tr><tr><td style=\"white-space:nowrap\">51<a name=\"CRMorphologyFamilyCS-51\"> </a></td><td>Stromal sarcomas (51)</td></tr><tr><td style=\"white-space:nowrap\">52<a name=\"CRMorphologyFamilyCS-52\"> </a></td><td>Tumours of bone and connective tissue (52)</td></tr><tr><td style=\"white-space:nowrap\">53<a name=\"CRMorphologyFamilyCS-53\"> </a></td><td>Chondromatous tumours (53)</td></tr><tr><td style=\"white-space:nowrap\">54<a name=\"CRMorphologyFamilyCS-54\"> </a></td><td>Intraepithelial tumours (54)</td></tr><tr><td style=\"white-space:nowrap\">55<a name=\"CRMorphologyFamilyCS-55\"> </a></td><td>Transitional cell tumours (55)</td></tr><tr><td style=\"white-space:nowrap\">56<a name=\"CRMorphologyFamilyCS-56\"> </a></td><td>Carcinoid tumours (56)</td></tr><tr><td style=\"white-space:nowrap\">57<a name=\"CRMorphologyFamilyCS-57\"> </a></td><td>Ductal and lobular tumours (57)</td></tr><tr><td style=\"white-space:nowrap\">58<a name=\"CRMorphologyFamilyCS-58\"> </a></td><td>Paragangliomas (58)</td></tr><tr><td style=\"white-space:nowrap\">59<a name=\"CRMorphologyFamilyCS-59\"> </a></td><td>Germ cell and trophoblastic tumours (59)</td></tr><tr><td style=\"white-space:nowrap\">60<a name=\"CRMorphologyFamilyCS-60\"> </a></td><td>Choriocarcinomas (60)</td></tr><tr><td style=\"white-space:nowrap\">61<a name=\"CRMorphologyFamilyCS-61\"> </a></td><td>Chordomas (61)</td></tr><tr><td style=\"white-space:nowrap\">62<a name=\"CRMorphologyFamilyCS-62\"> </a></td><td>Neuroepitheliomatous tumours (62)</td></tr><tr><td style=\"white-space:nowrap\">63<a name=\"CRMorphologyFamilyCS-63\"> </a></td><td>Nerve sheath tumours (63)</td></tr><tr><td style=\"white-space:nowrap\">64<a name=\"CRMorphologyFamilyCS-64\"> </a></td><td>Not haematopoietic tumours (64)</td></tr><tr><td style=\"white-space:nowrap\">65<a name=\"CRMorphologyFamilyCS-65\"> </a></td><td>Not site-specific carcinomas (65)</td></tr><tr><td style=\"white-space:nowrap\">66<a name=\"CRMorphologyFamilyCS-66\"> </a></td><td>Not site-specific sarcomas (66)</td></tr><tr><td style=\"white-space:nowrap\">67<a name=\"CRMorphologyFamilyCS-67\"> </a></td><td>Giant cell sarcomas (67)</td></tr><tr><td style=\"white-space:nowrap\">68<a name=\"CRMorphologyFamilyCS-68\"> </a></td><td>Not CNS affecting sarcomas (68)</td></tr><tr><td style=\"white-space:nowrap\">69<a name=\"CRMorphologyFamilyCS-69\"> </a></td><td>Kaposi sarcoma (69)</td></tr><tr><td style=\"white-space:nowrap\">70<a name=\"CRMorphologyFamilyCS-70\"> </a></td><td>Plasmacytomas, extramedullary (70)</td></tr><tr><td style=\"white-space:nowrap\">99<a name=\"CRMorphologyFamilyCS-99\"> </a></td><td>N/A (**)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRMorphologyFamilyCS"] ; # 
+  fhir:title [ fhir:v "CR - Morphology Family"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-10T12:38:15+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file. Each morphology code is assigned to a morphological family, which is used in the Sex-Morphology check (to identify rare sex-morphology combinations) and the Topography-Morphology check (to evaluate morphology-topography combinations against MUST and MUST-NOT lookup tables). Code 99 (N/A) indicates the family is accepted with any topography."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "71"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "Salivary gland tumours (01)" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "Stomach tumours (02)" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Small intestine tumours (03)" ]
+  ] [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Colo-rectal tumours (04)" ]
+  ] [
+     fhir:code [ fhir:v "5" ] ;
+     fhir:display [ fhir:v "Anal tumours (05)" ]
+  ] [
+     fhir:code [ fhir:v "6" ] ;
+     fhir:display [ fhir:v "Gastrointestinal tumours (06)" ]
+  ] [
+     fhir:code [ fhir:v "7" ] ;
+     fhir:display [ fhir:v "Liver tumours (07)" ]
+  ] [
+     fhir:code [ fhir:v "8" ] ;
+     fhir:display [ fhir:v "Biliary tumours (08)" ]
+  ] [
+     fhir:code [ fhir:v "9" ] ;
+     fhir:display [ fhir:v "Pancreatic tumours (09)" ]
+  ] [
+     fhir:code [ fhir:v "10" ] ;
+     fhir:display [ fhir:v "Olfactory tumours (10)" ]
+  ] [
+     fhir:code [ fhir:v "11" ] ;
+     fhir:display [ fhir:v "Lung tumours (11)" ]
+  ] [
+     fhir:code [ fhir:v "12" ] ;
+     fhir:display [ fhir:v "Mesotheliomas and pleuropulmonary blastomas (12)" ]
+  ] [
+     fhir:code [ fhir:v "13" ] ;
+     fhir:display [ fhir:v "Thymus tumours (13)" ]
+  ] [
+     fhir:code [ fhir:v "14" ] ;
+     fhir:display [ fhir:v "Cystic tumours of atrio-ventricular node (14)" ]
+  ] [
+     fhir:code [ fhir:v "15" ] ;
+     fhir:display [ fhir:v "Askin tumours (15)" ]
+  ] [
+     fhir:code [ fhir:v "16" ] ;
+     fhir:display [ fhir:v "Adamantinomas of long bones (16)" ]
+  ] [
+     fhir:code [ fhir:v "17" ] ;
+     fhir:display [ fhir:v "Bone tumours (17)" ]
+  ] [
+     fhir:code [ fhir:v "18" ] ;
+     fhir:display [ fhir:v "Haematopoietic tumours (18)" ]
+  ] [
+     fhir:code [ fhir:v "19" ] ;
+     fhir:display [ fhir:v "Skin tumours (19)" ]
+  ] [
+     fhir:code [ fhir:v "20" ] ;
+     fhir:display [ fhir:v "Tumours of skin and subcutaneous tissue (20)" ]
+  ] [
+     fhir:code [ fhir:v "21" ] ;
+     fhir:display [ fhir:v "Breast tumours (21)" ]
+  ] [
+     fhir:code [ fhir:v "22" ] ;
+     fhir:display [ fhir:v "Genital rhabdomyomas (22)" ]
+  ] [
+     fhir:code [ fhir:v "23" ] ;
+     fhir:display [ fhir:v "Endometrial stromal sarcomas (23)" ]
+  ] [
+     fhir:code [ fhir:v "24" ] ;
+     fhir:display [ fhir:v "Ovarian tumours (24)" ]
+  ] [
+     fhir:code [ fhir:v "25" ] ;
+     fhir:display [ fhir:v "Placental tumours (25)" ]
+  ] [
+     fhir:code [ fhir:v "26" ] ;
+     fhir:display [ fhir:v "Tumours of female genital organs (26)" ]
+  ] [
+     fhir:code [ fhir:v "27" ] ;
+     fhir:display [ fhir:v "Queyrat erythroplasias (27)" ]
+  ] [
+     fhir:code [ fhir:v "28" ] ;
+     fhir:display [ fhir:v "Testicular tumours (28)" ]
+  ] [
+     fhir:code [ fhir:v "29" ] ;
+     fhir:display [ fhir:v "Renal tumours (29)" ]
+  ] [
+     fhir:code [ fhir:v "30" ] ;
+     fhir:display [ fhir:v "Retinoblastomas (30)" ]
+  ] [
+     fhir:code [ fhir:v "31" ] ;
+     fhir:display [ fhir:v "Naevi and melanomas of the eye (31)" ]
+  ] [
+     fhir:code [ fhir:v "32" ] ;
+     fhir:display [ fhir:v "Meningeal tumours (32)" ]
+  ] [
+     fhir:code [ fhir:v "33" ] ;
+     fhir:display [ fhir:v "Cerebellar tumours (33)" ]
+  ] [
+     fhir:code [ fhir:v "34" ] ;
+     fhir:display [ fhir:v "Cerebral tumours (34)" ]
+  ] [
+     fhir:code [ fhir:v "35" ] ;
+     fhir:display [ fhir:v "CNS tumours (35)" ]
+  ] [
+     fhir:code [ fhir:v "36" ] ;
+     fhir:display [ fhir:v "Thyroid tumours (36)" ]
+  ] [
+     fhir:code [ fhir:v "37" ] ;
+     fhir:display [ fhir:v "Adrenal tumours (37)" ]
+  ] [
+     fhir:code [ fhir:v "38" ] ;
+     fhir:display [ fhir:v "Parathyroid tumours (38)" ]
+  ] [
+     fhir:code [ fhir:v "39" ] ;
+     fhir:display [ fhir:v "Pituitary tumours (39)" ]
+  ] [
+     fhir:code [ fhir:v "40" ] ;
+     fhir:display [ fhir:v "Pineal tumours (40)" ]
+  ] [
+     fhir:code [ fhir:v "41" ] ;
+     fhir:display [ fhir:v "Carotid body tumours (41)" ]
+  ] [
+     fhir:code [ fhir:v "42" ] ;
+     fhir:display [ fhir:v "Tumours of glomus jugulare/aortic body (42)" ]
+  ] [
+     fhir:code [ fhir:v "43" ] ;
+     fhir:display [ fhir:v "Adenoid basal carcinomas (43)" ]
+  ] [
+     fhir:code [ fhir:v "44" ] ;
+     fhir:display [ fhir:v "Gastrinomas, Somatostatinomas, Enteroglucagonomas (44)" ]
+  ] [
+     fhir:code [ fhir:v "45" ] ;
+     fhir:display [ fhir:v "Oxyphilic adenocarcinomas (45)" ]
+  ] [
+     fhir:code [ fhir:v "46" ] ;
+     fhir:display [ fhir:v "Papillary (cyst)adeno-carcinomas (46)" ]
+  ] [
+     fhir:code [ fhir:v "47" ] ;
+     fhir:display [ fhir:v "Serous surface papillary carcinomas (47)" ]
+  ] [
+     fhir:code [ fhir:v "48" ] ;
+     fhir:display [ fhir:v "Gonadal tumours (48)" ]
+  ] [
+     fhir:code [ fhir:v "49" ] ;
+     fhir:display [ fhir:v "Naevi and Melanomas (49)" ]
+  ] [
+     fhir:code [ fhir:v "50" ] ;
+     fhir:display [ fhir:v "Adenosarcomas and Mesonephromas (50)" ]
+  ] [
+     fhir:code [ fhir:v "51" ] ;
+     fhir:display [ fhir:v "Stromal sarcomas (51)" ]
+  ] [
+     fhir:code [ fhir:v "52" ] ;
+     fhir:display [ fhir:v "Tumours of bone and connective tissue (52)" ]
+  ] [
+     fhir:code [ fhir:v "53" ] ;
+     fhir:display [ fhir:v "Chondromatous tumours (53)" ]
+  ] [
+     fhir:code [ fhir:v "54" ] ;
+     fhir:display [ fhir:v "Intraepithelial tumours (54)" ]
+  ] [
+     fhir:code [ fhir:v "55" ] ;
+     fhir:display [ fhir:v "Transitional cell tumours (55)" ]
+  ] [
+     fhir:code [ fhir:v "56" ] ;
+     fhir:display [ fhir:v "Carcinoid tumours (56)" ]
+  ] [
+     fhir:code [ fhir:v "57" ] ;
+     fhir:display [ fhir:v "Ductal and lobular tumours (57)" ]
+  ] [
+     fhir:code [ fhir:v "58" ] ;
+     fhir:display [ fhir:v "Paragangliomas (58)" ]
+  ] [
+     fhir:code [ fhir:v "59" ] ;
+     fhir:display [ fhir:v "Germ cell and trophoblastic tumours (59)" ]
+  ] [
+     fhir:code [ fhir:v "60" ] ;
+     fhir:display [ fhir:v "Choriocarcinomas (60)" ]
+  ] [
+     fhir:code [ fhir:v "61" ] ;
+     fhir:display [ fhir:v "Chordomas (61)" ]
+  ] [
+     fhir:code [ fhir:v "62" ] ;
+     fhir:display [ fhir:v "Neuroepitheliomatous tumours (62)" ]
+  ] [
+     fhir:code [ fhir:v "63" ] ;
+     fhir:display [ fhir:v "Nerve sheath tumours (63)" ]
+  ] [
+     fhir:code [ fhir:v "64" ] ;
+     fhir:display [ fhir:v "Not haematopoietic tumours (64)" ]
+  ] [
+     fhir:code [ fhir:v "65" ] ;
+     fhir:display [ fhir:v "Not site-specific carcinomas (65)" ]
+  ] [
+     fhir:code [ fhir:v "66" ] ;
+     fhir:display [ fhir:v "Not site-specific sarcomas (66)" ]
+  ] [
+     fhir:code [ fhir:v "67" ] ;
+     fhir:display [ fhir:v "Giant cell sarcomas (67)" ]
+  ] [
+     fhir:code [ fhir:v "68" ] ;
+     fhir:display [ fhir:v "Not CNS affecting sarcomas (68)" ]
+  ] [
+     fhir:code [ fhir:v "69" ] ;
+     fhir:display [ fhir:v "Kaposi sarcoma (69)" ]
+  ] [
+     fhir:code [ fhir:v "70" ] ;
+     fhir:display [ fhir:v "Plasmacytomas, extramedullary (70)" ]
+  ] [
+     fhir:code [ fhir:v "99" ] ;
+     fhir:display [ fhir:v "N/A (**)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

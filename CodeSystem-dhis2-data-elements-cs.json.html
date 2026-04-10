@@ -1,0 +1,562 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>DHIS2 Data Elements - JSON Representation - DHIS2 Cancer Registry Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+<!-- Placeholder for child template CSS declarations -->
+<!-- <link href="assets/css/colors.css" rel="stylesheet"/>! -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.66"}
+    h3,h4,h5,h6{--heading-prefix:"8.66"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="system-design.html">System Design</a>
+  </li>
+  <li>
+    <a href="data-quality-checks.html">Data Quality Checks</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles &amp; Mappings</a>
+  </li>
+  <li>
+    <a href="deployment.html">Deployment</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://dhis2.org/integration/fhir/">
+      <img height="60" alt="Project home" src="assets/images/dhis2.png"/>
+    </a>
+  </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="80" alt="FHIR website" src="assets/images/fhir.png"/> </a>
+  </div>
+
+<!-- search icon - if you want -->
+<!--
+  <div id="hl7-search">
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+-->
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DHIS2 Cancer Registry Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>DHIS2 Data Elements</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main'>https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a> and changes regularly. See the <a href='https://dhis2.org/fhir/cancer-registry/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/64112b60cc67b2c18fa0b367ed5fc2459ca5d4a8"><code>64112b60</code></a>.</span></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="CodeSystem-dhis2-data-elements-cs.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="CodeSystem-dhis2-data-elements-cs.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="CodeSystem-dhis2-data-elements-cs.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: DHIS2 Data Elements - JSON Representation</h2>
+
+  <table class="colsd">
+    <tr>
+
+      <td colspan="2">
+        
+          Draft
+          
+            as of 2026-04-10
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="CodeSystem-dhis2-data-elements-cs.json" no-download="true">Raw json</a> | <a href="CodeSystem-dhis2-data-elements-cs.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem">resourceType</a>" : "CodeSystem",
+  "<a href="http://hl7.org/fhir/R4/resource.html#CodeSystem.id">id</a>" : "dhis2-data-elements-cs",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#CodeSystem.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem dhis2-data-elements-cs&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;dhis2-data-elements-cs\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdhis2-data-elements-cs\&quot;&gt; &lt;/a&gt;&lt;p&gt;This  code system &lt;code&gt;https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Definition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;c6EnHSAMUat&lt;a name=\&quot;dhis2-data-elements-cs-c6EnHSAMUat\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Incidence date&lt;/td&gt;&lt;td&gt;CR - Incidence date&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;tasm9QG8HaF&lt;a name=\&quot;dhis2-data-elements-cs-tasm9QG8HaF\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Age&lt;/td&gt;&lt;td&gt;CR - Age&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;xcUBzN5QFXu&lt;a name=\&quot;dhis2-data-elements-cs-xcUBzN5QFXu\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Address&lt;/td&gt;&lt;td&gt;CR - Address&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;KgDQLAkC5ql&lt;a name=\&quot;dhis2-data-elements-cs-KgDQLAkC5ql\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Tumor number&lt;/td&gt;&lt;td&gt;CR - Tumor number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;LCSApBii8CI&lt;a name=\&quot;dhis2-data-elements-cs-LCSApBii8CI\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Site&lt;/td&gt;&lt;td&gt;CR - Site&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;zw6Vwqnhvmh&lt;a name=\&quot;dhis2-data-elements-cs-zw6Vwqnhvmh\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Topography&lt;/td&gt;&lt;td&gt;CR - Topography&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;UkyyY1xukJg&lt;a name=\&quot;dhis2-data-elements-cs-UkyyY1xukJg\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Morphology&lt;/td&gt;&lt;td&gt;CR - Morphology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;MMIuwJdjx8B&lt;a name=\&quot;dhis2-data-elements-cs-MMIuwJdjx8B\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Behaviour&lt;/td&gt;&lt;td&gt;CR - Behaviour&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;uoyoNWrexbY&lt;a name=\&quot;dhis2-data-elements-cs-uoyoNWrexbY\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Basis diagnosis&lt;/td&gt;&lt;td&gt;CR - Basis diagnosis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ZMD8dwB3zOZ&lt;a name=\&quot;dhis2-data-elements-cs-ZMD8dwB3zOZ\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Grade&lt;/td&gt;&lt;td&gt;CR - Grade&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;FlGHlAuG4Ly&lt;a name=\&quot;dhis2-data-elements-cs-FlGHlAuG4Ly\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Run checks&lt;/td&gt;&lt;td&gt;CR - Checks: Run checks&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;nFJ2MJ8Vxuj&lt;a name=\&quot;dhis2-data-elements-cs-nFJ2MJ8Vxuj\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Run Topography Morphology check&lt;/td&gt;&lt;td&gt;CR - Run Topography Morphology check&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;rqpqtJZto2L&lt;a name=\&quot;dhis2-data-elements-cs-rqpqtJZto2L\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Run Multiple primary check&lt;/td&gt;&lt;td&gt;CR - Run Multiple primary check&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;mxfPEKn6kFt&lt;a name=\&quot;dhis2-data-elements-cs-mxfPEKn6kFt\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Age Morphology&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Age Morphology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;rPvQffpxaEs&lt;a name=\&quot;dhis2-data-elements-cs-rPvQffpxaEs\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Age Topography&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Age Topography&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Laax6wSBp2G&lt;a name=\&quot;dhis2-data-elements-cs-Laax6wSBp2G\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Age Topography Morphology&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Age Topography Morphology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;U8v95tUnazC&lt;a name=\&quot;dhis2-data-elements-cs-U8v95tUnazC\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Basis&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Basis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;doB0rv08MIc&lt;a name=\&quot;dhis2-data-elements-cs-doB0rv08MIc\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Invalid Grade&lt;/td&gt;&lt;td&gt;CR - Checks: Invalid Grade&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;FH09UKj7HMC&lt;a name=\&quot;dhis2-data-elements-cs-FH09UKj7HMC\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Sex Morphology&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Sex Morphology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;wAmyuRZNNXC&lt;a name=\&quot;dhis2-data-elements-cs-wAmyuRZNNXC\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Invalid Sex Topography&lt;/td&gt;&lt;td&gt;CR - Checks: Invalid Sex Topography&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;ugeBdJzYHVW&lt;a name=\&quot;dhis2-data-elements-cs-ugeBdJzYHVW\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Topography Behaviour&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Topography Behaviour&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;fdvzxz58nEE&lt;a name=\&quot;dhis2-data-elements-cs-fdvzxz58nEE\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Topography Morphology&lt;/td&gt;&lt;td&gt;CR - Checks: Rare Topography Morphology&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;VBkjlEwG4BE&lt;a name=\&quot;dhis2-data-elements-cs-VBkjlEwG4BE\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Checks: Multiple primary test result&lt;/td&gt;&lt;td&gt;CR - Checks: Multiple primary test result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;jTW2ljvoIc6&lt;a name=\&quot;dhis2-data-elements-cs-jTW2ljvoIc6\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Rare&lt;/td&gt;&lt;td&gt;CR - Rare&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;TXtHNzrfmki&lt;a name=\&quot;dhis2-data-elements-cs-TXtHNzrfmki\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Invalid&lt;/td&gt;&lt;td&gt;CR - Invalid&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;RBu5b3A68mq&lt;a name=\&quot;dhis2-data-elements-cs-RBu5b3A68mq\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Morphology Family&lt;/td&gt;&lt;td&gt;CR - Morphology Family&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;XR1U9dr60xI&lt;a name=\&quot;dhis2-data-elements-cs-XR1U9dr60xI\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Topography Morphology key&lt;/td&gt;&lt;td&gt;CR - Topography Morphology key&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;oZyJlKscN6G&lt;a name=\&quot;dhis2-data-elements-cs-oZyJlKscN6G\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Present in the MUST list&lt;/td&gt;&lt;td&gt;CR - Present in the MUST list&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;DyVH5Q3Qf0Q&lt;a name=\&quot;dhis2-data-elements-cs-DyVH5Q3Qf0Q\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Present in the MUST-NOT list&lt;/td&gt;&lt;td&gt;CR - Present in the MUST-NOT list&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;yt3gq8onyKb&lt;a name=\&quot;dhis2-data-elements-cs-yt3gq8onyKb\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Morphology group&lt;/td&gt;&lt;td&gt;CR - Morphology group&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;eGWudq2aGpY&lt;a name=\&quot;dhis2-data-elements-cs-eGWudq2aGpY\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Previous morphology group&lt;/td&gt;&lt;td&gt;CR - Previous morphology group&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;dTbQZsduHT7&lt;a name=\&quot;dhis2-data-elements-cs-dTbQZsduHT7\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Previous morphology group (multiple)&lt;/td&gt;&lt;td&gt;CR - Previous morphology group (multiple)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;RmzIYvxiBm4&lt;a name=\&quot;dhis2-data-elements-cs-RmzIYvxiBm4\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Topography group&lt;/td&gt;&lt;td&gt;CR - Topography group&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;FyzoZsxRjjz&lt;a name=\&quot;dhis2-data-elements-cs-FyzoZsxRjjz\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Previous topography group&lt;/td&gt;&lt;td&gt;CR - Previous topography group&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;IhLiguJKuzz&lt;a name=\&quot;dhis2-data-elements-cs-IhLiguJKuzz\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Previous topography group (multiple)&lt;/td&gt;&lt;td&gt;CR - Previous topography group (multiple)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;n4IHuWceDlW&lt;a name=\&quot;dhis2-data-elements-cs-n4IHuWceDlW\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Morphology result&lt;/td&gt;&lt;td&gt;CR - Morphology result&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;z3JSu92EQhg&lt;a name=\&quot;dhis2-data-elements-cs-z3JSu92EQhg\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Confirm the rare status&lt;/td&gt;&lt;td&gt;CR - Confirm the rare status&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;KwMs1DNVA0R&lt;a name=\&quot;dhis2-data-elements-cs-KwMs1DNVA0R\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - TUMOURID&lt;/td&gt;&lt;td&gt;CR - TUMOURID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;OrVAWBySU43&lt;a name=\&quot;dhis2-data-elements-cs-OrVAWBySU43\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Previous tumor number&lt;/td&gt;&lt;td&gt;CR - Previous tumor number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;EMoLghRDW4A&lt;a name=\&quot;dhis2-data-elements-cs-EMoLghRDW4A\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Patient ID&lt;/td&gt;&lt;td&gt;CR - Patient ID&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;fID2of7Q8Jj&lt;a name=\&quot;dhis2-data-elements-cs-fID2of7Q8Jj\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Source: Tumor number&lt;/td&gt;&lt;td&gt;CR - Source: Tumor number&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;TgjO873BZTu&lt;a name=\&quot;dhis2-data-elements-cs-TgjO873BZTu\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Source date&lt;/td&gt;&lt;td&gt;CR - Source date&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Mqz5dPrwWho&lt;a name=\&quot;dhis2-data-elements-cs-Mqz5dPrwWho\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Source Type&lt;/td&gt;&lt;td&gt;CR - Source Type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;HxMFZcIIZpL&lt;a name=\&quot;dhis2-data-elements-cs-HxMFZcIIZpL\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - TUMOURIDSOURCETABLE&lt;/td&gt;&lt;td&gt;CR - TUMOURIDSOURCETABLE&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;Ks2WWWWCuzq&lt;a name=\&quot;dhis2-data-elements-cs-Ks2WWWWCuzq\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Date last contact&lt;/td&gt;&lt;td&gt;CR - Date last contact&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;nMpcjKFF5zt&lt;a name=\&quot;dhis2-data-elements-cs-nMpcjKFF5zt\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Status&lt;/td&gt;&lt;td&gt;CR - Status&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;hCJqPZcw2n6&lt;a name=\&quot;dhis2-data-elements-cs-hCJqPZcw2n6\&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;CR - Date of death&lt;/td&gt;&lt;td&gt;CR - Date of death&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a>" : "Dhis2DataElementsCS",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a>" : "DHIS2 Data Elements",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a>" : "draft",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a>" : "2026-04-10T12:38:15+00:00",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a>" : "DHIS2",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "DHIS2",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://dhis2.org"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.description">description</a>" : "Code system for 47 unique DHIS2 data elements from all selected programs",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.content">content</a>" : "complete",
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.count">count</a>" : 47,
+  "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept">concept</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "c6EnHSAMUat",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Incidence date",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Incidence date"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "tasm9QG8HaF",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Age",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Age"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "xcUBzN5QFXu",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Address",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Address"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "KgDQLAkC5ql",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Tumor number",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Tumor number"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "LCSApBii8CI",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Site",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Site"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "zw6Vwqnhvmh",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Topography",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Topography"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "UkyyY1xukJg",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Morphology",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Morphology"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "MMIuwJdjx8B",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Behaviour",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Behaviour"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "uoyoNWrexbY",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Basis diagnosis",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Basis diagnosis"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ZMD8dwB3zOZ",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Grade",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Grade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "FlGHlAuG4Ly",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Run checks",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Run checks"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "nFJ2MJ8Vxuj",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Run Topography Morphology check",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Run Topography Morphology check"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "rqpqtJZto2L",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Run Multiple primary check",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Run Multiple primary check"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "mxfPEKn6kFt",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Rare Age Morphology",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Rare Age Morphology"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "rPvQffpxaEs",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Rare Age Topography",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Rare Age Topography"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Laax6wSBp2G",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Rare Age Topography Morphology",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Rare Age Topography Morphology"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "U8v95tUnazC",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Rare Basis",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Rare Basis"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "doB0rv08MIc",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Invalid Grade",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Invalid Grade"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "FH09UKj7HMC",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Rare Sex Morphology",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Rare Sex Morphology"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "wAmyuRZNNXC",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Invalid Sex Topography",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Invalid Sex Topography"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "ugeBdJzYHVW",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Rare Topography Behaviour",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Rare Topography Behaviour"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "fdvzxz58nEE",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Rare Topography Morphology",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Rare Topography Morphology"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "VBkjlEwG4BE",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Checks: Multiple primary test result",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Checks: Multiple primary test result"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "jTW2ljvoIc6",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Rare",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Rare"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "TXtHNzrfmki",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Invalid",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Invalid"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "RBu5b3A68mq",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Morphology Family",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Morphology Family"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "XR1U9dr60xI",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Topography Morphology key",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Topography Morphology key"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "oZyJlKscN6G",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Present in the MUST list",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Present in the MUST list"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "DyVH5Q3Qf0Q",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Present in the MUST-NOT list",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Present in the MUST-NOT list"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "yt3gq8onyKb",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Morphology group",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Morphology group"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "eGWudq2aGpY",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Previous morphology group",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Previous morphology group"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "dTbQZsduHT7",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Previous morphology group (multiple)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Previous morphology group (multiple)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "RmzIYvxiBm4",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Topography group",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Topography group"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "FyzoZsxRjjz",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Previous topography group",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Previous topography group"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "IhLiguJKuzz",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Previous topography group (multiple)",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Previous topography group (multiple)"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "n4IHuWceDlW",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Morphology result",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Morphology result"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "z3JSu92EQhg",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Confirm the rare status",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Confirm the rare status"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "KwMs1DNVA0R",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - TUMOURID",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - TUMOURID"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "OrVAWBySU43",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Previous tumor number",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Previous tumor number"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "EMoLghRDW4A",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Patient ID",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Patient ID"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "fID2of7Q8Jj",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Source: Tumor number",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Source: Tumor number"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "TgjO873BZTu",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Source date",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Source date"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Mqz5dPrwWho",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Source Type",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Source Type"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "HxMFZcIIZpL",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - TUMOURIDSOURCETABLE",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - TUMOURIDSOURCETABLE"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "Ks2WWWWCuzq",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Date last contact",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Date last contact"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "nMpcjKFF5zt",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Status",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Status"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.code">code</a>" : "hCJqPZcw2n6",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.display">display</a>" : "CR - Date of death",
+      "<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.concept.definition">definition</a>" : "CR - Date of death"
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>.  Package dhis2.cancer.registry#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 12:38+0000">2026-04-10</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhis2.org/fhir/cancer-registry/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

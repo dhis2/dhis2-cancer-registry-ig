@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cr-observation-codes"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cr-observation-codes</b></p><a name=\"cr-observation-codes\"> </a><a name=\"hccr-observation-codes\"> </a><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">topography<a name=\"cr-observation-codes-topography\"> </a></td><td>Topography</td><td>ICD-O-3 topography code indicating the anatomical site of the primary tumour.</td></tr><tr><td style=\"white-space:nowrap\">morphology<a name=\"cr-observation-codes-morphology\"> </a></td><td>Morphology</td><td>ICD-O-3 morphology code (4-digit histological type) of the neoplasm.</td></tr><tr><td style=\"white-space:nowrap\">behaviour<a name=\"cr-observation-codes-behaviour\"> </a></td><td>Behaviour</td><td>ICD-O-3 behaviour code of the neoplasm (0=benign, 1=uncertain, 2=in situ, 3=malignant).</td></tr><tr><td style=\"white-space:nowrap\">basis-of-diagnosis<a name=\"cr-observation-codes-basis-of-diagnosis\"> </a></td><td>Basis of Diagnosis</td><td>How the cancer diagnosis was established. Coded according to the ICD-O-3 basis of diagnosis classification (codes 0–9).</td></tr><tr><td style=\"white-space:nowrap\">site<a name=\"cr-observation-codes-site\"> </a></td><td>Site</td><td>Higher-level anatomical site grouping derived from the ICD-O-3 topography.</td></tr><tr><td style=\"white-space:nowrap\">incidence-date<a name=\"cr-observation-codes-incidence-date\"> </a></td><td>Incidence Date</td><td>Date of incidence (diagnosis date) of the cancer case.</td></tr><tr><td style=\"white-space:nowrap\">age-at-incidence<a name=\"cr-observation-codes-age-at-incidence\"> </a></td><td>Age at Incidence</td><td>Age of the patient at the date of incidence.</td></tr><tr><td style=\"white-space:nowrap\">address<a name=\"cr-observation-codes-address\"> </a></td><td>Address</td><td>Administrative address code of the patient at incidence.</td></tr><tr><td style=\"white-space:nowrap\">tumor-number<a name=\"cr-observation-codes-tumor-number\"> </a></td><td>Tumor Number</td><td>Sequential tumor number within the patient's registration.</td></tr><tr><td style=\"white-space:nowrap\">vital-status<a name=\"cr-observation-codes-vital-status\"> </a></td><td>Vital Status</td><td>Follow-up vital status of the registered cancer patient (alive, dead, or unknown).</td></tr><tr><td style=\"white-space:nowrap\">date-of-death<a name=\"cr-observation-codes-date-of-death\"> </a></td><td>Date of Death</td><td>Date of death of the patient.</td></tr><tr><td style=\"white-space:nowrap\">source-type<a name=\"cr-observation-codes-source-type\"> </a></td><td>Source Type</td><td>Type of documentation source that notified the cancer registry about a case (e.g. hospital, laboratory, death certificate).</td></tr><tr><td style=\"white-space:nowrap\">source-tumor-number<a name=\"cr-observation-codes-source-tumor-number\"> </a></td><td>Source Tumor Number</td><td>Tumor number that this source notification relates to.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRObservationCodesCS"] ; # 
+  fhir:title [ fhir:v "Cancer Registry Observation Codes"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-04-10T12:38:15+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code system defining observation type codes for cancer registry observations. Used where no standard LOINC code exists for cancer-registry-specific concepts."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "13"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "topography" ] ;
+     fhir:display [ fhir:v "Topography" ] ;
+     fhir:definition [ fhir:v "ICD-O-3 topography code indicating the anatomical site of the primary tumour." ]
+  ] [
+     fhir:code [ fhir:v "morphology" ] ;
+     fhir:display [ fhir:v "Morphology" ] ;
+     fhir:definition [ fhir:v "ICD-O-3 morphology code (4-digit histological type) of the neoplasm." ]
+  ] [
+     fhir:code [ fhir:v "behaviour" ] ;
+     fhir:display [ fhir:v "Behaviour" ] ;
+     fhir:definition [ fhir:v "ICD-O-3 behaviour code of the neoplasm (0=benign, 1=uncertain, 2=in situ, 3=malignant)." ]
+  ] [
+     fhir:code [ fhir:v "basis-of-diagnosis" ] ;
+     fhir:display [ fhir:v "Basis of Diagnosis" ] ;
+     fhir:definition [ fhir:v "How the cancer diagnosis was established. Coded according to the ICD-O-3 basis of diagnosis classification (codes 0–9)." ]
+  ] [
+     fhir:code [ fhir:v "site" ] ;
+     fhir:display [ fhir:v "Site" ] ;
+     fhir:definition [ fhir:v "Higher-level anatomical site grouping derived from the ICD-O-3 topography." ]
+  ] [
+     fhir:code [ fhir:v "incidence-date" ] ;
+     fhir:display [ fhir:v "Incidence Date" ] ;
+     fhir:definition [ fhir:v "Date of incidence (diagnosis date) of the cancer case." ]
+  ] [
+     fhir:code [ fhir:v "age-at-incidence" ] ;
+     fhir:display [ fhir:v "Age at Incidence" ] ;
+     fhir:definition [ fhir:v "Age of the patient at the date of incidence." ]
+  ] [
+     fhir:code [ fhir:v "address" ] ;
+     fhir:display [ fhir:v "Address" ] ;
+     fhir:definition [ fhir:v "Administrative address code of the patient at incidence." ]
+  ] [
+     fhir:code [ fhir:v "tumor-number" ] ;
+     fhir:display [ fhir:v "Tumor Number" ] ;
+     fhir:definition [ fhir:v "Sequential tumor number within the patient's registration." ]
+  ] [
+     fhir:code [ fhir:v "vital-status" ] ;
+     fhir:display [ fhir:v "Vital Status" ] ;
+     fhir:definition [ fhir:v "Follow-up vital status of the registered cancer patient (alive, dead, or unknown)." ]
+  ] [
+     fhir:code [ fhir:v "date-of-death" ] ;
+     fhir:display [ fhir:v "Date of Death" ] ;
+     fhir:definition [ fhir:v "Date of death of the patient." ]
+  ] [
+     fhir:code [ fhir:v "source-type" ] ;
+     fhir:display [ fhir:v "Source Type" ] ;
+     fhir:definition [ fhir:v "Type of documentation source that notified the cancer registry about a case (e.g. hospital, laboratory, death certificate)." ]
+  ] [
+     fhir:code [ fhir:v "source-tumor-number" ] ;
+     fhir:display [ fhir:v "Source Tumor Number" ] ;
+     fhir:definition [ fhir:v "Tumor number that this source notification relates to." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

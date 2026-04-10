@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRTopographyGroupVS.displays.json",
+  "title": "CR - Topography Group value set Display Values",
+  "description": "Display values for CR - Topography Group value set ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#0": {
+      "en": "0"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#1": {
+      "en": "1"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#3": {
+      "en": "3"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#7": {
+      "en": "7"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#8": {
+      "en": "8"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#9": {
+      "en": "9"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#11": {
+      "en": "11"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#15": {
+      "en": "15"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#16": {
+      "en": "16"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#17": {
+      "en": "17"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#18": {
+      "en": "18"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#19": {
+      "en": "19"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#21": {
+      "en": "21"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#22": {
+      "en": "22"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#23": {
+      "en": "23"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#25": {
+      "en": "25"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#26": {
+      "en": "26"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#30": {
+      "en": "30"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#31": {
+      "en": "31"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#32": {
+      "en": "32"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#33": {
+      "en": "33"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#35": {
+      "en": "35"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#36": {
+      "en": "36"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#37": {
+      "en": "37"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#38": {
+      "en": "38"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#39": {
+      "en": "39"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#40": {
+      "en": "40"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#42": {
+      "en": "42"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#44": {
+      "en": "44"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#47": {
+      "en": "47"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#48": {
+      "en": "48"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#49": {
+      "en": "49"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#50": {
+      "en": "50"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#51": {
+      "en": "51"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#52": {
+      "en": "52"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#53": {
+      "en": "53"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#54": {
+      "en": "54"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#55": {
+      "en": "55"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#56": {
+      "en": "56"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#57": {
+      "en": "57"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#60": {
+      "en": "60"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#61": {
+      "en": "61"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#62": {
+      "en": "62"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#63": {
+      "en": "63"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#64": {
+      "en": "64"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#65": {
+      "en": "65"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#69": {
+      "en": "69"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#70": {
+      "en": "70"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#71": {
+      "en": "71"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#72": {
+      "en": "72"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#73": {
+      "en": "73"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#74": {
+      "en": "74"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#75": {
+      "en": "75"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#76": {
+      "en": "76"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#77": {
+      "en": "77"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS#80": {
+      "en": "80"
+    }
+  },
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.716422"
+}

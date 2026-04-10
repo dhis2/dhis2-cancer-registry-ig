@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRTumorNumberVS.schema.json",
+  "title": "CR - Tumor number value set Schema",
+  "description": "JSON Schema for CR - Tumor number value set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#01",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#02",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#03",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#04",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#05",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#06",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#07",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#08",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#09",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS#10"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the CR - Tumor number value set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-CRTumorNumberVS.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRTumorNumberVS.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.714722"
+}

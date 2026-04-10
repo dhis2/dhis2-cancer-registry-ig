@@ -1,0 +1,389 @@
+{
+  "codeSystems" : [{
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRAddressVS",
+    "title" : "CR - Address value set",
+    "description" : "Value set of address codes containing placeholder values that must be customised prior to implementation to reflect the administrative geography of the country or region.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRAddressVS",
+    "title" : "CR - Address value set",
+    "description" : "Value set of address codes containing placeholder values that must be customised prior to implementation to reflect the administrative geography of the country or region.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor",
+    "StructureDefinition-cr-address-observation.html" : "Address"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRBasisDiagnosisVS",
+    "title" : "CR - Basis diagnosis value set",
+    "description" : "Value set of basis of diagnosis codes aligned with the CanReg5 basis dictionary. Codes 0-4 are non-microscopically confirmed, codes 5-8 are microscopically confirmed, and code 9 is unknown.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRBasisDiagnosisVS",
+    "title" : "CR - Basis diagnosis value set",
+    "description" : "Value set of basis of diagnosis codes aligned with the CanReg5 basis dictionary. Codes 0-4 are non-microscopically confirmed, codes 5-8 are microscopically confirmed, and code 9 is unknown.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS"],
+    "uses" : {
+    },
+    "StructureDefinition-cr-basis-of-diagnosis-observation.html" : "Basis of Diagnosis",
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBehaviourVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRBehaviourVS",
+    "title" : "CR - Behaviour value set",
+    "description" : "Value set of tumour behaviour codes aligned with the CanReg5 ICD-O-3.2 behaviour dictionary, used in the Tumor stage to classify the biological behaviour of the neoplasm.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBehaviourVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRBehaviourVS",
+    "title" : "CR - Behaviour value set",
+    "description" : "Value set of tumour behaviour codes aligned with the CanReg5 ICD-O-3.2 behaviour dictionary, used in the Tumor stage to classify the biological behaviour of the neoplasm.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor",
+    "StructureDefinition-cr-behaviour-observation.html" : "Behaviour"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRGradeVS",
+    "title" : "CR - Grade value set",
+    "description" : "Value set of tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Includes histological grades 1-4, lymphoma/leukaemia-specific codes 5-8, and unknown (9). Grade is mandatory only when behaviour is malignant (3).",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRGradeVS",
+    "title" : "CR - Grade value set",
+    "description" : "Value set of tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Includes histological grades 1-4, lymphoma/leukaemia-specific codes 5-8, and unknown (9). Grade is mandatory only when behaviour is malignant (3).",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor",
+    "StructureDefinition-cr-grade-observation.html" : "Histological Grade"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRMorphology4VS",
+    "title" : "CR - Morphology4 value set",
+    "description" : "Value set of ICD-O-3.2 morphology codes (first four digits) mapped from the CanReg5 morphology dictionary, representing histological types of neoplasms.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRMorphology4VS",
+    "title" : "CR - Morphology4 value set",
+    "description" : "Value set of ICD-O-3.2 morphology codes (first four digits) mapped from the CanReg5 morphology dictionary, representing histological types of neoplasms.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS"],
+    "uses" : {
+    },
+    "StructureDefinition-cr-morphology-observation.html" : "Morphology",
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRMorphologyFamilyVS",
+    "title" : "CR - Morphology Family value set",
+    "description" : "Value set of morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file, used in the Sex-Morphology and Topography-Morphology data quality checks.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRMorphologyFamilyVS",
+    "title" : "CR - Morphology Family value set",
+    "description" : "Value set of morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file, used in the Sex-Morphology and Topography-Morphology data quality checks.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRMorphologyGroupVS",
+    "title" : "CR - Morphology Group value set",
+    "description" : "Value set of morphology group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRMorphologyGroupVS",
+    "title" : "CR - Morphology Group value set",
+    "description" : "Value set of morphology group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyResultVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRMorphologyResultVS",
+    "title" : "CR - Morphology result value set",
+    "description" : "Value set of intermediate morphology evaluation result codes used in the Multiple Primary Tester check to determine whether to proceed to topography evaluation.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyResultCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyResultVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRMorphologyResultVS",
+    "title" : "CR - Morphology result value set",
+    "description" : "Value set of intermediate morphology evaluation result codes used in the Multiple Primary Tester check to determine whether to proceed to topography evaluation.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyResultCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRMultiplePrimaryTestVS",
+    "title" : "CR - Multiple primary test value set",
+    "description" : "Value set of result codes for the Multiple Primary Tester data quality check, determining whether tumours are duplicate registrations, distinct multiple primaries, or have unknown topography.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMultiplePrimaryTestCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRMultiplePrimaryTestVS",
+    "title" : "CR - Multiple primary test value set",
+    "description" : "Value set of result codes for the Multiple Primary Tester data quality check, determining whether tumours are duplicate registrations, distinct multiple primaries, or have unknown topography.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMultiplePrimaryTestCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRPlaceholderSourceTypeVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRPlaceholderSourceTypeVS",
+    "title" : "CR - Placeholder: Source type value set",
+    "description" : "Value set of placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect local source types (e.g. hospital records, pathology reports, death certificates).",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRPlaceholderSourceTypeVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRPlaceholderSourceTypeVS",
+    "title" : "CR - Placeholder: Source type value set",
+    "description" : "Value set of placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect local source types (e.g. hospital records, pathology reports, death certificates).",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS"],
+    "uses" : {
+    },
+    "StructureDefinition-cr-source-type-observation.html" : "Source Type",
+    "StructureDefinition-Source.html" : "Source"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSexVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRSexVS",
+    "title" : "CR - Sex value set",
+    "description" : "Value set of sex codes aligned with the CanReg5 sex dictionary. These numeric codes are referenced in multiple data quality checks including Sex-Topography and Sex-Morphology checks.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSexCS"],
+    "uses" : {
+    },
+    "StructureDefinition-CancerRegistry.html" : "Cancer Registry"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRSiteVS",
+    "title" : "CR - Site value set",
+    "description" : "Value set of anatomical site codes used to filter topography values in a dependent dropdown list for simplified data entry.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRSiteVS",
+    "title" : "CR - Site value set",
+    "description" : "Value set of anatomical site codes used to filter topography values in a dependent dropdown list for simplified data entry.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor",
+    "StructureDefinition-cr-site-observation.html" : "Site"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRTopographyGroupVS",
+    "title" : "CR - Topography Group value set",
+    "description" : "Value set of topography group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRTopographyGroupVS",
+    "title" : "CR - Topography Group value set",
+    "description" : "Value set of topography group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyGroupCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyMorphologyKeyVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRTopographyMorphologyKeyVS",
+    "title" : "CR - Topography Morphology key value set",
+    "description" : "Value set of keys used in the Topography-Morphology data quality check. NA (*) means accepted with any topography; Plus (+) means checked against the MUST list; Minus (-) means checked against the MUST-NOT list.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyMorphologyKeyCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyMorphologyKeyVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRTopographyMorphologyKeyVS",
+    "title" : "CR - Topography Morphology key value set",
+    "description" : "Value set of keys used in the Topography-Morphology data quality check. NA (*) means accepted with any topography; Plus (+) means checked against the MUST list; Minus (-) means checked against the MUST-NOT list.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyMorphologyKeyCS"],
+    "uses" : {
+    },
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRTopographyVS",
+    "title" : "CR - Topography value set",
+    "description" : "Value set of ICD-O-3 topography codes mapped from the CanReg5 topography dictionary, representing anatomical sites of tumour origin.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRTopographyVS",
+    "title" : "CR - Topography value set",
+    "description" : "Value set of ICD-O-3 topography codes mapped from the CanReg5 topography dictionary, representing anatomical sites of tumour origin.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS"],
+    "uses" : {
+    },
+    "StructureDefinition-cr-topography-observation.html" : "Topography",
+    "StructureDefinition-Tumor.html" : "Tumor"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRTumorNumberVS",
+    "title" : "CR - Tumor number value set",
+    "description" : "Value set of tumor number identifiers. Combined with the Patient ID, the Tumor Number forms the Tumor ID composite identifier that uniquely identifies a tumor record within the system.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRTumorNumberVS",
+    "title" : "CR - Tumor number value set",
+    "description" : "Value set of tumor number identifiers. Combined with the Patient ID, the Tumor Number forms the Tumor ID composite identifier that uniquely identifies a tumor record within the system.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRTumorNumberVS",
+    "title" : "CR - Tumor number value set",
+    "description" : "Value set of tumor number identifiers. Combined with the Patient ID, the Tumor Number forms the Tumor ID composite identifier that uniquely identifies a tumor record within the system.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS"],
+    "uses" : {
+    },
+    "StructureDefinition-cr-source-tumor-number-observation.html" : "Source Tumor Number",
+    "StructureDefinition-Source.html" : "Source",
+    "StructureDefinition-Tumor.html" : "Tumor",
+    "StructureDefinition-cr-tumor-number-observation.html" : "Tumor Number"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRVitalStatusVS",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "CRVitalStatusVS",
+    "title" : "CR - Vital status value set",
+    "description" : "Value set of vital status codes used in the Follow-up stage to record the current status of the registered patient.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRVitalStatusCS"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRVitalStatusVS",
+    "version" : "0.1.0",
+    "status" : "active",
+    "name" : "CRVitalStatusVS",
+    "title" : "CR - Vital status value set",
+    "description" : "Value set of vital status codes used in the Follow-up stage to record the current status of the registered patient.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/CRVitalStatusCS"],
+    "uses" : {
+    },
+    "StructureDefinition-cr-vital-status-observation.html" : "Vital Status",
+    "StructureDefinition-FollowUp.html" : "Follow up"
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-encounter-type-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "CREncounterTypeVS",
+    "title" : "Cancer Registry Encounter Types Value Set",
+    "description" : "Value set of encounter types for cancer registration stages.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"]
+  },
+  {
+    "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-observation-codes-vs",
+    "version" : "0.1.0",
+    "status" : "draft",
+    "name" : "CRObservationCodesVS",
+    "title" : "Cancer Registry Observation Codes Value Set",
+    "description" : "Value set containing all cancer-registry-specific observation type codes.",
+    "systems" : ["https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"]
+  }]
+}

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="CRSiteCS"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"/>
+    <profile value="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem CRSiteCS</b></p><a name="CRSiteCS"> </a><a name="hcCRSiteCS"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profiles: <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html">CRMI Shareable CodeSystem</a>, <a href="http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">0<a name="CRSiteCS-0"> </a></td><td>Lip (00)</td></tr><tr><td style="white-space:nowrap">1<a name="CRSiteCS-1"> </a></td><td>Base of tongue (01)</td></tr><tr><td style="white-space:nowrap">2<a name="CRSiteCS-2"> </a></td><td>Other and unspecified parts of tongue (02)</td></tr><tr><td style="white-space:nowrap">3<a name="CRSiteCS-3"> </a></td><td>Gum (03)</td></tr><tr><td style="white-space:nowrap">4<a name="CRSiteCS-4"> </a></td><td>Floor of mouth (04)</td></tr><tr><td style="white-space:nowrap">5<a name="CRSiteCS-5"> </a></td><td>Palate (05)</td></tr><tr><td style="white-space:nowrap">6<a name="CRSiteCS-6"> </a></td><td>Other and unspecified parts of mouth (06)</td></tr><tr><td style="white-space:nowrap">7<a name="CRSiteCS-7"> </a></td><td>Parotid glanid (07)</td></tr><tr><td style="white-space:nowrap">8<a name="CRSiteCS-8"> </a></td><td>Other and unspecified major salivary glands (08)</td></tr><tr><td style="white-space:nowrap">9<a name="CRSiteCS-9"> </a></td><td>Tonsil (09)</td></tr><tr><td style="white-space:nowrap">10<a name="CRSiteCS-10"> </a></td><td>Oropharynx (10)</td></tr><tr><td style="white-space:nowrap">11<a name="CRSiteCS-11"> </a></td><td>Nasopharynx (11)</td></tr><tr><td style="white-space:nowrap">12<a name="CRSiteCS-12"> </a></td><td>Pyriform sinus (12)</td></tr><tr><td style="white-space:nowrap">13<a name="CRSiteCS-13"> </a></td><td>Hypopharynx (13)</td></tr><tr><td style="white-space:nowrap">14<a name="CRSiteCS-14"> </a></td><td>Other and ill-defined sites in lip, oral cavity and pharynx (14)</td></tr><tr><td style="white-space:nowrap">15<a name="CRSiteCS-15"> </a></td><td>Esophagus (15)</td></tr><tr><td style="white-space:nowrap">16<a name="CRSiteCS-16"> </a></td><td>Stomach (16)</td></tr><tr><td style="white-space:nowrap">17<a name="CRSiteCS-17"> </a></td><td>Small intestine (17)</td></tr><tr><td style="white-space:nowrap">18<a name="CRSiteCS-18"> </a></td><td>Colon (18)</td></tr><tr><td style="white-space:nowrap">19<a name="CRSiteCS-19"> </a></td><td>Rectosigmoid junction (19)</td></tr><tr><td style="white-space:nowrap">20<a name="CRSiteCS-20"> </a></td><td>Rectum (20)</td></tr><tr><td style="white-space:nowrap">21<a name="CRSiteCS-21"> </a></td><td>Anus and anal canal (21)</td></tr><tr><td style="white-space:nowrap">22<a name="CRSiteCS-22"> </a></td><td>Liver and intrahepatic bile ducts (22)</td></tr><tr><td style="white-space:nowrap">23<a name="CRSiteCS-23"> </a></td><td>Gallbladder (23)</td></tr><tr><td style="white-space:nowrap">24<a name="CRSiteCS-24"> </a></td><td>Other and unspecified parts of biliary tract (24)</td></tr><tr><td style="white-space:nowrap">25<a name="CRSiteCS-25"> </a></td><td>Pancreas (25)</td></tr><tr><td style="white-space:nowrap">26<a name="CRSiteCS-26"> </a></td><td>Other and ill-defined digestive organs (26)</td></tr><tr><td style="white-space:nowrap">30<a name="CRSiteCS-30"> </a></td><td>Nasal cavity and middle ear (30)</td></tr><tr><td style="white-space:nowrap">31<a name="CRSiteCS-31"> </a></td><td>Accessory sinuses (31)</td></tr><tr><td style="white-space:nowrap">32<a name="CRSiteCS-32"> </a></td><td>Larynx (32)</td></tr><tr><td style="white-space:nowrap">33<a name="CRSiteCS-33"> </a></td><td>Trachea (33)</td></tr><tr><td style="white-space:nowrap">34<a name="CRSiteCS-34"> </a></td><td>Bronchus and lung (34)</td></tr><tr><td style="white-space:nowrap">37<a name="CRSiteCS-37"> </a></td><td>Thymus (37)</td></tr><tr><td style="white-space:nowrap">38<a name="CRSiteCS-38"> </a></td><td>Heart, mediastinum, and pleura (38)</td></tr><tr><td style="white-space:nowrap">39<a name="CRSiteCS-39"> </a></td><td>Other and ill-defined sites within respiratory system amd intrathoracic organs (39)</td></tr><tr><td style="white-space:nowrap">40<a name="CRSiteCS-40"> </a></td><td>Bones, joints and articular cartilage of limbs (40)</td></tr><tr><td style="white-space:nowrap">41<a name="CRSiteCS-41"> </a></td><td>Bones, joints and articular cartilage of other and unspecified sites (41)</td></tr><tr><td style="white-space:nowrap">42<a name="CRSiteCS-42"> </a></td><td>Hematopoietic and reticuloendothelial systems (42)</td></tr><tr><td style="white-space:nowrap">44<a name="CRSiteCS-44"> </a></td><td>Skin (44)</td></tr><tr><td style="white-space:nowrap">47<a name="CRSiteCS-47"> </a></td><td>Peripheral nerves and autonomic nervous system (47)</td></tr><tr><td style="white-space:nowrap">48<a name="CRSiteCS-48"> </a></td><td>Retroperitoneum and peritoneum (48)</td></tr><tr><td style="white-space:nowrap">49<a name="CRSiteCS-49"> </a></td><td>Connective, subcutaneous and other soft tissues (49)</td></tr><tr><td style="white-space:nowrap">50<a name="CRSiteCS-50"> </a></td><td>Breast (50)</td></tr><tr><td style="white-space:nowrap">51<a name="CRSiteCS-51"> </a></td><td>Vulva (51)</td></tr><tr><td style="white-space:nowrap">52<a name="CRSiteCS-52"> </a></td><td>Vagina (52)</td></tr><tr><td style="white-space:nowrap">53<a name="CRSiteCS-53"> </a></td><td>Cervix uteri (53)</td></tr><tr><td style="white-space:nowrap">54<a name="CRSiteCS-54"> </a></td><td>Corpus uteri (54)</td></tr><tr><td style="white-space:nowrap">55<a name="CRSiteCS-55"> </a></td><td>Uterus, nos (55)</td></tr><tr><td style="white-space:nowrap">56<a name="CRSiteCS-56"> </a></td><td>Ovary (56)</td></tr><tr><td style="white-space:nowrap">57<a name="CRSiteCS-57"> </a></td><td>Other an unspecified female genital organs (57)</td></tr><tr><td style="white-space:nowrap">58<a name="CRSiteCS-58"> </a></td><td>Placenta (58)</td></tr><tr><td style="white-space:nowrap">60<a name="CRSiteCS-60"> </a></td><td>Penis (60)</td></tr><tr><td style="white-space:nowrap">61<a name="CRSiteCS-61"> </a></td><td>Prostate gland (61)</td></tr><tr><td style="white-space:nowrap">62<a name="CRSiteCS-62"> </a></td><td>Testis (62)</td></tr><tr><td style="white-space:nowrap">63<a name="CRSiteCS-63"> </a></td><td>Other and unspecified male genital organs (63)</td></tr><tr><td style="white-space:nowrap">64<a name="CRSiteCS-64"> </a></td><td>Kidney (64)</td></tr><tr><td style="white-space:nowrap">65<a name="CRSiteCS-65"> </a></td><td>Renal pelvis (65)</td></tr><tr><td style="white-space:nowrap">66<a name="CRSiteCS-66"> </a></td><td>Ureter (66)</td></tr><tr><td style="white-space:nowrap">67<a name="CRSiteCS-67"> </a></td><td>Bladder (67)</td></tr><tr><td style="white-space:nowrap">68<a name="CRSiteCS-68"> </a></td><td>Other and unspecified urinary organs (68)</td></tr><tr><td style="white-space:nowrap">69<a name="CRSiteCS-69"> </a></td><td>Eye and adnexa (69)</td></tr><tr><td style="white-space:nowrap">70<a name="CRSiteCS-70"> </a></td><td>Meninges (70)</td></tr><tr><td style="white-space:nowrap">71<a name="CRSiteCS-71"> </a></td><td>Brain (71)</td></tr><tr><td style="white-space:nowrap">72<a name="CRSiteCS-72"> </a></td><td>Spinal cord, cranial nerves, and other parts of central nervous system (72)</td></tr><tr><td style="white-space:nowrap">73<a name="CRSiteCS-73"> </a></td><td>Thyroid gland (73)</td></tr><tr><td style="white-space:nowrap">74<a name="CRSiteCS-74"> </a></td><td>Adrenal gland (74)</td></tr><tr><td style="white-space:nowrap">75<a name="CRSiteCS-75"> </a></td><td>Other endocrine glands and related structures (75)</td></tr><tr><td style="white-space:nowrap">76<a name="CRSiteCS-76"> </a></td><td>Other and ill-defined sites (76)</td></tr><tr><td style="white-space:nowrap">77<a name="CRSiteCS-77"> </a></td><td>Lymph nodes (77)</td></tr><tr><td style="white-space:nowrap">80<a name="CRSiteCS-80"> </a></td><td>Unknown primary site (80)</td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS"/>
+  <version value="0.1.0"/>
+  <name value="CRSiteCS"/>
+  <title value="CR - Site"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2026-04-10T12:38:15+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Anatomical site codes used to filter topography values in a dependent dropdown list. When a site is selected, only the topography codes valid for the chosen site are presented for selection, simplifying data entry for registry staff."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="70"/>
+  <concept>
+    <code value="0"/>
+    <display value="Lip (00)"/>
+  </concept>
+  <concept>
+    <code value="1"/>
+    <display value="Base of tongue (01)"/>
+  </concept>
+  <concept>
+    <code value="2"/>
+    <display value="Other and unspecified parts of tongue (02)"/>
+  </concept>
+  <concept>
+    <code value="3"/>
+    <display value="Gum (03)"/>
+  </concept>
+  <concept>
+    <code value="4"/>
+    <display value="Floor of mouth (04)"/>
+  </concept>
+  <concept>
+    <code value="5"/>
+    <display value="Palate (05)"/>
+  </concept>
+  <concept>
+    <code value="6"/>
+    <display value="Other and unspecified parts of mouth (06)"/>
+  </concept>
+  <concept>
+    <code value="7"/>
+    <display value="Parotid glanid (07)"/>
+  </concept>
+  <concept>
+    <code value="8"/>
+    <display value="Other and unspecified major salivary glands (08)"/>
+  </concept>
+  <concept>
+    <code value="9"/>
+    <display value="Tonsil (09)"/>
+  </concept>
+  <concept>
+    <code value="10"/>
+    <display value="Oropharynx (10)"/>
+  </concept>
+  <concept>
+    <code value="11"/>
+    <display value="Nasopharynx (11)"/>
+  </concept>
+  <concept>
+    <code value="12"/>
+    <display value="Pyriform sinus (12)"/>
+  </concept>
+  <concept>
+    <code value="13"/>
+    <display value="Hypopharynx (13)"/>
+  </concept>
+  <concept>
+    <code value="14"/>
+    <display value="Other and ill-defined sites in lip, oral cavity and pharynx (14)"/>
+  </concept>
+  <concept>
+    <code value="15"/>
+    <display value="Esophagus (15)"/>
+  </concept>
+  <concept>
+    <code value="16"/>
+    <display value="Stomach (16)"/>
+  </concept>
+  <concept>
+    <code value="17"/>
+    <display value="Small intestine (17)"/>
+  </concept>
+  <concept>
+    <code value="18"/>
+    <display value="Colon (18)"/>
+  </concept>
+  <concept>
+    <code value="19"/>
+    <display value="Rectosigmoid junction (19)"/>
+  </concept>
+  <concept>
+    <code value="20"/>
+    <display value="Rectum (20)"/>
+  </concept>
+  <concept>
+    <code value="21"/>
+    <display value="Anus and anal canal (21)"/>
+  </concept>
+  <concept>
+    <code value="22"/>
+    <display value="Liver and intrahepatic bile ducts (22)"/>
+  </concept>
+  <concept>
+    <code value="23"/>
+    <display value="Gallbladder (23)"/>
+  </concept>
+  <concept>
+    <code value="24"/>
+    <display value="Other and unspecified parts of biliary tract (24)"/>
+  </concept>
+  <concept>
+    <code value="25"/>
+    <display value="Pancreas (25)"/>
+  </concept>
+  <concept>
+    <code value="26"/>
+    <display value="Other and ill-defined digestive organs (26)"/>
+  </concept>
+  <concept>
+    <code value="30"/>
+    <display value="Nasal cavity and middle ear (30)"/>
+  </concept>
+  <concept>
+    <code value="31"/>
+    <display value="Accessory sinuses (31)"/>
+  </concept>
+  <concept>
+    <code value="32"/>
+    <display value="Larynx (32)"/>
+  </concept>
+  <concept>
+    <code value="33"/>
+    <display value="Trachea (33)"/>
+  </concept>
+  <concept>
+    <code value="34"/>
+    <display value="Bronchus and lung (34)"/>
+  </concept>
+  <concept>
+    <code value="37"/>
+    <display value="Thymus (37)"/>
+  </concept>
+  <concept>
+    <code value="38"/>
+    <display value="Heart, mediastinum, and pleura (38)"/>
+  </concept>
+  <concept>
+    <code value="39"/>
+    <display value="Other and ill-defined sites within respiratory system amd intrathoracic organs (39)"/>
+  </concept>
+  <concept>
+    <code value="40"/>
+    <display value="Bones, joints and articular cartilage of limbs (40)"/>
+  </concept>
+  <concept>
+    <code value="41"/>
+    <display value="Bones, joints and articular cartilage of other and unspecified sites (41)"/>
+  </concept>
+  <concept>
+    <code value="42"/>
+    <display value="Hematopoietic and reticuloendothelial systems (42)"/>
+  </concept>
+  <concept>
+    <code value="44"/>
+    <display value="Skin (44)"/>
+  </concept>
+  <concept>
+    <code value="47"/>
+    <display value="Peripheral nerves and autonomic nervous system (47)"/>
+  </concept>
+  <concept>
+    <code value="48"/>
+    <display value="Retroperitoneum and peritoneum (48)"/>
+  </concept>
+  <concept>
+    <code value="49"/>
+    <display value="Connective, subcutaneous and other soft tissues (49)"/>
+  </concept>
+  <concept>
+    <code value="50"/>
+    <display value="Breast (50)"/>
+  </concept>
+  <concept>
+    <code value="51"/>
+    <display value="Vulva (51)"/>
+  </concept>
+  <concept>
+    <code value="52"/>
+    <display value="Vagina (52)"/>
+  </concept>
+  <concept>
+    <code value="53"/>
+    <display value="Cervix uteri (53)"/>
+  </concept>
+  <concept>
+    <code value="54"/>
+    <display value="Corpus uteri (54)"/>
+  </concept>
+  <concept>
+    <code value="55"/>
+    <display value="Uterus, nos (55)"/>
+  </concept>
+  <concept>
+    <code value="56"/>
+    <display value="Ovary (56)"/>
+  </concept>
+  <concept>
+    <code value="57"/>
+    <display value="Other an unspecified female genital organs (57)"/>
+  </concept>
+  <concept>
+    <code value="58"/>
+    <display value="Placenta (58)"/>
+  </concept>
+  <concept>
+    <code value="60"/>
+    <display value="Penis (60)"/>
+  </concept>
+  <concept>
+    <code value="61"/>
+    <display value="Prostate gland (61)"/>
+  </concept>
+  <concept>
+    <code value="62"/>
+    <display value="Testis (62)"/>
+  </concept>
+  <concept>
+    <code value="63"/>
+    <display value="Other and unspecified male genital organs (63)"/>
+  </concept>
+  <concept>
+    <code value="64"/>
+    <display value="Kidney (64)"/>
+  </concept>
+  <concept>
+    <code value="65"/>
+    <display value="Renal pelvis (65)"/>
+  </concept>
+  <concept>
+    <code value="66"/>
+    <display value="Ureter (66)"/>
+  </concept>
+  <concept>
+    <code value="67"/>
+    <display value="Bladder (67)"/>
+  </concept>
+  <concept>
+    <code value="68"/>
+    <display value="Other and unspecified urinary organs (68)"/>
+  </concept>
+  <concept>
+    <code value="69"/>
+    <display value="Eye and adnexa (69)"/>
+  </concept>
+  <concept>
+    <code value="70"/>
+    <display value="Meninges (70)"/>
+  </concept>
+  <concept>
+    <code value="71"/>
+    <display value="Brain (71)"/>
+  </concept>
+  <concept>
+    <code value="72"/>
+    <display value="Spinal cord, cranial nerves, and other parts of central nervous system (72)"/>
+  </concept>
+  <concept>
+    <code value="73"/>
+    <display value="Thyroid gland (73)"/>
+  </concept>
+  <concept>
+    <code value="74"/>
+    <display value="Adrenal gland (74)"/>
+  </concept>
+  <concept>
+    <code value="75"/>
+    <display value="Other endocrine glands and related structures (75)"/>
+  </concept>
+  <concept>
+    <code value="76"/>
+    <display value="Other and ill-defined sites (76)"/>
+  </concept>
+  <concept>
+    <code value="77"/>
+    <display value="Lymph nodes (77)"/>
+  </concept>
+  <concept>
+    <code value="80"/>
+    <display value="Unknown primary site (80)"/>
+  </concept>
+</CodeSystem>

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.schema.json",
+  "title": "Cancer Registry Observation Codes Value Set Schema",
+  "description": "JSON Schema for Cancer Registry Observation Codes Value Set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#topography",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#morphology",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#behaviour",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#basis-of-diagnosis",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#site",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#incidence-date",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#age-at-incidence",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#address",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#tumor-number",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#vital-status",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#date-of-death",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#source-type",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#source-tumor-number"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the Cancer Registry Observation Codes Value Set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-observation-codes-vs",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.716617"
+}

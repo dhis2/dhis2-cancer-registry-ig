@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRGradeVS.schema.json",
+  "title": "CR - Grade value set Schema",
+  "description": "JSON Schema for CR - Grade value set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#1",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#2",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#3",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#4",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#5",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#6",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#7",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#8",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS#9"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the CR - Grade value set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-CRGradeVS.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRGradeVS.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.714899"
+}

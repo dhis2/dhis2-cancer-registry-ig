@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.schema.json",
+  "title": "CR - Basis diagnosis value set Schema",
+  "description": "JSON Schema for CR - Basis diagnosis value set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#0",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#1",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#2",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#3",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#4",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#5",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#6",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#7",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#8",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#9"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the CR - Basis diagnosis value set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.715873"
+}

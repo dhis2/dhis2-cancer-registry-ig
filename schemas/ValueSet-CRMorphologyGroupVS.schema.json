@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.schema.json",
+  "title": "CR - Morphology Group value set Schema",
+  "description": "JSON Schema for CR - Morphology Group value set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#0",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#1",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#2",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#3",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#4",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#5",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#6",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#7",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#8",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#9",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#10",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#11",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#12",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#13",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#14",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#15",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#16",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS#17"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the CR - Morphology Group value set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.716055"
+}

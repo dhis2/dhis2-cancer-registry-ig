@@ -1,0 +1,18 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: Mapping: Source to CRSourceEncounter","Mapping: Mapping: Source crSourceType to Source Type Observation","Mapping: Mapping: Source crSourceTumorNumber to Source Tumor Number Observation"
+"Source","Source","","","",0,*,"","","","null {[]} {[]}
+","Source","Source stage of the DHIS2 Cancer Registry tracker program. This repeatable stage records the documentation sources from which a cancer case has been notified to the registry. Each source represents a piece of documentation, such as a hospital record, pathology report, or death certificate, that supports the registration of a specific tumor. Sources are linked to a specific tumor via the Tumor Number.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"Source.crSourceTumorNumber","Source.crSourceTumorNumber","","","",1,1,"","","","code {[]} {[]}
+","CR - Source: Tumor number","CR - Source: Tumor number","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#fID2of7Q8Jj
+",,,,"Source.crSourceTumorNumber",1,1,"","","Observation.valueCodeableConcept"
+"Source.crSourceDate","Source.crSourceDate","","","",0,1,"","","","date {[]} {[]}
+","CR - Source date","CR - Source date","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#TgjO873BZTu
+",,,,"Source.crSourceDate",0,1,"","","Encounter.period.start"
+"Source.crSourceType","Source.crSourceType","","","",0,1,"","","","code {[]} {[]}
+","CR - Source Type","CR - Source Type","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRPlaceholderSourceTypeVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#Mqz5dPrwWho
+",,,,"Source.crSourceType",0,1,"","","Observation.valueCodeableConcept"
+"Source.crPatientId","Source.crPatientId","","","",0,1,"","","","string {[]} {[]}
+","CR - Patient ID","CR - Patient ID","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#EMoLghRDW4A
+",,,,"Source.crPatientId",0,1,"",""
+"Source.crTumouridsourcetable","Source.crTumouridsourcetable","","","",0,1,"","","","string {[]} {[]}
+","CR - TUMOURIDSOURCETABLE","CR - TUMOURIDSOURCETABLE","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#HxMFZcIIZpL
+",,,,"Source.crTumouridsourcetable",0,1,"",""

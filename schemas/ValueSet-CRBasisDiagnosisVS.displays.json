@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.displays.json",
+  "title": "CR - Basis diagnosis value set Display Values",
+  "description": "Display values for CR - Basis diagnosis value set ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#0": {
+      "en": "Death Certificate Only (0)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#1": {
+      "en": "Clinical only (1)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#2": {
+      "en": "Clin. Invest./Ult Soun (2)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#3": {
+      "en": "Surgery/Autopsy (3)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#4": {
+      "en": "Laboratory test (4)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#5": {
+      "en": "Cytology (5)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#6": {
+      "en": "Histology of metastase (6)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#7": {
+      "en": "Histology of primary (7)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#8": {
+      "en": "Autopsy/Histology (8)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS#9": {
+      "en": "Unknown (9)"
+    }
+  },
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-10T12:40:13.715873"
+}

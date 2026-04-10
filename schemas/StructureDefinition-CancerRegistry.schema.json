@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-CancerRegistry.schema.json",
+  "title": "Cancer Registry",
+  "description": "Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "CancerRegistry",
+      "description": "Resource type identifier for CancerRegistry logical model"
+    },
+    "@context": {
+      "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "URI reference to external JSON-LD context"
+        },
+        {
+          "type": "object",
+          "description": "Inline JSON-LD context",
+          "properties": {
+            "@version": {
+              "type": "number",
+              "const": 1.1
+            },
+            "fhir": {
+              "type": "string",
+              "const": "http://hl7.org/fhir/"
+            }
+          },
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        {
+          "type": "array",
+          "description": "Array of JSON-LD context objects/URIs",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "@type": {
+      "type": "string",
+      "description": "JSON-LD type identifier for CancerRegistry logical model",
+      "examples": [
+        "LogicalModel-CancerRegistry"
+      ]
+    },
+    "crPatientId": {
+      "type": "string",
+      "description": "CR - Patient ID"
+    },
+    "familyName": {
+      "type": "string",
+      "description": "Family name or last name of the person or case."
+    },
+    "givenName": {
+      "type": "string",
+      "description": "Given name or first name of the person or case."
+    },
+    "crSex": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRSexVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRSexVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRSexVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRSexVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRSexVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Sex"
+    },
+    "dateOfBirth": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated."
+    },
+    "tumor": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/base/StructureDefinition-Tumor.schema.json"
+      },
+      "description": "Tumor"
+    },
+    "source": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/base/StructureDefinition-Source.schema.json"
+      },
+      "description": "Source"
+    },
+    "followUp": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/base/StructureDefinition-FollowUp.schema.json"
+      },
+      "description": "Follow up"
+    }
+  },
+  "required": [
+    "resourceType",
+    "crPatientId",
+    "familyName",
+    "crSex",
+    "dateOfBirth"
+  ],
+  "resourceDefinition": "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry",
+  "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base",
+  "jsonld:valuesets": [
+    "CRSexVS"
+  ],
+  "jsonld:contextTemplate": {
+    "@version": 1.1,
+    "fhir": "http://hl7.org/fhir/",
+    "CRSexVS": "http://smart.who.int/base/ValueSet-CRSexVS.jsonld"
+  }
+}

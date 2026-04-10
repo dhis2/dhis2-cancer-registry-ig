@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ExampleMorphology",
+  "meta" : {
+    "profile" : ["https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-morphology-observation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleMorphology</b></p><a name=\"ExampleMorphology\"> </a><a name=\"hcExampleMorphology\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-cr-morphology-observation.html\">Morphology</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes morphology}\">Morphology</span></p><p><b>subject</b>: <a href=\"Patient-ExampleCRPatient.html\">Jane Doe  Female, DoB: 1970-03-15 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleTumorEncounter.html\">Encounter: extension = false; status = finished; class = ambulatory (ActCode#AMB); type = Tumor Registration; period = 2026-01-01 --&gt; (ongoing)</a></p><p><b>effective</b>: 2026-01-01</p><p><b>value</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS 8500}\">Infiltrating duct carcinoma, NOS (C50._) (8500)</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes",
+      "code" : "morphology"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleCRPatient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/ExampleTumorEncounter"
+  },
+  "effectiveDateTime" : "2026-01-01",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS",
+      "code" : "8500",
+      "display" : "Infiltrating duct carcinoma, NOS (C50._) (8500)"
+    }]
+  }
+}
