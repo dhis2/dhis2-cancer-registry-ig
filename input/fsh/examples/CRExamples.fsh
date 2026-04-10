@@ -4,9 +4,9 @@ InstanceOf: CRPatient
 Usage: #example
 Title: "Example Cancer Registry Patient"
 Description: "A 54-year-old female patient enrolled in the DHIS2 Cancer Registry."
-* identifier[REGNO].value = "20240001"
-* identifier[REGNO].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
-* identifier[REGNO].system = "https://dhis2.org/fhir/cancer-registry/regno"
+* identifier[regno].system = "https://dhis2.org/fhir/cancer-registry/regno"
+* identifier[regno].type = http://terminology.hl7.org/CodeSystem/v2-0203#MR
+* identifier[regno].value = "20240001"
 * name.family = "Doe"
 * name.given = "Jane"
 * gender = #female
@@ -42,7 +42,7 @@ Description: "Topography observation: C50.4 — Upper-outer quadrant of breast."
 * subject = Reference(ExampleCRPatient)
 * encounter = Reference(ExampleTumorEncounter)
 * effectiveDateTime = "2026-01-01"
-* valueCodeableConcept = CRTopographyCS#C504 "Upper-outer quadrant of breast"
+* valueCodeableConcept = CRTopographyCS#"504" "Upper-outer quadrant of breast (504)"
 
 Instance: ExampleMorphology
 InstanceOf: CRMorphologyObservation
@@ -53,7 +53,7 @@ Description: "Morphology observation: 8500 — Infiltrating duct carcinoma, NOS.
 * subject = Reference(ExampleCRPatient)
 * encounter = Reference(ExampleTumorEncounter)
 * effectiveDateTime = "2026-01-01"
-* valueCodeableConcept = CRMorphology4CS#M8500 "Infiltrating duct carcinoma, NOS"
+* valueCodeableConcept = CRMorphology4CS#"8500" "Infiltrating duct carcinoma, NOS (C50._) (8500)"
 
 Instance: ExampleBehaviour
 InstanceOf: CRBehaviourObservation
@@ -126,12 +126,12 @@ Instance: ExampleTumorNumber
 InstanceOf: CRTumorNumberObservation
 Usage: #example
 Title: "Example Tumor Number"
-Description: "Tumour number: 1 (first tumour registered for this patient)."
+Description: "Tumour number: 01 (first tumour registered for this patient)."
 * status = #final
 * subject = Reference(ExampleCRPatient)
 * encounter = Reference(ExampleTumorEncounter)
 * effectiveDateTime = "2026-01-01"
-* valueCodeableConcept = CRTumorNumberCS#1 "1"
+* valueCodeableConcept = CRTumorNumberCS#"01" "01"
 
 Instance: ExampleSourceEncounter
 InstanceOf: CRSourceEncounter
@@ -160,12 +160,12 @@ Instance: ExampleSourceTumorNumber
 InstanceOf: CRSourceTumorNumberObservation
 Usage: #example
 Title: "Example Source Tumor Number"
-Description: "Source links to tumor number 1."
+Description: "Source links to tumor number 01."
 * status = #final
 * subject = Reference(ExampleCRPatient)
 * encounter = Reference(ExampleSourceEncounter)
 * effectiveDateTime = "2026-01-01"
-* valueCodeableConcept = CRTumorNumberCS#1 "1"
+* valueCodeableConcept = CRTumorNumberCS#"01" "01"
 
 
 Instance: ExampleFollowUpEncounter
