@@ -1,0 +1,58 @@
+/// url = "https://dhis2.org/fhir/cancer-registry/StructureMap/SourceToEncounterAndObservations"
+/// name = "SourceToEncounterAndObservations"
+/// title = "Transform: Source Stage to CRSourceEncounter + Observations"
+/// status = "draft"
+
+map "https://dhis2.org/fhir/cancer-registry/StructureMap/SourceToEncounterAndObservations" = "SourceToEncounterAndObservations"
+
+uses "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Source" alias Source as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+
+group SourceToBundle(source src : Source, target tgt : Bundle) {
+  src -> tgt.type = 'transaction' "set-bundle-type";
+
+  // Create the Encounter resource
+  src -> tgt.entry as entry, entry.resource = create('Encounter') as enc then {
+    src -> enc.meta as meta then {
+      src -> meta.profile = 'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-encounter' "set-enc-profile";
+    } "set-enc-meta";
+    src -> enc.status = 'finished' "set-enc-status";
+    src -> enc.class as cls then {
+      src -> cls.system = 'http://terminology.hl7.org/CodeSystem/v3-ActCode' "set-cls-system";
+      src -> cls.code = 'AMB' "set-cls-code";
+    } "set-enc-class";
+    src -> enc.type as tp then {
+      src -> tp.coding as coding then {
+        src -> coding.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type' "set-type-system";
+        src -> coding.code = 'source' "set-type-code";
+      } "set-type-coding";
+    } "set-enc-type";
+    src.crSourceDate as dt -> enc.period as p, p.start = dt "set-enc-period";
+  } "create-encounter";
+
+  // Source Type Observation
+  src.crSourceType as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "srctype-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "srctype-code-sys";
+      src -> cd.code = 'source-type' "srctype-code-val";
+    } "srctype-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS' "srctype-val-sys";
+      val -> cd.code = val "srctype-val-code";
+    } "srctype-value";
+  } "create-source-type";
+
+  // Source Tumor Number Observation
+  src.crSourceTumorNumber as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "srctn-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "srctn-code-sys";
+      src -> cd.code = 'source-tumor-number' "srctn-code-val";
+    } "srctn-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS' "srctn-val-sys";
+      val -> cd.code = val "srctn-val-code";
+    } "srctn-value";
+  } "create-source-tumor-number";
+}

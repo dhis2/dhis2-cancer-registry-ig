@@ -1,0 +1,156 @@
+/// url = "https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations"
+/// name = "TumorToEncounterAndObservations"
+/// title = "Transform: Tumor Stage to CRTumorEncounter + Observations"
+/// status = "draft"
+
+map "https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations" = "TumorToEncounterAndObservations"
+
+uses "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor" alias Tumor as source
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
+
+group TumorToBundle(source src : Tumor, target tgt : Bundle) {
+  src -> tgt.type = 'transaction' "set-bundle-type";
+
+  // Create the Encounter resource
+  src -> tgt.entry as entry, entry.resource = create('Encounter') as enc then {
+    src -> enc.meta as meta then {
+      src -> meta.profile = 'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter' "set-enc-profile";
+    } "set-enc-meta";
+    src -> enc.status = 'finished' "set-enc-status";
+    src -> enc.class as cls then {
+      src -> cls.system = 'http://terminology.hl7.org/CodeSystem/v3-ActCode' "set-cls-system";
+      src -> cls.code = 'AMB' "set-cls-code";
+    } "set-enc-class";
+    src -> enc.type as tp then {
+      src -> tp.coding as coding then {
+        src -> coding.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type' "set-type-system";
+        src -> coding.code = 'tumor' "set-type-code";
+      } "set-type-coding";
+    } "set-enc-type";
+    src.crIncidenceDate as dt -> enc.period as p, p.start = dt "set-enc-period";
+  } "create-encounter";
+
+  // Topography Observation
+  src.crTopography as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "topo-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "topo-code-sys";
+      src -> cd.code = 'topography' "topo-code-val";
+    } "topo-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS' "topo-val-sys";
+      val -> cd.code = val "topo-val-code";
+    } "topo-value";
+  } "create-topography";
+
+  // Morphology Observation
+  src.crMorphology as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "morph-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "morph-code-sys";
+      src -> cd.code = 'morphology' "morph-code-val";
+    } "morph-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS' "morph-val-sys";
+      val -> cd.code = val "morph-val-code";
+    } "morph-value";
+  } "create-morphology";
+
+  // Behaviour Observation
+  src.crBehaviour as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "behav-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "behav-code-sys";
+      src -> cd.code = 'behaviour' "behav-code-val";
+    } "behav-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS' "behav-val-sys";
+      val -> cd.code = val "behav-val-code";
+    } "behav-value";
+  } "create-behaviour";
+
+  // Grade Observation (LOINC code)
+  src.crGrade as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "grade-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'http://loinc.org' "grade-code-sys";
+      src -> cd.code = '33732-9' "grade-code-val";
+    } "grade-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS' "grade-val-sys";
+      val -> cd.code = val "grade-val-code";
+    } "grade-value";
+  } "create-grade";
+
+  // Basis of Diagnosis Observation
+  src.crBasisDiagnosis as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "basis-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "basis-code-sys";
+      src -> cd.code = 'basis-of-diagnosis' "basis-code-val";
+    } "basis-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS' "basis-val-sys";
+      val -> cd.code = val "basis-val-code";
+    } "basis-value";
+  } "create-basis";
+
+  // Site Observation
+  src.crSite as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "site-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "site-code-sys";
+      src -> cd.code = 'site' "site-code-val";
+    } "site-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS' "site-val-sys";
+      val -> cd.code = val "site-val-code";
+    } "site-value";
+  } "create-site";
+
+  // Incidence Date Observation
+  src.crIncidenceDate as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "incdate-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "incdate-code-sys";
+      src -> cd.code = 'incidence-date' "incdate-code-val";
+    } "incdate-code";
+    val -> obs.value = create('dateTime') as dt, dt.value = val "incdate-value";
+  } "create-incidence-date";
+
+  // Age at Incidence Observation
+  src.crAge as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "age-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "age-code-sys";
+      src -> cd.code = 'age-at-incidence' "age-code-val";
+    } "age-code";
+    val -> obs.value = create('integer') as i, i.value = val "age-value";
+  } "create-age";
+
+  // Tumor Number Observation
+  src.crTumorNumber as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "tn-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "tn-code-sys";
+      src -> cd.code = 'tumor-number' "tn-code-val";
+    } "tn-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS' "tn-val-sys";
+      val -> cd.code = val "tn-val-code";
+    } "tn-value";
+  } "create-tumor-number";
+
+  // Address Observation
+  src.crAddress as val -> tgt.entry as entry, entry.resource = create('Observation') as obs then {
+    src -> obs.status = 'final' "addr-status";
+    src -> obs.code as c, c.coding as cd then {
+      src -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes' "addr-code-sys";
+      src -> cd.code = 'address' "addr-code-val";
+    } "addr-code";
+    val -> obs.value = create('CodeableConcept') as cc, cc.coding as cd then {
+      val -> cd.system = 'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS' "addr-val-sys";
+      val -> cd.code = val "addr-val-code";
+    } "addr-value";
+  } "create-address";
+}
