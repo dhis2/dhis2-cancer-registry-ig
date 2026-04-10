@@ -1,0 +1,36 @@
+/// url = "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient"
+/// name = "CancerRegistryToPatient"
+/// title = "Transform: Cancer Registry Enrollment to Patient"
+/// status = "draft"
+
+map "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient" = "CancerRegistryToPatient"
+
+uses "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry" alias CancerRegistry as source
+uses "http://hl7.org/fhir/StructureDefinition/Patient" alias Patient as target
+
+group CancerRegistryToPatient(source src : CancerRegistry, target tgt : Patient) {
+  src -> tgt.meta as meta then {
+    src -> meta.profile = 'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient' "set-profile";
+  } "set-meta";
+
+  src.crPatientId as patientId -> tgt.identifier as ident then {
+    patientId -> ident.value = patientId "set-id-value";
+    patientId -> ident.type as idType then {
+      patientId -> idType.coding as coding then {
+        patientId -> coding.system = 'http://terminology.hl7.org/CodeSystem/v2-0203' "set-id-system";
+        patientId -> coding.code = 'MR' "set-id-code";
+      } "set-type-coding";
+    } "set-id-type";
+  } "set-identifier";
+
+  src -> tgt.name as name then {
+    src.familyName as fn -> name.family = fn "set-family";
+    src.givenName as gn -> name.given = gn "set-given";
+  } "set-name";
+
+  src.crSex as sex where sex = '1' -> tgt.gender = 'male' "sex-male";
+  src.crSex as sex where sex = '2' -> tgt.gender = 'female' "sex-female";
+  src.crSex as sex where sex = '9' -> tgt.gender = 'unknown' "sex-unknown";
+
+  src.dateOfBirth as dob -> tgt.birthDate = dob "set-birthdate";
+}

@@ -1,0 +1,22 @@
+/// url = "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode"
+/// name = "CancerRegistryToEpisode"
+/// title = "Transform: Cancer Registry Enrollment to EpisodeOfCare"
+/// status = "draft"
+
+map "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode" = "CancerRegistryToEpisode"
+
+uses "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry" alias CancerRegistry as source
+uses "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" alias EpisodeOfCare as target
+
+group CancerRegistryToEpisode(source src : CancerRegistry, target tgt : EpisodeOfCare) {
+  src -> tgt.meta as meta then {
+    src -> meta.profile = 'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode' "set-profile";
+  } "set-meta";
+
+  src -> tgt.status = 'active' "set-status";
+
+  // The patient reference must be set by the orchestrating engine.
+  // src.crPatientId -> tgt.patient (Reference resolution is external)
+
+  // Period start represents enrollment date — set from the source system context.
+}
