@@ -19,6 +19,7 @@ This implementation guide is structured as follows:
 - **[Home](index.html)** — Overview, key links, and background context for the Cancer Registry toolkit.
 - **[System Design](system-design.html)** — Description of the DHIS2 Tracker program structure, including enrollment, tumor, source, and follow-up stages with their data elements and sections.
 - **[Data Quality Checks](data-quality-checks.html)** — Detailed description of the CanReg5-aligned data quality checks implemented as program rules, covering age, sex, topography, morphology, behaviour, grade, basis of diagnosis, and multiple primary testing.
+- **[Profiles & Mappings](profiles.html)** — FHIR resource profiles, extensions, conceptual mappings, and FML StructureMaps that define how DHIS2 Cancer Registry data maps to standard FHIR resources.
 - **[Deployment](deployment.html)** — Links to the demo instance, metadata downloads, the CanReg5 export application, and guidance for local adaptation.
 - **[References](references.html)** — Key publications, standards, and resources referenced in this guide.
 - **[Artifacts](artifacts.html)** — Complete listing of FHIR artifacts defined in this implementation guide, including logical models, code systems, value sets, and questionnaires.
