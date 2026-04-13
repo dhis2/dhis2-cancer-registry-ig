@@ -3,8 +3,6 @@
 /// title = "Transform: Tumor Stage to CRTumorEncounter + Observations"
 /// status = "draft"
 
-map "https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations" = "TumorToEncounterAndObservations"
-
 uses "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor" alias Tumor as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 

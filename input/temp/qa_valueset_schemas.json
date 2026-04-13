@@ -1,6 +1,6 @@
 {
   "component": "valueset_schemas",
-  "timestamp": "2026-04-09T12:39:26.139944",
+  "timestamp": "2026-04-13T14:37:58.249452",
   "status": "completed",
   "summary": {
     "total_successes": 4,
@@ -10,25 +10,25 @@
     "files_expected_count": 1,
     "files_missing_count": 1,
     "schemas_generated_count": 0,
-    "completion_timestamp": "2026-04-09T12:39:26.148811"
+    "completion_timestamp": "2026-04-13T14:37:58.259625"
   },
   "details": {
     "successes": [
       {
         "message": "Starting ValueSet schema generation",
-        "timestamp": "2026-04-09T12:39:26.139947"
+        "timestamp": "2026-04-13T14:37:58.249455"
       },
       {
         "message": "Configured paths - Expansions: output/expansions.json, Output: output",
-        "timestamp": "2026-04-09T12:39:26.140439"
+        "timestamp": "2026-04-13T14:37:58.250096"
       },
       {
         "message": "Used fallback method: loaded ValueSet/CodeSystem files directly",
-        "timestamp": "2026-04-09T12:39:26.142472"
+        "timestamp": "2026-04-13T14:37:58.252424"
       },
       {
-        "message": "Successfully generated 17 ValueSet schemas",
-        "timestamp": "2026-04-09T12:39:26.148809"
+        "message": "Successfully generated 19 ValueSet schemas",
+        "timestamp": "2026-04-13T14:37:58.259622"
       }
     ],
     "warnings": [],

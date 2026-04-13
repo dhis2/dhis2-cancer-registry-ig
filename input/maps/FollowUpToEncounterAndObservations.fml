@@ -3,8 +3,6 @@
 /// title = "Transform: Follow-up Stage to CRFollowUpEncounter + Observations"
 /// status = "draft"
 
-map "https://dhis2.org/fhir/cancer-registry/StructureMap/FollowUpToEncounterAndObservations" = "FollowUpToEncounterAndObservations"
-
 uses "https://dhis2.org/fhir/cancer-registry/StructureDefinition/FollowUp" alias FollowUp as source
 uses "http://hl7.org/fhir/StructureDefinition/Bundle" alias Bundle as target
 

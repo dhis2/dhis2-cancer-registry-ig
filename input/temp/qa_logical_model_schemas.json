@@ -1,22 +1,22 @@
 {
   "component": "logical_model_schemas",
-  "timestamp": "2026-04-09T12:39:26.181064",
+  "timestamp": "2026-04-13T14:37:58.291479",
   "status": "completed",
   "summary": {
     "total_successes": 10,
     "total_warnings": 0,
     "total_errors": 0,
     "files_processed_count": 4,
-    "files_expected_count": 4,
+    "files_expected_count": 24,
     "files_missing_count": 0,
     "schemas_generated_count": 4,
-    "completion_timestamp": "2026-04-09T12:39:26.211563"
+    "completion_timestamp": "2026-04-13T14:37:58.373622"
   },
   "details": {
     "successes": [
       {
         "message": "Script started",
-        "timestamp": "2026-04-09T12:39:26.181097",
+        "timestamp": "2026-04-13T14:37:58.291512",
         "details": {
           "input_directory": "output",
           "output_directory": "output"
@@ -24,22 +24,22 @@
       },
       {
         "message": "Input directory found",
-        "timestamp": "2026-04-09T12:39:26.181102",
+        "timestamp": "2026-04-13T14:37:58.291517",
         "details": {
           "directory": "output"
         }
       },
       {
-        "message": "Found 4 StructureDefinition files",
-        "timestamp": "2026-04-09T12:39:26.181680",
+        "message": "Found 24 StructureDefinition files",
+        "timestamp": "2026-04-13T14:37:58.292408",
         "details": {
           "directory": "output",
-          "file_count": 4
+          "file_count": 24
         }
       },
       {
         "message": "Found 4 logical models",
-        "timestamp": "2026-04-09T12:39:26.182318",
+        "timestamp": "2026-04-13T14:37:58.302488",
         "details": {
           "models_found": 4,
           "model_names": [
@@ -52,23 +52,23 @@
       },
       {
         "message": "Generated schema for model Tumor",
-        "timestamp": "2026-04-09T12:39:26.182367"
+        "timestamp": "2026-04-13T14:37:58.302541"
       },
       {
         "message": "Generated schema for model FollowUp",
-        "timestamp": "2026-04-09T12:39:26.182962"
+        "timestamp": "2026-04-13T14:37:58.303137"
       },
       {
         "message": "Generated schema for model Source",
-        "timestamp": "2026-04-09T12:39:26.183167"
+        "timestamp": "2026-04-13T14:37:58.303353"
       },
       {
         "message": "Generated schema for model CancerRegistry",
-        "timestamp": "2026-04-09T12:39:26.183440"
+        "timestamp": "2026-04-13T14:37:58.303587"
       },
       {
         "message": "Generated 4 Logical Model schemas",
-        "timestamp": "2026-04-09T12:39:26.183698",
+        "timestamp": "2026-04-13T14:37:58.303901",
         "details": {
           "schemas_generated": 4,
           "schema_files": [
@@ -81,7 +81,7 @@
       },
       {
         "message": "Successfully generated 4 logical model schemas",
-        "timestamp": "2026-04-09T12:39:26.183721",
+        "timestamp": "2026-04-13T14:37:58.303923",
         "details": {
           "schemas_generated": 4
         }
@@ -93,34 +93,34 @@
       {
         "file": "output/schemas/StructureDefinition-Tumor.schema.json",
         "status": "success",
-        "timestamp": "2026-04-09T12:39:26.182939",
+        "timestamp": "2026-04-13T14:37:58.303114",
         "details": {
           "model_name": "Tumor",
-          "schema_size": 17400
+          "schema_size": 16852
         }
       },
       {
         "file": "output/schemas/StructureDefinition-FollowUp.schema.json",
         "status": "success",
-        "timestamp": "2026-04-09T12:39:26.183145",
+        "timestamp": "2026-04-13T14:37:58.303332",
         "details": {
           "model_name": "FollowUp",
-          "schema_size": 2587
+          "schema_size": 2575
         }
       },
       {
         "file": "output/schemas/StructureDefinition-Source.schema.json",
         "status": "success",
-        "timestamp": "2026-04-09T12:39:26.183418",
+        "timestamp": "2026-04-13T14:37:58.303567",
         "details": {
           "model_name": "Source",
-          "schema_size": 3653
+          "schema_size": 3522
         }
       },
       {
         "file": "output/schemas/StructureDefinition-CancerRegistry.schema.json",
         "status": "success",
-        "timestamp": "2026-04-09T12:39:26.183694",
+        "timestamp": "2026-04-13T14:37:58.303899",
         "details": {
           "model_name": "CancerRegistry",
           "schema_size": 3453
@@ -128,10 +128,30 @@
       }
     ],
     "files_expected": [
+      "output/StructureDefinition-cr-source-type-observation.json",
+      "output/StructureDefinition-cr-topography-observation.json",
+      "output/StructureDefinition-cr-behaviour-observation.json",
       "output/StructureDefinition-Tumor.json",
+      "output/StructureDefinition-cr-rare.json",
       "output/StructureDefinition-FollowUp.json",
+      "output/StructureDefinition-cr-grade-observation.json",
+      "output/StructureDefinition-cr-basis-of-diagnosis-observation.json",
+      "output/StructureDefinition-cr-address-observation.json",
+      "output/StructureDefinition-cr-tumor-encounter.json",
       "output/StructureDefinition-Source.json",
-      "output/StructureDefinition-CancerRegistry.json"
+      "output/StructureDefinition-cr-source-tumor-number-observation.json",
+      "output/StructureDefinition-cr-followup-encounter.json",
+      "output/StructureDefinition-cr-age-at-incidence-observation.json",
+      "output/StructureDefinition-cr-vital-status-observation.json",
+      "output/StructureDefinition-cr-patient.json",
+      "output/StructureDefinition-cr-cancer-registration-episode.json",
+      "output/StructureDefinition-cr-source-encounter.json",
+      "output/StructureDefinition-cr-incidence-date-observation.json",
+      "output/StructureDefinition-CancerRegistry.json",
+      "output/StructureDefinition-cr-morphology-observation.json",
+      "output/StructureDefinition-cr-site-observation.json",
+      "output/StructureDefinition-cr-tumor-number-observation.json",
+      "output/StructureDefinition-cr-date-of-death-observation.json"
     ],
     "files_missing": [],
     "schemas_generated": [
@@ -143,7 +163,7 @@
           "resourceType",
           "crTumorNumber"
         ],
-        "timestamp": "2026-04-09T12:39:26.182941"
+        "timestamp": "2026-04-13T14:37:58.303116"
       },
       {
         "model_name": "FollowUp",
@@ -152,7 +172,7 @@
         "required_fields": [
           "resourceType"
         ],
-        "timestamp": "2026-04-09T12:39:26.183148"
+        "timestamp": "2026-04-13T14:37:58.303334"
       },
       {
         "model_name": "Source",
@@ -162,7 +182,7 @@
           "resourceType",
           "crSourceTumorNumber"
         ],
-        "timestamp": "2026-04-09T12:39:26.183420"
+        "timestamp": "2026-04-13T14:37:58.303568"
       },
       {
         "model_name": "CancerRegistry",
@@ -175,7 +195,7 @@
           "crSex",
           "dateOfBirth"
         ],
-        "timestamp": "2026-04-09T12:39:26.183696"
+        "timestamp": "2026-04-13T14:37:58.303900"
       }
     ]
   }

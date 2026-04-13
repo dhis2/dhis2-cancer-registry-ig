@@ -3,8 +3,6 @@
 /// title = "Transform: Cancer Registry Enrollment to EpisodeOfCare"
 /// status = "draft"
 
-map "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode" = "CancerRegistryToEpisode"
-
 uses "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry" alias CancerRegistry as source
 uses "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" alias EpisodeOfCare as target
 

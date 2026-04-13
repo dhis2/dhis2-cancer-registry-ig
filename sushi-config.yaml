@@ -91,6 +91,26 @@ menu:
   References: references.html
   Artifacts: artifacts.html
 
+parameters:
+  path-map: input/maps
+
+resources:
+  StructureMap/CancerRegistryToPatient:
+    name: "Transform: Cancer Registry Enrollment to Patient"
+    description: "Maps DHIS2 Cancer Registry enrollment TEAs to a FHIR Patient resource."
+  StructureMap/CancerRegistryToEpisode:
+    name: "Transform: Cancer Registry Enrollment to EpisodeOfCare"
+    description: "Maps DHIS2 Cancer Registry enrollment to a FHIR EpisodeOfCare resource."
+  StructureMap/TumorToEncounterAndObservations:
+    name: "Transform: Tumor Stage to Encounter + Observations"
+    description: "Maps a DHIS2 Tumor stage event to a FHIR Encounter and Observation bundle."
+  StructureMap/SourceToEncounterAndObservations:
+    name: "Transform: Source Stage to Encounter + Observations"
+    description: "Maps a DHIS2 Source stage event to a FHIR Encounter and Observation bundle."
+  StructureMap/FollowUpToEncounterAndObservations:
+    name: "Transform: Follow-up Stage to Encounter + Observations"
+    description: "Maps a DHIS2 Follow-up stage event to a FHIR Encounter and Observation bundle."
+
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
