@@ -40,17 +40,7 @@ This 1:1 structural mapping preserves the repeatable stage event semantics of DH
 - **EpisodeOfCare** groups the entire cancer registration case and all encounters
 - **Encounter** represents each programme stage event, typed by a local code system
 - **Observation** captures each individual data element within its encounter context
-- **Extension** is used sparingly — only where a concept is registry metadata rather than a clinical observation (e.g. the IARC rare tumor classification flag)
-
-### Design Decisions
-
-| Decision                              | Rationale                                                                                                                                                                                            |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Encounter per stage event**         | Preserves DHIS2 Tracker's repeatable event structure. Each Tumor, Source, or Follow-up stage event is a distinct Encounter, allowing multiple tumours, multiple sources, and longitudinal follow-up. |
-| **All data elements as Observations** | Uniform, predictable mapping. Even concepts like morphology and behaviour (which mCODE puts on Condition) are Observations here, matching the flat data-element structure of DHIS2.                  |
-| **LOINC where available**             | Histological grade uses LOINC `33732-9`. CanReg5-specific concepts use a local code system (`CRObservationCodesCS`).                                                                                 |
-| **No US Core / mCODE dependency**     | Jurisdiction-neutral profiles suitable for global deployment.                                                                                                                                        |
-| **REGNO invariant**                   | Patient identifier must be ≥8 characters, matching the CanReg5 pattern `CURRENT_DATE(yyyy)+SEQUENTIAL(####)`.                                                                                        |
+- **Extension** is used sparingly — only where a concept is registry metadata rather than a clinical observation (e.g. the IARC rare tumor classification flag) |
 
 ### Resource Profiles
 
@@ -109,8 +99,8 @@ The CRTumorEncounter also supports the [CRRareExtension](StructureDefinition-cr-
 
 ### Extensions
 
-| Extension | Context | Type | Description |
-| --- | --- | --- | --- |
+| Extension                                           | Context          | Type    | Description                                                                                                                                                                         |
+| --------------------------------------------------- | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [CRRareExtension](StructureDefinition-cr-rare.html) | CRTumorEncounter | boolean | IARC rare tumor classification flag. Computed from the topography-morphology combination evaluated against rare cancer reference tables. Corresponds to the CR - Rare data element. |
 
 ### Terminology
@@ -142,22 +132,22 @@ The stage-level FML maps produce a FHIR transaction `Bundle` containing the Enco
 
 A complete example scenario demonstrates a 54-year-old female patient with breast carcinoma:
 
-| Example                                                                         | Profile                        | Description                                     |
-| ------------------------------------------------------------------------------- | ------------------------------ | ----------------------------------------------- |
+| Example                                                                         | Profile                        | Description                                       |
+| ------------------------------------------------------------------------------- | ------------------------------ | ------------------------------------------------- |
 | [ExampleCRPatient](Patient-ExampleCRPatient.html)                               | CRPatient                      | Jane Doe, female, born 1970-03-15, REGNO 20240001 |
-| [ExampleCRRegistrationEpisode](EpisodeOfCare-ExampleCRRegistrationEpisode.html) | CRCancerRegistrationEpisode    | Active registration episode from 2026-01-01     |
-| [ExampleTumorEncounter](Encounter-ExampleTumorEncounter.html)                   | CRTumorEncounter               | Tumor stage encounter, rare=false               |
-| [ExampleTopography](Observation-ExampleTopography.html)                         | CRTopographyObservation        | 504 — Upper-outer quadrant of breast            |
-| [ExampleMorphology](Observation-ExampleMorphology.html)                         | CRMorphologyObservation        | 8500 — Infiltrating duct carcinoma              |
-| [ExampleBehaviour](Observation-ExampleBehaviour.html)                           | CRBehaviourObservation         | 3 — Malignant, primary site                     |
-| [ExampleGrade](Observation-ExampleGrade.html)                                   | CRGradeObservation             | Grade II — moderately differentiated            |
-| [ExampleBasisOfDiagnosis](Observation-ExampleBasisOfDiagnosis.html)             | CRBasisOfDiagnosisObservation  | 7 — Histology of primary                        |
-| [ExampleSite](Observation-ExampleSite.html)                                     | CRSiteObservation              | 50 — Breast                                     |
-| [ExampleIncidenceDate](Observation-ExampleIncidenceDate.html)                   | CRIncidenceDateObservation     | 2026-01-01                                      |
-| [ExampleAgeAtIncidence](Observation-ExampleAgeAtIncidence.html)                 | CRAgeAtIncidenceObservation    | 54 years                                        |
-| [ExampleTumorNumber](Observation-ExampleTumorNumber.html)                       | CRTumorNumberObservation       | Tumour 01                                       |
-| [ExampleSourceEncounter](Encounter-ExampleSourceEncounter.html)                 | CRSourceEncounter              | Source stage encounter                          |
-| [ExampleSourceType](Observation-ExampleSourceType.html)                         | CRSourceTypeObservation        | Hospital pathology department                   |
-| [ExampleSourceTumorNumber](Observation-ExampleSourceTumorNumber.html)           | CRSourceTumorNumberObservation | Relates to tumour 01                            |
-| [ExampleFollowUpEncounter](Encounter-ExampleFollowUpEncounter.html)             | CRFollowUpEncounter            | 6-month follow-up                               |
-| [ExampleVitalStatus](Observation-ExampleVitalStatus.html)                       | CRVitalStatusObservation       | Alive                                           |
+| [ExampleCRRegistrationEpisode](EpisodeOfCare-ExampleCRRegistrationEpisode.html) | CRCancerRegistrationEpisode    | Active registration episode from 2026-01-01       |
+| [ExampleTumorEncounter](Encounter-ExampleTumorEncounter.html)                   | CRTumorEncounter               | Tumor stage encounter, rare=false                 |
+| [ExampleTopography](Observation-ExampleTopography.html)                         | CRTopographyObservation        | 504 — Upper-outer quadrant of breast              |
+| [ExampleMorphology](Observation-ExampleMorphology.html)                         | CRMorphologyObservation        | 8500 — Infiltrating duct carcinoma                |
+| [ExampleBehaviour](Observation-ExampleBehaviour.html)                           | CRBehaviourObservation         | 3 — Malignant, primary site                       |
+| [ExampleGrade](Observation-ExampleGrade.html)                                   | CRGradeObservation             | Grade II — moderately differentiated              |
+| [ExampleBasisOfDiagnosis](Observation-ExampleBasisOfDiagnosis.html)             | CRBasisOfDiagnosisObservation  | 7 — Histology of primary                          |
+| [ExampleSite](Observation-ExampleSite.html)                                     | CRSiteObservation              | 50 — Breast                                       |
+| [ExampleIncidenceDate](Observation-ExampleIncidenceDate.html)                   | CRIncidenceDateObservation     | 2026-01-01                                        |
+| [ExampleAgeAtIncidence](Observation-ExampleAgeAtIncidence.html)                 | CRAgeAtIncidenceObservation    | 54 years                                          |
+| [ExampleTumorNumber](Observation-ExampleTumorNumber.html)                       | CRTumorNumberObservation       | Tumour 01                                         |
+| [ExampleSourceEncounter](Encounter-ExampleSourceEncounter.html)                 | CRSourceEncounter              | Source stage encounter                            |
+| [ExampleSourceType](Observation-ExampleSourceType.html)                         | CRSourceTypeObservation        | Hospital pathology department                     |
+| [ExampleSourceTumorNumber](Observation-ExampleSourceTumorNumber.html)           | CRSourceTumorNumberObservation | Relates to tumour 01                              |
+| [ExampleFollowUpEncounter](Encounter-ExampleFollowUpEncounter.html)             | CRFollowUpEncounter            | 6-month follow-up                                 |
+| [ExampleVitalStatus](Observation-ExampleVitalStatus.html)                       | CRVitalStatusObservation       | Alive                                             |
