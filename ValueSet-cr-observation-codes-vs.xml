@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="cr-observation-codes-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet cr-observation-codes-vs</b></p><a name="cr-observation-codes-vs"> </a><a name="hccr-observation-codes-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-cr-observation-codes.html"><code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span></li></ul></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/ValueSet/cr-observation-codes-vs"/>
+  <version value="0.1.0"/>
+  <name value="CRObservationCodesVS"/>
+  <title value="Cancer Registry Observation Codes Value Set"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Value set containing all cancer-registry-specific observation type codes."/>
+  <compose>
+    <include>
+      <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"/>
+    </include>
+  </compose>
+</ValueSet>

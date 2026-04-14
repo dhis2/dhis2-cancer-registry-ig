@@ -1,0 +1,103 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "CRMorphologyGroupCS",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRMorphologyGroupCS</b></p><a name=\"CRMorphologyGroupCS\"> </a><a name=\"hcCRMorphologyGroupCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"CRMorphologyGroupCS-0\"> </a></td><td>Invalid (0)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRMorphologyGroupCS-1\"> </a></td><td>Squamous &amp; Transitional cell carcinomas (1)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRMorphologyGroupCS-2\"> </a></td><td>Basal Cell carcinomas (2)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRMorphologyGroupCS-3\"> </a></td><td>Adenocarcinomas (3)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"CRMorphologyGroupCS-4\"> </a></td><td>Other specific Carcinomas (4)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"CRMorphologyGroupCS-5\"> </a></td><td>Unspecified Carcinomas (5)</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"CRMorphologyGroupCS-6\"> </a></td><td>Sarcomas &amp; other soft tissue tumors (6)</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"CRMorphologyGroupCS-7\"> </a></td><td>Mesotheliomas (7)</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"CRMorphologyGroupCS-8\"> </a></td><td>Hematopoietic, lymphoid tissue: Myeloid (8)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"CRMorphologyGroupCS-9\"> </a></td><td>Hematopoietic, lymphoid tissue: B-Cell (9)</td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"CRMorphologyGroupCS-10\"> </a></td><td>Hematopoietic, lymphoid tissue: T-Cell, NK-Cell (10)</td></tr><tr><td style=\"white-space:nowrap\">11<a name=\"CRMorphologyGroupCS-11\"> </a></td><td>Hematopoietic, lymphoid tissue: Hodgkin Lymphoma (11)</td></tr><tr><td style=\"white-space:nowrap\">12<a name=\"CRMorphologyGroupCS-12\"> </a></td><td>Hematopoietic, lymphoid tissue: Mast-cell (12)</td></tr><tr><td style=\"white-space:nowrap\">13<a name=\"CRMorphologyGroupCS-13\"> </a></td><td>Hematopoietic, lymphoid tissue: Histiocytes, Accessory Lymphoid cells (13)</td></tr><tr><td style=\"white-space:nowrap\">14<a name=\"CRMorphologyGroupCS-14\"> </a></td><td>Hematopoietic, lymphoid tissue: Unspecified types (14)</td></tr><tr><td style=\"white-space:nowrap\">15<a name=\"CRMorphologyGroupCS-15\"> </a></td><td>Kaposi sarcoma (15)</td></tr><tr><td style=\"white-space:nowrap\">16<a name=\"CRMorphologyGroupCS-16\"> </a></td><td>Other specified (16)</td></tr><tr><td style=\"white-space:nowrap\">17<a name=\"CRMorphologyGroupCS-17\"> </a></td><td>Unspecified (17)</td></tr></table></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS",
+  "version" : "0.1.0",
+  "name" : "CRMorphologyGroupCS",
+  "title" : "CR - Morphology Group",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Morphology group codes used in the Multiple Primary Tester data quality check. Groups are derived from morphology codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Groups 8-14 represent haematopoietic/lymphoid tissue subtypes (systemic groups). Group 0 indicates an invalid morphology, and group 17 indicates an unspecified morphology.",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 18,
+  "concept" : [{
+    "code" : "0",
+    "display" : "Invalid (0)"
+  },
+  {
+    "code" : "1",
+    "display" : "Squamous & Transitional cell carcinomas (1)"
+  },
+  {
+    "code" : "2",
+    "display" : "Basal Cell carcinomas (2)"
+  },
+  {
+    "code" : "3",
+    "display" : "Adenocarcinomas (3)"
+  },
+  {
+    "code" : "4",
+    "display" : "Other specific Carcinomas (4)"
+  },
+  {
+    "code" : "5",
+    "display" : "Unspecified Carcinomas (5)"
+  },
+  {
+    "code" : "6",
+    "display" : "Sarcomas & other soft tissue tumors (6)"
+  },
+  {
+    "code" : "7",
+    "display" : "Mesotheliomas (7)"
+  },
+  {
+    "code" : "8",
+    "display" : "Hematopoietic, lymphoid tissue: Myeloid (8)"
+  },
+  {
+    "code" : "9",
+    "display" : "Hematopoietic, lymphoid tissue: B-Cell (9)"
+  },
+  {
+    "code" : "10",
+    "display" : "Hematopoietic, lymphoid tissue: T-Cell, NK-Cell (10)"
+  },
+  {
+    "code" : "11",
+    "display" : "Hematopoietic, lymphoid tissue: Hodgkin Lymphoma (11)"
+  },
+  {
+    "code" : "12",
+    "display" : "Hematopoietic, lymphoid tissue: Mast-cell (12)"
+  },
+  {
+    "code" : "13",
+    "display" : "Hematopoietic, lymphoid tissue: Histiocytes, Accessory Lymphoid cells (13)"
+  },
+  {
+    "code" : "14",
+    "display" : "Hematopoietic, lymphoid tissue: Unspecified types (14)"
+  },
+  {
+    "code" : "15",
+    "display" : "Kaposi sarcoma (15)"
+  },
+  {
+    "code" : "16",
+    "display" : "Other specified (16)"
+  },
+  {
+    "code" : "17",
+    "display" : "Unspecified (17)"
+  }]
+}

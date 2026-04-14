@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyResultCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CRMorphologyResultCS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRMorphologyResultCS</b></p><a name=\"CRMorphologyResultCS\"> </a><a name=\"hcCRMorphologyResultCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyResultCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">INVALID<a name=\"CRMorphologyResultCS-INVALID\"> </a></td><td>Invalid</td></tr><tr><td style=\"white-space:nowrap\">GO_TO_TOPOGRAPHY<a name=\"CRMorphologyResultCS-GO_TO_TOPOGRAPHY\"> </a></td><td>Go to topography</td></tr><tr><td style=\"white-space:nowrap\">DUPLICATE_PRIMARY<a name=\"CRMorphologyResultCS-DUPLICATE_PRIMARY\"> </a></td><td>Duplicate primary</td></tr><tr><td style=\"white-space:nowrap\">MULTIPLE_PRIMARY<a name=\"CRMorphologyResultCS-MULTIPLE_PRIMARY\"> </a></td><td>Multiple primary</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyResultCS"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyResultCS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRMorphologyResultCS"] ; # 
+  fhir:title [ fhir:v "CR - Morphology result"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Intermediate morphology evaluation result codes used in the Multiple Primary Tester check. When the morphology comparison between two tumours is inconclusive (undecided), the check proceeds to topography evaluation. 'Invalid' indicates one of the morphology groups is invalid (0). 'Go to topography' indicates the morphology evaluation was undecided and topography comparison is needed."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "INVALID" ] ;
+     fhir:display [ fhir:v "Invalid" ]
+  ] [
+     fhir:code [ fhir:v "GO_TO_TOPOGRAPHY" ] ;
+     fhir:display [ fhir:v "Go to topography" ]
+  ] [
+     fhir:code [ fhir:v "DUPLICATE_PRIMARY" ] ;
+     fhir:display [ fhir:v "Duplicate primary" ]
+  ] [
+     fhir:code [ fhir:v "MULTIPLE_PRIMARY" ] ;
+     fhir:display [ fhir:v "Multiple primary" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

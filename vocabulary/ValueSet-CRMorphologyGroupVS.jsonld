@@ -1,0 +1,125 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-04-14T08:00:57.816328Z",
+  "@graph": [
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#0",
+      "name": "Invalid (0)",
+      "fhir:code": "0",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#1",
+      "name": "Squamous & Transitional cell carcinomas (1)",
+      "fhir:code": "1",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#2",
+      "name": "Basal Cell carcinomas (2)",
+      "fhir:code": "2",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#3",
+      "name": "Adenocarcinomas (3)",
+      "fhir:code": "3",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#4",
+      "name": "Other specific Carcinomas (4)",
+      "fhir:code": "4",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#5",
+      "name": "Unspecified Carcinomas (5)",
+      "fhir:code": "5",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#6",
+      "name": "Sarcomas & other soft tissue tumors (6)",
+      "fhir:code": "6",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#7",
+      "name": "Mesotheliomas (7)",
+      "fhir:code": "7",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#8",
+      "name": "Hematopoietic, lymphoid tissue: Myeloid (8)",
+      "fhir:code": "8",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#9",
+      "name": "Hematopoietic, lymphoid tissue: B-Cell (9)",
+      "fhir:code": "9",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#10",
+      "name": "Hematopoietic, lymphoid tissue: T-Cell, NK-Cell (10)",
+      "fhir:code": "10",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#11",
+      "name": "Hematopoietic, lymphoid tissue: Hodgkin Lymphoma (11)",
+      "fhir:code": "11",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#12",
+      "name": "Hematopoietic, lymphoid tissue: Mast-cell (12)",
+      "fhir:code": "12",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#13",
+      "name": "Hematopoietic, lymphoid tissue: Histiocytes, Accessory Lymphoid cells (13)",
+      "fhir:code": "13",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#14",
+      "name": "Hematopoietic, lymphoid tissue: Unspecified types (14)",
+      "fhir:code": "14",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#15",
+      "name": "Kaposi sarcoma (15)",
+      "fhir:code": "15",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#16",
+      "name": "Other specified (16)",
+      "fhir:code": "16",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyGroupVS.jsonld#17",
+      "name": "Unspecified (17)",
+      "fhir:code": "17",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRMorphologyGroupCS"
+    }
+  ]
+}

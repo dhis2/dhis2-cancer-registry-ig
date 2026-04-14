@@ -1,0 +1,1355 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "CRTopographyCS",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRTopographyCS</b></p><a name=\"CRTopographyCS\"> </a><a name=\"hcCRTopographyCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"CRTopographyCS-0\"> </a></td><td>External upper lip (000)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRTopographyCS-1\"> </a></td><td>External lower lip (001)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRTopographyCS-2\"> </a></td><td>External lip, NOS (002)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRTopographyCS-3\"> </a></td><td>Mucosa of upper lip (003)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"CRTopographyCS-4\"> </a></td><td>Mucosa of lower lip (004)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"CRTopographyCS-5\"> </a></td><td>Mucosa of lip, NOS (005)</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"CRTopographyCS-6\"> </a></td><td>Commissure of lip (006)</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"CRTopographyCS-8\"> </a></td><td>Overlapping lesion of lip (008)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"CRTopographyCS-9\"> </a></td><td>Lip, NOS (009)</td></tr><tr><td style=\"white-space:nowrap\">19<a name=\"CRTopographyCS-19\"> </a></td><td>Base of tongue, NOS (019)</td></tr><tr><td style=\"white-space:nowrap\">20<a name=\"CRTopographyCS-20\"> </a></td><td>Dorsal surface of tongue, NOS (020)</td></tr><tr><td style=\"white-space:nowrap\">21<a name=\"CRTopographyCS-21\"> </a></td><td>Border of tongue (021)</td></tr><tr><td style=\"white-space:nowrap\">22<a name=\"CRTopographyCS-22\"> </a></td><td>Ventral surface of tongue, NOS (022)</td></tr><tr><td style=\"white-space:nowrap\">23<a name=\"CRTopographyCS-23\"> </a></td><td>Anterior 2/3 of tongue, NOS (023)</td></tr><tr><td style=\"white-space:nowrap\">24<a name=\"CRTopographyCS-24\"> </a></td><td>Lingual tonsil (024)</td></tr><tr><td style=\"white-space:nowrap\">28<a name=\"CRTopographyCS-28\"> </a></td><td>Overlapping lesion of tongue (028)</td></tr><tr><td style=\"white-space:nowrap\">29<a name=\"CRTopographyCS-29\"> </a></td><td>Tongue, NOS (029)</td></tr><tr><td style=\"white-space:nowrap\">30<a name=\"CRTopographyCS-30\"> </a></td><td>Upper Gum (030)</td></tr><tr><td style=\"white-space:nowrap\">31<a name=\"CRTopographyCS-31\"> </a></td><td>Lower gum (031)</td></tr><tr><td style=\"white-space:nowrap\">39<a name=\"CRTopographyCS-39\"> </a></td><td>Gum, NOS (039)</td></tr><tr><td style=\"white-space:nowrap\">40<a name=\"CRTopographyCS-40\"> </a></td><td>Anterior floor of mouth (040)</td></tr><tr><td style=\"white-space:nowrap\">41<a name=\"CRTopographyCS-41\"> </a></td><td>Lateral floor of mouth (041)</td></tr><tr><td style=\"white-space:nowrap\">48<a name=\"CRTopographyCS-48\"> </a></td><td>Overlapping lesion of floor of mouth (048)</td></tr><tr><td style=\"white-space:nowrap\">49<a name=\"CRTopographyCS-49\"> </a></td><td>Floor of mouth, NOS (049)</td></tr><tr><td style=\"white-space:nowrap\">50<a name=\"CRTopographyCS-50\"> </a></td><td>Hard palate (050)</td></tr><tr><td style=\"white-space:nowrap\">51<a name=\"CRTopographyCS-51\"> </a></td><td>Soft palate, NOS (051)</td></tr><tr><td style=\"white-space:nowrap\">52<a name=\"CRTopographyCS-52\"> </a></td><td>Uvula (052)</td></tr><tr><td style=\"white-space:nowrap\">58<a name=\"CRTopographyCS-58\"> </a></td><td>Overlapping lesion of palate (058)</td></tr><tr><td style=\"white-space:nowrap\">59<a name=\"CRTopographyCS-59\"> </a></td><td>Palate, NOS (059)</td></tr><tr><td style=\"white-space:nowrap\">60<a name=\"CRTopographyCS-60\"> </a></td><td>Cheeck mucosa (060)</td></tr><tr><td style=\"white-space:nowrap\">61<a name=\"CRTopographyCS-61\"> </a></td><td>Vestibule of mouth (061)</td></tr><tr><td style=\"white-space:nowrap\">62<a name=\"CRTopographyCS-62\"> </a></td><td>Retromolar area (062)</td></tr><tr><td style=\"white-space:nowrap\">68<a name=\"CRTopographyCS-68\"> </a></td><td>Overlapping lesion of other and unspecified parts of mouth (068)</td></tr><tr><td style=\"white-space:nowrap\">69<a name=\"CRTopographyCS-69\"> </a></td><td>Mouth, NOS (069)</td></tr><tr><td style=\"white-space:nowrap\">79<a name=\"CRTopographyCS-79\"> </a></td><td>Parotid gland (079)</td></tr><tr><td style=\"white-space:nowrap\">80<a name=\"CRTopographyCS-80\"> </a></td><td>Submandibular gland (080)</td></tr><tr><td style=\"white-space:nowrap\">81<a name=\"CRTopographyCS-81\"> </a></td><td>Sublingual gland (081)</td></tr><tr><td style=\"white-space:nowrap\">88<a name=\"CRTopographyCS-88\"> </a></td><td>Overlapping lesion of major salivary glands (088)</td></tr><tr><td style=\"white-space:nowrap\">89<a name=\"CRTopographyCS-89\"> </a></td><td>Major salivary gland, NOS (089)</td></tr><tr><td style=\"white-space:nowrap\">90<a name=\"CRTopographyCS-90\"> </a></td><td>Tonsillar fossa (090)</td></tr><tr><td style=\"white-space:nowrap\">91<a name=\"CRTopographyCS-91\"> </a></td><td>Tonsillar pillar (091)</td></tr><tr><td style=\"white-space:nowrap\">98<a name=\"CRTopographyCS-98\"> </a></td><td>Overlapping lesion of tonsil (098)</td></tr><tr><td style=\"white-space:nowrap\">99<a name=\"CRTopographyCS-99\"> </a></td><td>Tonsil, NOS (099)</td></tr><tr><td style=\"white-space:nowrap\">100<a name=\"CRTopographyCS-100\"> </a></td><td>Vallecula (100)</td></tr><tr><td style=\"white-space:nowrap\">101<a name=\"CRTopographyCS-101\"> </a></td><td>Anterior surface of epiglottis (101)</td></tr><tr><td style=\"white-space:nowrap\">102<a name=\"CRTopographyCS-102\"> </a></td><td>Lateral wall of oropharynx (102)</td></tr><tr><td style=\"white-space:nowrap\">103<a name=\"CRTopographyCS-103\"> </a></td><td>Posterior wall of oropharynx (103)</td></tr><tr><td style=\"white-space:nowrap\">104<a name=\"CRTopographyCS-104\"> </a></td><td>Branchial cleft (104)</td></tr><tr><td style=\"white-space:nowrap\">108<a name=\"CRTopographyCS-108\"> </a></td><td>Overlapping lesions of oropharynx (108)</td></tr><tr><td style=\"white-space:nowrap\">109<a name=\"CRTopographyCS-109\"> </a></td><td>Oropharynx, NOS (109)</td></tr><tr><td style=\"white-space:nowrap\">110<a name=\"CRTopographyCS-110\"> </a></td><td>Superior wall of nasopharynx (110)</td></tr><tr><td style=\"white-space:nowrap\">111<a name=\"CRTopographyCS-111\"> </a></td><td>Posterior wall of nasopharynx (111)</td></tr><tr><td style=\"white-space:nowrap\">112<a name=\"CRTopographyCS-112\"> </a></td><td>Lateral wall of nasopharynx (112)</td></tr><tr><td style=\"white-space:nowrap\">113<a name=\"CRTopographyCS-113\"> </a></td><td>Anterior wall of nasopharynx (113)</td></tr><tr><td style=\"white-space:nowrap\">118<a name=\"CRTopographyCS-118\"> </a></td><td>Overlapping lesion of nasopharynx (118)</td></tr><tr><td style=\"white-space:nowrap\">119<a name=\"CRTopographyCS-119\"> </a></td><td>Nasopharynx, NOS (119)</td></tr><tr><td style=\"white-space:nowrap\">129<a name=\"CRTopographyCS-129\"> </a></td><td>Pyriform sinus (129)</td></tr><tr><td style=\"white-space:nowrap\">130<a name=\"CRTopographyCS-130\"> </a></td><td>Postcricoid region (130)</td></tr><tr><td style=\"white-space:nowrap\">131<a name=\"CRTopographyCS-131\"> </a></td><td>Hypopharyngeal aspect of aryepiglottic fold (131)</td></tr><tr><td style=\"white-space:nowrap\">132<a name=\"CRTopographyCS-132\"> </a></td><td>Posterior wall of hypopharynx (132)</td></tr><tr><td style=\"white-space:nowrap\">138<a name=\"CRTopographyCS-138\"> </a></td><td>Overlapping lesion of hypopharynx (138)</td></tr><tr><td style=\"white-space:nowrap\">139<a name=\"CRTopographyCS-139\"> </a></td><td>Hypopharynx, NOS (139)</td></tr><tr><td style=\"white-space:nowrap\">140<a name=\"CRTopographyCS-140\"> </a></td><td>Pharynx, NOS (140)</td></tr><tr><td style=\"white-space:nowrap\">141<a name=\"CRTopographyCS-141\"> </a></td><td>Laryngopharynx (OLD CODE) (141)</td></tr><tr><td style=\"white-space:nowrap\">142<a name=\"CRTopographyCS-142\"> </a></td><td>Waldeyer ring (142)</td></tr><tr><td style=\"white-space:nowrap\">148<a name=\"CRTopographyCS-148\"> </a></td><td>Overlapping lesion of lip, oral cavity and pharynx (148)</td></tr><tr><td style=\"white-space:nowrap\">150<a name=\"CRTopographyCS-150\"> </a></td><td>Cervical esophagus (150)</td></tr><tr><td style=\"white-space:nowrap\">151<a name=\"CRTopographyCS-151\"> </a></td><td>Thoracic esophagus (151)</td></tr><tr><td style=\"white-space:nowrap\">152<a name=\"CRTopographyCS-152\"> </a></td><td>Abdominal esophagus (152)</td></tr><tr><td style=\"white-space:nowrap\">153<a name=\"CRTopographyCS-153\"> </a></td><td>Upper third of esophagus (153)</td></tr><tr><td style=\"white-space:nowrap\">154<a name=\"CRTopographyCS-154\"> </a></td><td>Middle third of esophagus (154)</td></tr><tr><td style=\"white-space:nowrap\">155<a name=\"CRTopographyCS-155\"> </a></td><td>Lower third of esophagus (155)</td></tr><tr><td style=\"white-space:nowrap\">158<a name=\"CRTopographyCS-158\"> </a></td><td>Overlapping lesion of esophagus (158)</td></tr><tr><td style=\"white-space:nowrap\">159<a name=\"CRTopographyCS-159\"> </a></td><td>Esophagus, NOS (159)</td></tr><tr><td style=\"white-space:nowrap\">160<a name=\"CRTopographyCS-160\"> </a></td><td>Cardia, NOS (160)</td></tr><tr><td style=\"white-space:nowrap\">161<a name=\"CRTopographyCS-161\"> </a></td><td>Fundus of stomach (161)</td></tr><tr><td style=\"white-space:nowrap\">162<a name=\"CRTopographyCS-162\"> </a></td><td>Body of stomach (162)</td></tr><tr><td style=\"white-space:nowrap\">163<a name=\"CRTopographyCS-163\"> </a></td><td>Gastric antrum (163)</td></tr><tr><td style=\"white-space:nowrap\">164<a name=\"CRTopographyCS-164\"> </a></td><td>Pylorus (164)</td></tr><tr><td style=\"white-space:nowrap\">165<a name=\"CRTopographyCS-165\"> </a></td><td>Lesser curvature of stomach, NOS (165)</td></tr><tr><td style=\"white-space:nowrap\">166<a name=\"CRTopographyCS-166\"> </a></td><td>Greater curvature of stomach, NOS (166)</td></tr><tr><td style=\"white-space:nowrap\">168<a name=\"CRTopographyCS-168\"> </a></td><td>Overlapping lesion of stomach (168)</td></tr><tr><td style=\"white-space:nowrap\">169<a name=\"CRTopographyCS-169\"> </a></td><td>Stomach, NOS (169)</td></tr><tr><td style=\"white-space:nowrap\">170<a name=\"CRTopographyCS-170\"> </a></td><td>Duodenum (170)</td></tr><tr><td style=\"white-space:nowrap\">171<a name=\"CRTopographyCS-171\"> </a></td><td>Jejunum (171)</td></tr><tr><td style=\"white-space:nowrap\">172<a name=\"CRTopographyCS-172\"> </a></td><td>Ileum (172)</td></tr><tr><td style=\"white-space:nowrap\">173<a name=\"CRTopographyCS-173\"> </a></td><td>Meckel diverticulum (173)</td></tr><tr><td style=\"white-space:nowrap\">178<a name=\"CRTopographyCS-178\"> </a></td><td>Overlapping lesion of small intestine (178)</td></tr><tr><td style=\"white-space:nowrap\">179<a name=\"CRTopographyCS-179\"> </a></td><td>Small intestine, NOS (179)</td></tr><tr><td style=\"white-space:nowrap\">180<a name=\"CRTopographyCS-180\"> </a></td><td>Cecum (180)</td></tr><tr><td style=\"white-space:nowrap\">181<a name=\"CRTopographyCS-181\"> </a></td><td>Appendix (181)</td></tr><tr><td style=\"white-space:nowrap\">182<a name=\"CRTopographyCS-182\"> </a></td><td>Ascending colon (182)</td></tr><tr><td style=\"white-space:nowrap\">183<a name=\"CRTopographyCS-183\"> </a></td><td>Hepatic flexure of colon (183)</td></tr><tr><td style=\"white-space:nowrap\">184<a name=\"CRTopographyCS-184\"> </a></td><td>Transverse colon (184)</td></tr><tr><td style=\"white-space:nowrap\">185<a name=\"CRTopographyCS-185\"> </a></td><td>Splenic flexure of colon (185)</td></tr><tr><td style=\"white-space:nowrap\">186<a name=\"CRTopographyCS-186\"> </a></td><td>Descending colon (186)</td></tr><tr><td style=\"white-space:nowrap\">187<a name=\"CRTopographyCS-187\"> </a></td><td>Sigmoid colon (187)</td></tr><tr><td style=\"white-space:nowrap\">188<a name=\"CRTopographyCS-188\"> </a></td><td>Overlapping lesion of colon (188)</td></tr><tr><td style=\"white-space:nowrap\">189<a name=\"CRTopographyCS-189\"> </a></td><td>Colon, NOS (189)</td></tr><tr><td style=\"white-space:nowrap\">199<a name=\"CRTopographyCS-199\"> </a></td><td>Rectosigmoid junction (199)</td></tr><tr><td style=\"white-space:nowrap\">209<a name=\"CRTopographyCS-209\"> </a></td><td>Rectum, NOS (209)</td></tr><tr><td style=\"white-space:nowrap\">210<a name=\"CRTopographyCS-210\"> </a></td><td>Anus, NOS (210)</td></tr><tr><td style=\"white-space:nowrap\">211<a name=\"CRTopographyCS-211\"> </a></td><td>Anal canal (211)</td></tr><tr><td style=\"white-space:nowrap\">212<a name=\"CRTopographyCS-212\"> </a></td><td>Cloacogenic zone (212)</td></tr><tr><td style=\"white-space:nowrap\">218<a name=\"CRTopographyCS-218\"> </a></td><td>Overlapping lesion of rectum, anus and anal canal (218)</td></tr><tr><td style=\"white-space:nowrap\">220<a name=\"CRTopographyCS-220\"> </a></td><td>Liver (220)</td></tr><tr><td style=\"white-space:nowrap\">221<a name=\"CRTopographyCS-221\"> </a></td><td>intrahepatic bile duct (221)</td></tr><tr><td style=\"white-space:nowrap\">239<a name=\"CRTopographyCS-239\"> </a></td><td>Gallbladder (239)</td></tr><tr><td style=\"white-space:nowrap\">240<a name=\"CRTopographyCS-240\"> </a></td><td>Extrahepatic bile duct (240)</td></tr><tr><td style=\"white-space:nowrap\">241<a name=\"CRTopographyCS-241\"> </a></td><td>Ampulla of Vater (241)</td></tr><tr><td style=\"white-space:nowrap\">248<a name=\"CRTopographyCS-248\"> </a></td><td>Overlapping lesion of billiary tract (248)</td></tr><tr><td style=\"white-space:nowrap\">249<a name=\"CRTopographyCS-249\"> </a></td><td>Billiary tract, NOS (249)</td></tr><tr><td style=\"white-space:nowrap\">250<a name=\"CRTopographyCS-250\"> </a></td><td>Head of pancreas (250)</td></tr><tr><td style=\"white-space:nowrap\">251<a name=\"CRTopographyCS-251\"> </a></td><td>Body of pancreas (251)</td></tr><tr><td style=\"white-space:nowrap\">252<a name=\"CRTopographyCS-252\"> </a></td><td>Tail of pancreas (252)</td></tr><tr><td style=\"white-space:nowrap\">253<a name=\"CRTopographyCS-253\"> </a></td><td>Pancreatic duct (253)</td></tr><tr><td style=\"white-space:nowrap\">254<a name=\"CRTopographyCS-254\"> </a></td><td>Islets of Langerhans (254)</td></tr><tr><td style=\"white-space:nowrap\">257<a name=\"CRTopographyCS-257\"> </a></td><td>Other specified parts of pancreas (257)</td></tr><tr><td style=\"white-space:nowrap\">258<a name=\"CRTopographyCS-258\"> </a></td><td>Overlapping lesion of pancreas (258)</td></tr><tr><td style=\"white-space:nowrap\">259<a name=\"CRTopographyCS-259\"> </a></td><td>Pancreas, NOS (259)</td></tr><tr><td style=\"white-space:nowrap\">260<a name=\"CRTopographyCS-260\"> </a></td><td>Intestinal tract, NOS (260)</td></tr><tr><td style=\"white-space:nowrap\">268<a name=\"CRTopographyCS-268\"> </a></td><td>Overlapping lesion of digestive system (268)</td></tr><tr><td style=\"white-space:nowrap\">269<a name=\"CRTopographyCS-269\"> </a></td><td>Gastrointestinal tract, NOS (269)</td></tr><tr><td style=\"white-space:nowrap\">300<a name=\"CRTopographyCS-300\"> </a></td><td>Nasal cavity (300)</td></tr><tr><td style=\"white-space:nowrap\">301<a name=\"CRTopographyCS-301\"> </a></td><td>Middle ear (301)</td></tr><tr><td style=\"white-space:nowrap\">310<a name=\"CRTopographyCS-310\"> </a></td><td>Maxillary sinus (310)</td></tr><tr><td style=\"white-space:nowrap\">311<a name=\"CRTopographyCS-311\"> </a></td><td>Ethmoid sinus (311)</td></tr><tr><td style=\"white-space:nowrap\">312<a name=\"CRTopographyCS-312\"> </a></td><td>Frontal sinus (312)</td></tr><tr><td style=\"white-space:nowrap\">313<a name=\"CRTopographyCS-313\"> </a></td><td>Sphenoid sinus (313)</td></tr><tr><td style=\"white-space:nowrap\">318<a name=\"CRTopographyCS-318\"> </a></td><td>Overlapping lesion of accessory sinuses (318)</td></tr><tr><td style=\"white-space:nowrap\">319<a name=\"CRTopographyCS-319\"> </a></td><td>Accessory sinus, NOS (319)</td></tr><tr><td style=\"white-space:nowrap\">320<a name=\"CRTopographyCS-320\"> </a></td><td>Glottis (320)</td></tr><tr><td style=\"white-space:nowrap\">321<a name=\"CRTopographyCS-321\"> </a></td><td>Supraglottis (321)</td></tr><tr><td style=\"white-space:nowrap\">322<a name=\"CRTopographyCS-322\"> </a></td><td>Subglottis (322)</td></tr><tr><td style=\"white-space:nowrap\">323<a name=\"CRTopographyCS-323\"> </a></td><td>Laryngeal cartilage (323)</td></tr><tr><td style=\"white-space:nowrap\">328<a name=\"CRTopographyCS-328\"> </a></td><td>Overlapping lesion of larynx (328)</td></tr><tr><td style=\"white-space:nowrap\">329<a name=\"CRTopographyCS-329\"> </a></td><td>Larynx, NOS (329)</td></tr><tr><td style=\"white-space:nowrap\">339<a name=\"CRTopographyCS-339\"> </a></td><td>Trachea (339)</td></tr><tr><td style=\"white-space:nowrap\">340<a name=\"CRTopographyCS-340\"> </a></td><td>Main bronchus (340)</td></tr><tr><td style=\"white-space:nowrap\">341<a name=\"CRTopographyCS-341\"> </a></td><td>Upper lobe, lung (341)</td></tr><tr><td style=\"white-space:nowrap\">342<a name=\"CRTopographyCS-342\"> </a></td><td>Middle lobe, lung (342)</td></tr><tr><td style=\"white-space:nowrap\">343<a name=\"CRTopographyCS-343\"> </a></td><td>Lower lobe, lung (343)</td></tr><tr><td style=\"white-space:nowrap\">348<a name=\"CRTopographyCS-348\"> </a></td><td>Overlapping lesion of lung (348)</td></tr><tr><td style=\"white-space:nowrap\">349<a name=\"CRTopographyCS-349\"> </a></td><td>Lung, NOS (349)</td></tr><tr><td style=\"white-space:nowrap\">379<a name=\"CRTopographyCS-379\"> </a></td><td>Thymus (379)</td></tr><tr><td style=\"white-space:nowrap\">380<a name=\"CRTopographyCS-380\"> </a></td><td>Heart (380)</td></tr><tr><td style=\"white-space:nowrap\">381<a name=\"CRTopographyCS-381\"> </a></td><td>Anterior mediastinum (381)</td></tr><tr><td style=\"white-space:nowrap\">382<a name=\"CRTopographyCS-382\"> </a></td><td>Posterior mediastinum (382)</td></tr><tr><td style=\"white-space:nowrap\">383<a name=\"CRTopographyCS-383\"> </a></td><td>Mediastinum, NOS (383)</td></tr><tr><td style=\"white-space:nowrap\">384<a name=\"CRTopographyCS-384\"> </a></td><td>Pleura, NOS (384)</td></tr><tr><td style=\"white-space:nowrap\">388<a name=\"CRTopographyCS-388\"> </a></td><td>Overlapping lesion of heart, mediastinum and pleura (388)</td></tr><tr><td style=\"white-space:nowrap\">390<a name=\"CRTopographyCS-390\"> </a></td><td>Upper respiratory tract, NOS (390)</td></tr><tr><td style=\"white-space:nowrap\">398<a name=\"CRTopographyCS-398\"> </a></td><td>Overlapping lesion of respiratory system and intrathoracic organs (398)</td></tr><tr><td style=\"white-space:nowrap\">399<a name=\"CRTopographyCS-399\"> </a></td><td>Ill-defined sites within respiratory system (399)</td></tr><tr><td style=\"white-space:nowrap\">400<a name=\"CRTopographyCS-400\"> </a></td><td>Long bones of upper limb, scapula and associated joints (400)</td></tr><tr><td style=\"white-space:nowrap\">401<a name=\"CRTopographyCS-401\"> </a></td><td>Short bones of upper limb and associated joints (401)</td></tr><tr><td style=\"white-space:nowrap\">402<a name=\"CRTopographyCS-402\"> </a></td><td>Long bones of lower limb and associated joints (402)</td></tr><tr><td style=\"white-space:nowrap\">403<a name=\"CRTopographyCS-403\"> </a></td><td>Short bones of lower limb and associated joints (403)</td></tr><tr><td style=\"white-space:nowrap\">408<a name=\"CRTopographyCS-408\"> </a></td><td>Overlapping lesion of bones, joints and articular cartilage of limbs (408)</td></tr><tr><td style=\"white-space:nowrap\">409<a name=\"CRTopographyCS-409\"> </a></td><td>Bone of limb, NOS (409)</td></tr><tr><td style=\"white-space:nowrap\">410<a name=\"CRTopographyCS-410\"> </a></td><td>Bones of skull and face and associated joints (410)</td></tr><tr><td style=\"white-space:nowrap\">411<a name=\"CRTopographyCS-411\"> </a></td><td>Mandible (411)</td></tr><tr><td style=\"white-space:nowrap\">412<a name=\"CRTopographyCS-412\"> </a></td><td>Vertebral column (412)</td></tr><tr><td style=\"white-space:nowrap\">413<a name=\"CRTopographyCS-413\"> </a></td><td>Rib, sternum, clavicle and associated joints (413)</td></tr><tr><td style=\"white-space:nowrap\">414<a name=\"CRTopographyCS-414\"> </a></td><td>Pelvic bones, sacrum, coccyx and associated joints (414)</td></tr><tr><td style=\"white-space:nowrap\">418<a name=\"CRTopographyCS-418\"> </a></td><td>Overlapping lesion of bones, joints and articular cartilage (418)</td></tr><tr><td style=\"white-space:nowrap\">419<a name=\"CRTopographyCS-419\"> </a></td><td>Bone, NOS (419)</td></tr><tr><td style=\"white-space:nowrap\">420<a name=\"CRTopographyCS-420\"> </a></td><td>Blood (420)</td></tr><tr><td style=\"white-space:nowrap\">421<a name=\"CRTopographyCS-421\"> </a></td><td>Bone marrow (421)</td></tr><tr><td style=\"white-space:nowrap\">422<a name=\"CRTopographyCS-422\"> </a></td><td>Spleen (422)</td></tr><tr><td style=\"white-space:nowrap\">423<a name=\"CRTopographyCS-423\"> </a></td><td>Reticuloendothelial system, NOS (423)</td></tr><tr><td style=\"white-space:nowrap\">424<a name=\"CRTopographyCS-424\"> </a></td><td>Hematopoietic system, NOS (424)</td></tr><tr><td style=\"white-space:nowrap\">440<a name=\"CRTopographyCS-440\"> </a></td><td>Skin of lip, NOS (440)</td></tr><tr><td style=\"white-space:nowrap\">441<a name=\"CRTopographyCS-441\"> </a></td><td>Eyelid (441)</td></tr><tr><td style=\"white-space:nowrap\">442<a name=\"CRTopographyCS-442\"> </a></td><td>External ear (442)</td></tr><tr><td style=\"white-space:nowrap\">443<a name=\"CRTopographyCS-443\"> </a></td><td>Skin of other and unspecified parts of face (443)</td></tr><tr><td style=\"white-space:nowrap\">444<a name=\"CRTopographyCS-444\"> </a></td><td>Skin of scalp and neck (444)</td></tr><tr><td style=\"white-space:nowrap\">445<a name=\"CRTopographyCS-445\"> </a></td><td>Skin of trunk (445)</td></tr><tr><td style=\"white-space:nowrap\">446<a name=\"CRTopographyCS-446\"> </a></td><td>Skin of upper limb and shoulder (446)</td></tr><tr><td style=\"white-space:nowrap\">447<a name=\"CRTopographyCS-447\"> </a></td><td>Skin of lower limb and hip (447)</td></tr><tr><td style=\"white-space:nowrap\">448<a name=\"CRTopographyCS-448\"> </a></td><td>Overlapping lesion of skin (448)</td></tr><tr><td style=\"white-space:nowrap\">449<a name=\"CRTopographyCS-449\"> </a></td><td>Skin, NOS (449)</td></tr><tr><td style=\"white-space:nowrap\">470<a name=\"CRTopographyCS-470\"> </a></td><td>Peripheral nerves and autonomic nervous system of head, face, and neck (470)</td></tr><tr><td style=\"white-space:nowrap\">471<a name=\"CRTopographyCS-471\"> </a></td><td>Peripheral nerves and autonomic nervous system of upper limb and shoulder (471)</td></tr><tr><td style=\"white-space:nowrap\">472<a name=\"CRTopographyCS-472\"> </a></td><td>Peripheral nerves and autonomic nervous system of lower limb and hip (472)</td></tr><tr><td style=\"white-space:nowrap\">473<a name=\"CRTopographyCS-473\"> </a></td><td>Peripheral nerves and autonomic nervous system of thorax (473)</td></tr><tr><td style=\"white-space:nowrap\">474<a name=\"CRTopographyCS-474\"> </a></td><td>Peripheral nerves and autonomic nervous system of abdomen (474)</td></tr><tr><td style=\"white-space:nowrap\">475<a name=\"CRTopographyCS-475\"> </a></td><td>Peripheral nerves and autonomic nervous system of pelvis (475)</td></tr><tr><td style=\"white-space:nowrap\">476<a name=\"CRTopographyCS-476\"> </a></td><td>Peripheral nerves and autonomic nervous system of trunk, NOS (476)</td></tr><tr><td style=\"white-space:nowrap\">478<a name=\"CRTopographyCS-478\"> </a></td><td>Overlapping lesion of peripheral nerves and autonomic nervous system (478)</td></tr><tr><td style=\"white-space:nowrap\">479<a name=\"CRTopographyCS-479\"> </a></td><td>Autonomic nervous system, NOS (479)</td></tr><tr><td style=\"white-space:nowrap\">480<a name=\"CRTopographyCS-480\"> </a></td><td>Retroperitoneum (480)</td></tr><tr><td style=\"white-space:nowrap\">481<a name=\"CRTopographyCS-481\"> </a></td><td>Specified parts of peritoneum (481)</td></tr><tr><td style=\"white-space:nowrap\">482<a name=\"CRTopographyCS-482\"> </a></td><td>Peritoneum, NOS (482)</td></tr><tr><td style=\"white-space:nowrap\">488<a name=\"CRTopographyCS-488\"> </a></td><td>Overlapping lesion of retroperitoneum and peritoneum (488)</td></tr><tr><td style=\"white-space:nowrap\">490<a name=\"CRTopographyCS-490\"> </a></td><td>Connective, Subcutaneous and other soft tissues of head, face, and neck (490)</td></tr><tr><td style=\"white-space:nowrap\">491<a name=\"CRTopographyCS-491\"> </a></td><td>Connective, Subcutaneous and other soft tissues of upper limb and shoulder (491)</td></tr><tr><td style=\"white-space:nowrap\">492<a name=\"CRTopographyCS-492\"> </a></td><td>Connective, Subcutaneous and other soft tissues of lower limb and hip (492)</td></tr><tr><td style=\"white-space:nowrap\">493<a name=\"CRTopographyCS-493\"> </a></td><td>Connective, Subcutaneous and other soft tissues of thorax (493)</td></tr><tr><td style=\"white-space:nowrap\">494<a name=\"CRTopographyCS-494\"> </a></td><td>Connective, Subcutaneous and other soft tissues of abdomen (494)</td></tr><tr><td style=\"white-space:nowrap\">495<a name=\"CRTopographyCS-495\"> </a></td><td>Connective, Subcutaneous and other soft tissues of pelvis (495)</td></tr><tr><td style=\"white-space:nowrap\">496<a name=\"CRTopographyCS-496\"> </a></td><td>Connective, Subcutaneous and other soft tissues of trunk, NOS (496)</td></tr><tr><td style=\"white-space:nowrap\">498<a name=\"CRTopographyCS-498\"> </a></td><td>Overlapping lesion of connective, subcutaneous and other soft tissues (498)</td></tr><tr><td style=\"white-space:nowrap\">499<a name=\"CRTopographyCS-499\"> </a></td><td>Connective, Subcutaneous and other soft tissues, NOS (499)</td></tr><tr><td style=\"white-space:nowrap\">500<a name=\"CRTopographyCS-500\"> </a></td><td>Nipple (500)</td></tr><tr><td style=\"white-space:nowrap\">501<a name=\"CRTopographyCS-501\"> </a></td><td>Central portion of breast (501)</td></tr><tr><td style=\"white-space:nowrap\">502<a name=\"CRTopographyCS-502\"> </a></td><td>Upper-inner quadrant of breast (502)</td></tr><tr><td style=\"white-space:nowrap\">503<a name=\"CRTopographyCS-503\"> </a></td><td>Lower-inner quadrant of breast (503)</td></tr><tr><td style=\"white-space:nowrap\">504<a name=\"CRTopographyCS-504\"> </a></td><td>Upper-outer quadrant of breast (504)</td></tr><tr><td style=\"white-space:nowrap\">505<a name=\"CRTopographyCS-505\"> </a></td><td>Lower-outer quadrant of breast (505)</td></tr><tr><td style=\"white-space:nowrap\">506<a name=\"CRTopographyCS-506\"> </a></td><td>Axillary tail of breast (506)</td></tr><tr><td style=\"white-space:nowrap\">508<a name=\"CRTopographyCS-508\"> </a></td><td>Overlapping lesion of breast (508)</td></tr><tr><td style=\"white-space:nowrap\">509<a name=\"CRTopographyCS-509\"> </a></td><td>Breast, NOS (509)</td></tr><tr><td style=\"white-space:nowrap\">510<a name=\"CRTopographyCS-510\"> </a></td><td>Labium majus (510)</td></tr><tr><td style=\"white-space:nowrap\">511<a name=\"CRTopographyCS-511\"> </a></td><td>Labium minus (511)</td></tr><tr><td style=\"white-space:nowrap\">512<a name=\"CRTopographyCS-512\"> </a></td><td>Clitorus (512)</td></tr><tr><td style=\"white-space:nowrap\">518<a name=\"CRTopographyCS-518\"> </a></td><td>Overlapping lesion of vulva (518)</td></tr><tr><td style=\"white-space:nowrap\">519<a name=\"CRTopographyCS-519\"> </a></td><td>Vulva, NOS (519)</td></tr><tr><td style=\"white-space:nowrap\">529<a name=\"CRTopographyCS-529\"> </a></td><td>Vagina, NOS (529)</td></tr><tr><td style=\"white-space:nowrap\">530<a name=\"CRTopographyCS-530\"> </a></td><td>Endocervix (530)</td></tr><tr><td style=\"white-space:nowrap\">531<a name=\"CRTopographyCS-531\"> </a></td><td>Exocervix (531)</td></tr><tr><td style=\"white-space:nowrap\">538<a name=\"CRTopographyCS-538\"> </a></td><td>Overlapping lesion of cervix uteri (538)</td></tr><tr><td style=\"white-space:nowrap\">539<a name=\"CRTopographyCS-539\"> </a></td><td>Cervix uteri (539)</td></tr><tr><td style=\"white-space:nowrap\">540<a name=\"CRTopographyCS-540\"> </a></td><td>Isthmus uteri (540)</td></tr><tr><td style=\"white-space:nowrap\">541<a name=\"CRTopographyCS-541\"> </a></td><td>Endometrium (541)</td></tr><tr><td style=\"white-space:nowrap\">542<a name=\"CRTopographyCS-542\"> </a></td><td>Myometrium (542)</td></tr><tr><td style=\"white-space:nowrap\">543<a name=\"CRTopographyCS-543\"> </a></td><td>Fundus uteri (543)</td></tr><tr><td style=\"white-space:nowrap\">548<a name=\"CRTopographyCS-548\"> </a></td><td>Overlapping lesion of corpus uteri (548)</td></tr><tr><td style=\"white-space:nowrap\">549<a name=\"CRTopographyCS-549\"> </a></td><td>Corpus uteri (549)</td></tr><tr><td style=\"white-space:nowrap\">559<a name=\"CRTopographyCS-559\"> </a></td><td>Uterus, NOS (559)</td></tr><tr><td style=\"white-space:nowrap\">569<a name=\"CRTopographyCS-569\"> </a></td><td>Ovary (569)</td></tr><tr><td style=\"white-space:nowrap\">570<a name=\"CRTopographyCS-570\"> </a></td><td>Fallopian tube (570)</td></tr><tr><td style=\"white-space:nowrap\">571<a name=\"CRTopographyCS-571\"> </a></td><td>Broad ligament (571)</td></tr><tr><td style=\"white-space:nowrap\">572<a name=\"CRTopographyCS-572\"> </a></td><td>Round ligament (572)</td></tr><tr><td style=\"white-space:nowrap\">573<a name=\"CRTopographyCS-573\"> </a></td><td>Parametrium (573)</td></tr><tr><td style=\"white-space:nowrap\">574<a name=\"CRTopographyCS-574\"> </a></td><td>Uterine adnexa (574)</td></tr><tr><td style=\"white-space:nowrap\">577<a name=\"CRTopographyCS-577\"> </a></td><td>Other specified parts of female genital organs (577)</td></tr><tr><td style=\"white-space:nowrap\">578<a name=\"CRTopographyCS-578\"> </a></td><td>Overlapping lesion of female genital organs (578)</td></tr><tr><td style=\"white-space:nowrap\">579<a name=\"CRTopographyCS-579\"> </a></td><td>Female genital tract, NOS (579)</td></tr><tr><td style=\"white-space:nowrap\">589<a name=\"CRTopographyCS-589\"> </a></td><td>Placenta (589)</td></tr><tr><td style=\"white-space:nowrap\">600<a name=\"CRTopographyCS-600\"> </a></td><td>Prepuce (600)</td></tr><tr><td style=\"white-space:nowrap\">601<a name=\"CRTopographyCS-601\"> </a></td><td>Glans penis (601)</td></tr><tr><td style=\"white-space:nowrap\">602<a name=\"CRTopographyCS-602\"> </a></td><td>Body of penis (602)</td></tr><tr><td style=\"white-space:nowrap\">608<a name=\"CRTopographyCS-608\"> </a></td><td>Overlapping lesion of penis (608)</td></tr><tr><td style=\"white-space:nowrap\">609<a name=\"CRTopographyCS-609\"> </a></td><td>Penis, NOS (609)</td></tr><tr><td style=\"white-space:nowrap\">619<a name=\"CRTopographyCS-619\"> </a></td><td>Prostate gland (619)</td></tr><tr><td style=\"white-space:nowrap\">620<a name=\"CRTopographyCS-620\"> </a></td><td>Undescended testis (620)</td></tr><tr><td style=\"white-space:nowrap\">621<a name=\"CRTopographyCS-621\"> </a></td><td>Descended testis (621)</td></tr><tr><td style=\"white-space:nowrap\">629<a name=\"CRTopographyCS-629\"> </a></td><td>Testis, NOS (629)</td></tr><tr><td style=\"white-space:nowrap\">630<a name=\"CRTopographyCS-630\"> </a></td><td>Epididymis (630)</td></tr><tr><td style=\"white-space:nowrap\">631<a name=\"CRTopographyCS-631\"> </a></td><td>Spermatic cord (631)</td></tr><tr><td style=\"white-space:nowrap\">632<a name=\"CRTopographyCS-632\"> </a></td><td>Scrotum, NOS (632)</td></tr><tr><td style=\"white-space:nowrap\">637<a name=\"CRTopographyCS-637\"> </a></td><td>Other specified parts of male genital organs (637)</td></tr><tr><td style=\"white-space:nowrap\">638<a name=\"CRTopographyCS-638\"> </a></td><td>Overlapping lesion of male genital organs (638)</td></tr><tr><td style=\"white-space:nowrap\">639<a name=\"CRTopographyCS-639\"> </a></td><td>Male genital organs, NOS (639)</td></tr><tr><td style=\"white-space:nowrap\">649<a name=\"CRTopographyCS-649\"> </a></td><td>Kidney, NOS (649)</td></tr><tr><td style=\"white-space:nowrap\">659<a name=\"CRTopographyCS-659\"> </a></td><td>Renal pelvis (659)</td></tr><tr><td style=\"white-space:nowrap\">669<a name=\"CRTopographyCS-669\"> </a></td><td>Ureter (669)</td></tr><tr><td style=\"white-space:nowrap\">670<a name=\"CRTopographyCS-670\"> </a></td><td>Trigone of bladder (670)</td></tr><tr><td style=\"white-space:nowrap\">671<a name=\"CRTopographyCS-671\"> </a></td><td>Dome of bladder (671)</td></tr><tr><td style=\"white-space:nowrap\">672<a name=\"CRTopographyCS-672\"> </a></td><td>Lateral wall of bladder (672)</td></tr><tr><td style=\"white-space:nowrap\">673<a name=\"CRTopographyCS-673\"> </a></td><td>Anterior wall of bladder (673)</td></tr><tr><td style=\"white-space:nowrap\">674<a name=\"CRTopographyCS-674\"> </a></td><td>Posterior wall of bladder (674)</td></tr><tr><td style=\"white-space:nowrap\">675<a name=\"CRTopographyCS-675\"> </a></td><td>Bladder neck (675)</td></tr><tr><td style=\"white-space:nowrap\">676<a name=\"CRTopographyCS-676\"> </a></td><td>Ureteric orifice (676)</td></tr><tr><td style=\"white-space:nowrap\">677<a name=\"CRTopographyCS-677\"> </a></td><td>Urachus (677)</td></tr><tr><td style=\"white-space:nowrap\">678<a name=\"CRTopographyCS-678\"> </a></td><td>Overlapping lesion of bladder (678)</td></tr><tr><td style=\"white-space:nowrap\">679<a name=\"CRTopographyCS-679\"> </a></td><td>Bladder, NOS (679)</td></tr><tr><td style=\"white-space:nowrap\">680<a name=\"CRTopographyCS-680\"> </a></td><td>Urethra (680)</td></tr><tr><td style=\"white-space:nowrap\">681<a name=\"CRTopographyCS-681\"> </a></td><td>Paraurethral gland (681)</td></tr><tr><td style=\"white-space:nowrap\">688<a name=\"CRTopographyCS-688\"> </a></td><td>Overlapping lesion of urinary organs (688)</td></tr><tr><td style=\"white-space:nowrap\">689<a name=\"CRTopographyCS-689\"> </a></td><td>Urinary system, NOS (689)</td></tr><tr><td style=\"white-space:nowrap\">690<a name=\"CRTopographyCS-690\"> </a></td><td>Conjunctiva (690)</td></tr><tr><td style=\"white-space:nowrap\">691<a name=\"CRTopographyCS-691\"> </a></td><td>Cornea, NOS (691)</td></tr><tr><td style=\"white-space:nowrap\">692<a name=\"CRTopographyCS-692\"> </a></td><td>Retina (692)</td></tr><tr><td style=\"white-space:nowrap\">693<a name=\"CRTopographyCS-693\"> </a></td><td>Choroid (693)</td></tr><tr><td style=\"white-space:nowrap\">694<a name=\"CRTopographyCS-694\"> </a></td><td>Ciliary body (694)</td></tr><tr><td style=\"white-space:nowrap\">695<a name=\"CRTopographyCS-695\"> </a></td><td>Lacrimal gland (695)</td></tr><tr><td style=\"white-space:nowrap\">696<a name=\"CRTopographyCS-696\"> </a></td><td>Orbit, NOS (696)</td></tr><tr><td style=\"white-space:nowrap\">698<a name=\"CRTopographyCS-698\"> </a></td><td>Overlapping lesion of eye and adnexa (698)</td></tr><tr><td style=\"white-space:nowrap\">699<a name=\"CRTopographyCS-699\"> </a></td><td>Eye, NOS (699)</td></tr><tr><td style=\"white-space:nowrap\">700<a name=\"CRTopographyCS-700\"> </a></td><td>Cerebral meninges (700)</td></tr><tr><td style=\"white-space:nowrap\">701<a name=\"CRTopographyCS-701\"> </a></td><td>Spinal meninges (701)</td></tr><tr><td style=\"white-space:nowrap\">709<a name=\"CRTopographyCS-709\"> </a></td><td>Meninges, NOS (709)</td></tr><tr><td style=\"white-space:nowrap\">710<a name=\"CRTopographyCS-710\"> </a></td><td>Cerebrum (710)</td></tr><tr><td style=\"white-space:nowrap\">711<a name=\"CRTopographyCS-711\"> </a></td><td>Frontal lobe (711)</td></tr><tr><td style=\"white-space:nowrap\">712<a name=\"CRTopographyCS-712\"> </a></td><td>Temporal lobe (712)</td></tr><tr><td style=\"white-space:nowrap\">713<a name=\"CRTopographyCS-713\"> </a></td><td>Parietal lobe (713)</td></tr><tr><td style=\"white-space:nowrap\">714<a name=\"CRTopographyCS-714\"> </a></td><td>Occipital lobe (714)</td></tr><tr><td style=\"white-space:nowrap\">715<a name=\"CRTopographyCS-715\"> </a></td><td>Ventricle, NOS (715)</td></tr><tr><td style=\"white-space:nowrap\">716<a name=\"CRTopographyCS-716\"> </a></td><td>Cerebellum, NOS (716)</td></tr><tr><td style=\"white-space:nowrap\">717<a name=\"CRTopographyCS-717\"> </a></td><td>Brain stem (717)</td></tr><tr><td style=\"white-space:nowrap\">718<a name=\"CRTopographyCS-718\"> </a></td><td>Overlapping lesion of brain (718)</td></tr><tr><td style=\"white-space:nowrap\">719<a name=\"CRTopographyCS-719\"> </a></td><td>Brain, NOS (719)</td></tr><tr><td style=\"white-space:nowrap\">720<a name=\"CRTopographyCS-720\"> </a></td><td>Spinal cord (720)</td></tr><tr><td style=\"white-space:nowrap\">721<a name=\"CRTopographyCS-721\"> </a></td><td>Cauda equina (721)</td></tr><tr><td style=\"white-space:nowrap\">722<a name=\"CRTopographyCS-722\"> </a></td><td>Olfactory nerve (722)</td></tr><tr><td style=\"white-space:nowrap\">723<a name=\"CRTopographyCS-723\"> </a></td><td>Optic nerve (723)</td></tr><tr><td style=\"white-space:nowrap\">724<a name=\"CRTopographyCS-724\"> </a></td><td>Acoustic nerve (724)</td></tr><tr><td style=\"white-space:nowrap\">725<a name=\"CRTopographyCS-725\"> </a></td><td>Cranial nerve, NOS (725)</td></tr><tr><td style=\"white-space:nowrap\">728<a name=\"CRTopographyCS-728\"> </a></td><td>Overlapping lesion of brain and central nervous system (728)</td></tr><tr><td style=\"white-space:nowrap\">729<a name=\"CRTopographyCS-729\"> </a></td><td>Nervous system, NOS (729)</td></tr><tr><td style=\"white-space:nowrap\">739<a name=\"CRTopographyCS-739\"> </a></td><td>Thyroid gland (739)</td></tr><tr><td style=\"white-space:nowrap\">740<a name=\"CRTopographyCS-740\"> </a></td><td>Cortex of adrenal gland (740)</td></tr><tr><td style=\"white-space:nowrap\">741<a name=\"CRTopographyCS-741\"> </a></td><td>Medulla of adrenal gland (741)</td></tr><tr><td style=\"white-space:nowrap\">749<a name=\"CRTopographyCS-749\"> </a></td><td>Adrenal gland, NOS (749)</td></tr><tr><td style=\"white-space:nowrap\">750<a name=\"CRTopographyCS-750\"> </a></td><td>Parathyroid gland (750)</td></tr><tr><td style=\"white-space:nowrap\">751<a name=\"CRTopographyCS-751\"> </a></td><td>Pituitary gland (751)</td></tr><tr><td style=\"white-space:nowrap\">752<a name=\"CRTopographyCS-752\"> </a></td><td>Craniopharyngeal duct (752)</td></tr><tr><td style=\"white-space:nowrap\">753<a name=\"CRTopographyCS-753\"> </a></td><td>Pineal gland (753)</td></tr><tr><td style=\"white-space:nowrap\">754<a name=\"CRTopographyCS-754\"> </a></td><td>Carotid body (754)</td></tr><tr><td style=\"white-space:nowrap\">755<a name=\"CRTopographyCS-755\"> </a></td><td>Aortic body and other paraganglia (755)</td></tr><tr><td style=\"white-space:nowrap\">758<a name=\"CRTopographyCS-758\"> </a></td><td>Overlapping lesion of endocrine glands and related structures (758)</td></tr><tr><td style=\"white-space:nowrap\">759<a name=\"CRTopographyCS-759\"> </a></td><td>Endocrine gland, NOS (759)</td></tr><tr><td style=\"white-space:nowrap\">760<a name=\"CRTopographyCS-760\"> </a></td><td>Head, face or neck, NOS (760)</td></tr><tr><td style=\"white-space:nowrap\">761<a name=\"CRTopographyCS-761\"> </a></td><td>Thorax, NOS (761)</td></tr><tr><td style=\"white-space:nowrap\">762<a name=\"CRTopographyCS-762\"> </a></td><td>Abdomen, NOS (762)</td></tr><tr><td style=\"white-space:nowrap\">763<a name=\"CRTopographyCS-763\"> </a></td><td>Pelvis, NOS (763)</td></tr><tr><td style=\"white-space:nowrap\">764<a name=\"CRTopographyCS-764\"> </a></td><td>Upper limb, NOS (764)</td></tr><tr><td style=\"white-space:nowrap\">765<a name=\"CRTopographyCS-765\"> </a></td><td>Lower limb, NOS (765)</td></tr><tr><td style=\"white-space:nowrap\">767<a name=\"CRTopographyCS-767\"> </a></td><td>Other ill-defined sites (767)</td></tr><tr><td style=\"white-space:nowrap\">768<a name=\"CRTopographyCS-768\"> </a></td><td>Overlapping lesion of ill-defined sites (768)</td></tr><tr><td style=\"white-space:nowrap\">770<a name=\"CRTopographyCS-770\"> </a></td><td>Lymph nodes of head, face and neck (770)</td></tr><tr><td style=\"white-space:nowrap\">771<a name=\"CRTopographyCS-771\"> </a></td><td>Intrathoracic lymph nodes (771)</td></tr><tr><td style=\"white-space:nowrap\">772<a name=\"CRTopographyCS-772\"> </a></td><td>Intra-abdominal lymph nodes (772)</td></tr><tr><td style=\"white-space:nowrap\">773<a name=\"CRTopographyCS-773\"> </a></td><td>Lymph nodes of axilla or arm (773)</td></tr><tr><td style=\"white-space:nowrap\">774<a name=\"CRTopographyCS-774\"> </a></td><td>Lymph nodes of inguinal region or leg (774)</td></tr><tr><td style=\"white-space:nowrap\">775<a name=\"CRTopographyCS-775\"> </a></td><td>Pelvic lymph nodes (775)</td></tr><tr><td style=\"white-space:nowrap\">778<a name=\"CRTopographyCS-778\"> </a></td><td>Lymph nodes of multiple regions (778)</td></tr><tr><td style=\"white-space:nowrap\">779<a name=\"CRTopographyCS-779\"> </a></td><td>Lymph node, NOS (779)</td></tr><tr><td style=\"white-space:nowrap\">809<a name=\"CRTopographyCS-809\"> </a></td><td>Unknown primary site (809)</td></tr></table></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS",
+  "version" : "0.1.0",
+  "name" : "CRTopographyCS",
+  "title" : "CR - Topography",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "ICD-O-3 topography codes mapped from the CanReg5 topography dictionary (topography.tsv). These codes represent the anatomical site of the tumour origin. The topography field is implemented as a dependent dropdown list filtered by the selected Site. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks.",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 331,
+  "concept" : [{
+    "code" : "0",
+    "display" : "External upper lip (000)"
+  },
+  {
+    "code" : "1",
+    "display" : "External lower lip (001)"
+  },
+  {
+    "code" : "2",
+    "display" : "External lip, NOS (002)"
+  },
+  {
+    "code" : "3",
+    "display" : "Mucosa of upper lip (003)"
+  },
+  {
+    "code" : "4",
+    "display" : "Mucosa of lower lip (004)"
+  },
+  {
+    "code" : "5",
+    "display" : "Mucosa of lip, NOS (005)"
+  },
+  {
+    "code" : "6",
+    "display" : "Commissure of lip (006)"
+  },
+  {
+    "code" : "8",
+    "display" : "Overlapping lesion of lip (008)"
+  },
+  {
+    "code" : "9",
+    "display" : "Lip, NOS (009)"
+  },
+  {
+    "code" : "19",
+    "display" : "Base of tongue, NOS (019)"
+  },
+  {
+    "code" : "20",
+    "display" : "Dorsal surface of tongue, NOS (020)"
+  },
+  {
+    "code" : "21",
+    "display" : "Border of tongue (021)"
+  },
+  {
+    "code" : "22",
+    "display" : "Ventral surface of tongue, NOS (022)"
+  },
+  {
+    "code" : "23",
+    "display" : "Anterior 2/3 of tongue, NOS (023)"
+  },
+  {
+    "code" : "24",
+    "display" : "Lingual tonsil (024)"
+  },
+  {
+    "code" : "28",
+    "display" : "Overlapping lesion of tongue (028)"
+  },
+  {
+    "code" : "29",
+    "display" : "Tongue, NOS (029)"
+  },
+  {
+    "code" : "30",
+    "display" : "Upper Gum (030)"
+  },
+  {
+    "code" : "31",
+    "display" : "Lower gum (031)"
+  },
+  {
+    "code" : "39",
+    "display" : "Gum, NOS (039)"
+  },
+  {
+    "code" : "40",
+    "display" : "Anterior floor of mouth (040)"
+  },
+  {
+    "code" : "41",
+    "display" : "Lateral floor of mouth (041)"
+  },
+  {
+    "code" : "48",
+    "display" : "Overlapping lesion of floor of mouth (048)"
+  },
+  {
+    "code" : "49",
+    "display" : "Floor of mouth, NOS (049)"
+  },
+  {
+    "code" : "50",
+    "display" : "Hard palate (050)"
+  },
+  {
+    "code" : "51",
+    "display" : "Soft palate, NOS (051)"
+  },
+  {
+    "code" : "52",
+    "display" : "Uvula (052)"
+  },
+  {
+    "code" : "58",
+    "display" : "Overlapping lesion of palate (058)"
+  },
+  {
+    "code" : "59",
+    "display" : "Palate, NOS (059)"
+  },
+  {
+    "code" : "60",
+    "display" : "Cheeck mucosa (060)"
+  },
+  {
+    "code" : "61",
+    "display" : "Vestibule of mouth (061)"
+  },
+  {
+    "code" : "62",
+    "display" : "Retromolar area (062)"
+  },
+  {
+    "code" : "68",
+    "display" : "Overlapping lesion of other and unspecified parts of mouth (068)"
+  },
+  {
+    "code" : "69",
+    "display" : "Mouth, NOS (069)"
+  },
+  {
+    "code" : "79",
+    "display" : "Parotid gland (079)"
+  },
+  {
+    "code" : "80",
+    "display" : "Submandibular gland (080)"
+  },
+  {
+    "code" : "81",
+    "display" : "Sublingual gland (081)"
+  },
+  {
+    "code" : "88",
+    "display" : "Overlapping lesion of major salivary glands (088)"
+  },
+  {
+    "code" : "89",
+    "display" : "Major salivary gland, NOS (089)"
+  },
+  {
+    "code" : "90",
+    "display" : "Tonsillar fossa (090)"
+  },
+  {
+    "code" : "91",
+    "display" : "Tonsillar pillar (091)"
+  },
+  {
+    "code" : "98",
+    "display" : "Overlapping lesion of tonsil (098)"
+  },
+  {
+    "code" : "99",
+    "display" : "Tonsil, NOS (099)"
+  },
+  {
+    "code" : "100",
+    "display" : "Vallecula (100)"
+  },
+  {
+    "code" : "101",
+    "display" : "Anterior surface of epiglottis (101)"
+  },
+  {
+    "code" : "102",
+    "display" : "Lateral wall of oropharynx (102)"
+  },
+  {
+    "code" : "103",
+    "display" : "Posterior wall of oropharynx (103)"
+  },
+  {
+    "code" : "104",
+    "display" : "Branchial cleft (104)"
+  },
+  {
+    "code" : "108",
+    "display" : "Overlapping lesions of oropharynx (108)"
+  },
+  {
+    "code" : "109",
+    "display" : "Oropharynx, NOS (109)"
+  },
+  {
+    "code" : "110",
+    "display" : "Superior wall of nasopharynx (110)"
+  },
+  {
+    "code" : "111",
+    "display" : "Posterior wall of nasopharynx (111)"
+  },
+  {
+    "code" : "112",
+    "display" : "Lateral wall of nasopharynx (112)"
+  },
+  {
+    "code" : "113",
+    "display" : "Anterior wall of nasopharynx (113)"
+  },
+  {
+    "code" : "118",
+    "display" : "Overlapping lesion of nasopharynx (118)"
+  },
+  {
+    "code" : "119",
+    "display" : "Nasopharynx, NOS (119)"
+  },
+  {
+    "code" : "129",
+    "display" : "Pyriform sinus (129)"
+  },
+  {
+    "code" : "130",
+    "display" : "Postcricoid region (130)"
+  },
+  {
+    "code" : "131",
+    "display" : "Hypopharyngeal aspect of aryepiglottic fold (131)"
+  },
+  {
+    "code" : "132",
+    "display" : "Posterior wall of hypopharynx (132)"
+  },
+  {
+    "code" : "138",
+    "display" : "Overlapping lesion of hypopharynx (138)"
+  },
+  {
+    "code" : "139",
+    "display" : "Hypopharynx, NOS (139)"
+  },
+  {
+    "code" : "140",
+    "display" : "Pharynx, NOS (140)"
+  },
+  {
+    "code" : "141",
+    "display" : "Laryngopharynx (OLD CODE) (141)"
+  },
+  {
+    "code" : "142",
+    "display" : "Waldeyer ring (142)"
+  },
+  {
+    "code" : "148",
+    "display" : "Overlapping lesion of lip, oral cavity and pharynx (148)"
+  },
+  {
+    "code" : "150",
+    "display" : "Cervical esophagus (150)"
+  },
+  {
+    "code" : "151",
+    "display" : "Thoracic esophagus (151)"
+  },
+  {
+    "code" : "152",
+    "display" : "Abdominal esophagus (152)"
+  },
+  {
+    "code" : "153",
+    "display" : "Upper third of esophagus (153)"
+  },
+  {
+    "code" : "154",
+    "display" : "Middle third of esophagus (154)"
+  },
+  {
+    "code" : "155",
+    "display" : "Lower third of esophagus (155)"
+  },
+  {
+    "code" : "158",
+    "display" : "Overlapping lesion of esophagus (158)"
+  },
+  {
+    "code" : "159",
+    "display" : "Esophagus, NOS (159)"
+  },
+  {
+    "code" : "160",
+    "display" : "Cardia, NOS (160)"
+  },
+  {
+    "code" : "161",
+    "display" : "Fundus of stomach (161)"
+  },
+  {
+    "code" : "162",
+    "display" : "Body of stomach (162)"
+  },
+  {
+    "code" : "163",
+    "display" : "Gastric antrum (163)"
+  },
+  {
+    "code" : "164",
+    "display" : "Pylorus (164)"
+  },
+  {
+    "code" : "165",
+    "display" : "Lesser curvature of stomach, NOS (165)"
+  },
+  {
+    "code" : "166",
+    "display" : "Greater curvature of stomach, NOS (166)"
+  },
+  {
+    "code" : "168",
+    "display" : "Overlapping lesion of stomach (168)"
+  },
+  {
+    "code" : "169",
+    "display" : "Stomach, NOS (169)"
+  },
+  {
+    "code" : "170",
+    "display" : "Duodenum (170)"
+  },
+  {
+    "code" : "171",
+    "display" : "Jejunum (171)"
+  },
+  {
+    "code" : "172",
+    "display" : "Ileum (172)"
+  },
+  {
+    "code" : "173",
+    "display" : "Meckel diverticulum (173)"
+  },
+  {
+    "code" : "178",
+    "display" : "Overlapping lesion of small intestine (178)"
+  },
+  {
+    "code" : "179",
+    "display" : "Small intestine, NOS (179)"
+  },
+  {
+    "code" : "180",
+    "display" : "Cecum (180)"
+  },
+  {
+    "code" : "181",
+    "display" : "Appendix (181)"
+  },
+  {
+    "code" : "182",
+    "display" : "Ascending colon (182)"
+  },
+  {
+    "code" : "183",
+    "display" : "Hepatic flexure of colon (183)"
+  },
+  {
+    "code" : "184",
+    "display" : "Transverse colon (184)"
+  },
+  {
+    "code" : "185",
+    "display" : "Splenic flexure of colon (185)"
+  },
+  {
+    "code" : "186",
+    "display" : "Descending colon (186)"
+  },
+  {
+    "code" : "187",
+    "display" : "Sigmoid colon (187)"
+  },
+  {
+    "code" : "188",
+    "display" : "Overlapping lesion of colon (188)"
+  },
+  {
+    "code" : "189",
+    "display" : "Colon, NOS (189)"
+  },
+  {
+    "code" : "199",
+    "display" : "Rectosigmoid junction (199)"
+  },
+  {
+    "code" : "209",
+    "display" : "Rectum, NOS (209)"
+  },
+  {
+    "code" : "210",
+    "display" : "Anus, NOS (210)"
+  },
+  {
+    "code" : "211",
+    "display" : "Anal canal (211)"
+  },
+  {
+    "code" : "212",
+    "display" : "Cloacogenic zone (212)"
+  },
+  {
+    "code" : "218",
+    "display" : "Overlapping lesion of rectum, anus and anal canal (218)"
+  },
+  {
+    "code" : "220",
+    "display" : "Liver (220)"
+  },
+  {
+    "code" : "221",
+    "display" : "intrahepatic bile duct (221)"
+  },
+  {
+    "code" : "239",
+    "display" : "Gallbladder (239)"
+  },
+  {
+    "code" : "240",
+    "display" : "Extrahepatic bile duct (240)"
+  },
+  {
+    "code" : "241",
+    "display" : "Ampulla of Vater (241)"
+  },
+  {
+    "code" : "248",
+    "display" : "Overlapping lesion of billiary tract (248)"
+  },
+  {
+    "code" : "249",
+    "display" : "Billiary tract, NOS (249)"
+  },
+  {
+    "code" : "250",
+    "display" : "Head of pancreas (250)"
+  },
+  {
+    "code" : "251",
+    "display" : "Body of pancreas (251)"
+  },
+  {
+    "code" : "252",
+    "display" : "Tail of pancreas (252)"
+  },
+  {
+    "code" : "253",
+    "display" : "Pancreatic duct (253)"
+  },
+  {
+    "code" : "254",
+    "display" : "Islets of Langerhans (254)"
+  },
+  {
+    "code" : "257",
+    "display" : "Other specified parts of pancreas (257)"
+  },
+  {
+    "code" : "258",
+    "display" : "Overlapping lesion of pancreas (258)"
+  },
+  {
+    "code" : "259",
+    "display" : "Pancreas, NOS (259)"
+  },
+  {
+    "code" : "260",
+    "display" : "Intestinal tract, NOS (260)"
+  },
+  {
+    "code" : "268",
+    "display" : "Overlapping lesion of digestive system (268)"
+  },
+  {
+    "code" : "269",
+    "display" : "Gastrointestinal tract, NOS (269)"
+  },
+  {
+    "code" : "300",
+    "display" : "Nasal cavity (300)"
+  },
+  {
+    "code" : "301",
+    "display" : "Middle ear (301)"
+  },
+  {
+    "code" : "310",
+    "display" : "Maxillary sinus (310)"
+  },
+  {
+    "code" : "311",
+    "display" : "Ethmoid sinus (311)"
+  },
+  {
+    "code" : "312",
+    "display" : "Frontal sinus (312)"
+  },
+  {
+    "code" : "313",
+    "display" : "Sphenoid sinus (313)"
+  },
+  {
+    "code" : "318",
+    "display" : "Overlapping lesion of accessory sinuses (318)"
+  },
+  {
+    "code" : "319",
+    "display" : "Accessory sinus, NOS (319)"
+  },
+  {
+    "code" : "320",
+    "display" : "Glottis (320)"
+  },
+  {
+    "code" : "321",
+    "display" : "Supraglottis (321)"
+  },
+  {
+    "code" : "322",
+    "display" : "Subglottis (322)"
+  },
+  {
+    "code" : "323",
+    "display" : "Laryngeal cartilage (323)"
+  },
+  {
+    "code" : "328",
+    "display" : "Overlapping lesion of larynx (328)"
+  },
+  {
+    "code" : "329",
+    "display" : "Larynx, NOS (329)"
+  },
+  {
+    "code" : "339",
+    "display" : "Trachea (339)"
+  },
+  {
+    "code" : "340",
+    "display" : "Main bronchus (340)"
+  },
+  {
+    "code" : "341",
+    "display" : "Upper lobe, lung (341)"
+  },
+  {
+    "code" : "342",
+    "display" : "Middle lobe, lung (342)"
+  },
+  {
+    "code" : "343",
+    "display" : "Lower lobe, lung (343)"
+  },
+  {
+    "code" : "348",
+    "display" : "Overlapping lesion of lung (348)"
+  },
+  {
+    "code" : "349",
+    "display" : "Lung, NOS (349)"
+  },
+  {
+    "code" : "379",
+    "display" : "Thymus (379)"
+  },
+  {
+    "code" : "380",
+    "display" : "Heart (380)"
+  },
+  {
+    "code" : "381",
+    "display" : "Anterior mediastinum (381)"
+  },
+  {
+    "code" : "382",
+    "display" : "Posterior mediastinum (382)"
+  },
+  {
+    "code" : "383",
+    "display" : "Mediastinum, NOS (383)"
+  },
+  {
+    "code" : "384",
+    "display" : "Pleura, NOS (384)"
+  },
+  {
+    "code" : "388",
+    "display" : "Overlapping lesion of heart, mediastinum and pleura (388)"
+  },
+  {
+    "code" : "390",
+    "display" : "Upper respiratory tract, NOS (390)"
+  },
+  {
+    "code" : "398",
+    "display" : "Overlapping lesion of respiratory system and intrathoracic organs (398)"
+  },
+  {
+    "code" : "399",
+    "display" : "Ill-defined sites within respiratory system (399)"
+  },
+  {
+    "code" : "400",
+    "display" : "Long bones of upper limb, scapula and associated joints (400)"
+  },
+  {
+    "code" : "401",
+    "display" : "Short bones of upper limb and associated joints (401)"
+  },
+  {
+    "code" : "402",
+    "display" : "Long bones of lower limb and associated joints (402)"
+  },
+  {
+    "code" : "403",
+    "display" : "Short bones of lower limb and associated joints (403)"
+  },
+  {
+    "code" : "408",
+    "display" : "Overlapping lesion of bones, joints and articular cartilage of limbs (408)"
+  },
+  {
+    "code" : "409",
+    "display" : "Bone of limb, NOS (409)"
+  },
+  {
+    "code" : "410",
+    "display" : "Bones of skull and face and associated joints (410)"
+  },
+  {
+    "code" : "411",
+    "display" : "Mandible (411)"
+  },
+  {
+    "code" : "412",
+    "display" : "Vertebral column (412)"
+  },
+  {
+    "code" : "413",
+    "display" : "Rib, sternum, clavicle and associated joints (413)"
+  },
+  {
+    "code" : "414",
+    "display" : "Pelvic bones, sacrum, coccyx and associated joints (414)"
+  },
+  {
+    "code" : "418",
+    "display" : "Overlapping lesion of bones, joints and articular cartilage (418)"
+  },
+  {
+    "code" : "419",
+    "display" : "Bone, NOS (419)"
+  },
+  {
+    "code" : "420",
+    "display" : "Blood (420)"
+  },
+  {
+    "code" : "421",
+    "display" : "Bone marrow (421)"
+  },
+  {
+    "code" : "422",
+    "display" : "Spleen (422)"
+  },
+  {
+    "code" : "423",
+    "display" : "Reticuloendothelial system, NOS (423)"
+  },
+  {
+    "code" : "424",
+    "display" : "Hematopoietic system, NOS (424)"
+  },
+  {
+    "code" : "440",
+    "display" : "Skin of lip, NOS (440)"
+  },
+  {
+    "code" : "441",
+    "display" : "Eyelid (441)"
+  },
+  {
+    "code" : "442",
+    "display" : "External ear (442)"
+  },
+  {
+    "code" : "443",
+    "display" : "Skin of other and unspecified parts of face (443)"
+  },
+  {
+    "code" : "444",
+    "display" : "Skin of scalp and neck (444)"
+  },
+  {
+    "code" : "445",
+    "display" : "Skin of trunk (445)"
+  },
+  {
+    "code" : "446",
+    "display" : "Skin of upper limb and shoulder (446)"
+  },
+  {
+    "code" : "447",
+    "display" : "Skin of lower limb and hip (447)"
+  },
+  {
+    "code" : "448",
+    "display" : "Overlapping lesion of skin (448)"
+  },
+  {
+    "code" : "449",
+    "display" : "Skin, NOS (449)"
+  },
+  {
+    "code" : "470",
+    "display" : "Peripheral nerves and autonomic nervous system of head, face, and neck (470)"
+  },
+  {
+    "code" : "471",
+    "display" : "Peripheral nerves and autonomic nervous system of upper limb and shoulder (471)"
+  },
+  {
+    "code" : "472",
+    "display" : "Peripheral nerves and autonomic nervous system of lower limb and hip (472)"
+  },
+  {
+    "code" : "473",
+    "display" : "Peripheral nerves and autonomic nervous system of thorax (473)"
+  },
+  {
+    "code" : "474",
+    "display" : "Peripheral nerves and autonomic nervous system of abdomen (474)"
+  },
+  {
+    "code" : "475",
+    "display" : "Peripheral nerves and autonomic nervous system of pelvis (475)"
+  },
+  {
+    "code" : "476",
+    "display" : "Peripheral nerves and autonomic nervous system of trunk, NOS (476)"
+  },
+  {
+    "code" : "478",
+    "display" : "Overlapping lesion of peripheral nerves and autonomic nervous system (478)"
+  },
+  {
+    "code" : "479",
+    "display" : "Autonomic nervous system, NOS (479)"
+  },
+  {
+    "code" : "480",
+    "display" : "Retroperitoneum (480)"
+  },
+  {
+    "code" : "481",
+    "display" : "Specified parts of peritoneum (481)"
+  },
+  {
+    "code" : "482",
+    "display" : "Peritoneum, NOS (482)"
+  },
+  {
+    "code" : "488",
+    "display" : "Overlapping lesion of retroperitoneum and peritoneum (488)"
+  },
+  {
+    "code" : "490",
+    "display" : "Connective, Subcutaneous and other soft tissues of head, face, and neck (490)"
+  },
+  {
+    "code" : "491",
+    "display" : "Connective, Subcutaneous and other soft tissues of upper limb and shoulder (491)"
+  },
+  {
+    "code" : "492",
+    "display" : "Connective, Subcutaneous and other soft tissues of lower limb and hip (492)"
+  },
+  {
+    "code" : "493",
+    "display" : "Connective, Subcutaneous and other soft tissues of thorax (493)"
+  },
+  {
+    "code" : "494",
+    "display" : "Connective, Subcutaneous and other soft tissues of abdomen (494)"
+  },
+  {
+    "code" : "495",
+    "display" : "Connective, Subcutaneous and other soft tissues of pelvis (495)"
+  },
+  {
+    "code" : "496",
+    "display" : "Connective, Subcutaneous and other soft tissues of trunk, NOS (496)"
+  },
+  {
+    "code" : "498",
+    "display" : "Overlapping lesion of connective, subcutaneous and other soft tissues (498)"
+  },
+  {
+    "code" : "499",
+    "display" : "Connective, Subcutaneous and other soft tissues, NOS (499)"
+  },
+  {
+    "code" : "500",
+    "display" : "Nipple (500)"
+  },
+  {
+    "code" : "501",
+    "display" : "Central portion of breast (501)"
+  },
+  {
+    "code" : "502",
+    "display" : "Upper-inner quadrant of breast (502)"
+  },
+  {
+    "code" : "503",
+    "display" : "Lower-inner quadrant of breast (503)"
+  },
+  {
+    "code" : "504",
+    "display" : "Upper-outer quadrant of breast (504)"
+  },
+  {
+    "code" : "505",
+    "display" : "Lower-outer quadrant of breast (505)"
+  },
+  {
+    "code" : "506",
+    "display" : "Axillary tail of breast (506)"
+  },
+  {
+    "code" : "508",
+    "display" : "Overlapping lesion of breast (508)"
+  },
+  {
+    "code" : "509",
+    "display" : "Breast, NOS (509)"
+  },
+  {
+    "code" : "510",
+    "display" : "Labium majus (510)"
+  },
+  {
+    "code" : "511",
+    "display" : "Labium minus (511)"
+  },
+  {
+    "code" : "512",
+    "display" : "Clitorus (512)"
+  },
+  {
+    "code" : "518",
+    "display" : "Overlapping lesion of vulva (518)"
+  },
+  {
+    "code" : "519",
+    "display" : "Vulva, NOS (519)"
+  },
+  {
+    "code" : "529",
+    "display" : "Vagina, NOS (529)"
+  },
+  {
+    "code" : "530",
+    "display" : "Endocervix (530)"
+  },
+  {
+    "code" : "531",
+    "display" : "Exocervix (531)"
+  },
+  {
+    "code" : "538",
+    "display" : "Overlapping lesion of cervix uteri (538)"
+  },
+  {
+    "code" : "539",
+    "display" : "Cervix uteri (539)"
+  },
+  {
+    "code" : "540",
+    "display" : "Isthmus uteri (540)"
+  },
+  {
+    "code" : "541",
+    "display" : "Endometrium (541)"
+  },
+  {
+    "code" : "542",
+    "display" : "Myometrium (542)"
+  },
+  {
+    "code" : "543",
+    "display" : "Fundus uteri (543)"
+  },
+  {
+    "code" : "548",
+    "display" : "Overlapping lesion of corpus uteri (548)"
+  },
+  {
+    "code" : "549",
+    "display" : "Corpus uteri (549)"
+  },
+  {
+    "code" : "559",
+    "display" : "Uterus, NOS (559)"
+  },
+  {
+    "code" : "569",
+    "display" : "Ovary (569)"
+  },
+  {
+    "code" : "570",
+    "display" : "Fallopian tube (570)"
+  },
+  {
+    "code" : "571",
+    "display" : "Broad ligament (571)"
+  },
+  {
+    "code" : "572",
+    "display" : "Round ligament (572)"
+  },
+  {
+    "code" : "573",
+    "display" : "Parametrium (573)"
+  },
+  {
+    "code" : "574",
+    "display" : "Uterine adnexa (574)"
+  },
+  {
+    "code" : "577",
+    "display" : "Other specified parts of female genital organs (577)"
+  },
+  {
+    "code" : "578",
+    "display" : "Overlapping lesion of female genital organs (578)"
+  },
+  {
+    "code" : "579",
+    "display" : "Female genital tract, NOS (579)"
+  },
+  {
+    "code" : "589",
+    "display" : "Placenta (589)"
+  },
+  {
+    "code" : "600",
+    "display" : "Prepuce (600)"
+  },
+  {
+    "code" : "601",
+    "display" : "Glans penis (601)"
+  },
+  {
+    "code" : "602",
+    "display" : "Body of penis (602)"
+  },
+  {
+    "code" : "608",
+    "display" : "Overlapping lesion of penis (608)"
+  },
+  {
+    "code" : "609",
+    "display" : "Penis, NOS (609)"
+  },
+  {
+    "code" : "619",
+    "display" : "Prostate gland (619)"
+  },
+  {
+    "code" : "620",
+    "display" : "Undescended testis (620)"
+  },
+  {
+    "code" : "621",
+    "display" : "Descended testis (621)"
+  },
+  {
+    "code" : "629",
+    "display" : "Testis, NOS (629)"
+  },
+  {
+    "code" : "630",
+    "display" : "Epididymis (630)"
+  },
+  {
+    "code" : "631",
+    "display" : "Spermatic cord (631)"
+  },
+  {
+    "code" : "632",
+    "display" : "Scrotum, NOS (632)"
+  },
+  {
+    "code" : "637",
+    "display" : "Other specified parts of male genital organs (637)"
+  },
+  {
+    "code" : "638",
+    "display" : "Overlapping lesion of male genital organs (638)"
+  },
+  {
+    "code" : "639",
+    "display" : "Male genital organs, NOS (639)"
+  },
+  {
+    "code" : "649",
+    "display" : "Kidney, NOS (649)"
+  },
+  {
+    "code" : "659",
+    "display" : "Renal pelvis (659)"
+  },
+  {
+    "code" : "669",
+    "display" : "Ureter (669)"
+  },
+  {
+    "code" : "670",
+    "display" : "Trigone of bladder (670)"
+  },
+  {
+    "code" : "671",
+    "display" : "Dome of bladder (671)"
+  },
+  {
+    "code" : "672",
+    "display" : "Lateral wall of bladder (672)"
+  },
+  {
+    "code" : "673",
+    "display" : "Anterior wall of bladder (673)"
+  },
+  {
+    "code" : "674",
+    "display" : "Posterior wall of bladder (674)"
+  },
+  {
+    "code" : "675",
+    "display" : "Bladder neck (675)"
+  },
+  {
+    "code" : "676",
+    "display" : "Ureteric orifice (676)"
+  },
+  {
+    "code" : "677",
+    "display" : "Urachus (677)"
+  },
+  {
+    "code" : "678",
+    "display" : "Overlapping lesion of bladder (678)"
+  },
+  {
+    "code" : "679",
+    "display" : "Bladder, NOS (679)"
+  },
+  {
+    "code" : "680",
+    "display" : "Urethra (680)"
+  },
+  {
+    "code" : "681",
+    "display" : "Paraurethral gland (681)"
+  },
+  {
+    "code" : "688",
+    "display" : "Overlapping lesion of urinary organs (688)"
+  },
+  {
+    "code" : "689",
+    "display" : "Urinary system, NOS (689)"
+  },
+  {
+    "code" : "690",
+    "display" : "Conjunctiva (690)"
+  },
+  {
+    "code" : "691",
+    "display" : "Cornea, NOS (691)"
+  },
+  {
+    "code" : "692",
+    "display" : "Retina (692)"
+  },
+  {
+    "code" : "693",
+    "display" : "Choroid (693)"
+  },
+  {
+    "code" : "694",
+    "display" : "Ciliary body (694)"
+  },
+  {
+    "code" : "695",
+    "display" : "Lacrimal gland (695)"
+  },
+  {
+    "code" : "696",
+    "display" : "Orbit, NOS (696)"
+  },
+  {
+    "code" : "698",
+    "display" : "Overlapping lesion of eye and adnexa (698)"
+  },
+  {
+    "code" : "699",
+    "display" : "Eye, NOS (699)"
+  },
+  {
+    "code" : "700",
+    "display" : "Cerebral meninges (700)"
+  },
+  {
+    "code" : "701",
+    "display" : "Spinal meninges (701)"
+  },
+  {
+    "code" : "709",
+    "display" : "Meninges, NOS (709)"
+  },
+  {
+    "code" : "710",
+    "display" : "Cerebrum (710)"
+  },
+  {
+    "code" : "711",
+    "display" : "Frontal lobe (711)"
+  },
+  {
+    "code" : "712",
+    "display" : "Temporal lobe (712)"
+  },
+  {
+    "code" : "713",
+    "display" : "Parietal lobe (713)"
+  },
+  {
+    "code" : "714",
+    "display" : "Occipital lobe (714)"
+  },
+  {
+    "code" : "715",
+    "display" : "Ventricle, NOS (715)"
+  },
+  {
+    "code" : "716",
+    "display" : "Cerebellum, NOS (716)"
+  },
+  {
+    "code" : "717",
+    "display" : "Brain stem (717)"
+  },
+  {
+    "code" : "718",
+    "display" : "Overlapping lesion of brain (718)"
+  },
+  {
+    "code" : "719",
+    "display" : "Brain, NOS (719)"
+  },
+  {
+    "code" : "720",
+    "display" : "Spinal cord (720)"
+  },
+  {
+    "code" : "721",
+    "display" : "Cauda equina (721)"
+  },
+  {
+    "code" : "722",
+    "display" : "Olfactory nerve (722)"
+  },
+  {
+    "code" : "723",
+    "display" : "Optic nerve (723)"
+  },
+  {
+    "code" : "724",
+    "display" : "Acoustic nerve (724)"
+  },
+  {
+    "code" : "725",
+    "display" : "Cranial nerve, NOS (725)"
+  },
+  {
+    "code" : "728",
+    "display" : "Overlapping lesion of brain and central nervous system (728)"
+  },
+  {
+    "code" : "729",
+    "display" : "Nervous system, NOS (729)"
+  },
+  {
+    "code" : "739",
+    "display" : "Thyroid gland (739)"
+  },
+  {
+    "code" : "740",
+    "display" : "Cortex of adrenal gland (740)"
+  },
+  {
+    "code" : "741",
+    "display" : "Medulla of adrenal gland (741)"
+  },
+  {
+    "code" : "749",
+    "display" : "Adrenal gland, NOS (749)"
+  },
+  {
+    "code" : "750",
+    "display" : "Parathyroid gland (750)"
+  },
+  {
+    "code" : "751",
+    "display" : "Pituitary gland (751)"
+  },
+  {
+    "code" : "752",
+    "display" : "Craniopharyngeal duct (752)"
+  },
+  {
+    "code" : "753",
+    "display" : "Pineal gland (753)"
+  },
+  {
+    "code" : "754",
+    "display" : "Carotid body (754)"
+  },
+  {
+    "code" : "755",
+    "display" : "Aortic body and other paraganglia (755)"
+  },
+  {
+    "code" : "758",
+    "display" : "Overlapping lesion of endocrine glands and related structures (758)"
+  },
+  {
+    "code" : "759",
+    "display" : "Endocrine gland, NOS (759)"
+  },
+  {
+    "code" : "760",
+    "display" : "Head, face or neck, NOS (760)"
+  },
+  {
+    "code" : "761",
+    "display" : "Thorax, NOS (761)"
+  },
+  {
+    "code" : "762",
+    "display" : "Abdomen, NOS (762)"
+  },
+  {
+    "code" : "763",
+    "display" : "Pelvis, NOS (763)"
+  },
+  {
+    "code" : "764",
+    "display" : "Upper limb, NOS (764)"
+  },
+  {
+    "code" : "765",
+    "display" : "Lower limb, NOS (765)"
+  },
+  {
+    "code" : "767",
+    "display" : "Other ill-defined sites (767)"
+  },
+  {
+    "code" : "768",
+    "display" : "Overlapping lesion of ill-defined sites (768)"
+  },
+  {
+    "code" : "770",
+    "display" : "Lymph nodes of head, face and neck (770)"
+  },
+  {
+    "code" : "771",
+    "display" : "Intrathoracic lymph nodes (771)"
+  },
+  {
+    "code" : "772",
+    "display" : "Intra-abdominal lymph nodes (772)"
+  },
+  {
+    "code" : "773",
+    "display" : "Lymph nodes of axilla or arm (773)"
+  },
+  {
+    "code" : "774",
+    "display" : "Lymph nodes of inguinal region or leg (774)"
+  },
+  {
+    "code" : "775",
+    "display" : "Pelvic lymph nodes (775)"
+  },
+  {
+    "code" : "778",
+    "display" : "Lymph nodes of multiple regions (778)"
+  },
+  {
+    "code" : "779",
+    "display" : "Lymph node, NOS (779)"
+  },
+  {
+    "code" : "809",
+    "display" : "Unknown primary site (809)"
+  }]
+}

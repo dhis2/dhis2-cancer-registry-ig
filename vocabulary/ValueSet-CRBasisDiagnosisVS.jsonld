@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-04-14T08:00:57.816029Z",
+  "@graph": [
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#0",
+      "name": "Death Certificate Only (0)",
+      "fhir:code": "0",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#1",
+      "name": "Clinical only (1)",
+      "fhir:code": "1",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#2",
+      "name": "Clin. Invest./Ult Soun (2)",
+      "fhir:code": "2",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#3",
+      "name": "Surgery/Autopsy (3)",
+      "fhir:code": "3",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#4",
+      "name": "Laboratory test (4)",
+      "fhir:code": "4",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#5",
+      "name": "Cytology (5)",
+      "fhir:code": "5",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#6",
+      "name": "Histology of metastase (6)",
+      "fhir:code": "6",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#7",
+      "name": "Histology of primary (7)",
+      "fhir:code": "7",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#8",
+      "name": "Autopsy/Histology (8)",
+      "fhir:code": "8",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRBasisDiagnosisVS.jsonld#9",
+      "name": "Unknown (9)",
+      "fhir:code": "9",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRBasisDiagnosisCS"
+    }
+  ]
+}

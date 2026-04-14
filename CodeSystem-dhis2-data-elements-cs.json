@@ -1,0 +1,260 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dhis2-data-elements-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dhis2-data-elements-cs</b></p><a name=\"dhis2-data-elements-cs\"> </a><a name=\"hcdhis2-data-elements-cs\"> </a><p>This  code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">c6EnHSAMUat<a name=\"dhis2-data-elements-cs-c6EnHSAMUat\"> </a></td><td>CR - Incidence date</td><td>CR - Incidence date</td></tr><tr><td style=\"white-space:nowrap\">tasm9QG8HaF<a name=\"dhis2-data-elements-cs-tasm9QG8HaF\"> </a></td><td>CR - Age</td><td>CR - Age</td></tr><tr><td style=\"white-space:nowrap\">xcUBzN5QFXu<a name=\"dhis2-data-elements-cs-xcUBzN5QFXu\"> </a></td><td>CR - Address</td><td>CR - Address</td></tr><tr><td style=\"white-space:nowrap\">KgDQLAkC5ql<a name=\"dhis2-data-elements-cs-KgDQLAkC5ql\"> </a></td><td>CR - Tumor number</td><td>CR - Tumor number</td></tr><tr><td style=\"white-space:nowrap\">LCSApBii8CI<a name=\"dhis2-data-elements-cs-LCSApBii8CI\"> </a></td><td>CR - Site</td><td>CR - Site</td></tr><tr><td style=\"white-space:nowrap\">zw6Vwqnhvmh<a name=\"dhis2-data-elements-cs-zw6Vwqnhvmh\"> </a></td><td>CR - Topography</td><td>CR - Topography</td></tr><tr><td style=\"white-space:nowrap\">UkyyY1xukJg<a name=\"dhis2-data-elements-cs-UkyyY1xukJg\"> </a></td><td>CR - Morphology</td><td>CR - Morphology</td></tr><tr><td style=\"white-space:nowrap\">MMIuwJdjx8B<a name=\"dhis2-data-elements-cs-MMIuwJdjx8B\"> </a></td><td>CR - Behaviour</td><td>CR - Behaviour</td></tr><tr><td style=\"white-space:nowrap\">uoyoNWrexbY<a name=\"dhis2-data-elements-cs-uoyoNWrexbY\"> </a></td><td>CR - Basis diagnosis</td><td>CR - Basis diagnosis</td></tr><tr><td style=\"white-space:nowrap\">ZMD8dwB3zOZ<a name=\"dhis2-data-elements-cs-ZMD8dwB3zOZ\"> </a></td><td>CR - Grade</td><td>CR - Grade</td></tr><tr><td style=\"white-space:nowrap\">FlGHlAuG4Ly<a name=\"dhis2-data-elements-cs-FlGHlAuG4Ly\"> </a></td><td>CR - Checks: Run checks</td><td>CR - Checks: Run checks</td></tr><tr><td style=\"white-space:nowrap\">nFJ2MJ8Vxuj<a name=\"dhis2-data-elements-cs-nFJ2MJ8Vxuj\"> </a></td><td>CR - Run Topography Morphology check</td><td>CR - Run Topography Morphology check</td></tr><tr><td style=\"white-space:nowrap\">rqpqtJZto2L<a name=\"dhis2-data-elements-cs-rqpqtJZto2L\"> </a></td><td>CR - Run Multiple primary check</td><td>CR - Run Multiple primary check</td></tr><tr><td style=\"white-space:nowrap\">mxfPEKn6kFt<a name=\"dhis2-data-elements-cs-mxfPEKn6kFt\"> </a></td><td>CR - Checks: Rare Age Morphology</td><td>CR - Checks: Rare Age Morphology</td></tr><tr><td style=\"white-space:nowrap\">rPvQffpxaEs<a name=\"dhis2-data-elements-cs-rPvQffpxaEs\"> </a></td><td>CR - Checks: Rare Age Topography</td><td>CR - Checks: Rare Age Topography</td></tr><tr><td style=\"white-space:nowrap\">Laax6wSBp2G<a name=\"dhis2-data-elements-cs-Laax6wSBp2G\"> </a></td><td>CR - Checks: Rare Age Topography Morphology</td><td>CR - Checks: Rare Age Topography Morphology</td></tr><tr><td style=\"white-space:nowrap\">U8v95tUnazC<a name=\"dhis2-data-elements-cs-U8v95tUnazC\"> </a></td><td>CR - Checks: Rare Basis</td><td>CR - Checks: Rare Basis</td></tr><tr><td style=\"white-space:nowrap\">doB0rv08MIc<a name=\"dhis2-data-elements-cs-doB0rv08MIc\"> </a></td><td>CR - Checks: Invalid Grade</td><td>CR - Checks: Invalid Grade</td></tr><tr><td style=\"white-space:nowrap\">FH09UKj7HMC<a name=\"dhis2-data-elements-cs-FH09UKj7HMC\"> </a></td><td>CR - Checks: Rare Sex Morphology</td><td>CR - Checks: Rare Sex Morphology</td></tr><tr><td style=\"white-space:nowrap\">wAmyuRZNNXC<a name=\"dhis2-data-elements-cs-wAmyuRZNNXC\"> </a></td><td>CR - Checks: Invalid Sex Topography</td><td>CR - Checks: Invalid Sex Topography</td></tr><tr><td style=\"white-space:nowrap\">ugeBdJzYHVW<a name=\"dhis2-data-elements-cs-ugeBdJzYHVW\"> </a></td><td>CR - Checks: Rare Topography Behaviour</td><td>CR - Checks: Rare Topography Behaviour</td></tr><tr><td style=\"white-space:nowrap\">fdvzxz58nEE<a name=\"dhis2-data-elements-cs-fdvzxz58nEE\"> </a></td><td>CR - Checks: Rare Topography Morphology</td><td>CR - Checks: Rare Topography Morphology</td></tr><tr><td style=\"white-space:nowrap\">VBkjlEwG4BE<a name=\"dhis2-data-elements-cs-VBkjlEwG4BE\"> </a></td><td>CR - Checks: Multiple primary test result</td><td>CR - Checks: Multiple primary test result</td></tr><tr><td style=\"white-space:nowrap\">jTW2ljvoIc6<a name=\"dhis2-data-elements-cs-jTW2ljvoIc6\"> </a></td><td>CR - Rare</td><td>CR - Rare</td></tr><tr><td style=\"white-space:nowrap\">TXtHNzrfmki<a name=\"dhis2-data-elements-cs-TXtHNzrfmki\"> </a></td><td>CR - Invalid</td><td>CR - Invalid</td></tr><tr><td style=\"white-space:nowrap\">RBu5b3A68mq<a name=\"dhis2-data-elements-cs-RBu5b3A68mq\"> </a></td><td>CR - Morphology Family</td><td>CR - Morphology Family</td></tr><tr><td style=\"white-space:nowrap\">XR1U9dr60xI<a name=\"dhis2-data-elements-cs-XR1U9dr60xI\"> </a></td><td>CR - Topography Morphology key</td><td>CR - Topography Morphology key</td></tr><tr><td style=\"white-space:nowrap\">oZyJlKscN6G<a name=\"dhis2-data-elements-cs-oZyJlKscN6G\"> </a></td><td>CR - Present in the MUST list</td><td>CR - Present in the MUST list</td></tr><tr><td style=\"white-space:nowrap\">DyVH5Q3Qf0Q<a name=\"dhis2-data-elements-cs-DyVH5Q3Qf0Q\"> </a></td><td>CR - Present in the MUST-NOT list</td><td>CR - Present in the MUST-NOT list</td></tr><tr><td style=\"white-space:nowrap\">yt3gq8onyKb<a name=\"dhis2-data-elements-cs-yt3gq8onyKb\"> </a></td><td>CR - Morphology group</td><td>CR - Morphology group</td></tr><tr><td style=\"white-space:nowrap\">eGWudq2aGpY<a name=\"dhis2-data-elements-cs-eGWudq2aGpY\"> </a></td><td>CR - Previous morphology group</td><td>CR - Previous morphology group</td></tr><tr><td style=\"white-space:nowrap\">dTbQZsduHT7<a name=\"dhis2-data-elements-cs-dTbQZsduHT7\"> </a></td><td>CR - Previous morphology group (multiple)</td><td>CR - Previous morphology group (multiple)</td></tr><tr><td style=\"white-space:nowrap\">RmzIYvxiBm4<a name=\"dhis2-data-elements-cs-RmzIYvxiBm4\"> </a></td><td>CR - Topography group</td><td>CR - Topography group</td></tr><tr><td style=\"white-space:nowrap\">FyzoZsxRjjz<a name=\"dhis2-data-elements-cs-FyzoZsxRjjz\"> </a></td><td>CR - Previous topography group</td><td>CR - Previous topography group</td></tr><tr><td style=\"white-space:nowrap\">IhLiguJKuzz<a name=\"dhis2-data-elements-cs-IhLiguJKuzz\"> </a></td><td>CR - Previous topography group (multiple)</td><td>CR - Previous topography group (multiple)</td></tr><tr><td style=\"white-space:nowrap\">n4IHuWceDlW<a name=\"dhis2-data-elements-cs-n4IHuWceDlW\"> </a></td><td>CR - Morphology result</td><td>CR - Morphology result</td></tr><tr><td style=\"white-space:nowrap\">z3JSu92EQhg<a name=\"dhis2-data-elements-cs-z3JSu92EQhg\"> </a></td><td>CR - Confirm the rare status</td><td>CR - Confirm the rare status</td></tr><tr><td style=\"white-space:nowrap\">KwMs1DNVA0R<a name=\"dhis2-data-elements-cs-KwMs1DNVA0R\"> </a></td><td>CR - TUMOURID</td><td>CR - TUMOURID</td></tr><tr><td style=\"white-space:nowrap\">OrVAWBySU43<a name=\"dhis2-data-elements-cs-OrVAWBySU43\"> </a></td><td>CR - Previous tumor number</td><td>CR - Previous tumor number</td></tr><tr><td style=\"white-space:nowrap\">EMoLghRDW4A<a name=\"dhis2-data-elements-cs-EMoLghRDW4A\"> </a></td><td>CR - Patient ID</td><td>CR - Patient ID</td></tr><tr><td style=\"white-space:nowrap\">fID2of7Q8Jj<a name=\"dhis2-data-elements-cs-fID2of7Q8Jj\"> </a></td><td>CR - Source: Tumor number</td><td>CR - Source: Tumor number</td></tr><tr><td style=\"white-space:nowrap\">TgjO873BZTu<a name=\"dhis2-data-elements-cs-TgjO873BZTu\"> </a></td><td>CR - Source date</td><td>CR - Source date</td></tr><tr><td style=\"white-space:nowrap\">Mqz5dPrwWho<a name=\"dhis2-data-elements-cs-Mqz5dPrwWho\"> </a></td><td>CR - Source Type</td><td>CR - Source Type</td></tr><tr><td style=\"white-space:nowrap\">HxMFZcIIZpL<a name=\"dhis2-data-elements-cs-HxMFZcIIZpL\"> </a></td><td>CR - TUMOURIDSOURCETABLE</td><td>CR - TUMOURIDSOURCETABLE</td></tr><tr><td style=\"white-space:nowrap\">Ks2WWWWCuzq<a name=\"dhis2-data-elements-cs-Ks2WWWWCuzq\"> </a></td><td>CR - Date last contact</td><td>CR - Date last contact</td></tr><tr><td style=\"white-space:nowrap\">nMpcjKFF5zt<a name=\"dhis2-data-elements-cs-nMpcjKFF5zt\"> </a></td><td>CR - Status</td><td>CR - Status</td></tr><tr><td style=\"white-space:nowrap\">hCJqPZcw2n6<a name=\"dhis2-data-elements-cs-hCJqPZcw2n6\"> </a></td><td>CR - Date of death</td><td>CR - Date of death</td></tr></table></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs",
+  "version" : "0.1.0",
+  "name" : "Dhis2DataElementsCS",
+  "title" : "DHIS2 Data Elements",
+  "status" : "draft",
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Code system for 47 unique DHIS2 data elements from all selected programs",
+  "content" : "complete",
+  "count" : 47,
+  "concept" : [{
+    "code" : "c6EnHSAMUat",
+    "display" : "CR - Incidence date",
+    "definition" : "CR - Incidence date"
+  },
+  {
+    "code" : "tasm9QG8HaF",
+    "display" : "CR - Age",
+    "definition" : "CR - Age"
+  },
+  {
+    "code" : "xcUBzN5QFXu",
+    "display" : "CR - Address",
+    "definition" : "CR - Address"
+  },
+  {
+    "code" : "KgDQLAkC5ql",
+    "display" : "CR - Tumor number",
+    "definition" : "CR - Tumor number"
+  },
+  {
+    "code" : "LCSApBii8CI",
+    "display" : "CR - Site",
+    "definition" : "CR - Site"
+  },
+  {
+    "code" : "zw6Vwqnhvmh",
+    "display" : "CR - Topography",
+    "definition" : "CR - Topography"
+  },
+  {
+    "code" : "UkyyY1xukJg",
+    "display" : "CR - Morphology",
+    "definition" : "CR - Morphology"
+  },
+  {
+    "code" : "MMIuwJdjx8B",
+    "display" : "CR - Behaviour",
+    "definition" : "CR - Behaviour"
+  },
+  {
+    "code" : "uoyoNWrexbY",
+    "display" : "CR - Basis diagnosis",
+    "definition" : "CR - Basis diagnosis"
+  },
+  {
+    "code" : "ZMD8dwB3zOZ",
+    "display" : "CR - Grade",
+    "definition" : "CR - Grade"
+  },
+  {
+    "code" : "FlGHlAuG4Ly",
+    "display" : "CR - Checks: Run checks",
+    "definition" : "CR - Checks: Run checks"
+  },
+  {
+    "code" : "nFJ2MJ8Vxuj",
+    "display" : "CR - Run Topography Morphology check",
+    "definition" : "CR - Run Topography Morphology check"
+  },
+  {
+    "code" : "rqpqtJZto2L",
+    "display" : "CR - Run Multiple primary check",
+    "definition" : "CR - Run Multiple primary check"
+  },
+  {
+    "code" : "mxfPEKn6kFt",
+    "display" : "CR - Checks: Rare Age Morphology",
+    "definition" : "CR - Checks: Rare Age Morphology"
+  },
+  {
+    "code" : "rPvQffpxaEs",
+    "display" : "CR - Checks: Rare Age Topography",
+    "definition" : "CR - Checks: Rare Age Topography"
+  },
+  {
+    "code" : "Laax6wSBp2G",
+    "display" : "CR - Checks: Rare Age Topography Morphology",
+    "definition" : "CR - Checks: Rare Age Topography Morphology"
+  },
+  {
+    "code" : "U8v95tUnazC",
+    "display" : "CR - Checks: Rare Basis",
+    "definition" : "CR - Checks: Rare Basis"
+  },
+  {
+    "code" : "doB0rv08MIc",
+    "display" : "CR - Checks: Invalid Grade",
+    "definition" : "CR - Checks: Invalid Grade"
+  },
+  {
+    "code" : "FH09UKj7HMC",
+    "display" : "CR - Checks: Rare Sex Morphology",
+    "definition" : "CR - Checks: Rare Sex Morphology"
+  },
+  {
+    "code" : "wAmyuRZNNXC",
+    "display" : "CR - Checks: Invalid Sex Topography",
+    "definition" : "CR - Checks: Invalid Sex Topography"
+  },
+  {
+    "code" : "ugeBdJzYHVW",
+    "display" : "CR - Checks: Rare Topography Behaviour",
+    "definition" : "CR - Checks: Rare Topography Behaviour"
+  },
+  {
+    "code" : "fdvzxz58nEE",
+    "display" : "CR - Checks: Rare Topography Morphology",
+    "definition" : "CR - Checks: Rare Topography Morphology"
+  },
+  {
+    "code" : "VBkjlEwG4BE",
+    "display" : "CR - Checks: Multiple primary test result",
+    "definition" : "CR - Checks: Multiple primary test result"
+  },
+  {
+    "code" : "jTW2ljvoIc6",
+    "display" : "CR - Rare",
+    "definition" : "CR - Rare"
+  },
+  {
+    "code" : "TXtHNzrfmki",
+    "display" : "CR - Invalid",
+    "definition" : "CR - Invalid"
+  },
+  {
+    "code" : "RBu5b3A68mq",
+    "display" : "CR - Morphology Family",
+    "definition" : "CR - Morphology Family"
+  },
+  {
+    "code" : "XR1U9dr60xI",
+    "display" : "CR - Topography Morphology key",
+    "definition" : "CR - Topography Morphology key"
+  },
+  {
+    "code" : "oZyJlKscN6G",
+    "display" : "CR - Present in the MUST list",
+    "definition" : "CR - Present in the MUST list"
+  },
+  {
+    "code" : "DyVH5Q3Qf0Q",
+    "display" : "CR - Present in the MUST-NOT list",
+    "definition" : "CR - Present in the MUST-NOT list"
+  },
+  {
+    "code" : "yt3gq8onyKb",
+    "display" : "CR - Morphology group",
+    "definition" : "CR - Morphology group"
+  },
+  {
+    "code" : "eGWudq2aGpY",
+    "display" : "CR - Previous morphology group",
+    "definition" : "CR - Previous morphology group"
+  },
+  {
+    "code" : "dTbQZsduHT7",
+    "display" : "CR - Previous morphology group (multiple)",
+    "definition" : "CR - Previous morphology group (multiple)"
+  },
+  {
+    "code" : "RmzIYvxiBm4",
+    "display" : "CR - Topography group",
+    "definition" : "CR - Topography group"
+  },
+  {
+    "code" : "FyzoZsxRjjz",
+    "display" : "CR - Previous topography group",
+    "definition" : "CR - Previous topography group"
+  },
+  {
+    "code" : "IhLiguJKuzz",
+    "display" : "CR - Previous topography group (multiple)",
+    "definition" : "CR - Previous topography group (multiple)"
+  },
+  {
+    "code" : "n4IHuWceDlW",
+    "display" : "CR - Morphology result",
+    "definition" : "CR - Morphology result"
+  },
+  {
+    "code" : "z3JSu92EQhg",
+    "display" : "CR - Confirm the rare status",
+    "definition" : "CR - Confirm the rare status"
+  },
+  {
+    "code" : "KwMs1DNVA0R",
+    "display" : "CR - TUMOURID",
+    "definition" : "CR - TUMOURID"
+  },
+  {
+    "code" : "OrVAWBySU43",
+    "display" : "CR - Previous tumor number",
+    "definition" : "CR - Previous tumor number"
+  },
+  {
+    "code" : "EMoLghRDW4A",
+    "display" : "CR - Patient ID",
+    "definition" : "CR - Patient ID"
+  },
+  {
+    "code" : "fID2of7Q8Jj",
+    "display" : "CR - Source: Tumor number",
+    "definition" : "CR - Source: Tumor number"
+  },
+  {
+    "code" : "TgjO873BZTu",
+    "display" : "CR - Source date",
+    "definition" : "CR - Source date"
+  },
+  {
+    "code" : "Mqz5dPrwWho",
+    "display" : "CR - Source Type",
+    "definition" : "CR - Source Type"
+  },
+  {
+    "code" : "HxMFZcIIZpL",
+    "display" : "CR - TUMOURIDSOURCETABLE",
+    "definition" : "CR - TUMOURIDSOURCETABLE"
+  },
+  {
+    "code" : "Ks2WWWWCuzq",
+    "display" : "CR - Date last contact",
+    "definition" : "CR - Date last contact"
+  },
+  {
+    "code" : "nMpcjKFF5zt",
+    "display" : "CR - Status",
+    "definition" : "CR - Status"
+  },
+  {
+    "code" : "hCJqPZcw2n6",
+    "display" : "CR - Date of death",
+    "definition" : "CR - Date of death"
+  }]
+}

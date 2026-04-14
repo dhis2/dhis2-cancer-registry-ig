@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="CancerRegistryToPatient"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureMap CancerRegistryToPatient</b></p><a name="CancerRegistryToPatient"> </a><a name="hcCancerRegistryToPatient"> </a><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient<span style="color: navy">&quot; = &quot;</span>CancerRegistryToPatient<span style="color: navy">&quot;
+
+</span><span style="color: navy">// </span><span style="color: green">Transform: Cancer Registry Enrollment to Patient</span>
+
+<b>uses</b><span style="color: navy"> &quot;</span><a href="StructureDefinition-CancerRegistry.html" title="Cancer Registry">https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry</a><span style="color: navy">&quot; </span><b>alias </b>CancerRegistry <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/patient.html" title="Patient">http://hl7.org/fhir/StructureDefinition/Patient</a><span style="color: navy">&quot; </span><b>alias </b>Patient <b>as </b><b>target</b>
+
+<b>group </b>CancerRegistryToPatient<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>CancerRegistry, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>Patient<span style="color: navy">)</span><span style="color: navy"> {
+</span>  src<span style="color: navy"><b> -&gt; </b></span>tgt.meta<b> as </b><span style="color: maroon">meta</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>meta.profile = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient'</span> <i>&quot;setprofile&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;setmeta&quot;</i><span style="color: navy">;</span>
+  src.crPatientId<b> as </b><span style="color: maroon">patientId</span><span style="color: navy"><b> -&gt; </b></span>tgt.identifier<b> as </b><span style="color: maroon">ident</span><b> then</b><span style="color: navy"> {
+</span>    patientId<span style="color: navy"><b> -&gt; </b></span>ident.value = <span style="color: maroon">patientId</span> <i>&quot;setidvalue&quot;</i><span style="color: navy">;</span>
+    patientId<span style="color: navy"><b> -&gt; </b></span>ident.type<b> as </b><span style="color: maroon">idType</span><b> then</b><span style="color: navy"> {
+</span>      patientId<span style="color: navy"><b> -&gt; </b></span>idType.coding<b> as </b><span style="color: maroon">coding</span><b> then</b><span style="color: navy"> {
+</span>        patientId<span style="color: navy"><b> -&gt; </b></span>coding.system = <span style="color: blue">'http://terminology.hl7.org/CodeSystem/v2-0203'</span> <i>&quot;setidsystem&quot;</i><span style="color: navy">;</span>
+        patientId<span style="color: navy"><b> -&gt; </b></span>coding.code = <span style="color: blue">'MR'</span> <i>&quot;setidcode&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;settypecoding&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;setidtype&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;setidentifier&quot;</i><span style="color: navy">;</span>
+  src<span style="color: navy"><b> -&gt; </b></span>tgt.name<b> as </b><span style="color: maroon">name</span><b> then</b><span style="color: navy"> {
+</span>    src.familyName<b> as </b><span style="color: maroon">fn</span><span style="color: navy"><b> -&gt; </b></span>name.family = <span style="color: maroon">fn</span> <i>&quot;setfamily&quot;</i><span style="color: navy">;</span>
+    src.givenName<b> as </b><span style="color: maroon">gn</span><span style="color: navy"><b> -&gt; </b></span>name.given = <span style="color: maroon">gn</span> <i>&quot;setgiven&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;setname&quot;</i><span style="color: navy">;</span>
+  src.crSex<b> as </b><span style="color: maroon">sex</span><b> where </b>sex = '1'<span style="color: navy"><b> -&gt; </b></span>tgt.gender = <span style="color: blue">'male'</span> <i>&quot;sexmale&quot;</i><span style="color: navy">;</span>
+  src.crSex<b> as </b><span style="color: maroon">sex</span><b> where </b>sex = '2'<span style="color: navy"><b> -&gt; </b></span>tgt.gender = <span style="color: blue">'female'</span> <i>&quot;sexfemale&quot;</i><span style="color: navy">;</span>
+  src.crSex<b> as </b><span style="color: maroon">sex</span><b> where </b>sex = '9'<span style="color: navy"><b> -&gt; </b></span>tgt.gender = <span style="color: blue">'unknown'</span> <i>&quot;sexunknown&quot;</i><span style="color: navy">;</span>
+  src.dateOfBirth<b> as </b><span style="color: maroon">dob</span><span style="color: navy"><b> -&gt; </b></span>tgt.birthDate = <span style="color: maroon">dob</span> <i>&quot;setbirthdate&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient"/>
+  <version value="0.1.0"/>
+  <name value="CancerRegistryToPatient"/>
+  <title value="Transform: Cancer Registry Enrollment to Patient"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Transform: Cancer Registry Enrollment to Patient"/>
+  <structure>
+    <url value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry"/>
+    <mode value="source"/>
+    <alias value="CancerRegistry"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <mode value="target"/>
+    <alias value="Patient"/>
+  </structure>
+  <group>
+    <name value="CancerRegistryToPatient"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="CancerRegistry"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Patient"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="setmeta"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="meta"/>
+        <variable value="meta"/>
+      </target>
+      <rule>
+        <name value="setprofile"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="meta"/>
+          <contextType value="variable"/>
+          <element value="profile"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="setidentifier"/>
+      <source>
+        <context value="src"/>
+        <element value="crPatientId"/>
+        <variable value="patientId"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="identifier"/>
+        <variable value="ident"/>
+      </target>
+      <rule>
+        <name value="setidvalue"/>
+        <source>
+          <context value="patientId"/>
+        </source>
+        <target>
+          <context value="ident"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="patientId"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="setidtype"/>
+        <source>
+          <context value="patientId"/>
+        </source>
+        <target>
+          <context value="ident"/>
+          <contextType value="variable"/>
+          <element value="type"/>
+          <variable value="idType"/>
+        </target>
+        <rule>
+          <name value="settypecoding"/>
+          <source>
+            <context value="patientId"/>
+          </source>
+          <target>
+            <context value="idType"/>
+            <contextType value="variable"/>
+            <element value="coding"/>
+            <variable value="coding"/>
+          </target>
+          <rule>
+            <name value="setidsystem"/>
+            <source>
+              <context value="patientId"/>
+            </source>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="system"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+              </parameter>
+            </target>
+          </rule>
+          <rule>
+            <name value="setidcode"/>
+            <source>
+              <context value="patientId"/>
+            </source>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="code"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="MR"/>
+              </parameter>
+            </target>
+          </rule>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="setname"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="name"/>
+        <variable value="name"/>
+      </target>
+      <rule>
+        <name value="setfamily"/>
+        <source>
+          <context value="src"/>
+          <element value="familyName"/>
+          <variable value="fn"/>
+        </source>
+        <target>
+          <context value="name"/>
+          <contextType value="variable"/>
+          <element value="family"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="fn"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="setgiven"/>
+        <source>
+          <context value="src"/>
+          <element value="givenName"/>
+          <variable value="gn"/>
+        </source>
+        <target>
+          <context value="name"/>
+          <contextType value="variable"/>
+          <element value="given"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="gn"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="sexmale"/>
+      <source>
+        <context value="src"/>
+        <element value="crSex"/>
+        <variable value="sex"/>
+        <condition value="sex = '1'"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="gender"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="male"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="sexfemale"/>
+      <source>
+        <context value="src"/>
+        <element value="crSex"/>
+        <variable value="sex"/>
+        <condition value="sex = '2'"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="gender"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="female"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="sexunknown"/>
+      <source>
+        <context value="src"/>
+        <element value="crSex"/>
+        <variable value="sex"/>
+        <condition value="sex = '9'"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="gender"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="unknown"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="setbirthdate"/>
+      <source>
+        <context value="src"/>
+        <element value="dateOfBirth"/>
+        <variable value="dob"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="birthDate"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueId value="dob"/>
+        </parameter>
+      </target>
+    </rule>
+  </group>
+</StructureMap>

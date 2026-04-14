@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/Encounter/ExampleTumorEncounter> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleTumorEncounter"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter"^^xsd:anyURI ;
+       fhir:l <https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter ExampleTumorEncounter</b></p><a name=\"ExampleTumorEncounter\"> </a><a name=\"hcExampleTumorEncounter\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-cr-tumor-encounter.html\">Tumor Registration Encounter</a></p></div><p><b>Rare Tumor Classification</b>: false</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type tumor}\">Tumor Registration</span></p><p><b>subject</b>: <a href=\"Patient-ExampleCRPatient.html\">Jane Doe  Female, DoB: 1970-03-15 ( Medical record number)</a></p><p><b>episodeOfCare</b>: <a href=\"EpisodeOfCare-ExampleCRRegistrationEpisode.html\">EpisodeOfCare: status = active; period = 2026-01-01 --&gt; (ongoing)</a></p><p><b>period</b>: 2026-01-01 --&gt; (ongoing)</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-rare"^^xsd:anyURI ;
+       fhir:l <https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-rare>
+     ] ;
+     fhir:value [
+       a fhir:Boolean ;
+       fhir:v false
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"^^xsd:anyURI ;
+         fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type>
+       ] ;
+       fhir:code [ fhir:v "tumor" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <https://dhis2.org/fhir/cancer-registry/Patient/ExampleCRPatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleCRPatient" ]
+  ] ; # 
+  fhir:episodeOfCare ( [
+     fhir:l <https://dhis2.org/fhir/cancer-registry/EpisodeOfCare/ExampleCRRegistrationEpisode> ;
+     fhir:reference [ fhir:v "EpisodeOfCare/ExampleCRRegistrationEpisode" ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2026-01-01"^^xsd:date ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

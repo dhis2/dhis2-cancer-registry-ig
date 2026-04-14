@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CRTumorNumberCS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRTumorNumberCS</b></p><a name=\"CRTumorNumberCS\"> </a><a name=\"hcCRTumorNumberCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">01<a name=\"CRTumorNumberCS-01\"> </a></td></tr><tr><td style=\"white-space:nowrap\">02<a name=\"CRTumorNumberCS-02\"> </a></td></tr><tr><td style=\"white-space:nowrap\">03<a name=\"CRTumorNumberCS-03\"> </a></td></tr><tr><td style=\"white-space:nowrap\">04<a name=\"CRTumorNumberCS-04\"> </a></td></tr><tr><td style=\"white-space:nowrap\">05<a name=\"CRTumorNumberCS-05\"> </a></td></tr><tr><td style=\"white-space:nowrap\">06<a name=\"CRTumorNumberCS-06\"> </a></td></tr><tr><td style=\"white-space:nowrap\">07<a name=\"CRTumorNumberCS-07\"> </a></td></tr><tr><td style=\"white-space:nowrap\">08<a name=\"CRTumorNumberCS-08\"> </a></td></tr><tr><td style=\"white-space:nowrap\">09<a name=\"CRTumorNumberCS-09\"> </a></td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"CRTumorNumberCS-10\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRTumorNumberCS"] ; # 
+  fhir:title [ fhir:v "CR - Tumor number"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Tumor number codes used as a unique identifier for each tumor within the registry. Combined with the Patient ID, the Tumor Number constitutes the Tumor ID (the composite identifier that uniquely identifies a tumor record). A validation mechanism prevents the same tumor number from being assigned to more than one tumor belonging to the same patient."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "01" ] ;
+     fhir:display [ fhir:v "01" ]
+  ] [
+     fhir:code [ fhir:v "02" ] ;
+     fhir:display [ fhir:v "02" ]
+  ] [
+     fhir:code [ fhir:v "03" ] ;
+     fhir:display [ fhir:v "03" ]
+  ] [
+     fhir:code [ fhir:v "04" ] ;
+     fhir:display [ fhir:v "04" ]
+  ] [
+     fhir:code [ fhir:v "05" ] ;
+     fhir:display [ fhir:v "05" ]
+  ] [
+     fhir:code [ fhir:v "06" ] ;
+     fhir:display [ fhir:v "06" ]
+  ] [
+     fhir:code [ fhir:v "07" ] ;
+     fhir:display [ fhir:v "07" ]
+  ] [
+     fhir:code [ fhir:v "08" ] ;
+     fhir:display [ fhir:v "08" ]
+  ] [
+     fhir:code [ fhir:v "09" ] ;
+     fhir:display [ fhir:v "09" ]
+  ] [
+     fhir:code [ fhir:v "10" ] ;
+     fhir:display [ fhir:v "10" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

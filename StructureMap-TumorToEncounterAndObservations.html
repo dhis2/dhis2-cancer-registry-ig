@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Transform: Tumor Stage to Encounter + Observations - DHIS2 Cancer Registry Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+<!-- Placeholder for child template CSS declarations -->
+<!-- <link href="assets/css/colors.css" rel="stylesheet"/>! -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.72"}
+    h3,h4,h5,h6{--heading-prefix:"8.72"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="system-design.html">System Design</a>
+  </li>
+  <li>
+    <a href="data-quality-checks.html">Data Quality Checks</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles &amp; Mappings</a>
+  </li>
+  <li>
+    <a href="deployment.html">Deployment</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://dhis2.org/integration/fhir/">
+      <img height="60" alt="Project home" src="assets/images/dhis2.png"/>
+    </a>
+  </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="80" alt="FHIR website" src="assets/images/fhir.png"/> </a>
+  </div>
+
+<!-- search icon - if you want -->
+<!--
+  <div id="hl7-search">
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+-->
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DHIS2 Cancer Registry Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Transform: Tumor Stage to Encounter + Observations</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main'>https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a> and changes regularly. See the <a href='https://dhis2.org/fhir/cancer-registry/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/e2510df70ce53dcdb33212803a8e6476f5e60c09"><code>e2510df7</code></a>.</span></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureMap-TumorToEncounterAndObservations.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureMap-TumorToEncounterAndObservations.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureMap-TumorToEncounterAndObservations.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">StructureMap: Transform: Tumor Stage to Encounter + Observations
+
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2026-04-14
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">TumorToEncounterAndObservations</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>Transform: Tumor Stage to CRTumorEncounter + Observations</p>
+
+</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="StructureMap-TumorToEncounterAndObservations.xml.html">XML</a>, <a href="StructureMap-TumorToEncounterAndObservations.json.html">JSON</a>, <a href="StructureMap-TumorToEncounterAndObservations.ttl.html">Turtle</a>
+  </p>-->
+
+  
+
+
+  <div data-fhir="generated"><p class="res-header-id"/><a name="TumorToEncounterAndObservations"> </a><a name="hcTumorToEncounterAndObservations"> </a><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations<span style="color: navy">&quot; = &quot;</span>TumorToEncounterAndObservations<span style="color: navy">&quot;
+
+</span><span style="color: navy">// </span><span style="color: green">Transform: Tumor Stage to CRTumorEncounter + Observations</span>
+
+<b>uses</b><span style="color: navy"> &quot;</span><a href="StructureDefinition-Tumor.html" title="Tumor">https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor</a><span style="color: navy">&quot; </span><b>alias </b>Tumor <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>
+
+<b>group </b>TumorToBundle<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>Tumor, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>Bundle<span style="color: navy">)</span><span style="color: navy"> {
+</span>  src<span style="color: navy"><b> -&gt; </b></span>tgt.type = <span style="color: blue">'transaction'</span> <i>&quot;setbundletype&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Create the Encounter resource</span>
+  src<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Encounter'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">enc</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>enc.meta<b> as </b><span style="color: maroon">meta</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>meta.profile = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter'</span> <i>&quot;setencprofile&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;setencmeta&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span>enc.status = <span style="color: blue">'finished'</span> <i>&quot;setencstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span>enc.class<b> as </b><span style="color: maroon">cls</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cls.system = <span style="color: blue">'http://terminology.hl7.org/CodeSystem/v3-ActCode'</span> <i>&quot;setclssystem&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cls.code = <span style="color: blue">'AMB'</span> <i>&quot;setclscode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;setencclass&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span>enc.type<b> as </b><span style="color: maroon">tp</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>tp.coding<b> as </b><span style="color: maroon">coding</span><b> then</b><span style="color: navy"> {
+</span>        src<span style="color: navy"><b> -&gt; </b></span>coding.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type'</span> <i>&quot;settypesystem&quot;</i><span style="color: navy">;</span>
+        src<span style="color: navy"><b> -&gt; </b></span>coding.code = <span style="color: blue">'tumor'</span> <i>&quot;settypecode&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;settypecoding&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;setenctype&quot;</i><span style="color: navy">;</span>
+    src.crIncidenceDate<b> as </b><span style="color: maroon">dt</span><span style="color: navy"><b> -&gt; </b></span> enc.period<b> as </b><span style="color: maroon">p</span><span style="color: navy">, </span> p.start = <span style="color: maroon">dt</span> <i>&quot;setencperiod&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createencounter&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Topography Observation</span>
+  src.crTopography<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;topostatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;topocodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'topography'</span> <i>&quot;topocodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;topocode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS'</span> <i>&quot;topovalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;topovalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;topovalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createtopography&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Morphology Observation</span>
+  src.crMorphology<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;morphstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;morphcodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'morphology'</span> <i>&quot;morphcodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;morphcode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS'</span> <i>&quot;morphvalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;morphvalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;morphvalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createmorphology&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Behaviour Observation</span>
+  src.crBehaviour<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;behavstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;behavcodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'behaviour'</span> <i>&quot;behavcodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;behavcode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS'</span> <i>&quot;behavvalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;behavvalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;behavvalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createbehaviour&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Grade Observation (LOINC code)</span>
+  src.crGrade<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;gradestatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'http://loinc.org'</span> <i>&quot;gradecodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'33732-9'</span> <i>&quot;gradecodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;gradecode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS'</span> <i>&quot;gradevalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;gradevalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;gradevalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;creategrade&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Basis of Diagnosis Observation</span>
+  src.crBasisDiagnosis<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;basisstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;basiscodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'basis-of-diagnosis'</span> <i>&quot;basiscodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;basiscode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS'</span> <i>&quot;basisvalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;basisvalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;basisvalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createbasis&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Site Observation</span>
+  src.crSite<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;sitestatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;sitecodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'site'</span> <i>&quot;sitecodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;sitecode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS'</span> <i>&quot;sitevalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;sitevalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;sitevalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createsite&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Incidence Date Observation</span>
+  src.crIncidenceDate<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;incdatestatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;incdatecodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'incidence-date'</span> <i>&quot;incdatecodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;incdatecode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'dateTime'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">dt</span><span style="color: navy">, </span> dt.value = <span style="color: maroon">val</span> <i>&quot;incdatevalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createincidencedate&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Age at Incidence Observation</span>
+  src.crAge<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;agestatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;agecodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'age-at-incidence'</span> <i>&quot;agecodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;agecode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'integer'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">i</span><span style="color: navy">, </span> i.value = <span style="color: maroon">val</span> <i>&quot;agevalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createage&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Tumor Number Observation</span>
+  src.crTumorNumber<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;tnstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;tncodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'tumor-number'</span> <i>&quot;tncodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;tncode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS'</span> <i>&quot;tnvalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;tnvalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;tnvalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createtumornumber&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Address Observation</span>
+  src.crAddress<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;addrstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;addrcodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'address'</span> <i>&quot;addrcodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;addrcode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS'</span> <i>&quot;addrvalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;addrvalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;addrvalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createaddress&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>.  Package dhis2.cancer.registry#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 07:58+0000">2026-04-14</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhis2.org/fhir/cancer-registry/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

@@ -1,0 +1,1567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="dhis2.cancer.registry"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide dhis2.cancer.registry</b></p><a name="dhis2.cancer.registry"> </a><a name="hcdhis2.cancer.registry"> </a><h2>DHIS2CancerRegistryIG</h2><p>The official URL for this implementation guide is: </p><pre>https://dhis2.org/fhir/cancer-registry/ImplementationGuide/dhis2.cancer.registry</pre><div><p>This implementation guide defines the FHIR logical models and terminology for the DHIS2 Cancer Registry metadata package, aligned with CanReg5 data standards developed by the International Agency for Research on Cancer (IARC). The FHIR artifacts in this IG are generated from a DHIS2 Tracker program for individual-level cancer case registration supporting population-based monitoring, with embedded data quality control checks based on CanReg5 validation logic covering age, sex, topography, morphology, behaviour, grade and basis of diagnosis combinations.</p>
+</div></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/ImplementationGuide/dhis2.cancer.registry"/>
+  <version value="0.1.0"/>
+  <name value="DHIS2CancerRegistryIG"/>
+  <title value="DHIS2 Cancer Registry Implementation Guide"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="This implementation guide defines the FHIR logical models and terminology for the DHIS2 Cancer Registry metadata package, aligned with CanReg5 data standards developed by the International Agency for Research on Cancer (IARC). The FHIR artifacts in this IG are generated from a DHIS2 Tracker program for individual-level cancer case registration supporting population-based monitoring, with embedded data quality control checks based on CanReg5 validation logic covering age, sex, topography, morphology, behaviour, grade and basis of diagnosis combinations."/>
+  <packageId value="dhis2.cancer.registry"/>
+  <license value="CC-BY-SA-3.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.1.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_crmi">
+    <uri value="http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi"/>
+    <packageId value="hl7.fhir.uv.crmi"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-map"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/maps"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://dhis2.org/fhir/cancer-registry/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-map"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/maps"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://dhis2.org/fhir/cancer-registry/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-address-observation"/>
+      </reference>
+      <name value="Address"/>
+      <description value="Administrative address code of the patient at incidence. Country-specific — must be localised. Corresponds to the CR - Address data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-age-at-incidence-observation"/>
+      </reference>
+      <name value="Age at Incidence"/>
+      <description value="Age of the patient at the date of incidence. Corresponds to the CR - Age data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-basis-of-diagnosis-observation"/>
+      </reference>
+      <name value="Basis of Diagnosis"/>
+      <description value="How the cancer diagnosis was established, coded according to the ICD-O-3 basis of diagnosis classification (codes 0–9). Corresponds to the CR - Basis diagnosis data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-behaviour-observation"/>
+      </reference>
+      <name value="Behaviour"/>
+      <description value="ICD-O-3 behaviour code of the neoplasm: 0=benign, 1=uncertain, 2=in situ, 3=malignant (primary site). Corresponds to the CR - Behaviour data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-cancer-registration-episode"/>
+      </reference>
+      <name value="Cancer Registration EpisodeOfCare"/>
+      <description value="Episode of Care representing the overall enrollment of a patient in the cancer registry. Corresponds to the DHIS2 Cancer Registry tracker program enrollment. All stage-level Encounters (Tumor, Source, Follow-up) reference this episode."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/CancerRegistry"/>
+      </reference>
+      <name value="Cancer Registry"/>
+      <description value="Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cr-encounter-type"/>
+      </reference>
+      <name value="Cancer Registry Encounter Types"/>
+      <description value="Encounter types representing the three repeatable program stages of the DHIS2 Cancer Registry tracker program."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/cr-encounter-type-vs"/>
+      </reference>
+      <name value="Cancer Registry Encounter Types Value Set"/>
+      <description value="Value set of encounter types for cancer registration stages."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cr-observation-codes"/>
+      </reference>
+      <name value="Cancer Registry Observation Codes"/>
+      <description value="Code system defining observation type codes for cancer registry observations. Used where no standard LOINC code exists for cancer-registry-specific concepts."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/cr-observation-codes-vs"/>
+      </reference>
+      <name value="Cancer Registry Observation Codes Value Set"/>
+      <description value="Value set containing all cancer-registry-specific observation type codes."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-patient"/>
+      </reference>
+      <name value="Cancer Registry Patient"/>
+      <description value="Minimum patient profile for CanReg5-aligned population-based cancer registration. Requires a patient registration number (REGNO) of at least 8 characters following the CanReg5 CURRENT_DATE(yyyy)+SEQUENTIAL(####) convention, family name, administrative sex, and date of birth."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRAddressCS"/>
+      </reference>
+      <name value="CR - Address"/>
+      <description value="Address codes containing placeholder values that must be customised prior to implementation to reflect the administrative geography of the country or region. The recommended approach uses text-type data elements combined with dependent dropdown lists, aligning with the CanReg5 convention where the address variable is two characters in length encoding a combination of two administrative levels."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRAddressVS"/>
+      </reference>
+      <name value="CR - Address value set"/>
+      <description value="Value set of address codes containing placeholder values that must be customised prior to implementation to reflect the administrative geography of the country or region."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRBasisDiagnosisCS"/>
+      </reference>
+      <name value="CR - Basis diagnosis"/>
+      <description value="Basis of diagnosis codes aligned with the CanReg5 basis dictionary. Codes 0-4 represent non-microscopically confirmed diagnoses (death certificate only, clinical, clinical investigation/ultrasound, surgery/autopsy, laboratory test). Codes 5-8 represent microscopically confirmed diagnoses (cytology, histology of metastasis, histology of primary, autopsy with histology). Code 9 represents unknown basis. Used in the Basis data quality check."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRBasisDiagnosisVS"/>
+      </reference>
+      <name value="CR - Basis diagnosis value set"/>
+      <description value="Value set of basis of diagnosis codes aligned with the CanReg5 basis dictionary. Codes 0-4 are non-microscopically confirmed, codes 5-8 are microscopically confirmed, and code 9 is unknown."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRBehaviourCS"/>
+      </reference>
+      <name value="CR - Behaviour"/>
+      <description value="Tumour behaviour codes aligned with the CanReg5 ICD-O-3.2 behaviour dictionary. Used in the Tumor stage to classify the biological behaviour of the neoplasm. These codes are referenced in data quality checks including the Topography-Behaviour and Sex-Morphology checks. Codes must not be modified as they are mapped directly to CanReg5 standards."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRBehaviourVS"/>
+      </reference>
+      <name value="CR - Behaviour value set"/>
+      <description value="Value set of tumour behaviour codes aligned with the CanReg5 ICD-O-3.2 behaviour dictionary, used in the Tumor stage to classify the biological behaviour of the neoplasm."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRGradeCS"/>
+      </reference>
+      <name value="CR - Grade"/>
+      <description value="Tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Codes 1-4 represent histological grade (well differentiated to undifferentiated/anaplastic). Codes 5-8 are reserved for lymphomas and leukaemias (T-cell, B-cell, Null cell, NK cell). Code 9 represents unknown/not stated. Grade is mandatory only when behaviour is malignant (3). These codes are used in the Grade data quality check."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRGradeVS"/>
+      </reference>
+      <name value="CR - Grade value set"/>
+      <description value="Value set of tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Includes histological grades 1-4, lymphoma/leukaemia-specific codes 5-8, and unknown (9). Grade is mandatory only when behaviour is malignant (3)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRMorphologyFamilyCS"/>
+      </reference>
+      <name value="CR - Morphology Family"/>
+      <description value="Morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file. Each morphology code is assigned to a morphological family, which is used in the Sex-Morphology check (to identify rare sex-morphology combinations) and the Topography-Morphology check (to evaluate morphology-topography combinations against MUST and MUST-NOT lookup tables). Code 99 (N/A) indicates the family is accepted with any topography."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRMorphologyFamilyVS"/>
+      </reference>
+      <name value="CR - Morphology Family value set"/>
+      <description value="Value set of morphological family grouping codes derived from the CanReg5 MorphFam.txt lookup file, used in the Sex-Morphology and Topography-Morphology data quality checks."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRMorphologyGroupCS"/>
+      </reference>
+      <name value="CR - Morphology Group"/>
+      <description value="Morphology group codes used in the Multiple Primary Tester data quality check. Groups are derived from morphology codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Groups 8-14 represent haematopoietic/lymphoid tissue subtypes (systemic groups). Group 0 indicates an invalid morphology, and group 17 indicates an unspecified morphology."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRMorphologyGroupVS"/>
+      </reference>
+      <name value="CR - Morphology Group value set"/>
+      <description value="Value set of morphology group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRMorphologyResultCS"/>
+      </reference>
+      <name value="CR - Morphology result"/>
+      <description value="Intermediate morphology evaluation result codes used in the Multiple Primary Tester check. When the morphology comparison between two tumours is inconclusive (undecided), the check proceeds to topography evaluation. 'Invalid' indicates one of the morphology groups is invalid (0). 'Go to topography' indicates the morphology evaluation was undecided and topography comparison is needed."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRMorphologyResultVS"/>
+      </reference>
+      <name value="CR - Morphology result value set"/>
+      <description value="Value set of intermediate morphology evaluation result codes used in the Multiple Primary Tester check to determine whether to proceed to topography evaluation."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRMorphology4CS"/>
+      </reference>
+      <name value="CR - Morphology4"/>
+      <description value="ICD-O-3.2 morphology codes (first four digits) mapped from the CanReg5 morphology dictionary (morphology4.tsv). These codes represent the histological type of the neoplasm. Since the field is configured as a closed option set, validity of morphology values is guaranteed by the data entry interface. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRMorphology4VS"/>
+      </reference>
+      <name value="CR - Morphology4 value set"/>
+      <description value="Value set of ICD-O-3.2 morphology codes (first four digits) mapped from the CanReg5 morphology dictionary, representing histological types of neoplasms."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRMultiplePrimaryTestCS"/>
+      </reference>
+      <name value="CR - Multiple primary test"/>
+      <description value="Result codes for the Multiple Primary Tester data quality check. This check determines whether two or more tumours registered for the same patient represent duplicate registrations of the same tumour or distinct multiple primary tumours, based on the CanReg5 DefaultMultiplePrimaryTester logic."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRMultiplePrimaryTestVS"/>
+      </reference>
+      <name value="CR - Multiple primary test value set"/>
+      <description value="Value set of result codes for the Multiple Primary Tester data quality check, determining whether tumours are duplicate registrations, distinct multiple primaries, or have unknown topography."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRPlaceholderSourceTypeCS"/>
+      </reference>
+      <name value="CR - Placeholder: Source type"/>
+      <description value="Placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect the source types relevant to the local registry context (e.g. hospital records, pathology laboratory reports, death certificates)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRPlaceholderSourceTypeVS"/>
+      </reference>
+      <name value="CR - Placeholder: Source type value set"/>
+      <description value="Value set of placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect local source types (e.g. hospital records, pathology reports, death certificates)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRSexCS"/>
+      </reference>
+      <name value="CR - Sex"/>
+      <description value="Sex codes aligned with the CanReg5 sex dictionary, using numeric codes. These codes are referenced in multiple data quality checks throughout the program, including the Sex-Topography and Sex-Morphology checks. Any modification to these codes or substitution with a differently coded option set would break the logic of those checks."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRSexVS"/>
+      </reference>
+      <name value="CR - Sex value set"/>
+      <description value="Value set of sex codes aligned with the CanReg5 sex dictionary. These numeric codes are referenced in multiple data quality checks including Sex-Topography and Sex-Morphology checks."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRSiteCS"/>
+      </reference>
+      <name value="CR - Site"/>
+      <description value="Anatomical site codes used to filter topography values in a dependent dropdown list. When a site is selected, only the topography codes valid for the chosen site are presented for selection, simplifying data entry for registry staff."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRSiteVS"/>
+      </reference>
+      <name value="CR - Site value set"/>
+      <description value="Value set of anatomical site codes used to filter topography values in a dependent dropdown list for simplified data entry."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRTopographyCS"/>
+      </reference>
+      <name value="CR - Topography"/>
+      <description value="ICD-O-3 topography codes mapped from the CanReg5 topography dictionary (topography.tsv). These codes represent the anatomical site of the tumour origin. The topography field is implemented as a dependent dropdown list filtered by the selected Site. Codes must not be modified as they are mapped directly to CanReg5 standards and used in multiple data quality checks."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRTopographyGroupCS"/>
+      </reference>
+      <name value="CR - Topography Group"/>
+      <description value="Topography group codes used in the Multiple Primary Tester data quality check. Groups are derived from topography codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Group 80 indicates an unspecified topography. These groups determine whether tumours at different sites should be considered duplicate or multiple primaries."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRTopographyGroupVS"/>
+      </reference>
+      <name value="CR - Topography Group value set"/>
+      <description value="Value set of topography group codes used in the Multiple Primary Tester data quality check, derived from the CanReg5 DefaultMultiplePrimaryTester mapping logic."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRTopographyMorphologyKeyCS"/>
+      </reference>
+      <name value="CR - Topography Morphology key"/>
+      <description value="Keys used in the Topography-Morphology data quality check to determine how each morphological family relates to topography. NA (*): the family is accepted with any topography. Plus (+): the family has a restricted set of expected topography sites checked against the MUST list. Minus (-): the family has a restricted set of prohibited topography sites checked against the MUST-NOT list."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRTopographyMorphologyKeyVS"/>
+      </reference>
+      <name value="CR - Topography Morphology key value set"/>
+      <description value="Value set of keys used in the Topography-Morphology data quality check. NA (*) means accepted with any topography; Plus (+) means checked against the MUST list; Minus (-) means checked against the MUST-NOT list."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRTopographyVS"/>
+      </reference>
+      <name value="CR - Topography value set"/>
+      <description value="Value set of ICD-O-3 topography codes mapped from the CanReg5 topography dictionary, representing anatomical sites of tumour origin."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRTumorNumberCS"/>
+      </reference>
+      <name value="CR - Tumor number"/>
+      <description value="Tumor number codes used as a unique identifier for each tumor within the registry. Combined with the Patient ID, the Tumor Number constitutes the Tumor ID (the composite identifier that uniquely identifies a tumor record). A validation mechanism prevents the same tumor number from being assigned to more than one tumor belonging to the same patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRTumorNumberVS"/>
+      </reference>
+      <name value="CR - Tumor number value set"/>
+      <description value="Value set of tumor number identifiers. Combined with the Patient ID, the Tumor Number forms the Tumor ID composite identifier that uniquely identifies a tumor record within the system."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/CRVitalStatusCS"/>
+      </reference>
+      <name value="CR - Vital status"/>
+      <description value="Vital status codes used in the Follow-up stage to record the current status of the registered patient. When the status is 'Died', the date of death must also be recorded."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/CRVitalStatusVS"/>
+      </reference>
+      <name value="CR - Vital status value set"/>
+      <description value="Value set of vital status codes used in the Follow-up stage to record the current status of the registered patient."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-date-of-death-observation"/>
+      </reference>
+      <name value="Date of Death"/>
+      <description value="Date of death of the cancer registry patient, recorded when the vital status is 'dead'. Corresponds to the CR - Date of death data element in the DHIS2 Cancer Registry Follow-up stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dhis2-data-elements-cs"/>
+      </reference>
+      <name value="DHIS2 Data Elements"/>
+      <description value="Code system for 47 unique DHIS2 data elements from all selected programs"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dhis2-tracked-entity-attributes-cs"/>
+      </reference>
+      <name value="DHIS2 Tracked Entity Attributes"/>
+      <description value="Code system for 5 unique DHIS2 tracked entity attributes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleAgeAtIncidence"/>
+      </reference>
+      <name value="Example Age at Incidence"/>
+      <description value="Age at incidence: 54 years."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-age-at-incidence-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleBasisOfDiagnosis"/>
+      </reference>
+      <name value="Example Basis of Diagnosis"/>
+      <description value="Basis of diagnosis observation: 7 — Histology of primary."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-basis-of-diagnosis-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleBehaviour"/>
+      </reference>
+      <name value="Example Behaviour"/>
+      <description value="Behaviour observation: 3 — Malignant, primary site."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-behaviour-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="EpisodeOfCare"/>
+      </extension>
+      <reference>
+        <reference value="EpisodeOfCare/ExampleCRRegistrationEpisode"/>
+      </reference>
+      <name value="Example Cancer Registration Episode"/>
+      <description value="Episode of care representing the patient's enrollment into the Cancer Registry programme."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/ExampleCRPatient"/>
+      </reference>
+      <name value="Example Cancer Registry Patient"/>
+      <description value="A 54-year-old female patient enrolled in the DHIS2 Cancer Registry."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/ExampleFollowUpEncounter"/>
+      </reference>
+      <name value="Example Follow-up Encounter"/>
+      <description value="Encounter recording a 6-month follow-up contact."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-followup-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleGrade"/>
+      </reference>
+      <name value="Example Grade"/>
+      <description value="Histological grade observation: Grade 2 — moderately differentiated."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-grade-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleIncidenceDate"/>
+      </reference>
+      <name value="Example Incidence Date"/>
+      <description value="Incidence date observation: 2026-01-01."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-incidence-date-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleMorphology"/>
+      </reference>
+      <name value="Example Morphology"/>
+      <description value="Morphology observation: 8500 — Infiltrating duct carcinoma, NOS."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-morphology-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleSite"/>
+      </reference>
+      <name value="Example Site"/>
+      <description value="Site observation: Breast."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-site-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/ExampleSourceEncounter"/>
+      </reference>
+      <name value="Example Source Encounter"/>
+      <description value="Encounter recording the Source stage event: hospital notification."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleSourceTumorNumber"/>
+      </reference>
+      <name value="Example Source Tumor Number"/>
+      <description value="Source links to tumor number 01."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-tumor-number-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleSourceType"/>
+      </reference>
+      <name value="Example Source Type"/>
+      <description value="Source type: placeholder source type (to be localised)."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-type-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleTopography"/>
+      </reference>
+      <name value="Example Topography"/>
+      <description value="Topography observation: C50.4 — Upper-outer quadrant of breast."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-topography-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/ExampleTumorEncounter"/>
+      </reference>
+      <name value="Example Tumor Encounter"/>
+      <description value="Encounter recording the Tumor stage event for primary breast carcinoma."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleTumorNumber"/>
+      </reference>
+      <name value="Example Tumor Number"/>
+      <description value="Tumour number: 01 (first tumour registered for this patient)."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-number-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ExampleVitalStatus"/>
+      </reference>
+      <name value="Example Vital Status"/>
+      <description value="Patient alive at 6-month follow-up."/>
+      <exampleCanonical value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-vital-status-observation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/FollowUp"/>
+      </reference>
+      <name value="Follow up"/>
+      <description value="Follow-up stage of the DHIS2 Cancer Registry tracker program. This repeatable stage records the follow-up status of the registered patient over time, capturing the date of last contact, the vital status, and, in cases where the status is death, the date of death. This stage is not associated with a specific tumor or source."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/FollowUpQuestionnaire"/>
+      </reference>
+      <name value="Follow up Questionnaire"/>
+      <description value="Questionnaire for the Follow-up stage of the DHIS2 Cancer Registry tracker program. Records the follow-up status of registered patients over time, capturing the date of last contact, vital status, and date of death when applicable. This stage is not associated with a specific tumor or source."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-followup-encounter"/>
+      </reference>
+      <name value="Follow-up Encounter"/>
+      <description value="Encounter representing a single Follow-up stage event in the DHIS2 Cancer Registry tracker program. Each follow-up contact with a registered patient to ascertain vital status is recorded as a separate encounter. Observations within this encounter capture the vital status, date of last contact, and optional date of death."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-grade-observation"/>
+      </reference>
+      <name value="Histological Grade"/>
+      <description value="Histological grade (differentiation) of the tumour as defined in ICD-O-3. LOINC 33732-9. Grade codes: 1=well differentiated, 2=moderately differentiated, 3=poorly differentiated, 4=undifferentiated, 5–8=lymphomas/leukaemias, 9=not determined. Corresponds to the CR - Grade data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-incidence-date-observation"/>
+      </reference>
+      <name value="Incidence Date"/>
+      <description value="Date of incidence (diagnosis date) of the cancer case. Corresponds to the CR - Incidence date data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-morphology-observation"/>
+      </reference>
+      <name value="Morphology"/>
+      <description value="ICD-O-3 morphology code (4-digit histological type) of the neoplasm, e.g. 8500 = infiltrating duct carcinoma. Corresponds to the CR - Morphology data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-rare"/>
+      </reference>
+      <name value="Rare Tumor Classification"/>
+      <description value="Indicates whether the registered tumor has been classified as rare according to the IARC/CanReg5 data quality checks. This is a computed flag derived from the topography-morphology combination evaluated against the IARC rare cancer reference tables. Corresponds to the CR - Rare data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-site-observation"/>
+      </reference>
+      <name value="Site"/>
+      <description value="Higher-level anatomical site grouping derived from the ICD-O-3 topography. Corresponds to the CR - Site data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Source"/>
+      </reference>
+      <name value="Source"/>
+      <description value="Source stage of the DHIS2 Cancer Registry tracker program. This repeatable stage records the documentation sources from which a cancer case has been notified to the registry. Each source represents a piece of documentation, such as a hospital record, pathology report, or death certificate, that supports the registration of a specific tumor. Sources are linked to a specific tumor via the Tumor Number."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-source-encounter"/>
+      </reference>
+      <name value="Source Notification Encounter"/>
+      <description value="Encounter representing a single Source stage event in the DHIS2 Cancer Registry tracker program. Each documentation source (hospital record, pathology report, death certificate, etc.) that notifies the registry about a cancer case is recorded as a separate encounter. Observations within this encounter capture the source type and linked tumor number."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/SourceQuestionnaire"/>
+      </reference>
+      <name value="Source Questionnaire"/>
+      <description value="Questionnaire for the Source stage of the DHIS2 Cancer Registry tracker program. Records the documentation sources from which a cancer case has been notified to the registry. Each source represents a piece of documentation (such as a hospital record, pathology report, or death certificate) linked to a specific tumor via the Tumor Number. Contains a visible Source section and a hidden TUMOURIDSOURCETABLE section used for CanReg5 data extraction."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-source-tumor-number-observation"/>
+      </reference>
+      <name value="Source Tumor Number"/>
+      <description value="Tumor number that this source notification relates to. Links the source to a specific tumor within the patient's registration. Corresponds to the CR - Source: Tumor number data element in the DHIS2 Cancer Registry Source stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-source-type-observation"/>
+      </reference>
+      <name value="Source Type"/>
+      <description value="Type of documentation source that notified the cancer registry about a case (e.g. hospital, laboratory, death certificate). Country-specific — must be localised. Corresponds to the CR - Source Type data element in the DHIS2 Cancer Registry Source stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-topography-observation"/>
+      </reference>
+      <name value="Topography"/>
+      <description value="ICD-O-3 topography code indicating the anatomical site of the primary tumour. Corresponds to the CR - Topography data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/CancerRegistryToEpisode"/>
+      </reference>
+      <name value="Transform: Cancer Registry Enrollment to EpisodeOfCare"/>
+      <description value="Maps DHIS2 Cancer Registry enrollment to a FHIR EpisodeOfCare resource."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/CancerRegistryToPatient"/>
+      </reference>
+      <name value="Transform: Cancer Registry Enrollment to Patient"/>
+      <description value="Maps DHIS2 Cancer Registry enrollment TEAs to a FHIR Patient resource."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/FollowUpToEncounterAndObservations"/>
+      </reference>
+      <name value="Transform: Follow-up Stage to Encounter + Observations"/>
+      <description value="Maps a DHIS2 Follow-up stage event to a FHIR Encounter and Observation bundle."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/SourceToEncounterAndObservations"/>
+      </reference>
+      <name value="Transform: Source Stage to Encounter + Observations"/>
+      <description value="Maps a DHIS2 Source stage event to a FHIR Encounter and Observation bundle."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureMap"/>
+      </extension>
+      <reference>
+        <reference value="StructureMap/TumorToEncounterAndObservations"/>
+      </reference>
+      <name value="Transform: Tumor Stage to Encounter + Observations"/>
+      <description value="Maps a DHIS2 Tumor stage event to a FHIR Encounter and Observation bundle."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Tumor"/>
+      </reference>
+      <name value="Tumor"/>
+      <description value="Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-tumor-number-observation"/>
+      </reference>
+      <name value="Tumor Number"/>
+      <description value="Sequential tumor number within the patient's registration (1–10). Corresponds to the CR - Tumor number data element in the DHIS2 Cancer Registry Tumor stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Questionnaire"/>
+      </extension>
+      <reference>
+        <reference value="Questionnaire/TumorQuestionnaire"/>
+      </reference>
+      <name value="Tumor Questionnaire"/>
+      <description value="Questionnaire for the Tumor stage of the DHIS2 Cancer Registry tracker program. This is the central data collection component, structured into sections: Patient (demographics and geographic information), Tumor (core variables aligned with CanReg5 ICD-O-3.2 standards including site, topography, morphology, behaviour, basis of diagnosis, and grade), Check Status (triggers for executing data quality checks), Checks (hidden section storing individual check results for rare/invalid classifications), Morphology Topography Check (hidden section for topography-morphology validation), Multiple Primary Tester (hidden section for duplicate/multiple primary determination), Rare Status (confirmation of flagged rare cases by authorised supervisors), and Tumor ID (hidden section supporting CanReg5 data extraction)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-tumor-encounter"/>
+      </reference>
+      <name value="Tumor Registration Encounter"/>
+      <description value="Encounter representing a single Tumor stage event in the DHIS2 Cancer Registry tracker program. Each time a tumour is registered for a patient, a new Encounter of this type is created. Observations for each data element (topography, morphology, behaviour, grade, basis of diagnosis, etc.) reference this Encounter."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/cr-vital-status-observation"/>
+      </reference>
+      <name value="Vital Status"/>
+      <description value="Follow-up vital status of the registered cancer patient (alive, dead, or unknown). Corresponds to the CR - Status data element in the DHIS2 Cancer Registry Follow-up stage."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="system-design.html"/>
+        </extension>
+        <nameUrl value="system-design.html"/>
+        <title value="System Design"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="data-quality-checks.html"/>
+        </extension>
+        <nameUrl value="data-quality-checks.html"/>
+        <title value="Data Quality Checks"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="deployment.html"/>
+        </extension>
+        <nameUrl value="deployment.html"/>
+        <title value="Deployment"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="profiles.html"/>
+        </extension>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles &amp; Mappings"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="references.html"/>
+        </extension>
+        <nameUrl value="references.html"/>
+        <title value="References"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="license.html"/>
+        </extension>
+        <nameUrl value="license.html"/>
+        <title value="License"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

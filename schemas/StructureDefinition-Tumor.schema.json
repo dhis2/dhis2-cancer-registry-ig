@@ -1,0 +1,760 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-Tumor.schema.json",
+  "title": "Tumor",
+  "description": "Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "Tumor",
+      "description": "Resource type identifier for Tumor logical model"
+    },
+    "@context": {
+      "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "URI reference to external JSON-LD context"
+        },
+        {
+          "type": "object",
+          "description": "Inline JSON-LD context",
+          "properties": {
+            "@version": {
+              "type": "number",
+              "const": 1.1
+            },
+            "fhir": {
+              "type": "string",
+              "const": "http://hl7.org/fhir/"
+            }
+          },
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        {
+          "type": "array",
+          "description": "Array of JSON-LD context objects/URIs",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "@type": {
+      "type": "string",
+      "description": "JSON-LD type identifier for Tumor logical model",
+      "examples": [
+        "LogicalModel-Tumor"
+      ]
+    },
+    "crIncidenceDate": {
+      "type": "string",
+      "format": "date",
+      "description": "CR - Incidence date"
+    },
+    "crAge": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "CR - Age"
+    },
+    "crAddress": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRAddressVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRAddressVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRAddressVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRAddressVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRAddressVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Address"
+    },
+    "crTumorNumber": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRTumorNumberVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRTumorNumberVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRTumorNumberVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRTumorNumberVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRTumorNumberVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Tumor number"
+    },
+    "crSite": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRSiteVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRSiteVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRSiteVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRSiteVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRSiteVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Site"
+    },
+    "crTopography": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRTopographyVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRTopographyVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRTopographyVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRTopographyVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRTopographyVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Topography"
+    },
+    "crMorphology": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRMorphology4VS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRMorphology4VS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRMorphology4VS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRMorphology4VS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRMorphology4VS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Morphology"
+    },
+    "crBehaviour": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRBehaviourVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRBehaviourVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRBehaviourVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRBehaviourVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRBehaviourVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Behaviour"
+    },
+    "crBasisDiagnosis": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRBasisDiagnosisVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRBasisDiagnosisVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRBasisDiagnosisVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRBasisDiagnosisVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRBasisDiagnosisVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Basis diagnosis"
+    },
+    "crGrade": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRGradeVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRGradeVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRGradeVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRGradeVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRGradeVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Grade"
+    },
+    "crChecksRunChecks": {
+      "type": "boolean",
+      "description": "CR - Checks: Run checks"
+    },
+    "crRunTopographyMorphologyCheck": {
+      "type": "boolean",
+      "description": "CR - Run Topography Morphology check"
+    },
+    "crRunMultiplePrimaryCheck": {
+      "type": "boolean",
+      "description": "CR - Run Multiple primary check"
+    },
+    "crChecksRareAgeMorphology": {
+      "type": "boolean",
+      "description": "CR - Checks: Rare Age Morphology"
+    },
+    "crChecksRareAgeTopography": {
+      "type": "boolean",
+      "description": "CR - Checks: Rare Age Topography"
+    },
+    "crChecksRareAgeTopographyMorphology": {
+      "type": "boolean",
+      "description": "CR - Checks: Rare Age Topography Morphology"
+    },
+    "crChecksRareBasis": {
+      "type": "boolean",
+      "description": "CR - Checks: Rare Basis"
+    },
+    "crChecksInvalidGrade": {
+      "type": "boolean",
+      "description": "CR - Checks: Invalid Grade"
+    },
+    "crChecksRareSexMorphology": {
+      "type": "boolean",
+      "description": "CR - Checks: Rare Sex Morphology"
+    },
+    "crChecksInvalidSexTopography": {
+      "type": "boolean",
+      "description": "CR - Checks: Invalid Sex Topography"
+    },
+    "crChecksRareTopographyBehaviour": {
+      "type": "boolean",
+      "description": "CR - Checks: Rare Topography Behaviour"
+    },
+    "crChecksRareTopographyMorphology": {
+      "type": "boolean",
+      "description": "CR - Checks: Rare Topography Morphology"
+    },
+    "crChecksMultiplePrimaryTestResult": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRMultiplePrimaryTestVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRMultiplePrimaryTestVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRMultiplePrimaryTestVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRMultiplePrimaryTestVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRMultiplePrimaryTestVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Checks: Multiple primary test result"
+    },
+    "crRare": {
+      "type": "boolean",
+      "description": "CR - Rare"
+    },
+    "crInvalid": {
+      "type": "boolean",
+      "description": "CR - Invalid"
+    },
+    "crMorphologyFamily": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRMorphologyFamilyVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRMorphologyFamilyVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRMorphologyFamilyVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRMorphologyFamilyVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRMorphologyFamilyVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Morphology Family"
+    },
+    "crTopographyMorphologyKey": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRTopographyMorphologyKeyVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRTopographyMorphologyKeyVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRTopographyMorphologyKeyVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRTopographyMorphologyKeyVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRTopographyMorphologyKeyVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Topography Morphology key"
+    },
+    "crPresentInTheMustList": {
+      "type": "boolean",
+      "description": "CR - Present in the MUST list"
+    },
+    "crPresentInTheMustNotList": {
+      "type": "boolean",
+      "description": "CR - Present in the MUST-NOT list"
+    },
+    "crMorphologyGroup": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRMorphologyGroupVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRMorphologyGroupVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRMorphologyGroupVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRMorphologyGroupVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRMorphologyGroupVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Morphology group"
+    },
+    "crPreviousMorphologyGroup": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRMorphologyGroupVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRMorphologyGroupVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRMorphologyGroupVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRMorphologyGroupVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRMorphologyGroupVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Previous morphology group"
+    },
+    "crPreviousMorphologyGroupMultiple": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRMorphologyGroupVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRMorphologyGroupVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRMorphologyGroupVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRMorphologyGroupVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRMorphologyGroupVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Previous morphology group (multiple)"
+    },
+    "crTopographyGroup": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRTopographyGroupVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRTopographyGroupVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRTopographyGroupVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRTopographyGroupVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRTopographyGroupVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Topography group"
+    },
+    "crPreviousTopographyGroup": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRTopographyGroupVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRTopographyGroupVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRTopographyGroupVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRTopographyGroupVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRTopographyGroupVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Previous topography group"
+    },
+    "crPreviousTopographyGroupMultiple": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRTopographyGroupVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRTopographyGroupVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRTopographyGroupVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRTopographyGroupVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRTopographyGroupVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Previous topography group (multiple)"
+    },
+    "crMorphologyResult": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRMorphologyResultVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRMorphologyResultVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRMorphologyResultVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRMorphologyResultVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRMorphologyResultVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Morphology result"
+    },
+    "crConfirmTheRareStatus": {
+      "type": "boolean",
+      "description": "CR - Confirm the rare status"
+    },
+    "crTumourid": {
+      "type": "string",
+      "description": "CR - TUMOURID"
+    },
+    "crPreviousTumorNumber": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRTumorNumberVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRTumorNumberVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRTumorNumberVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRTumorNumberVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRTumorNumberVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Previous tumor number"
+    },
+    "crPatientId": {
+      "type": "string",
+      "description": "CR - Patient ID"
+    }
+  },
+  "required": [
+    "resourceType",
+    "crTumorNumber"
+  ],
+  "resourceDefinition": "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor",
+  "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base",
+  "jsonld:valuesets": [
+    "CRTopographyGroupVS",
+    "CRMorphologyResultVS",
+    "CRBasisDiagnosisVS",
+    "CRAddressVS",
+    "CRMultiplePrimaryTestVS",
+    "CRMorphology4VS",
+    "CRGradeVS",
+    "CRTopographyMorphologyKeyVS",
+    "CRSiteVS",
+    "CRTumorNumberVS",
+    "CRBehaviourVS",
+    "CRTopographyVS",
+    "CRMorphologyGroupVS",
+    "CRMorphologyFamilyVS"
+  ],
+  "jsonld:contextTemplate": {
+    "@version": 1.1,
+    "fhir": "http://hl7.org/fhir/",
+    "CRTopographyGroupVS": "http://smart.who.int/base/ValueSet-CRTopographyGroupVS.jsonld",
+    "CRMorphologyResultVS": "http://smart.who.int/base/ValueSet-CRMorphologyResultVS.jsonld",
+    "CRBasisDiagnosisVS": "http://smart.who.int/base/ValueSet-CRBasisDiagnosisVS.jsonld",
+    "CRAddressVS": "http://smart.who.int/base/ValueSet-CRAddressVS.jsonld",
+    "CRMultiplePrimaryTestVS": "http://smart.who.int/base/ValueSet-CRMultiplePrimaryTestVS.jsonld",
+    "CRMorphology4VS": "http://smart.who.int/base/ValueSet-CRMorphology4VS.jsonld",
+    "CRGradeVS": "http://smart.who.int/base/ValueSet-CRGradeVS.jsonld",
+    "CRTopographyMorphologyKeyVS": "http://smart.who.int/base/ValueSet-CRTopographyMorphologyKeyVS.jsonld",
+    "CRSiteVS": "http://smart.who.int/base/ValueSet-CRSiteVS.jsonld",
+    "CRTumorNumberVS": "http://smart.who.int/base/ValueSet-CRTumorNumberVS.jsonld",
+    "CRBehaviourVS": "http://smart.who.int/base/ValueSet-CRBehaviourVS.jsonld",
+    "CRTopographyVS": "http://smart.who.int/base/ValueSet-CRTopographyVS.jsonld",
+    "CRMorphologyGroupVS": "http://smart.who.int/base/ValueSet-CRMorphologyGroupVS.jsonld",
+    "CRMorphologyFamilyVS": "http://smart.who.int/base/ValueSet-CRMorphologyFamilyVS.jsonld"
+  }
+}

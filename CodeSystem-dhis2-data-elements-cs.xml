@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dhis2-data-elements-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dhis2-data-elements-cs</b></p><a name="dhis2-data-elements-cs"> </a><a name="hcdhis2-data-elements-cs"> </a><p>This  code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">c6EnHSAMUat<a name="dhis2-data-elements-cs-c6EnHSAMUat"> </a></td><td>CR - Incidence date</td><td>CR - Incidence date</td></tr><tr><td style="white-space:nowrap">tasm9QG8HaF<a name="dhis2-data-elements-cs-tasm9QG8HaF"> </a></td><td>CR - Age</td><td>CR - Age</td></tr><tr><td style="white-space:nowrap">xcUBzN5QFXu<a name="dhis2-data-elements-cs-xcUBzN5QFXu"> </a></td><td>CR - Address</td><td>CR - Address</td></tr><tr><td style="white-space:nowrap">KgDQLAkC5ql<a name="dhis2-data-elements-cs-KgDQLAkC5ql"> </a></td><td>CR - Tumor number</td><td>CR - Tumor number</td></tr><tr><td style="white-space:nowrap">LCSApBii8CI<a name="dhis2-data-elements-cs-LCSApBii8CI"> </a></td><td>CR - Site</td><td>CR - Site</td></tr><tr><td style="white-space:nowrap">zw6Vwqnhvmh<a name="dhis2-data-elements-cs-zw6Vwqnhvmh"> </a></td><td>CR - Topography</td><td>CR - Topography</td></tr><tr><td style="white-space:nowrap">UkyyY1xukJg<a name="dhis2-data-elements-cs-UkyyY1xukJg"> </a></td><td>CR - Morphology</td><td>CR - Morphology</td></tr><tr><td style="white-space:nowrap">MMIuwJdjx8B<a name="dhis2-data-elements-cs-MMIuwJdjx8B"> </a></td><td>CR - Behaviour</td><td>CR - Behaviour</td></tr><tr><td style="white-space:nowrap">uoyoNWrexbY<a name="dhis2-data-elements-cs-uoyoNWrexbY"> </a></td><td>CR - Basis diagnosis</td><td>CR - Basis diagnosis</td></tr><tr><td style="white-space:nowrap">ZMD8dwB3zOZ<a name="dhis2-data-elements-cs-ZMD8dwB3zOZ"> </a></td><td>CR - Grade</td><td>CR - Grade</td></tr><tr><td style="white-space:nowrap">FlGHlAuG4Ly<a name="dhis2-data-elements-cs-FlGHlAuG4Ly"> </a></td><td>CR - Checks: Run checks</td><td>CR - Checks: Run checks</td></tr><tr><td style="white-space:nowrap">nFJ2MJ8Vxuj<a name="dhis2-data-elements-cs-nFJ2MJ8Vxuj"> </a></td><td>CR - Run Topography Morphology check</td><td>CR - Run Topography Morphology check</td></tr><tr><td style="white-space:nowrap">rqpqtJZto2L<a name="dhis2-data-elements-cs-rqpqtJZto2L"> </a></td><td>CR - Run Multiple primary check</td><td>CR - Run Multiple primary check</td></tr><tr><td style="white-space:nowrap">mxfPEKn6kFt<a name="dhis2-data-elements-cs-mxfPEKn6kFt"> </a></td><td>CR - Checks: Rare Age Morphology</td><td>CR - Checks: Rare Age Morphology</td></tr><tr><td style="white-space:nowrap">rPvQffpxaEs<a name="dhis2-data-elements-cs-rPvQffpxaEs"> </a></td><td>CR - Checks: Rare Age Topography</td><td>CR - Checks: Rare Age Topography</td></tr><tr><td style="white-space:nowrap">Laax6wSBp2G<a name="dhis2-data-elements-cs-Laax6wSBp2G"> </a></td><td>CR - Checks: Rare Age Topography Morphology</td><td>CR - Checks: Rare Age Topography Morphology</td></tr><tr><td style="white-space:nowrap">U8v95tUnazC<a name="dhis2-data-elements-cs-U8v95tUnazC"> </a></td><td>CR - Checks: Rare Basis</td><td>CR - Checks: Rare Basis</td></tr><tr><td style="white-space:nowrap">doB0rv08MIc<a name="dhis2-data-elements-cs-doB0rv08MIc"> </a></td><td>CR - Checks: Invalid Grade</td><td>CR - Checks: Invalid Grade</td></tr><tr><td style="white-space:nowrap">FH09UKj7HMC<a name="dhis2-data-elements-cs-FH09UKj7HMC"> </a></td><td>CR - Checks: Rare Sex Morphology</td><td>CR - Checks: Rare Sex Morphology</td></tr><tr><td style="white-space:nowrap">wAmyuRZNNXC<a name="dhis2-data-elements-cs-wAmyuRZNNXC"> </a></td><td>CR - Checks: Invalid Sex Topography</td><td>CR - Checks: Invalid Sex Topography</td></tr><tr><td style="white-space:nowrap">ugeBdJzYHVW<a name="dhis2-data-elements-cs-ugeBdJzYHVW"> </a></td><td>CR - Checks: Rare Topography Behaviour</td><td>CR - Checks: Rare Topography Behaviour</td></tr><tr><td style="white-space:nowrap">fdvzxz58nEE<a name="dhis2-data-elements-cs-fdvzxz58nEE"> </a></td><td>CR - Checks: Rare Topography Morphology</td><td>CR - Checks: Rare Topography Morphology</td></tr><tr><td style="white-space:nowrap">VBkjlEwG4BE<a name="dhis2-data-elements-cs-VBkjlEwG4BE"> </a></td><td>CR - Checks: Multiple primary test result</td><td>CR - Checks: Multiple primary test result</td></tr><tr><td style="white-space:nowrap">jTW2ljvoIc6<a name="dhis2-data-elements-cs-jTW2ljvoIc6"> </a></td><td>CR - Rare</td><td>CR - Rare</td></tr><tr><td style="white-space:nowrap">TXtHNzrfmki<a name="dhis2-data-elements-cs-TXtHNzrfmki"> </a></td><td>CR - Invalid</td><td>CR - Invalid</td></tr><tr><td style="white-space:nowrap">RBu5b3A68mq<a name="dhis2-data-elements-cs-RBu5b3A68mq"> </a></td><td>CR - Morphology Family</td><td>CR - Morphology Family</td></tr><tr><td style="white-space:nowrap">XR1U9dr60xI<a name="dhis2-data-elements-cs-XR1U9dr60xI"> </a></td><td>CR - Topography Morphology key</td><td>CR - Topography Morphology key</td></tr><tr><td style="white-space:nowrap">oZyJlKscN6G<a name="dhis2-data-elements-cs-oZyJlKscN6G"> </a></td><td>CR - Present in the MUST list</td><td>CR - Present in the MUST list</td></tr><tr><td style="white-space:nowrap">DyVH5Q3Qf0Q<a name="dhis2-data-elements-cs-DyVH5Q3Qf0Q"> </a></td><td>CR - Present in the MUST-NOT list</td><td>CR - Present in the MUST-NOT list</td></tr><tr><td style="white-space:nowrap">yt3gq8onyKb<a name="dhis2-data-elements-cs-yt3gq8onyKb"> </a></td><td>CR - Morphology group</td><td>CR - Morphology group</td></tr><tr><td style="white-space:nowrap">eGWudq2aGpY<a name="dhis2-data-elements-cs-eGWudq2aGpY"> </a></td><td>CR - Previous morphology group</td><td>CR - Previous morphology group</td></tr><tr><td style="white-space:nowrap">dTbQZsduHT7<a name="dhis2-data-elements-cs-dTbQZsduHT7"> </a></td><td>CR - Previous morphology group (multiple)</td><td>CR - Previous morphology group (multiple)</td></tr><tr><td style="white-space:nowrap">RmzIYvxiBm4<a name="dhis2-data-elements-cs-RmzIYvxiBm4"> </a></td><td>CR - Topography group</td><td>CR - Topography group</td></tr><tr><td style="white-space:nowrap">FyzoZsxRjjz<a name="dhis2-data-elements-cs-FyzoZsxRjjz"> </a></td><td>CR - Previous topography group</td><td>CR - Previous topography group</td></tr><tr><td style="white-space:nowrap">IhLiguJKuzz<a name="dhis2-data-elements-cs-IhLiguJKuzz"> </a></td><td>CR - Previous topography group (multiple)</td><td>CR - Previous topography group (multiple)</td></tr><tr><td style="white-space:nowrap">n4IHuWceDlW<a name="dhis2-data-elements-cs-n4IHuWceDlW"> </a></td><td>CR - Morphology result</td><td>CR - Morphology result</td></tr><tr><td style="white-space:nowrap">z3JSu92EQhg<a name="dhis2-data-elements-cs-z3JSu92EQhg"> </a></td><td>CR - Confirm the rare status</td><td>CR - Confirm the rare status</td></tr><tr><td style="white-space:nowrap">KwMs1DNVA0R<a name="dhis2-data-elements-cs-KwMs1DNVA0R"> </a></td><td>CR - TUMOURID</td><td>CR - TUMOURID</td></tr><tr><td style="white-space:nowrap">OrVAWBySU43<a name="dhis2-data-elements-cs-OrVAWBySU43"> </a></td><td>CR - Previous tumor number</td><td>CR - Previous tumor number</td></tr><tr><td style="white-space:nowrap">EMoLghRDW4A<a name="dhis2-data-elements-cs-EMoLghRDW4A"> </a></td><td>CR - Patient ID</td><td>CR - Patient ID</td></tr><tr><td style="white-space:nowrap">fID2of7Q8Jj<a name="dhis2-data-elements-cs-fID2of7Q8Jj"> </a></td><td>CR - Source: Tumor number</td><td>CR - Source: Tumor number</td></tr><tr><td style="white-space:nowrap">TgjO873BZTu<a name="dhis2-data-elements-cs-TgjO873BZTu"> </a></td><td>CR - Source date</td><td>CR - Source date</td></tr><tr><td style="white-space:nowrap">Mqz5dPrwWho<a name="dhis2-data-elements-cs-Mqz5dPrwWho"> </a></td><td>CR - Source Type</td><td>CR - Source Type</td></tr><tr><td style="white-space:nowrap">HxMFZcIIZpL<a name="dhis2-data-elements-cs-HxMFZcIIZpL"> </a></td><td>CR - TUMOURIDSOURCETABLE</td><td>CR - TUMOURIDSOURCETABLE</td></tr><tr><td style="white-space:nowrap">Ks2WWWWCuzq<a name="dhis2-data-elements-cs-Ks2WWWWCuzq"> </a></td><td>CR - Date last contact</td><td>CR - Date last contact</td></tr><tr><td style="white-space:nowrap">nMpcjKFF5zt<a name="dhis2-data-elements-cs-nMpcjKFF5zt"> </a></td><td>CR - Status</td><td>CR - Status</td></tr><tr><td style="white-space:nowrap">hCJqPZcw2n6<a name="dhis2-data-elements-cs-hCJqPZcw2n6"> </a></td><td>CR - Date of death</td><td>CR - Date of death</td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"/>
+  <version value="0.1.0"/>
+  <name value="Dhis2DataElementsCS"/>
+  <title value="DHIS2 Data Elements"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Code system for 47 unique DHIS2 data elements from all selected programs"/>
+  <content value="complete"/>
+  <count value="47"/>
+  <concept>
+    <code value="c6EnHSAMUat"/>
+    <display value="CR - Incidence date"/>
+    <definition value="CR - Incidence date"/>
+  </concept>
+  <concept>
+    <code value="tasm9QG8HaF"/>
+    <display value="CR - Age"/>
+    <definition value="CR - Age"/>
+  </concept>
+  <concept>
+    <code value="xcUBzN5QFXu"/>
+    <display value="CR - Address"/>
+    <definition value="CR - Address"/>
+  </concept>
+  <concept>
+    <code value="KgDQLAkC5ql"/>
+    <display value="CR - Tumor number"/>
+    <definition value="CR - Tumor number"/>
+  </concept>
+  <concept>
+    <code value="LCSApBii8CI"/>
+    <display value="CR - Site"/>
+    <definition value="CR - Site"/>
+  </concept>
+  <concept>
+    <code value="zw6Vwqnhvmh"/>
+    <display value="CR - Topography"/>
+    <definition value="CR - Topography"/>
+  </concept>
+  <concept>
+    <code value="UkyyY1xukJg"/>
+    <display value="CR - Morphology"/>
+    <definition value="CR - Morphology"/>
+  </concept>
+  <concept>
+    <code value="MMIuwJdjx8B"/>
+    <display value="CR - Behaviour"/>
+    <definition value="CR - Behaviour"/>
+  </concept>
+  <concept>
+    <code value="uoyoNWrexbY"/>
+    <display value="CR - Basis diagnosis"/>
+    <definition value="CR - Basis diagnosis"/>
+  </concept>
+  <concept>
+    <code value="ZMD8dwB3zOZ"/>
+    <display value="CR - Grade"/>
+    <definition value="CR - Grade"/>
+  </concept>
+  <concept>
+    <code value="FlGHlAuG4Ly"/>
+    <display value="CR - Checks: Run checks"/>
+    <definition value="CR - Checks: Run checks"/>
+  </concept>
+  <concept>
+    <code value="nFJ2MJ8Vxuj"/>
+    <display value="CR - Run Topography Morphology check"/>
+    <definition value="CR - Run Topography Morphology check"/>
+  </concept>
+  <concept>
+    <code value="rqpqtJZto2L"/>
+    <display value="CR - Run Multiple primary check"/>
+    <definition value="CR - Run Multiple primary check"/>
+  </concept>
+  <concept>
+    <code value="mxfPEKn6kFt"/>
+    <display value="CR - Checks: Rare Age Morphology"/>
+    <definition value="CR - Checks: Rare Age Morphology"/>
+  </concept>
+  <concept>
+    <code value="rPvQffpxaEs"/>
+    <display value="CR - Checks: Rare Age Topography"/>
+    <definition value="CR - Checks: Rare Age Topography"/>
+  </concept>
+  <concept>
+    <code value="Laax6wSBp2G"/>
+    <display value="CR - Checks: Rare Age Topography Morphology"/>
+    <definition value="CR - Checks: Rare Age Topography Morphology"/>
+  </concept>
+  <concept>
+    <code value="U8v95tUnazC"/>
+    <display value="CR - Checks: Rare Basis"/>
+    <definition value="CR - Checks: Rare Basis"/>
+  </concept>
+  <concept>
+    <code value="doB0rv08MIc"/>
+    <display value="CR - Checks: Invalid Grade"/>
+    <definition value="CR - Checks: Invalid Grade"/>
+  </concept>
+  <concept>
+    <code value="FH09UKj7HMC"/>
+    <display value="CR - Checks: Rare Sex Morphology"/>
+    <definition value="CR - Checks: Rare Sex Morphology"/>
+  </concept>
+  <concept>
+    <code value="wAmyuRZNNXC"/>
+    <display value="CR - Checks: Invalid Sex Topography"/>
+    <definition value="CR - Checks: Invalid Sex Topography"/>
+  </concept>
+  <concept>
+    <code value="ugeBdJzYHVW"/>
+    <display value="CR - Checks: Rare Topography Behaviour"/>
+    <definition value="CR - Checks: Rare Topography Behaviour"/>
+  </concept>
+  <concept>
+    <code value="fdvzxz58nEE"/>
+    <display value="CR - Checks: Rare Topography Morphology"/>
+    <definition value="CR - Checks: Rare Topography Morphology"/>
+  </concept>
+  <concept>
+    <code value="VBkjlEwG4BE"/>
+    <display value="CR - Checks: Multiple primary test result"/>
+    <definition value="CR - Checks: Multiple primary test result"/>
+  </concept>
+  <concept>
+    <code value="jTW2ljvoIc6"/>
+    <display value="CR - Rare"/>
+    <definition value="CR - Rare"/>
+  </concept>
+  <concept>
+    <code value="TXtHNzrfmki"/>
+    <display value="CR - Invalid"/>
+    <definition value="CR - Invalid"/>
+  </concept>
+  <concept>
+    <code value="RBu5b3A68mq"/>
+    <display value="CR - Morphology Family"/>
+    <definition value="CR - Morphology Family"/>
+  </concept>
+  <concept>
+    <code value="XR1U9dr60xI"/>
+    <display value="CR - Topography Morphology key"/>
+    <definition value="CR - Topography Morphology key"/>
+  </concept>
+  <concept>
+    <code value="oZyJlKscN6G"/>
+    <display value="CR - Present in the MUST list"/>
+    <definition value="CR - Present in the MUST list"/>
+  </concept>
+  <concept>
+    <code value="DyVH5Q3Qf0Q"/>
+    <display value="CR - Present in the MUST-NOT list"/>
+    <definition value="CR - Present in the MUST-NOT list"/>
+  </concept>
+  <concept>
+    <code value="yt3gq8onyKb"/>
+    <display value="CR - Morphology group"/>
+    <definition value="CR - Morphology group"/>
+  </concept>
+  <concept>
+    <code value="eGWudq2aGpY"/>
+    <display value="CR - Previous morphology group"/>
+    <definition value="CR - Previous morphology group"/>
+  </concept>
+  <concept>
+    <code value="dTbQZsduHT7"/>
+    <display value="CR - Previous morphology group (multiple)"/>
+    <definition value="CR - Previous morphology group (multiple)"/>
+  </concept>
+  <concept>
+    <code value="RmzIYvxiBm4"/>
+    <display value="CR - Topography group"/>
+    <definition value="CR - Topography group"/>
+  </concept>
+  <concept>
+    <code value="FyzoZsxRjjz"/>
+    <display value="CR - Previous topography group"/>
+    <definition value="CR - Previous topography group"/>
+  </concept>
+  <concept>
+    <code value="IhLiguJKuzz"/>
+    <display value="CR - Previous topography group (multiple)"/>
+    <definition value="CR - Previous topography group (multiple)"/>
+  </concept>
+  <concept>
+    <code value="n4IHuWceDlW"/>
+    <display value="CR - Morphology result"/>
+    <definition value="CR - Morphology result"/>
+  </concept>
+  <concept>
+    <code value="z3JSu92EQhg"/>
+    <display value="CR - Confirm the rare status"/>
+    <definition value="CR - Confirm the rare status"/>
+  </concept>
+  <concept>
+    <code value="KwMs1DNVA0R"/>
+    <display value="CR - TUMOURID"/>
+    <definition value="CR - TUMOURID"/>
+  </concept>
+  <concept>
+    <code value="OrVAWBySU43"/>
+    <display value="CR - Previous tumor number"/>
+    <definition value="CR - Previous tumor number"/>
+  </concept>
+  <concept>
+    <code value="EMoLghRDW4A"/>
+    <display value="CR - Patient ID"/>
+    <definition value="CR - Patient ID"/>
+  </concept>
+  <concept>
+    <code value="fID2of7Q8Jj"/>
+    <display value="CR - Source: Tumor number"/>
+    <definition value="CR - Source: Tumor number"/>
+  </concept>
+  <concept>
+    <code value="TgjO873BZTu"/>
+    <display value="CR - Source date"/>
+    <definition value="CR - Source date"/>
+  </concept>
+  <concept>
+    <code value="Mqz5dPrwWho"/>
+    <display value="CR - Source Type"/>
+    <definition value="CR - Source Type"/>
+  </concept>
+  <concept>
+    <code value="HxMFZcIIZpL"/>
+    <display value="CR - TUMOURIDSOURCETABLE"/>
+    <definition value="CR - TUMOURIDSOURCETABLE"/>
+  </concept>
+  <concept>
+    <code value="Ks2WWWWCuzq"/>
+    <display value="CR - Date last contact"/>
+    <definition value="CR - Date last contact"/>
+  </concept>
+  <concept>
+    <code value="nMpcjKFF5zt"/>
+    <display value="CR - Status"/>
+    <definition value="CR - Status"/>
+  </concept>
+  <concept>
+    <code value="hCJqPZcw2n6"/>
+    <display value="CR - Date of death"/>
+    <definition value="CR - Date of death"/>
+  </concept>
+</CodeSystem>

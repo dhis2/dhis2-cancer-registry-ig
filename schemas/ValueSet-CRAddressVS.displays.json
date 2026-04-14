@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRAddressVS.displays.json",
+  "title": "CR - Address value set Display Values",
+  "description": "Display values for CR - Address value set ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS#01": {
+      "en": "Placeholder - 1"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS#02": {
+      "en": "Placeholder - 2"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS#99": {
+      "en": "Placeholder - X"
+    }
+  },
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-14T08:00:57.677756"
+}

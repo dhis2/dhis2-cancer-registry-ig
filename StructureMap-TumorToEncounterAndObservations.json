@@ -1,0 +1,1581 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "TumorToEncounterAndObservations",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap TumorToEncounterAndObservations</b></p><a name=\"TumorToEncounterAndObservations\"> </a><a name=\"hcTumorToEncounterAndObservations\"> </a><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations<span style=\"color: navy\">&quot; = &quot;</span>TumorToEncounterAndObservations<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Transform: Tumor Stage to CRTumorEncounter + Observations</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-Tumor.html\" title=\"Tumor\">https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor</a><span style=\"color: navy\">&quot; </span><b>alias </b>Tumor <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>\r\n\r\n<b>group </b>TumorToBundle<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>Tumor, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>Bundle<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.type = <span style=\"color: blue\">'transaction'</span> <i>&quot;setbundletype&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Create the Encounter resource</span>\r\n  src<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Encounter'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">enc</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.meta<b> as </b><span style=\"color: maroon\">meta</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>meta.profile = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter'</span> <i>&quot;setencprofile&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;setencmeta&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.status = <span style=\"color: blue\">'finished'</span> <i>&quot;setencstatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.class<b> as </b><span style=\"color: maroon\">cls</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cls.system = <span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/v3-ActCode'</span> <i>&quot;setclssystem&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cls.code = <span style=\"color: blue\">'AMB'</span> <i>&quot;setclscode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;setencclass&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.type<b> as </b><span style=\"color: maroon\">tp</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>tp.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        src<span style=\"color: navy\"><b> -&gt; </b></span>coding.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type'</span> <i>&quot;settypesystem&quot;</i><span style=\"color: navy\">;</span>\r\n        src<span style=\"color: navy\"><b> -&gt; </b></span>coding.code = <span style=\"color: blue\">'tumor'</span> <i>&quot;settypecode&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;settypecoding&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;setenctype&quot;</i><span style=\"color: navy\">;</span>\r\n    src.crIncidenceDate<b> as </b><span style=\"color: maroon\">dt</span><span style=\"color: navy\"><b> -&gt; </b></span> enc.period<b> as </b><span style=\"color: maroon\">p</span><span style=\"color: navy\">, </span> p.start = <span style=\"color: maroon\">dt</span> <i>&quot;setencperiod&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createencounter&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Topography Observation</span>\r\n  src.crTopography<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;topostatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;topocodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'topography'</span> <i>&quot;topocodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;topocode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS'</span> <i>&quot;topovalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;topovalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;topovalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createtopography&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Morphology Observation</span>\r\n  src.crMorphology<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;morphstatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;morphcodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'morphology'</span> <i>&quot;morphcodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;morphcode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS'</span> <i>&quot;morphvalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;morphvalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;morphvalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createmorphology&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Behaviour Observation</span>\r\n  src.crBehaviour<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;behavstatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;behavcodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'behaviour'</span> <i>&quot;behavcodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;behavcode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS'</span> <i>&quot;behavvalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;behavvalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;behavvalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createbehaviour&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Grade Observation (LOINC code)</span>\r\n  src.crGrade<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;gradestatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'http://loinc.org'</span> <i>&quot;gradecodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'33732-9'</span> <i>&quot;gradecodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;gradecode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS'</span> <i>&quot;gradevalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;gradevalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;gradevalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;creategrade&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Basis of Diagnosis Observation</span>\r\n  src.crBasisDiagnosis<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;basisstatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;basiscodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'basis-of-diagnosis'</span> <i>&quot;basiscodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;basiscode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS'</span> <i>&quot;basisvalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;basisvalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;basisvalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createbasis&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Site Observation</span>\r\n  src.crSite<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;sitestatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;sitecodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'site'</span> <i>&quot;sitecodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;sitecode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS'</span> <i>&quot;sitevalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;sitevalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;sitevalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createsite&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Incidence Date Observation</span>\r\n  src.crIncidenceDate<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;incdatestatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;incdatecodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'incidence-date'</span> <i>&quot;incdatecodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;incdatecode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'dateTime'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">dt</span><span style=\"color: navy\">, </span> dt.value = <span style=\"color: maroon\">val</span> <i>&quot;incdatevalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createincidencedate&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Age at Incidence Observation</span>\r\n  src.crAge<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;agestatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;agecodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'age-at-incidence'</span> <i>&quot;agecodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;agecode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'integer'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">i</span><span style=\"color: navy\">, </span> i.value = <span style=\"color: maroon\">val</span> <i>&quot;agevalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createage&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Tumor Number Observation</span>\r\n  src.crTumorNumber<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;tnstatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;tncodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'tumor-number'</span> <i>&quot;tncodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;tncode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS'</span> <i>&quot;tnvalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;tnvalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;tnvalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createtumornumber&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Address Observation</span>\r\n  src.crAddress<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>&quot;addrstatus&quot;</i><span style=\"color: navy\">;</span>\r\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;addrcodesys&quot;</i><span style=\"color: navy\">;</span>\r\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'address'</span> <i>&quot;addrcodeval&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;addrcode&quot;</i><span style=\"color: navy\">;</span>\r\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS'</span> <i>&quot;addrvalsys&quot;</i><span style=\"color: navy\">;</span>\r\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>&quot;addrvalcode&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;addrvalue&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;createaddress&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations",
+  "version" : "0.1.0",
+  "name" : "TumorToEncounterAndObservations",
+  "title" : "Transform: Tumor Stage to CRTumorEncounter + Observations",
+  "status" : "draft",
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Transform: Tumor Stage to CRTumorEncounter + Observations",
+  "structure" : [{
+    "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor",
+    "mode" : "source",
+    "alias" : "Tumor"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Bundle",
+    "mode" : "target",
+    "alias" : "Bundle"
+  }],
+  "group" : [{
+    "name" : "TumorToBundle",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "src",
+      "type" : "Tumor",
+      "mode" : "source"
+    },
+    {
+      "name" : "tgt",
+      "type" : "Bundle",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "setbundletype",
+      "source" : [{
+        "context" : "src"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "type",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueString" : "transaction"
+        }]
+      }]
+    },
+    {
+      "name" : "createencounter",
+      "source" : [{
+        "context" : "src"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "enc",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Encounter"
+        }]
+      }],
+      "rule" : [{
+        "name" : "setencmeta",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "enc",
+          "contextType" : "variable",
+          "element" : "meta",
+          "variable" : "meta"
+        }],
+        "rule" : [{
+          "name" : "setencprofile",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "meta",
+            "contextType" : "variable",
+            "element" : "profile",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "setencstatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "enc",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "finished"
+          }]
+        }]
+      },
+      {
+        "name" : "setencclass",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "enc",
+          "contextType" : "variable",
+          "element" : "class",
+          "variable" : "cls"
+        }],
+        "rule" : [{
+          "name" : "setclssystem",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cls",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+            }]
+          }]
+        },
+        {
+          "name" : "setclscode",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cls",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "AMB"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "setenctype",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "enc",
+          "contextType" : "variable",
+          "element" : "type",
+          "variable" : "tp"
+        }],
+        "rule" : [{
+          "name" : "settypecoding",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "tp",
+            "contextType" : "variable",
+            "element" : "coding",
+            "variable" : "coding"
+          }],
+          "rule" : [{
+            "name" : "settypesystem",
+            "source" : [{
+              "context" : "src"
+            }],
+            "target" : [{
+              "context" : "coding",
+              "contextType" : "variable",
+              "element" : "system",
+              "transform" : "copy",
+              "parameter" : [{
+                "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"
+              }]
+            }]
+          },
+          {
+            "name" : "settypecode",
+            "source" : [{
+              "context" : "src"
+            }],
+            "target" : [{
+              "context" : "coding",
+              "contextType" : "variable",
+              "element" : "code",
+              "transform" : "copy",
+              "parameter" : [{
+                "valueString" : "tumor"
+              }]
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "setencperiod",
+        "source" : [{
+          "context" : "src",
+          "element" : "crIncidenceDate",
+          "variable" : "dt"
+        }],
+        "target" : [{
+          "context" : "enc",
+          "contextType" : "variable",
+          "element" : "period",
+          "variable" : "p"
+        },
+        {
+          "context" : "p",
+          "contextType" : "variable",
+          "element" : "start",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "dt"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createtopography",
+      "source" : [{
+        "context" : "src",
+        "element" : "crTopography",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "topostatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "topocode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "topocodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "topocodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "topography"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "topovalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "topovalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS"
+            }]
+          }]
+        },
+        {
+          "name" : "topovalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createmorphology",
+      "source" : [{
+        "context" : "src",
+        "element" : "crMorphology",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "morphstatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "morphcode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "morphcodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "morphcodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "morphology"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "morphvalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "morphvalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS"
+            }]
+          }]
+        },
+        {
+          "name" : "morphvalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createbehaviour",
+      "source" : [{
+        "context" : "src",
+        "element" : "crBehaviour",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "behavstatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "behavcode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "behavcodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "behavcodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "behaviour"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "behavvalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "behavvalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS"
+            }]
+          }]
+        },
+        {
+          "name" : "behavvalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "creategrade",
+      "source" : [{
+        "context" : "src",
+        "element" : "crGrade",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "gradestatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "gradecode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "gradecodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "http://loinc.org"
+            }]
+          }]
+        },
+        {
+          "name" : "gradecodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "33732-9"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "gradevalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "gradevalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS"
+            }]
+          }]
+        },
+        {
+          "name" : "gradevalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createbasis",
+      "source" : [{
+        "context" : "src",
+        "element" : "crBasisDiagnosis",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "basisstatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "basiscode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "basiscodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "basiscodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "basis-of-diagnosis"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "basisvalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "basisvalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS"
+            }]
+          }]
+        },
+        {
+          "name" : "basisvalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createsite",
+      "source" : [{
+        "context" : "src",
+        "element" : "crSite",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "sitestatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "sitecode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "sitecodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "sitecodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "site"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "sitevalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "sitevalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS"
+            }]
+          }]
+        },
+        {
+          "name" : "sitevalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createincidencedate",
+      "source" : [{
+        "context" : "src",
+        "element" : "crIncidenceDate",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "incdatestatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "incdatecode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "incdatecodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "incdatecodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "incidence-date"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "incdatevalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "dt",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "dateTime"
+          }]
+        },
+        {
+          "context" : "dt",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "val"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createage",
+      "source" : [{
+        "context" : "src",
+        "element" : "crAge",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "agestatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "agecode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "agecodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "agecodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "age-at-incidence"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "agevalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "i",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "integer"
+          }]
+        },
+        {
+          "context" : "i",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "val"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createtumornumber",
+      "source" : [{
+        "context" : "src",
+        "element" : "crTumorNumber",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "tnstatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "tncode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "tncodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "tncodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "tumor-number"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "tnvalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "tnvalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS"
+            }]
+          }]
+        },
+        {
+          "name" : "tnvalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "createaddress",
+      "source" : [{
+        "context" : "src",
+        "element" : "crAddress",
+        "variable" : "val"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "entry",
+        "variable" : "entry"
+      },
+      {
+        "context" : "entry",
+        "contextType" : "variable",
+        "element" : "resource",
+        "variable" : "obs",
+        "transform" : "create",
+        "parameter" : [{
+          "valueString" : "Observation"
+        }]
+      }],
+      "rule" : [{
+        "name" : "addrstatus",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "status",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "final"
+          }]
+        }]
+      },
+      {
+        "name" : "addrcode",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "code",
+          "variable" : "c"
+        },
+        {
+          "context" : "c",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "addrcodesys",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+            }]
+          }]
+        },
+        {
+          "name" : "addrcodeval",
+          "source" : [{
+            "context" : "src"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "address"
+            }]
+          }]
+        }]
+      },
+      {
+        "name" : "addrvalue",
+        "source" : [{
+          "context" : "val"
+        }],
+        "target" : [{
+          "context" : "obs",
+          "contextType" : "variable",
+          "element" : "value",
+          "variable" : "cc",
+          "transform" : "create",
+          "parameter" : [{
+            "valueString" : "CodeableConcept"
+          }]
+        },
+        {
+          "context" : "cc",
+          "contextType" : "variable",
+          "element" : "coding",
+          "variable" : "cd"
+        }],
+        "rule" : [{
+          "name" : "addrvalsys",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "system",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueString" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS"
+            }]
+          }]
+        },
+        {
+          "name" : "addrvalcode",
+          "source" : [{
+            "context" : "val"
+          }],
+          "target" : [{
+            "context" : "cd",
+            "contextType" : "variable",
+            "element" : "code",
+            "transform" : "copy",
+            "parameter" : [{
+              "valueId" : "val"
+            }]
+          }]
+        }]
+      }]
+    }]
+  }]
+}

@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Profiles &amp; Mappings - DHIS2 Cancer Registry Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+    <link rel="stylesheet" href="assets/css/fa-all.css" type="text/css"/>
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/who.css"/>
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+  <!-- Placeholder for child template CSS declarations -->
+  <!-- <link href="assets/css/colors.css" rel="stylesheet"/>! -->
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">    <!-- container -->
+            <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+              <!-- status-bar -->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                  <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="system-design.html">System Design</a>
+  </li>
+  <li>
+    <a href="data-quality-checks.html">Data Quality Checks</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles &amp; Mappings</a>
+  </li>
+  <li>
+    <a href="deployment.html">Deployment</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              </div>    <!-- /.nav-collapse -->
+
+              <div data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;" class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch">
+                  <!-- This div will be pushed to the right -->
+                <div style="margin-left: auto; background-color: #00477d; color: white;" class="language-selector">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" name="language-selector" id="language-selector">
+                    <option disabled="null" selected="null">Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                  <!-- Search Content -->
+              </div>
+            </div>    <!-- /.container -->
+          </nav>    <!-- /.navbar -->
+          <!-- /HEADER CONTENT -->
+        </div>    <!-- /container -->
+      </div>    <!-- /segment-navbar -->
+      
+
+      <div style=" justify-content: space-between; align-items: left;" class="container">
+
+          <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+    <a no-external="true" id="project-logo" href="https://dhis2.org/integration/fhir/">
+      <img src="assets/images/dhis2.png" alt="Project home" height="60"/>
+    </a>
+  </div>
+
+  <!-- Right logo - for example the FHIR logo -->
+  <!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir.png" alt="FHIR website" height="80"/> </a>
+  </div>
+
+  <!-- search icon - if you want -->
+  <!-- <div id="hl7-search">
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div> -->
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DHIS2 Cancer Registry Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Profiles &amp; Mappings</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main">https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a> and changes regularly. See the <a href="https://dhis2.org/fhir/cancer-registry/history.html">Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/e2510df70ce53dcdb33212803a8e6476f5e60c09"><code>e2510df7</code></a>.</span></p>  <!-- EndReleaseHeader -->
+  <h2>Profiles &amp; Mappings</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#generated-vs-authored-artifacts" id="markdown-toc-generated-vs-authored-artifacts">Generated vs Authored Artifacts</a></li>
+  <li><a href="#architecture" id="markdown-toc-architecture">Architecture</a></li>
+  <li><a href="#resource-profiles" id="markdown-toc-resource-profiles">Resource Profiles</a></li>
+  <li><a href="#extensions" id="markdown-toc-extensions">Extensions</a></li>
+  <li><a href="#terminology" id="markdown-toc-terminology">Terminology</a></li>
+  <li><a href="#mappings" id="markdown-toc-mappings">Mappings</a></li>
+  <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
+</ul>
+
+</div>
+<p>This page documents the manually authored FHIR resource profiles, mappings, and examples in this implementation guide. These artifacts define how the DHIS2 Cancer Registry (CanReg5) tracker programme maps to standard FHIR resources using an <strong>Encounter-based architecture</strong>.</p>
+
+<p>For the auto-generated artifacts (logical models, questionnaires, code systems, and value sets derived from the DHIS2 Cancer Registry metadata package), see the <a href="artifacts.html">Artifact Index</a>.</p>
+
+<h3 id="generated-vs-authored-artifacts">Generated vs Authored Artifacts</h3>
+
+<p>This IG contains two categories of artifacts:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Source</th>
+      <th>Location</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Generated</strong></td>
+      <td>DHIS2 IG generator app</td>
+      <td><code class="language-plaintext highlighter-rouge">models/</code>, <code class="language-plaintext highlighter-rouge">codesystems/</code>, <code class="language-plaintext highlighter-rouge">valuesets/</code>, <code class="language-plaintext highlighter-rouge">questionnaires/</code></td>
+      <td>Logical models, code systems, value sets, and questionnaires derived directly from the DHIS2 Cancer Registry metadata package. These represent the DHIS2 Tracker program structure as-is.</td>
+    </tr>
+    <tr>
+      <td><strong>Authored</strong></td>
+      <td>Manual</td>
+      <td><code class="language-plaintext highlighter-rouge">profiles/</code>, <code class="language-plaintext highlighter-rouge">examples/</code>, <code class="language-plaintext highlighter-rouge">mappings/</code>, <code class="language-plaintext highlighter-rouge">maps/</code></td>
+      <td>FHIR resource profiles, example instances, conceptual FSH mappings, and FML StructureMaps that define how CanReg5 cancer registration data maps to standard FHIR resources.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="architecture">Architecture</h3>
+
+<p>The profiling approach maps the DHIS2 Tracker programme structure directly to FHIR's workflow resources:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DHIS2 Tracker                    FHIR R4
+═══════════════                  ═══════════════════════════════════════
+Programme enrollment   ────►     CRPatient + CRCancerRegistrationEpisode
+                                     (Patient)     (EpisodeOfCare)
+
+Tumor stage event      ────►     CRTumorEncounter (Encounter)
+  ├─ data element      ────►       └─ Observation (one per data element)
+  ├─ data element      ────►       └─ Observation
+  └─ ...               ────►       └─ ...
+
+Source stage event     ────►     CRSourceEncounter (Encounter)
+  ├─ data element      ────►       └─ Observation
+  └─ ...               ────►       └─ ...
+
+Follow-up stage event  ────►     CRFollowUpEncounter (Encounter)
+  ├─ data element      ────►       └─ Observation
+  └─ ...               ────►       └─ ...
+</code></pre></div></div>
+
+<p>This 1:1 structural mapping preserves the repeatable stage event semantics of DHIS2 Tracker while following FHIR best practices:</p>
+
+<ul>
+  <li><strong>EpisodeOfCare</strong> groups the entire cancer registration case and all encounters</li>
+  <li><strong>Encounter</strong> represents each programme stage event, typed by a local code system</li>
+  <li><strong>Observation</strong> captures each individual data element within its encounter context</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>Extension</strong> is used sparingly — only where a concept is registry metadata rather than a clinical observation (e.g. the IARC rare tumor classification flag)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h3 id="resource-profiles">Resource Profiles</h3>
+
+<h4 id="patient">Patient</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Base</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-cr-patient.html">CRPatient</a></td>
+      <td>Patient</td>
+      <td>CanReg5 patient with required REGNO identifier (≥8 chars), family name, gender, and birth date.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="episodeofcare">EpisodeOfCare</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Base</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-cr-cancer-registration-episode.html">CRCancerRegistrationEpisode</a></td>
+      <td>EpisodeOfCare</td>
+      <td>Overall cancer registration enrollment. Groups all stage encounters.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="encounters">Encounters</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Base</th>
+      <th>Type Code</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-cr-tumor-encounter.html">CRTumorEncounter</a></td>
+      <td>Encounter</td>
+      <td><code class="language-plaintext highlighter-rouge">tumor</code></td>
+      <td>Tumour registration stage event</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-source-encounter.html">CRSourceEncounter</a></td>
+      <td>Encounter</td>
+      <td><code class="language-plaintext highlighter-rouge">source</code></td>
+      <td>Source/notification stage event</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-followup-encounter.html">CRFollowUpEncounter</a></td>
+      <td>Encounter</td>
+      <td><code class="language-plaintext highlighter-rouge">follow-up</code></td>
+      <td>Follow-up stage event</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All encounters reference the patient (<code class="language-plaintext highlighter-rouge">subject</code>) and the episode of care (<code class="language-plaintext highlighter-rouge">episodeOfCare</code>).</p>
+
+<p>The CRTumorEncounter also supports the <a href="StructureDefinition-cr-rare.html">CRRareExtension</a> — a boolean flag indicating whether the tumor has been classified as rare according to IARC reference tables.</p>
+
+<h4 id="observations--tumor-stage">Observations — Tumor Stage</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Base</th>
+      <th>Code</th>
+      <th>Value Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-cr-topography-observation.html">CRTopographyObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">topography</code></td>
+      <td>CodeableConcept</td>
+      <td>ICD-O-3 topography (anatomical site)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-morphology-observation.html">CRMorphologyObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">morphology</code></td>
+      <td>CodeableConcept</td>
+      <td>ICD-O-3 morphology (4-digit histological type)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-behaviour-observation.html">CRBehaviourObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">behaviour</code></td>
+      <td>CodeableConcept</td>
+      <td>ICD-O-3 behaviour (0–3)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-grade-observation.html">CRGradeObservation</a></td>
+      <td>Observation</td>
+      <td>LOINC <code class="language-plaintext highlighter-rouge">33732-9</code></td>
+      <td>CodeableConcept</td>
+      <td>Histological grade (1–9)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-basis-of-diagnosis-observation.html">CRBasisOfDiagnosisObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">basis-of-diagnosis</code></td>
+      <td>CodeableConcept</td>
+      <td>How the diagnosis was established (0–9)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-site-observation.html">CRSiteObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">site</code></td>
+      <td>CodeableConcept</td>
+      <td>Higher-level anatomical site grouping</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-incidence-date-observation.html">CRIncidenceDateObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">incidence-date</code></td>
+      <td>dateTime</td>
+      <td>Date of incidence (diagnosis date)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-age-at-incidence-observation.html">CRAgeAtIncidenceObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">age-at-incidence</code></td>
+      <td>integer</td>
+      <td>Age at incidence</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-address-observation.html">CRAddressObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">address</code></td>
+      <td>CodeableConcept</td>
+      <td>Administrative address at incidence</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-tumor-number-observation.html">CRTumorNumberObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">tumor-number</code></td>
+      <td>CodeableConcept</td>
+      <td>Sequential tumour number (1–10)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="observations--source-stage">Observations — Source Stage</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Base</th>
+      <th>Code</th>
+      <th>Value Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-cr-source-type-observation.html">CRSourceTypeObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">source-type</code></td>
+      <td>CodeableConcept</td>
+      <td>Type of documentation source</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-source-tumor-number-observation.html">CRSourceTumorNumberObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">source-tumor-number</code></td>
+      <td>CodeableConcept</td>
+      <td>Tumour number the source relates to</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="observations--follow-up-stage">Observations — Follow-up Stage</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Base</th>
+      <th>Code</th>
+      <th>Value Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-cr-vital-status-observation.html">CRVitalStatusObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">vital-status</code></td>
+      <td>CodeableConcept</td>
+      <td>Vital status (alive, dead, unknown)</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-cr-date-of-death-observation.html">CRDateOfDeathObservation</a></td>
+      <td>Observation</td>
+      <td><code class="language-plaintext highlighter-rouge">date-of-death</code></td>
+      <td>dateTime</td>
+      <td>Date of death</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="extensions">Extensions</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Extension</th>
+      <th>Context</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureDefinition-cr-rare.html">CRRareExtension</a></td>
+      <td>CRTumorEncounter</td>
+      <td>boolean</td>
+      <td>IARC rare tumor classification flag. Computed from the topography-morphology combination evaluated against rare cancer reference tables. Corresponds to the CR - Rare data element.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="terminology">Terminology</h3>
+
+<p>Two local code systems support the Encounter-based architecture:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code System</th>
+      <th>Id</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a name="l1100">​</a><a href="CodeSystem-CREncounterTypeCS.html">CREncounterTypeCS</a></td>
+      <td><code class="language-plaintext highlighter-rouge">cr-encounter-type</code></td>
+      <td>Encounter type codes: <code class="language-plaintext highlighter-rouge">tumor</code>, <code class="language-plaintext highlighter-rouge">source</code>, <code class="language-plaintext highlighter-rouge">follow-up</code></td>
+    </tr>
+    <tr>
+      <td><a name="l1122">​</a><a href="CodeSystem-CRObservationCodesCS.html">CRObservationCodesCS</a></td>
+      <td><code class="language-plaintext highlighter-rouge">cr-observation-codes</code></td>
+      <td>Observation type codes for each CanReg5 data element</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mappings">Mappings</h3>
+
+<p>Each logical model includes conceptual FSH mappings from every data element to the corresponding FHIR resource and path. These are visible in the <strong>Mappings</strong> tab of each logical model's page in the published IG.</p>
+
+<p>Executable FML StructureMaps are also provided:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>StructureMap</th>
+      <th>Source → Target</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="StructureMap-CancerRegistryToPatient.html">CancerRegistryToPatient</a></td>
+      <td>CancerRegistry → Patient</td>
+      <td>Enrollment TEAs → CRPatient</td>
+    </tr>
+    <tr>
+      <td><a href="StructureMap-CancerRegistryToEpisode.html">CancerRegistryToEpisode</a></td>
+      <td>CancerRegistry → EpisodeOfCare</td>
+      <td>Enrollment → CRCancerRegistrationEpisode</td>
+    </tr>
+    <tr>
+      <td><a href="StructureMap-TumorToEncounterAndObservations.html">TumorToEncounterAndObservations</a></td>
+      <td>Tumor → Bundle</td>
+      <td>Tumor event → CRTumorEncounter + Observations</td>
+    </tr>
+    <tr>
+      <td><a href="StructureMap-SourceToEncounterAndObservations.html">SourceToEncounterAndObservations</a></td>
+      <td>Source → Bundle</td>
+      <td>Source event → CRSourceEncounter + Observations</td>
+    </tr>
+    <tr>
+      <td><a href="StructureMap-FollowUpToEncounterAndObservations.html">FollowUpToEncounterAndObservations</a></td>
+      <td>FollowUp → Bundle</td>
+      <td>Follow-up event → CRFollowUpEncounter + Observations</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The stage-level FML maps produce a FHIR transaction <code class="language-plaintext highlighter-rouge">Bundle</code> containing the Encounter and all its Observations. Subject and encounter references must be resolved by the orchestrating mapping engine.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>A complete example scenario demonstrates a 54-year-old female patient with breast carcinoma:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>Profile</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="Patient-ExampleCRPatient.html">ExampleCRPatient</a></td>
+      <td>CRPatient</td>
+      <td>Jane Doe, female, born 1970-03-15, REGNO 20240001</td>
+    </tr>
+    <tr>
+      <td><a href="EpisodeOfCare-ExampleCRRegistrationEpisode.html">ExampleCRRegistrationEpisode</a></td>
+      <td>CRCancerRegistrationEpisode</td>
+      <td>Active registration episode from 2026-01-01</td>
+    </tr>
+    <tr>
+      <td><a href="Encounter-ExampleTumorEncounter.html">ExampleTumorEncounter</a></td>
+      <td>CRTumorEncounter</td>
+      <td>Tumor stage encounter, rare=false</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleTopography.html">ExampleTopography</a></td>
+      <td>CRTopographyObservation</td>
+      <td>504 — Upper-outer quadrant of breast</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleMorphology.html">ExampleMorphology</a></td>
+      <td>CRMorphologyObservation</td>
+      <td>8500 — Infiltrating duct carcinoma</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleBehaviour.html">ExampleBehaviour</a></td>
+      <td>CRBehaviourObservation</td>
+      <td>3 — Malignant, primary site</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleGrade.html">ExampleGrade</a></td>
+      <td>CRGradeObservation</td>
+      <td>Grade II — moderately differentiated</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleBasisOfDiagnosis.html">ExampleBasisOfDiagnosis</a></td>
+      <td>CRBasisOfDiagnosisObservation</td>
+      <td>7 — Histology of primary</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleSite.html">ExampleSite</a></td>
+      <td>CRSiteObservation</td>
+      <td>50 — Breast</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleIncidenceDate.html">ExampleIncidenceDate</a></td>
+      <td>CRIncidenceDateObservation</td>
+      <td>2026-01-01</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleAgeAtIncidence.html">ExampleAgeAtIncidence</a></td>
+      <td>CRAgeAtIncidenceObservation</td>
+      <td>54 years</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleTumorNumber.html">ExampleTumorNumber</a></td>
+      <td>CRTumorNumberObservation</td>
+      <td>Tumour 01</td>
+    </tr>
+    <tr>
+      <td><a href="Encounter-ExampleSourceEncounter.html">ExampleSourceEncounter</a></td>
+      <td>CRSourceEncounter</td>
+      <td>Source stage encounter</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleSourceType.html">ExampleSourceType</a></td>
+      <td>CRSourceTypeObservation</td>
+      <td>Hospital pathology department</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleSourceTumorNumber.html">ExampleSourceTumorNumber</a></td>
+      <td>CRSourceTumorNumberObservation</td>
+      <td>Relates to tumour 01</td>
+    </tr>
+    <tr>
+      <td><a href="Encounter-ExampleFollowUpEncounter.html">ExampleFollowUpEncounter</a></td>
+      <td>CRFollowUpEncounter</td>
+      <td>6-month follow-up</td>
+    </tr>
+    <tr>
+      <td><a href="Observation-ExampleVitalStatus.html">ExampleVitalStatus</a></td>
+      <td>CRVitalStatusObservation</td>
+      <td>Alive</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</div>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /row -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-content -->
+
+<script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+<script src="assets/js/window-hash.js" type="text/javascript"> </script>
+<a name="bottom"> </a>
+<div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+<div class="container">    <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &copy; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>.  Package dhis2.cancer.registry#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 07:58+0000">2026-04-14</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" href="https://dhis2.org/fhir/cancer-registry/history.html" target="_blank">Version History</a> | <a rel="license" style="color: #81BEF7" href="license.html">License</a>
+    </span>
+  </p>
+</div>    <!-- /inner-wrapper -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+<div class="container">    <!-- container -->
+</div>    <!-- /container -->
+</div>    <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+<script src="assets/js/respond.min.js" type="text/javascript"> </script>
+<script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+<script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+<script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+  <!-- Analytics Below
+================================================== -->
+
+
+
+
+</body></html>

@@ -1,0 +1,71 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "CRBasisDiagnosisCS",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRBasisDiagnosisCS</b></p><a name=\"CRBasisDiagnosisCS\"> </a><a name=\"hcCRBasisDiagnosisCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"CRBasisDiagnosisCS-0\"> </a></td><td>Death Certificate Only (0)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRBasisDiagnosisCS-1\"> </a></td><td>Clinical only (1)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRBasisDiagnosisCS-2\"> </a></td><td>Clin. Invest./Ult Soun (2)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRBasisDiagnosisCS-3\"> </a></td><td>Surgery/Autopsy (3)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"CRBasisDiagnosisCS-4\"> </a></td><td>Laboratory test (4)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"CRBasisDiagnosisCS-5\"> </a></td><td>Cytology (5)</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"CRBasisDiagnosisCS-6\"> </a></td><td>Histology of metastase (6)</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"CRBasisDiagnosisCS-7\"> </a></td><td>Histology of primary (7)</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"CRBasisDiagnosisCS-8\"> </a></td><td>Autopsy/Histology (8)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"CRBasisDiagnosisCS-9\"> </a></td><td>Unknown (9)</td></tr></table></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS",
+  "version" : "0.1.0",
+  "name" : "CRBasisDiagnosisCS",
+  "title" : "CR - Basis diagnosis",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Basis of diagnosis codes aligned with the CanReg5 basis dictionary. Codes 0-4 represent non-microscopically confirmed diagnoses (death certificate only, clinical, clinical investigation/ultrasound, surgery/autopsy, laboratory test). Codes 5-8 represent microscopically confirmed diagnoses (cytology, histology of metastasis, histology of primary, autopsy with histology). Code 9 represents unknown basis. Used in the Basis data quality check.",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 10,
+  "concept" : [{
+    "code" : "0",
+    "display" : "Death Certificate Only (0)"
+  },
+  {
+    "code" : "1",
+    "display" : "Clinical only (1)"
+  },
+  {
+    "code" : "2",
+    "display" : "Clin. Invest./Ult Soun (2)"
+  },
+  {
+    "code" : "3",
+    "display" : "Surgery/Autopsy (3)"
+  },
+  {
+    "code" : "4",
+    "display" : "Laboratory test (4)"
+  },
+  {
+    "code" : "5",
+    "display" : "Cytology (5)"
+  },
+  {
+    "code" : "6",
+    "display" : "Histology of metastase (6)"
+  },
+  {
+    "code" : "7",
+    "display" : "Histology of primary (7)"
+  },
+  {
+    "code" : "8",
+    "display" : "Autopsy/Histology (8)"
+  },
+  {
+    "code" : "9",
+    "display" : "Unknown (9)"
+  }]
+}

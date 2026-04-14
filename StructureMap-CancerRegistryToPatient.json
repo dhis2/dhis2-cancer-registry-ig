@@ -1,0 +1,274 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "CancerRegistryToPatient",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap CancerRegistryToPatient</b></p><a name=\"CancerRegistryToPatient\"> </a><a name=\"hcCancerRegistryToPatient\"> </a><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient<span style=\"color: navy\">&quot; = &quot;</span>CancerRegistryToPatient<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Transform: Cancer Registry Enrollment to Patient</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-CancerRegistry.html\" title=\"Cancer Registry\">https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry</a><span style=\"color: navy\">&quot; </span><b>alias </b>CancerRegistry <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/patient.html\" title=\"Patient\">http://hl7.org/fhir/StructureDefinition/Patient</a><span style=\"color: navy\">&quot; </span><b>alias </b>Patient <b>as </b><b>target</b>\r\n\r\n<b>group </b>CancerRegistryToPatient<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>CancerRegistry, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>Patient<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.meta<b> as </b><span style=\"color: maroon\">meta</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>meta.profile = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient'</span> <i>&quot;setprofile&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;setmeta&quot;</i><span style=\"color: navy\">;</span>\r\n  src.crPatientId<b> as </b><span style=\"color: maroon\">patientId</span><span style=\"color: navy\"><b> -&gt; </b></span>tgt.identifier<b> as </b><span style=\"color: maroon\">ident</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    patientId<span style=\"color: navy\"><b> -&gt; </b></span>ident.value = <span style=\"color: maroon\">patientId</span> <i>&quot;setidvalue&quot;</i><span style=\"color: navy\">;</span>\r\n    patientId<span style=\"color: navy\"><b> -&gt; </b></span>ident.type<b> as </b><span style=\"color: maroon\">idType</span><b> then</b><span style=\"color: navy\"> {\r\n</span>      patientId<span style=\"color: navy\"><b> -&gt; </b></span>idType.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {\r\n</span>        patientId<span style=\"color: navy\"><b> -&gt; </b></span>coding.system = <span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/v2-0203'</span> <i>&quot;setidsystem&quot;</i><span style=\"color: navy\">;</span>\r\n        patientId<span style=\"color: navy\"><b> -&gt; </b></span>coding.code = <span style=\"color: blue\">'MR'</span> <i>&quot;setidcode&quot;</i><span style=\"color: navy\">;</span>\r\n      <span style=\"color: navy\">}</span> <i>&quot;settypecoding&quot;</i><span style=\"color: navy\">;</span>\r\n    <span style=\"color: navy\">}</span> <i>&quot;setidtype&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;setidentifier&quot;</i><span style=\"color: navy\">;</span>\r\n  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.name<b> as </b><span style=\"color: maroon\">name</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src.familyName<b> as </b><span style=\"color: maroon\">fn</span><span style=\"color: navy\"><b> -&gt; </b></span>name.family = <span style=\"color: maroon\">fn</span> <i>&quot;setfamily&quot;</i><span style=\"color: navy\">;</span>\r\n    src.givenName<b> as </b><span style=\"color: maroon\">gn</span><span style=\"color: navy\"><b> -&gt; </b></span>name.given = <span style=\"color: maroon\">gn</span> <i>&quot;setgiven&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;setname&quot;</i><span style=\"color: navy\">;</span>\r\n  src.crSex<b> as </b><span style=\"color: maroon\">sex</span><b> where </b>sex = '1'<span style=\"color: navy\"><b> -&gt; </b></span>tgt.gender = <span style=\"color: blue\">'male'</span> <i>&quot;sexmale&quot;</i><span style=\"color: navy\">;</span>\r\n  src.crSex<b> as </b><span style=\"color: maroon\">sex</span><b> where </b>sex = '2'<span style=\"color: navy\"><b> -&gt; </b></span>tgt.gender = <span style=\"color: blue\">'female'</span> <i>&quot;sexfemale&quot;</i><span style=\"color: navy\">;</span>\r\n  src.crSex<b> as </b><span style=\"color: maroon\">sex</span><b> where </b>sex = '9'<span style=\"color: navy\"><b> -&gt; </b></span>tgt.gender = <span style=\"color: blue\">'unknown'</span> <i>&quot;sexunknown&quot;</i><span style=\"color: navy\">;</span>\r\n  src.dateOfBirth<b> as </b><span style=\"color: maroon\">dob</span><span style=\"color: navy\"><b> -&gt; </b></span>tgt.birthDate = <span style=\"color: maroon\">dob</span> <i>&quot;setbirthdate&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient",
+  "version" : "0.1.0",
+  "name" : "CancerRegistryToPatient",
+  "title" : "Transform: Cancer Registry Enrollment to Patient",
+  "status" : "draft",
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Transform: Cancer Registry Enrollment to Patient",
+  "structure" : [{
+    "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry",
+    "mode" : "source",
+    "alias" : "CancerRegistry"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/Patient",
+    "mode" : "target",
+    "alias" : "Patient"
+  }],
+  "group" : [{
+    "name" : "CancerRegistryToPatient",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "src",
+      "type" : "CancerRegistry",
+      "mode" : "source"
+    },
+    {
+      "name" : "tgt",
+      "type" : "Patient",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "setmeta",
+      "source" : [{
+        "context" : "src"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "meta",
+        "variable" : "meta"
+      }],
+      "rule" : [{
+        "name" : "setprofile",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "meta",
+          "contextType" : "variable",
+          "element" : "profile",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "setidentifier",
+      "source" : [{
+        "context" : "src",
+        "element" : "crPatientId",
+        "variable" : "patientId"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "identifier",
+        "variable" : "ident"
+      }],
+      "rule" : [{
+        "name" : "setidvalue",
+        "source" : [{
+          "context" : "patientId"
+        }],
+        "target" : [{
+          "context" : "ident",
+          "contextType" : "variable",
+          "element" : "value",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "patientId"
+          }]
+        }]
+      },
+      {
+        "name" : "setidtype",
+        "source" : [{
+          "context" : "patientId"
+        }],
+        "target" : [{
+          "context" : "ident",
+          "contextType" : "variable",
+          "element" : "type",
+          "variable" : "idType"
+        }],
+        "rule" : [{
+          "name" : "settypecoding",
+          "source" : [{
+            "context" : "patientId"
+          }],
+          "target" : [{
+            "context" : "idType",
+            "contextType" : "variable",
+            "element" : "coding",
+            "variable" : "coding"
+          }],
+          "rule" : [{
+            "name" : "setidsystem",
+            "source" : [{
+              "context" : "patientId"
+            }],
+            "target" : [{
+              "context" : "coding",
+              "contextType" : "variable",
+              "element" : "system",
+              "transform" : "copy",
+              "parameter" : [{
+                "valueString" : "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }]
+            }]
+          },
+          {
+            "name" : "setidcode",
+            "source" : [{
+              "context" : "patientId"
+            }],
+            "target" : [{
+              "context" : "coding",
+              "contextType" : "variable",
+              "element" : "code",
+              "transform" : "copy",
+              "parameter" : [{
+                "valueString" : "MR"
+              }]
+            }]
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "setname",
+      "source" : [{
+        "context" : "src"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "name",
+        "variable" : "name"
+      }],
+      "rule" : [{
+        "name" : "setfamily",
+        "source" : [{
+          "context" : "src",
+          "element" : "familyName",
+          "variable" : "fn"
+        }],
+        "target" : [{
+          "context" : "name",
+          "contextType" : "variable",
+          "element" : "family",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "fn"
+          }]
+        }]
+      },
+      {
+        "name" : "setgiven",
+        "source" : [{
+          "context" : "src",
+          "element" : "givenName",
+          "variable" : "gn"
+        }],
+        "target" : [{
+          "context" : "name",
+          "contextType" : "variable",
+          "element" : "given",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueId" : "gn"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "sexmale",
+      "source" : [{
+        "context" : "src",
+        "element" : "crSex",
+        "variable" : "sex",
+        "condition" : "sex = '1'"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "gender",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueString" : "male"
+        }]
+      }]
+    },
+    {
+      "name" : "sexfemale",
+      "source" : [{
+        "context" : "src",
+        "element" : "crSex",
+        "variable" : "sex",
+        "condition" : "sex = '2'"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "gender",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueString" : "female"
+        }]
+      }]
+    },
+    {
+      "name" : "sexunknown",
+      "source" : [{
+        "context" : "src",
+        "element" : "crSex",
+        "variable" : "sex",
+        "condition" : "sex = '9'"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "gender",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueString" : "unknown"
+        }]
+      }]
+    },
+    {
+      "name" : "setbirthdate",
+      "source" : [{
+        "context" : "src",
+        "element" : "dateOfBirth",
+        "variable" : "dob"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "birthDate",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueId" : "dob"
+        }]
+      }]
+    }]
+  }]
+}

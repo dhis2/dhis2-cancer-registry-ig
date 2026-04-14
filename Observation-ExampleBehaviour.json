@@ -1,0 +1,32 @@
+{
+  "resourceType" : "Observation",
+  "id" : "ExampleBehaviour",
+  "meta" : {
+    "profile" : ["https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-behaviour-observation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleBehaviour</b></p><a name=\"ExampleBehaviour\"> </a><a name=\"hcExampleBehaviour\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-cr-behaviour-observation.html\">Behaviour</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes behaviour}\">Behaviour</span></p><p><b>subject</b>: <a href=\"Patient-ExampleCRPatient.html\">Jane Doe  Female, DoB: 1970-03-15 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleTumorEncounter.html\">Encounter: extension = false; status = finished; class = ambulatory (ActCode#AMB); type = Tumor Registration; period = 2026-01-01 --&gt; (ongoing)</a></p><p><b>effective</b>: 2026-01-01</p><p><b>value</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS 3}\">Malignant, primary site</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes",
+      "code" : "behaviour"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/ExampleCRPatient"
+  },
+  "encounter" : {
+    "reference" : "Encounter/ExampleTumorEncounter"
+  },
+  "effectiveDateTime" : "2026-01-01",
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS",
+      "code" : "3",
+      "display" : "Malignant, primary site"
+    }]
+  }
+}

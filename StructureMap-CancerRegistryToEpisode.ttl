@@ -1,0 +1,111 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CancerRegistryToEpisode"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap CancerRegistryToEpisode</b></p><a name=\"CancerRegistryToEpisode\"> </a><a name=\"hcCancerRegistryToEpisode\"> </a><pre class=\"fml\">#xD;\n<b>map</b><span style=\"color: navy\"> \"</span>https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode<span style=\"color: navy\">\" = \"</span>CancerRegistryToEpisode<span style=\"color: navy\">\"#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Transform: Cancer Registry Enrollment to EpisodeOfCare</span>#xD;\n#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-CancerRegistry.html\" title=\"Cancer Registry\">https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry</a><span style=\"color: navy\">\" </span><b>alias </b>CancerRegistry <b>as </b><b>source</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"http://hl7.org/fhir/R4/episodeofcare.html\" title=\"EpisodeOfCare\">http://hl7.org/fhir/StructureDefinition/EpisodeOfCare</a><span style=\"color: navy\">\" </span><b>alias </b>EpisodeOfCare <b>as </b><b>target</b>#xD;\n#xD;\n<b>group </b>CancerRegistryToEpisode<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>CancerRegistry, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>EpisodeOfCare<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.meta<b> as </b><span style=\"color: maroon\">meta</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>meta.profile = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode'</span> <i>\"setprofile\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setmeta\"</i><span style=\"color: navy\">;</span>#xD;\n  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.status = <span style=\"color: blue\">'active'</span> <i>\"setstatus\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">// </span><span style=\"color: green\">The patient reference must be set by the orchestrating engine.</span>#xD;\n<span style=\"color: #b36b00\" title=\"This element was not defined prior to R5\">// src.crPatientId -&gt; tgt.patient (Reference resolution is external)</span>#xD;\n<span style=\"color: navy\">// </span><span style=\"color: green\">Period start represents enrollment date — set from the source system context.</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span></pre></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CancerRegistryToEpisode"] ; # 
+  fhir:title [ fhir:v "Transform: Cancer Registry Enrollment to EpisodeOfCare"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Transform: Cancer Registry Enrollment to EpisodeOfCare"] ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry"^^xsd:anyURI ;
+       fhir:l <https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "CancerRegistry" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/EpisodeOfCare>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "EpisodeOfCare" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "CancerRegistryToEpisode" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "CancerRegistry" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:type [ fhir:v "EpisodeOfCare" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "setmeta" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "meta" ] ;
+         fhir:variable [ fhir:v "meta" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "setprofile" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "meta" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "profile" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode"
+             ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "setstatus" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "status" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "active"
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

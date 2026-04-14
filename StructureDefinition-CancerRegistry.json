@@ -1,0 +1,415 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "CancerRegistry",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition CancerRegistry</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry\" title=\"Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention.\">CancerRegistry</a><a name=\"CancerRegistry\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://build.fhir.org/types.html#Base\">Base</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Cancer Registry</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.crPatientId\" title=\"CR - Patient ID\">crPatientId</a><a name=\"CancerRegistry.crPatientId\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">CR - Patient ID</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.familyName\" title=\"Family name or last name of the person or case.\">familyName</a><a name=\"CancerRegistry.familyName\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Family name or last name of the person or case.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.givenName\" title=\"Given name or first name of the person or case.\">givenName</a><a name=\"CancerRegistry.givenName\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Given name or first name of the person or case.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.crSex\" title=\"CR - Sex\">crSex</a><a name=\"CancerRegistry.crSex\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">CR - Sex<br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-CRSexVS.html\" title=\"https://dhis2.org/fhir/cancer-registry/ValueSet/CRSexVS\" class=\"binding\">CR - Sex value set</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R4/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\" class=\"binding\">required</a><span title=\"null\" class=\"binding\">)</span></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.dateOfBirth\" title=\"Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated.\">dateOfBirth</a><a name=\"CancerRegistry.dateOfBirth\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/datatypes.html#date\">date</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.tumor\" title=\"Tumor\">tumor</a><a name=\"CancerRegistry.tumor\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-Tumor.html\">Tumor</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Tumor<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.source\" title=\"Source\">source</a><a name=\"CancerRegistry.source\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-Source.html\">Source</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Source<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-CancerRegistry-definitions.html#CancerRegistry.followUp\" title=\"Follow up\">followUp</a><a name=\"CancerRegistry.followUp\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-FollowUp.html\">FollowUp</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Follow up<br/></td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry",
+  "version" : "0.1.0",
+  "name" : "CancerRegistry",
+  "title" : "Cancer Registry",
+  "status" : "draft",
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention.",
+  "fhirVersion" : "4.0.1",
+  "mapping" : [{
+    "identity" : "cancer-registry-to-cr-patient",
+    "uri" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient",
+    "name" : "Mapping: Cancer Registry → Patient",
+    "comment" : "Maps the DHIS2 Cancer Registry enrollment tracked-entity attributes to the Patient FHIR profile."
+  },
+  {
+    "identity" : "cancer-registry-to-episode",
+    "uri" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode",
+    "name" : "Mapping: Cancer Registry → EpisodeOfCare",
+    "comment" : "Maps the DHIS2 Cancer Registry enrollment to a CRCancerRegistrationEpisode that groups all stage encounters."
+  }],
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry",
+  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "4.0.1"
+    }],
+    "element" : [{
+      "id" : "CancerRegistry",
+      "path" : "CancerRegistry",
+      "short" : "Cancer Registry",
+      "definition" : "Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "isModifier" : false
+    },
+    {
+      "id" : "CancerRegistry.crPatientId",
+      "path" : "CancerRegistry.crPatientId",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "hDEhIMZe07x"
+      }],
+      "short" : "CR - Patient ID",
+      "definition" : "CR - Patient ID",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "CancerRegistry.crPatientId",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.identifier.where(type.coding.code='MR').value"
+      },
+      {
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare.patient",
+        "comment" : "Reference to the CRPatient"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.familyName",
+      "path" : "CancerRegistry.familyName",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "nJsmdQXRoze"
+      }],
+      "short" : "Family name or last name of the person or case.",
+      "definition" : "Family name or last name of the person or case.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "CancerRegistry.familyName",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.name.family"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.givenName",
+      "path" : "CancerRegistry.givenName",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "sB1IHYu2xQT"
+      }],
+      "short" : "Given name or first name of the person or case.",
+      "definition" : "Given name or first name of the person or case.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "CancerRegistry.givenName",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.name.given"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.crSex",
+      "path" : "CancerRegistry.crSex",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "m7GEZG8cyCO"
+      }],
+      "short" : "CR - Sex",
+      "definition" : "CR - Sex",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "CancerRegistry.crSex",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSexVS"
+      },
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.gender",
+        "comment" : "Sex codes: 1=male, 2=female, 9=unknown → FHIR: male, female, unknown"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.dateOfBirth",
+      "path" : "CancerRegistry.dateOfBirth",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "NI0QRzJvQ0k"
+      }],
+      "short" : "Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated.",
+      "definition" : "Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "CancerRegistry.dateOfBirth",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "date"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.birthDate"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.tumor",
+      "path" : "CancerRegistry.tumor",
+      "short" : "Tumor",
+      "definition" : "Tumor",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "CancerRegistry.tumor",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare.diagnosis",
+        "comment" : "Each tumor stage event → a CRTumorEncounter linked via episodeOfCare"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.source",
+      "path" : "CancerRegistry.source",
+      "short" : "Source",
+      "definition" : "Source",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "CancerRegistry.source",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Source"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare",
+        "comment" : "Each source event → a CRSourceEncounter linked via episodeOfCare"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.followUp",
+      "path" : "CancerRegistry.followUp",
+      "short" : "Follow up",
+      "definition" : "Follow up",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "CancerRegistry.followUp",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/FollowUp"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare",
+        "comment" : "Each follow-up event → a CRFollowUpEncounter linked via episodeOfCare"
+      }]
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "CancerRegistry",
+      "path" : "CancerRegistry",
+      "short" : "Cancer Registry",
+      "definition" : "Enrollment of the DHIS2 Cancer Registry tracker program. Captures core patient demographic information required to register an individual in the cancer registry, aligned with the IARC standard data requirements for population-based cancer registration. The tracked entity type is 'Person'. The Patient ID is automatically generated at enrollment using the pattern CURRENT_DATE(yyyy)+SEQUENTIAL(####), following the CanReg5 convention."
+    },
+    {
+      "id" : "CancerRegistry.crPatientId",
+      "path" : "CancerRegistry.crPatientId",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "hDEhIMZe07x"
+      }],
+      "short" : "CR - Patient ID",
+      "definition" : "CR - Patient ID",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.identifier.where(type.coding.code='MR').value"
+      },
+      {
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare.patient",
+        "comment" : "Reference to the CRPatient"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.familyName",
+      "path" : "CancerRegistry.familyName",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "nJsmdQXRoze"
+      }],
+      "short" : "Family name or last name of the person or case.",
+      "definition" : "Family name or last name of the person or case.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.name.family"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.givenName",
+      "path" : "CancerRegistry.givenName",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "sB1IHYu2xQT"
+      }],
+      "short" : "Given name or first name of the person or case.",
+      "definition" : "Given name or first name of the person or case.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.name.given"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.crSex",
+      "path" : "CancerRegistry.crSex",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "m7GEZG8cyCO"
+      }],
+      "short" : "CR - Sex",
+      "definition" : "CR - Sex",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "code"
+      }],
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRSexVS"
+      },
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.gender",
+        "comment" : "Sex codes: 1=male, 2=female, 9=unknown → FHIR: male, female, unknown"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.dateOfBirth",
+      "path" : "CancerRegistry.dateOfBirth",
+      "code" : [{
+        "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs",
+        "code" : "NI0QRzJvQ0k"
+      }],
+      "short" : "Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated.",
+      "definition" : "Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "date"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-cr-patient",
+        "map" : "Patient.birthDate"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.tumor",
+      "path" : "CancerRegistry.tumor",
+      "short" : "Tumor",
+      "definition" : "Tumor",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare.diagnosis",
+        "comment" : "Each tumor stage event → a CRTumorEncounter linked via episodeOfCare"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.source",
+      "path" : "CancerRegistry.source",
+      "short" : "Source",
+      "definition" : "Source",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Source"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare",
+        "comment" : "Each source event → a CRSourceEncounter linked via episodeOfCare"
+      }]
+    },
+    {
+      "id" : "CancerRegistry.followUp",
+      "path" : "CancerRegistry.followUp",
+      "short" : "Follow up",
+      "definition" : "Follow up",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/FollowUp"
+      }],
+      "mapping" : [{
+        "identity" : "cancer-registry-to-episode",
+        "map" : "EpisodeOfCare",
+        "comment" : "Each follow-up event → a CRFollowUpEncounter linked via episodeOfCare"
+      }]
+    }]
+  }
+}

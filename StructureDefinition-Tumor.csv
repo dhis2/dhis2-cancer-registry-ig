@@ -1,0 +1,123 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: Mapping: Tumor → CRTumorEncounter","Mapping: Mapping: Tumor crTopography → Topography Observation","Mapping: Mapping: Tumor crMorphology → Morphology Observation","Mapping: Mapping: Tumor crBehaviour → Behaviour Observation","Mapping: Mapping: Tumor crGrade → Grade Observation","Mapping: Mapping: Tumor crBasisDiagnosis → Basis of Diagnosis Observation","Mapping: Mapping: Tumor crSite → Site Observation","Mapping: Mapping: Tumor crIncidenceDate → Incidence Date Observation","Mapping: Mapping: Tumor crAge → Age at Incidence Observation","Mapping: Mapping: Tumor crAddress → Address Observation","Mapping: Mapping: Tumor crTumorNumber → Tumor Number Observation"
+"Tumor","Tumor","","","",0,*,"","","","null {[]} {[]}
+","Tumor","Tumor stage of the DHIS2 Cancer Registry tracker program. This repeatable stage is the central component capturing all key clinical and epidemiological information related to an individual cancer case.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"Tumor.crIncidenceDate","Tumor.crIncidenceDate","","","",0,1,"","","","date {[]} {[]}
+","CR - Incidence date","CR - Incidence date","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#c6EnHSAMUat
+",,,,"Tumor.crIncidenceDate",0,1,"","","Encounter.period.start","Observation.valueDateTime"
+"Tumor.crAge","Tumor.crAge","","","",0,1,"","","","unsignedInt {[]} {[]}
+","CR - Age","CR - Age","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#tasm9QG8HaF
+",,,,"Tumor.crAge",0,1,"","","Observation.valueInteger"
+"Tumor.crAddress","Tumor.crAddress","","","",0,1,"","","","code {[]} {[]}
+","CR - Address","CR - Address","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRAddressVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#xcUBzN5QFXu
+",,,,"Tumor.crAddress",0,1,"","","Observation.valueCodeableConcept"
+"Tumor.crTumorNumber","Tumor.crTumorNumber","","","",1,1,"","","","code {[]} {[]}
+","CR - Tumor number","CR - Tumor number","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#KgDQLAkC5ql
+",,,,"Tumor.crTumorNumber",1,1,"","","Observation.valueCodeableConcept"
+"Tumor.crSite","Tumor.crSite","","","",0,1,"","","","code {[]} {[]}
+","CR - Site","CR - Site","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRSiteVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#LCSApBii8CI
+",,,,"Tumor.crSite",0,1,"","","Observation.valueCodeableConcept"
+"Tumor.crTopography","Tumor.crTopography","","","",0,1,"","","","code {[]} {[]}
+","CR - Topography","CR - Topography","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#zw6Vwqnhvmh
+",,,,"Tumor.crTopography",0,1,"","","Observation.valueCodeableConcept"
+"Tumor.crMorphology","Tumor.crMorphology","","","",0,1,"","","","code {[]} {[]}
+","CR - Morphology","CR - Morphology","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphology4VS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#UkyyY1xukJg
+",,,,"Tumor.crMorphology",0,1,"","","Observation.valueCodeableConcept"
+"Tumor.crBehaviour","Tumor.crBehaviour","","","",0,1,"","","","code {[]} {[]}
+","CR - Behaviour","CR - Behaviour","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRBehaviourVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#MMIuwJdjx8B
+",,,,"Tumor.crBehaviour",0,1,"","","Observation.valueCodeableConcept"
+"Tumor.crBasisDiagnosis","Tumor.crBasisDiagnosis","","","",0,1,"","","","code {[]} {[]}
+","CR - Basis diagnosis","CR - Basis diagnosis","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRBasisDiagnosisVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#uoyoNWrexbY
+",,,,"Tumor.crBasisDiagnosis",0,1,"","","Observation.valueCodeableConcept"
+"Tumor.crGrade","Tumor.crGrade","","","",0,1,"","","","code {[]} {[]}
+","CR - Grade","CR - Grade","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#ZMD8dwB3zOZ
+",,,,"Tumor.crGrade",0,1,"","","Observation.valueCodeableConcept"
+"Tumor.crChecksRunChecks","Tumor.crChecksRunChecks","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Run checks","CR - Checks: Run checks","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#FlGHlAuG4Ly
+",,,,"Tumor.crChecksRunChecks",0,1,"",""
+"Tumor.crRunTopographyMorphologyCheck","Tumor.crRunTopographyMorphologyCheck","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Run Topography Morphology check","CR - Run Topography Morphology check","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#nFJ2MJ8Vxuj
+",,,,"Tumor.crRunTopographyMorphologyCheck",0,1,"",""
+"Tumor.crRunMultiplePrimaryCheck","Tumor.crRunMultiplePrimaryCheck","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Run Multiple primary check","CR - Run Multiple primary check","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#rqpqtJZto2L
+",,,,"Tumor.crRunMultiplePrimaryCheck",0,1,"",""
+"Tumor.crChecksRareAgeMorphology","Tumor.crChecksRareAgeMorphology","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Rare Age Morphology","CR - Checks: Rare Age Morphology","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#mxfPEKn6kFt
+",,,,"Tumor.crChecksRareAgeMorphology",0,1,"",""
+"Tumor.crChecksRareAgeTopography","Tumor.crChecksRareAgeTopography","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Rare Age Topography","CR - Checks: Rare Age Topography","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#rPvQffpxaEs
+",,,,"Tumor.crChecksRareAgeTopography",0,1,"",""
+"Tumor.crChecksRareAgeTopographyMorphology","Tumor.crChecksRareAgeTopographyMorphology","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Rare Age Topography Morphology","CR - Checks: Rare Age Topography Morphology","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#Laax6wSBp2G
+",,,,"Tumor.crChecksRareAgeTopographyMorphology",0,1,"",""
+"Tumor.crChecksRareBasis","Tumor.crChecksRareBasis","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Rare Basis","CR - Checks: Rare Basis","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#U8v95tUnazC
+",,,,"Tumor.crChecksRareBasis",0,1,"",""
+"Tumor.crChecksInvalidGrade","Tumor.crChecksInvalidGrade","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Invalid Grade","CR - Checks: Invalid Grade","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#doB0rv08MIc
+",,,,"Tumor.crChecksInvalidGrade",0,1,"",""
+"Tumor.crChecksRareSexMorphology","Tumor.crChecksRareSexMorphology","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Rare Sex Morphology","CR - Checks: Rare Sex Morphology","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#FH09UKj7HMC
+",,,,"Tumor.crChecksRareSexMorphology",0,1,"",""
+"Tumor.crChecksInvalidSexTopography","Tumor.crChecksInvalidSexTopography","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Invalid Sex Topography","CR - Checks: Invalid Sex Topography","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#wAmyuRZNNXC
+",,,,"Tumor.crChecksInvalidSexTopography",0,1,"",""
+"Tumor.crChecksRareTopographyBehaviour","Tumor.crChecksRareTopographyBehaviour","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Rare Topography Behaviour","CR - Checks: Rare Topography Behaviour","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#ugeBdJzYHVW
+",,,,"Tumor.crChecksRareTopographyBehaviour",0,1,"",""
+"Tumor.crChecksRareTopographyMorphology","Tumor.crChecksRareTopographyMorphology","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Checks: Rare Topography Morphology","CR - Checks: Rare Topography Morphology","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#fdvzxz58nEE
+",,,,"Tumor.crChecksRareTopographyMorphology",0,1,"",""
+"Tumor.crChecksMultiplePrimaryTestResult","Tumor.crChecksMultiplePrimaryTestResult","","","",0,1,"","","","code {[]} {[]}
+","CR - Checks: Multiple primary test result","CR - Checks: Multiple primary test result","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#VBkjlEwG4BE
+",,,,"Tumor.crChecksMultiplePrimaryTestResult",0,1,"",""
+"Tumor.crRare","Tumor.crRare","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Rare","CR - Rare","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#jTW2ljvoIc6
+",,,,"Tumor.crRare",0,1,"","","Encounter.extension('https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-rare').valueBoolean"
+"Tumor.crInvalid","Tumor.crInvalid","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Invalid","CR - Invalid","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#TXtHNzrfmki
+",,,,"Tumor.crInvalid",0,1,"",""
+"Tumor.crMorphologyFamily","Tumor.crMorphologyFamily","","","",0,1,"","","","code {[]} {[]}
+","CR - Morphology Family","CR - Morphology Family","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#RBu5b3A68mq
+",,,,"Tumor.crMorphologyFamily",0,1,"",""
+"Tumor.crTopographyMorphologyKey","Tumor.crTopographyMorphologyKey","","","",0,1,"","","","code {[]} {[]}
+","CR - Topography Morphology key","CR - Topography Morphology key","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyMorphologyKeyVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#XR1U9dr60xI
+",,,,"Tumor.crTopographyMorphologyKey",0,1,"",""
+"Tumor.crPresentInTheMustList","Tumor.crPresentInTheMustList","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Present in the MUST list","CR - Present in the MUST list","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#oZyJlKscN6G
+",,,,"Tumor.crPresentInTheMustList",0,1,"",""
+"Tumor.crPresentInTheMustNotList","Tumor.crPresentInTheMustNotList","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Present in the MUST-NOT list","CR - Present in the MUST-NOT list","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#DyVH5Q3Qf0Q
+",,,,"Tumor.crPresentInTheMustNotList",0,1,"",""
+"Tumor.crMorphologyGroup","Tumor.crMorphologyGroup","","","",0,1,"","","","code {[]} {[]}
+","CR - Morphology group","CR - Morphology group","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#yt3gq8onyKb
+",,,,"Tumor.crMorphologyGroup",0,1,"",""
+"Tumor.crPreviousMorphologyGroup","Tumor.crPreviousMorphologyGroup","","","",0,1,"","","","code {[]} {[]}
+","CR - Previous morphology group","CR - Previous morphology group","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#eGWudq2aGpY
+",,,,"Tumor.crPreviousMorphologyGroup",0,1,"",""
+"Tumor.crPreviousMorphologyGroupMultiple","Tumor.crPreviousMorphologyGroupMultiple","","","",0,1,"","","","code {[]} {[]}
+","CR - Previous morphology group (multiple)","CR - Previous morphology group (multiple)","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyGroupVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#dTbQZsduHT7
+",,,,"Tumor.crPreviousMorphologyGroupMultiple",0,1,"",""
+"Tumor.crTopographyGroup","Tumor.crTopographyGroup","","","",0,1,"","","","code {[]} {[]}
+","CR - Topography group","CR - Topography group","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#RmzIYvxiBm4
+",,,,"Tumor.crTopographyGroup",0,1,"",""
+"Tumor.crPreviousTopographyGroup","Tumor.crPreviousTopographyGroup","","","",0,1,"","","","code {[]} {[]}
+","CR - Previous topography group","CR - Previous topography group","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#FyzoZsxRjjz
+",,,,"Tumor.crPreviousTopographyGroup",0,1,"",""
+"Tumor.crPreviousTopographyGroupMultiple","Tumor.crPreviousTopographyGroupMultiple","","","",0,1,"","","","code {[]} {[]}
+","CR - Previous topography group (multiple)","CR - Previous topography group (multiple)","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTopographyGroupVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#IhLiguJKuzz
+",,,,"Tumor.crPreviousTopographyGroupMultiple",0,1,"",""
+"Tumor.crMorphologyResult","Tumor.crMorphologyResult","","","",0,1,"","","","code {[]} {[]}
+","CR - Morphology result","CR - Morphology result","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyResultVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#n4IHuWceDlW
+",,,,"Tumor.crMorphologyResult",0,1,"",""
+"Tumor.crConfirmTheRareStatus","Tumor.crConfirmTheRareStatus","","","",0,1,"","","","boolean {[]} {[]}
+","CR - Confirm the rare status","CR - Confirm the rare status","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#z3JSu92EQhg
+",,,,"Tumor.crConfirmTheRareStatus",0,1,"",""
+"Tumor.crTumourid","Tumor.crTumourid","","","",0,1,"","","","string {[]} {[]}
+","CR - TUMOURID","CR - TUMOURID","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#KwMs1DNVA0R
+",,,,"Tumor.crTumourid",0,1,"",""
+"Tumor.crPreviousTumorNumber","Tumor.crPreviousTumorNumber","","","",0,1,"","","","code {[]} {[]}
+","CR - Previous tumor number","CR - Previous tumor number","","","","","","","","","",,"required","","https://dhis2.org/fhir/cancer-registry/ValueSet/CRTumorNumberVS","https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#OrVAWBySU43
+",,,,"Tumor.crPreviousTumorNumber",0,1,"",""
+"Tumor.crPatientId","Tumor.crPatientId","","","",0,1,"","","","string {[]} {[]}
+","CR - Patient ID","CR - Patient ID","","","","","","","","","",,,,,"https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs#EMoLghRDW4A
+",,,,"Tumor.crPatientId",0,1,"",""

@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CRBehaviourCS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRBehaviourCS</b></p><a name=\"CRBehaviourCS\"> </a><a name=\"hcCRBehaviourCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"CRBehaviourCS-0\"> </a></td><td>Benign (0)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRBehaviourCS-1\"> </a></td><td>Uncertain (1)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRBehaviourCS-2\"> </a></td><td>In situ (2)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRBehaviourCS-3\"> </a></td><td>Malignant (3)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRBehaviourCS"] ; # 
+  fhir:title [ fhir:v "CR - Behaviour"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Tumour behaviour codes aligned with the CanReg5 ICD-O-3.2 behaviour dictionary. Used in the Tumor stage to classify the biological behaviour of the neoplasm. These codes are referenced in data quality checks including the Topography-Behaviour and Sex-Morphology checks. Codes must not be modified as they are mapped directly to CanReg5 standards."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "0" ] ;
+     fhir:display [ fhir:v "Benign (0)" ]
+  ] [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "Uncertain (1)" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "In situ (2)" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Malignant (3)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

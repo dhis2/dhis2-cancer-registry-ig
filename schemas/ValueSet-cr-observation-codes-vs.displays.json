@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-cr-observation-codes-vs.displays.json",
+  "title": "Cancer Registry Observation Codes Value Set Display Values",
+  "description": "Display values for Cancer Registry Observation Codes Value Set ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#topography": {
+      "en": "Topography"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#morphology": {
+      "en": "Morphology"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#behaviour": {
+      "en": "Behaviour"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#basis-of-diagnosis": {
+      "en": "Basis of Diagnosis"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#site": {
+      "en": "Site"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#incidence-date": {
+      "en": "Incidence Date"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#age-at-incidence": {
+      "en": "Age at Incidence"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#address": {
+      "en": "Address"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#tumor-number": {
+      "en": "Tumor Number"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#vital-status": {
+      "en": "Vital Status"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#date-of-death": {
+      "en": "Date of Death"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#source-type": {
+      "en": "Source Type"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes#source-tumor-number": {
+      "en": "Source Tumor Number"
+    }
+  },
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-observation-codes-vs",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-14T08:00:57.680583"
+}

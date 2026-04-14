@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CRMorphologyGroupCS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRMorphologyGroupCS</b></p><a name=\"CRMorphologyGroupCS\"> </a><a name=\"hcCRMorphologyGroupCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"CRMorphologyGroupCS-0\"> </a></td><td>Invalid (0)</td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRMorphologyGroupCS-1\"> </a></td><td>Squamous &amp; Transitional cell carcinomas (1)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRMorphologyGroupCS-2\"> </a></td><td>Basal Cell carcinomas (2)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRMorphologyGroupCS-3\"> </a></td><td>Adenocarcinomas (3)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"CRMorphologyGroupCS-4\"> </a></td><td>Other specific Carcinomas (4)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"CRMorphologyGroupCS-5\"> </a></td><td>Unspecified Carcinomas (5)</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"CRMorphologyGroupCS-6\"> </a></td><td>Sarcomas &amp; other soft tissue tumors (6)</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"CRMorphologyGroupCS-7\"> </a></td><td>Mesotheliomas (7)</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"CRMorphologyGroupCS-8\"> </a></td><td>Hematopoietic, lymphoid tissue: Myeloid (8)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"CRMorphologyGroupCS-9\"> </a></td><td>Hematopoietic, lymphoid tissue: B-Cell (9)</td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"CRMorphologyGroupCS-10\"> </a></td><td>Hematopoietic, lymphoid tissue: T-Cell, NK-Cell (10)</td></tr><tr><td style=\"white-space:nowrap\">11<a name=\"CRMorphologyGroupCS-11\"> </a></td><td>Hematopoietic, lymphoid tissue: Hodgkin Lymphoma (11)</td></tr><tr><td style=\"white-space:nowrap\">12<a name=\"CRMorphologyGroupCS-12\"> </a></td><td>Hematopoietic, lymphoid tissue: Mast-cell (12)</td></tr><tr><td style=\"white-space:nowrap\">13<a name=\"CRMorphologyGroupCS-13\"> </a></td><td>Hematopoietic, lymphoid tissue: Histiocytes, Accessory Lymphoid cells (13)</td></tr><tr><td style=\"white-space:nowrap\">14<a name=\"CRMorphologyGroupCS-14\"> </a></td><td>Hematopoietic, lymphoid tissue: Unspecified types (14)</td></tr><tr><td style=\"white-space:nowrap\">15<a name=\"CRMorphologyGroupCS-15\"> </a></td><td>Kaposi sarcoma (15)</td></tr><tr><td style=\"white-space:nowrap\">16<a name=\"CRMorphologyGroupCS-16\"> </a></td><td>Other specified (16)</td></tr><tr><td style=\"white-space:nowrap\">17<a name=\"CRMorphologyGroupCS-17\"> </a></td><td>Unspecified (17)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyGroupCS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRMorphologyGroupCS"] ; # 
+  fhir:title [ fhir:v "CR - Morphology Group"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Morphology group codes used in the Multiple Primary Tester data quality check. Groups are derived from morphology codes using the mapping logic defined in the CanReg5 DefaultMultiplePrimaryTester class. Groups 8-14 represent haematopoietic/lymphoid tissue subtypes (systemic groups). Group 0 indicates an invalid morphology, and group 17 indicates an unspecified morphology."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "18"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "0" ] ;
+     fhir:display [ fhir:v "Invalid (0)" ]
+  ] [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "Squamous & Transitional cell carcinomas (1)" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "Basal Cell carcinomas (2)" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Adenocarcinomas (3)" ]
+  ] [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Other specific Carcinomas (4)" ]
+  ] [
+     fhir:code [ fhir:v "5" ] ;
+     fhir:display [ fhir:v "Unspecified Carcinomas (5)" ]
+  ] [
+     fhir:code [ fhir:v "6" ] ;
+     fhir:display [ fhir:v "Sarcomas & other soft tissue tumors (6)" ]
+  ] [
+     fhir:code [ fhir:v "7" ] ;
+     fhir:display [ fhir:v "Mesotheliomas (7)" ]
+  ] [
+     fhir:code [ fhir:v "8" ] ;
+     fhir:display [ fhir:v "Hematopoietic, lymphoid tissue: Myeloid (8)" ]
+  ] [
+     fhir:code [ fhir:v "9" ] ;
+     fhir:display [ fhir:v "Hematopoietic, lymphoid tissue: B-Cell (9)" ]
+  ] [
+     fhir:code [ fhir:v "10" ] ;
+     fhir:display [ fhir:v "Hematopoietic, lymphoid tissue: T-Cell, NK-Cell (10)" ]
+  ] [
+     fhir:code [ fhir:v "11" ] ;
+     fhir:display [ fhir:v "Hematopoietic, lymphoid tissue: Hodgkin Lymphoma (11)" ]
+  ] [
+     fhir:code [ fhir:v "12" ] ;
+     fhir:display [ fhir:v "Hematopoietic, lymphoid tissue: Mast-cell (12)" ]
+  ] [
+     fhir:code [ fhir:v "13" ] ;
+     fhir:display [ fhir:v "Hematopoietic, lymphoid tissue: Histiocytes, Accessory Lymphoid cells (13)" ]
+  ] [
+     fhir:code [ fhir:v "14" ] ;
+     fhir:display [ fhir:v "Hematopoietic, lymphoid tissue: Unspecified types (14)" ]
+  ] [
+     fhir:code [ fhir:v "15" ] ;
+     fhir:display [ fhir:v "Kaposi sarcoma (15)" ]
+  ] [
+     fhir:code [ fhir:v "16" ] ;
+     fhir:display [ fhir:v "Other specified (16)" ]
+  ] [
+     fhir:code [ fhir:v "17" ] ;
+     fhir:display [ fhir:v "Unspecified (17)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

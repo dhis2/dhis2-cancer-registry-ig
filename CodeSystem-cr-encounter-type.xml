@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cr-encounter-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem cr-encounter-type</b></p><a name="cr-encounter-type"> </a><a name="hccr-encounter-type"> </a><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">tumor<a name="cr-encounter-type-tumor"> </a></td><td>Tumor Registration</td><td>Encounter capturing clinical and epidemiological data for a single registered tumour (DHIS2 Tumor stage).</td></tr><tr><td style="white-space:nowrap">source<a name="cr-encounter-type-source"> </a></td><td>Source Notification</td><td>Encounter recording a documentation source that notified the registry about a cancer case (DHIS2 Source stage).</td></tr><tr><td style="white-space:nowrap">follow-up<a name="cr-encounter-type-follow-up"> </a></td><td>Follow-up Contact</td><td>Encounter recording a follow-up contact with the registered patient to ascertain vital status (DHIS2 Follow-up stage).</td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"/>
+  <version value="0.1.0"/>
+  <name value="CREncounterTypeCS"/>
+  <title value="Cancer Registry Encounter Types"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Encounter types representing the three repeatable program stages of the DHIS2 Cancer Registry tracker program."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="tumor"/>
+    <display value="Tumor Registration"/>
+    <definition value="Encounter capturing clinical and epidemiological data for a single registered tumour (DHIS2 Tumor stage)."/>
+  </concept>
+  <concept>
+    <code value="source"/>
+    <display value="Source Notification"/>
+    <definition value="Encounter recording a documentation source that notified the registry about a cancer case (DHIS2 Source stage)."/>
+  </concept>
+  <concept>
+    <code value="follow-up"/>
+    <display value="Follow-up Contact"/>
+    <definition value="Encounter recording a follow-up contact with the registered patient to ascertain vital status (DHIS2 Follow-up stage)."/>
+  </concept>
+</CodeSystem>

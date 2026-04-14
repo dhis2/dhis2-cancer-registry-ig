@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cr-encounter-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem cr-encounter-type</b></p><a name=\"cr-encounter-type\"> </a><a name=\"hccr-encounter-type\"> </a><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">tumor<a name=\"cr-encounter-type-tumor\"> </a></td><td>Tumor Registration</td><td>Encounter capturing clinical and epidemiological data for a single registered tumour (DHIS2 Tumor stage).</td></tr><tr><td style=\"white-space:nowrap\">source<a name=\"cr-encounter-type-source\"> </a></td><td>Source Notification</td><td>Encounter recording a documentation source that notified the registry about a cancer case (DHIS2 Source stage).</td></tr><tr><td style=\"white-space:nowrap\">follow-up<a name=\"cr-encounter-type-follow-up\"> </a></td><td>Follow-up Contact</td><td>Encounter recording a follow-up contact with the registered patient to ascertain vital status (DHIS2 Follow-up stage).</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CREncounterTypeCS"] ; # 
+  fhir:title [ fhir:v "Cancer Registry Encounter Types"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Encounter types representing the three repeatable program stages of the DHIS2 Cancer Registry tracker program."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "tumor" ] ;
+     fhir:display [ fhir:v "Tumor Registration" ] ;
+     fhir:definition [ fhir:v "Encounter capturing clinical and epidemiological data for a single registered tumour (DHIS2 Tumor stage)." ]
+  ] [
+     fhir:code [ fhir:v "source" ] ;
+     fhir:display [ fhir:v "Source Notification" ] ;
+     fhir:definition [ fhir:v "Encounter recording a documentation source that notified the registry about a cancer case (DHIS2 Source stage)." ]
+  ] [
+     fhir:code [ fhir:v "follow-up" ] ;
+     fhir:display [ fhir:v "Follow-up Contact" ] ;
+     fhir:definition [ fhir:v "Encounter recording a follow-up contact with the registered patient to ascertain vital status (DHIS2 Follow-up stage)." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

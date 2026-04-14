@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMorphologyFamilyVS.displays.json",
+  "title": "CR - Morphology Family value set Display Values",
+  "description": "Display values for CR - Morphology Family value set ValueSet codes. Generated from FHIR expansions.",
+  "type": "object",
+  "properties": {
+    "fhir:displays": {
+      "type": "object",
+      "description": "Multilingual display values for ValueSet codes using IRI format to match JSON schema enum values",
+      "patternProperties": {
+        "^https?://.*": {
+          "type": "object",
+          "description": "Display values for a specific IRI-formatted code by language",
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "English display value"
+            }
+          },
+          "patternProperties": {
+            "^[a-z]{2}(-[A-Z]{2})?$": {
+              "type": "string",
+              "description": "Display value in the specified language (ISO 639-1 code)"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "fhir:displays"
+  ],
+  "additionalProperties": true,
+  "fhir:displays": {
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#1": {
+      "en": "Salivary gland tumours (01)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#2": {
+      "en": "Stomach tumours (02)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#3": {
+      "en": "Small intestine tumours (03)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#4": {
+      "en": "Colo-rectal tumours (04)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#5": {
+      "en": "Anal tumours (05)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#6": {
+      "en": "Gastrointestinal tumours (06)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#7": {
+      "en": "Liver tumours (07)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#8": {
+      "en": "Biliary tumours (08)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#9": {
+      "en": "Pancreatic tumours (09)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#10": {
+      "en": "Olfactory tumours (10)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#11": {
+      "en": "Lung tumours (11)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#12": {
+      "en": "Mesotheliomas and pleuropulmonary blastomas (12)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#13": {
+      "en": "Thymus tumours (13)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#14": {
+      "en": "Cystic tumours of atrio-ventricular node (14)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#15": {
+      "en": "Askin tumours (15)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#16": {
+      "en": "Adamantinomas of long bones (16)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#17": {
+      "en": "Bone tumours (17)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#18": {
+      "en": "Haematopoietic tumours (18)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#19": {
+      "en": "Skin tumours (19)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#20": {
+      "en": "Tumours of skin and subcutaneous tissue (20)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#21": {
+      "en": "Breast tumours (21)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#22": {
+      "en": "Genital rhabdomyomas (22)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#23": {
+      "en": "Endometrial stromal sarcomas (23)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#24": {
+      "en": "Ovarian tumours (24)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#25": {
+      "en": "Placental tumours (25)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#26": {
+      "en": "Tumours of female genital organs (26)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#27": {
+      "en": "Queyrat erythroplasias (27)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#28": {
+      "en": "Testicular tumours (28)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#29": {
+      "en": "Renal tumours (29)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#30": {
+      "en": "Retinoblastomas (30)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#31": {
+      "en": "Naevi and melanomas of the eye (31)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#32": {
+      "en": "Meningeal tumours (32)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#33": {
+      "en": "Cerebellar tumours (33)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#34": {
+      "en": "Cerebral tumours (34)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#35": {
+      "en": "CNS tumours (35)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#36": {
+      "en": "Thyroid tumours (36)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#37": {
+      "en": "Adrenal tumours (37)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#38": {
+      "en": "Parathyroid tumours (38)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#39": {
+      "en": "Pituitary tumours (39)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#40": {
+      "en": "Pineal tumours (40)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#41": {
+      "en": "Carotid body tumours (41)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#42": {
+      "en": "Tumours of glomus jugulare/aortic body (42)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#43": {
+      "en": "Adenoid basal carcinomas (43)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#44": {
+      "en": "Gastrinomas, Somatostatinomas, Enteroglucagonomas (44)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#45": {
+      "en": "Oxyphilic adenocarcinomas (45)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#46": {
+      "en": "Papillary (cyst)adeno-carcinomas (46)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#47": {
+      "en": "Serous surface papillary carcinomas (47)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#48": {
+      "en": "Gonadal tumours (48)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#49": {
+      "en": "Naevi and Melanomas (49)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#50": {
+      "en": "Adenosarcomas and Mesonephromas (50)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#51": {
+      "en": "Stromal sarcomas (51)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#52": {
+      "en": "Tumours of bone and connective tissue (52)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#53": {
+      "en": "Chondromatous tumours (53)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#54": {
+      "en": "Intraepithelial tumours (54)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#55": {
+      "en": "Transitional cell tumours (55)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#56": {
+      "en": "Carcinoid tumours (56)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#57": {
+      "en": "Ductal and lobular tumours (57)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#58": {
+      "en": "Paragangliomas (58)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#59": {
+      "en": "Germ cell and trophoblastic tumours (59)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#60": {
+      "en": "Choriocarcinomas (60)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#61": {
+      "en": "Chordomas (61)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#62": {
+      "en": "Neuroepitheliomatous tumours (62)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#63": {
+      "en": "Nerve sheath tumours (63)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#64": {
+      "en": "Not haematopoietic tumours (64)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#65": {
+      "en": "Not site-specific carcinomas (65)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#66": {
+      "en": "Not site-specific sarcomas (66)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#67": {
+      "en": "Giant cell sarcomas (67)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#68": {
+      "en": "Not CNS affecting sarcomas (68)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#69": {
+      "en": "Kaposi sarcoma (69)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#70": {
+      "en": "Plasmacytomas, extramedullary (70)"
+    },
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphologyFamilyCS#99": {
+      "en": "N/A (**)"
+    }
+  },
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMorphologyFamilyVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-14T08:00:57.676967"
+}

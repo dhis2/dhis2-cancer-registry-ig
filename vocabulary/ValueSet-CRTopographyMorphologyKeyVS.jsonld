@@ -1,0 +1,35 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "name": "http://www.w3.org/2000/01/rdf-schema#label",
+    "fhir": "https://smart.who.int/base/DataTypes.jsonld#",
+    "id": "@id",
+    "generatedAt": {
+      "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  },
+  "@id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRTopographyMorphologyKeyVS.jsonld",
+  "@type": "http://www.w3.org/ns/prov#Entity",
+  "generatedAt": "2026-04-14T08:00:57.812486Z",
+  "@graph": [
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRTopographyMorphologyKeyVS.jsonld#NA",
+      "name": "*",
+      "fhir:code": "NA",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRTopographyMorphologyKeyCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRTopographyMorphologyKeyVS.jsonld#PLUS",
+      "name": "+",
+      "fhir:code": "PLUS",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRTopographyMorphologyKeyCS"
+    },
+    {
+      "id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRTopographyMorphologyKeyVS.jsonld#MINUS",
+      "name": "-",
+      "fhir:code": "MINUS",
+      "fhir:CodeSystem": "https://dhis2.org/fhir/cancer-registry/CodeSystem-CRTopographyMorphologyKeyCS"
+    }
+  ]
+}

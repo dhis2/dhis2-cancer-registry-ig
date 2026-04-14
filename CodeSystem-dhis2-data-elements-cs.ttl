@@ -1,0 +1,227 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "dhis2-data-elements-cs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dhis2-data-elements-cs</b></p><a name=\"dhis2-data-elements-cs\"> </a><a name=\"hcdhis2-data-elements-cs\"> </a><p>This  code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">c6EnHSAMUat<a name=\"dhis2-data-elements-cs-c6EnHSAMUat\"> </a></td><td>CR - Incidence date</td><td>CR - Incidence date</td></tr><tr><td style=\"white-space:nowrap\">tasm9QG8HaF<a name=\"dhis2-data-elements-cs-tasm9QG8HaF\"> </a></td><td>CR - Age</td><td>CR - Age</td></tr><tr><td style=\"white-space:nowrap\">xcUBzN5QFXu<a name=\"dhis2-data-elements-cs-xcUBzN5QFXu\"> </a></td><td>CR - Address</td><td>CR - Address</td></tr><tr><td style=\"white-space:nowrap\">KgDQLAkC5ql<a name=\"dhis2-data-elements-cs-KgDQLAkC5ql\"> </a></td><td>CR - Tumor number</td><td>CR - Tumor number</td></tr><tr><td style=\"white-space:nowrap\">LCSApBii8CI<a name=\"dhis2-data-elements-cs-LCSApBii8CI\"> </a></td><td>CR - Site</td><td>CR - Site</td></tr><tr><td style=\"white-space:nowrap\">zw6Vwqnhvmh<a name=\"dhis2-data-elements-cs-zw6Vwqnhvmh\"> </a></td><td>CR - Topography</td><td>CR - Topography</td></tr><tr><td style=\"white-space:nowrap\">UkyyY1xukJg<a name=\"dhis2-data-elements-cs-UkyyY1xukJg\"> </a></td><td>CR - Morphology</td><td>CR - Morphology</td></tr><tr><td style=\"white-space:nowrap\">MMIuwJdjx8B<a name=\"dhis2-data-elements-cs-MMIuwJdjx8B\"> </a></td><td>CR - Behaviour</td><td>CR - Behaviour</td></tr><tr><td style=\"white-space:nowrap\">uoyoNWrexbY<a name=\"dhis2-data-elements-cs-uoyoNWrexbY\"> </a></td><td>CR - Basis diagnosis</td><td>CR - Basis diagnosis</td></tr><tr><td style=\"white-space:nowrap\">ZMD8dwB3zOZ<a name=\"dhis2-data-elements-cs-ZMD8dwB3zOZ\"> </a></td><td>CR - Grade</td><td>CR - Grade</td></tr><tr><td style=\"white-space:nowrap\">FlGHlAuG4Ly<a name=\"dhis2-data-elements-cs-FlGHlAuG4Ly\"> </a></td><td>CR - Checks: Run checks</td><td>CR - Checks: Run checks</td></tr><tr><td style=\"white-space:nowrap\">nFJ2MJ8Vxuj<a name=\"dhis2-data-elements-cs-nFJ2MJ8Vxuj\"> </a></td><td>CR - Run Topography Morphology check</td><td>CR - Run Topography Morphology check</td></tr><tr><td style=\"white-space:nowrap\">rqpqtJZto2L<a name=\"dhis2-data-elements-cs-rqpqtJZto2L\"> </a></td><td>CR - Run Multiple primary check</td><td>CR - Run Multiple primary check</td></tr><tr><td style=\"white-space:nowrap\">mxfPEKn6kFt<a name=\"dhis2-data-elements-cs-mxfPEKn6kFt\"> </a></td><td>CR - Checks: Rare Age Morphology</td><td>CR - Checks: Rare Age Morphology</td></tr><tr><td style=\"white-space:nowrap\">rPvQffpxaEs<a name=\"dhis2-data-elements-cs-rPvQffpxaEs\"> </a></td><td>CR - Checks: Rare Age Topography</td><td>CR - Checks: Rare Age Topography</td></tr><tr><td style=\"white-space:nowrap\">Laax6wSBp2G<a name=\"dhis2-data-elements-cs-Laax6wSBp2G\"> </a></td><td>CR - Checks: Rare Age Topography Morphology</td><td>CR - Checks: Rare Age Topography Morphology</td></tr><tr><td style=\"white-space:nowrap\">U8v95tUnazC<a name=\"dhis2-data-elements-cs-U8v95tUnazC\"> </a></td><td>CR - Checks: Rare Basis</td><td>CR - Checks: Rare Basis</td></tr><tr><td style=\"white-space:nowrap\">doB0rv08MIc<a name=\"dhis2-data-elements-cs-doB0rv08MIc\"> </a></td><td>CR - Checks: Invalid Grade</td><td>CR - Checks: Invalid Grade</td></tr><tr><td style=\"white-space:nowrap\">FH09UKj7HMC<a name=\"dhis2-data-elements-cs-FH09UKj7HMC\"> </a></td><td>CR - Checks: Rare Sex Morphology</td><td>CR - Checks: Rare Sex Morphology</td></tr><tr><td style=\"white-space:nowrap\">wAmyuRZNNXC<a name=\"dhis2-data-elements-cs-wAmyuRZNNXC\"> </a></td><td>CR - Checks: Invalid Sex Topography</td><td>CR - Checks: Invalid Sex Topography</td></tr><tr><td style=\"white-space:nowrap\">ugeBdJzYHVW<a name=\"dhis2-data-elements-cs-ugeBdJzYHVW\"> </a></td><td>CR - Checks: Rare Topography Behaviour</td><td>CR - Checks: Rare Topography Behaviour</td></tr><tr><td style=\"white-space:nowrap\">fdvzxz58nEE<a name=\"dhis2-data-elements-cs-fdvzxz58nEE\"> </a></td><td>CR - Checks: Rare Topography Morphology</td><td>CR - Checks: Rare Topography Morphology</td></tr><tr><td style=\"white-space:nowrap\">VBkjlEwG4BE<a name=\"dhis2-data-elements-cs-VBkjlEwG4BE\"> </a></td><td>CR - Checks: Multiple primary test result</td><td>CR - Checks: Multiple primary test result</td></tr><tr><td style=\"white-space:nowrap\">jTW2ljvoIc6<a name=\"dhis2-data-elements-cs-jTW2ljvoIc6\"> </a></td><td>CR - Rare</td><td>CR - Rare</td></tr><tr><td style=\"white-space:nowrap\">TXtHNzrfmki<a name=\"dhis2-data-elements-cs-TXtHNzrfmki\"> </a></td><td>CR - Invalid</td><td>CR - Invalid</td></tr><tr><td style=\"white-space:nowrap\">RBu5b3A68mq<a name=\"dhis2-data-elements-cs-RBu5b3A68mq\"> </a></td><td>CR - Morphology Family</td><td>CR - Morphology Family</td></tr><tr><td style=\"white-space:nowrap\">XR1U9dr60xI<a name=\"dhis2-data-elements-cs-XR1U9dr60xI\"> </a></td><td>CR - Topography Morphology key</td><td>CR - Topography Morphology key</td></tr><tr><td style=\"white-space:nowrap\">oZyJlKscN6G<a name=\"dhis2-data-elements-cs-oZyJlKscN6G\"> </a></td><td>CR - Present in the MUST list</td><td>CR - Present in the MUST list</td></tr><tr><td style=\"white-space:nowrap\">DyVH5Q3Qf0Q<a name=\"dhis2-data-elements-cs-DyVH5Q3Qf0Q\"> </a></td><td>CR - Present in the MUST-NOT list</td><td>CR - Present in the MUST-NOT list</td></tr><tr><td style=\"white-space:nowrap\">yt3gq8onyKb<a name=\"dhis2-data-elements-cs-yt3gq8onyKb\"> </a></td><td>CR - Morphology group</td><td>CR - Morphology group</td></tr><tr><td style=\"white-space:nowrap\">eGWudq2aGpY<a name=\"dhis2-data-elements-cs-eGWudq2aGpY\"> </a></td><td>CR - Previous morphology group</td><td>CR - Previous morphology group</td></tr><tr><td style=\"white-space:nowrap\">dTbQZsduHT7<a name=\"dhis2-data-elements-cs-dTbQZsduHT7\"> </a></td><td>CR - Previous morphology group (multiple)</td><td>CR - Previous morphology group (multiple)</td></tr><tr><td style=\"white-space:nowrap\">RmzIYvxiBm4<a name=\"dhis2-data-elements-cs-RmzIYvxiBm4\"> </a></td><td>CR - Topography group</td><td>CR - Topography group</td></tr><tr><td style=\"white-space:nowrap\">FyzoZsxRjjz<a name=\"dhis2-data-elements-cs-FyzoZsxRjjz\"> </a></td><td>CR - Previous topography group</td><td>CR - Previous topography group</td></tr><tr><td style=\"white-space:nowrap\">IhLiguJKuzz<a name=\"dhis2-data-elements-cs-IhLiguJKuzz\"> </a></td><td>CR - Previous topography group (multiple)</td><td>CR - Previous topography group (multiple)</td></tr><tr><td style=\"white-space:nowrap\">n4IHuWceDlW<a name=\"dhis2-data-elements-cs-n4IHuWceDlW\"> </a></td><td>CR - Morphology result</td><td>CR - Morphology result</td></tr><tr><td style=\"white-space:nowrap\">z3JSu92EQhg<a name=\"dhis2-data-elements-cs-z3JSu92EQhg\"> </a></td><td>CR - Confirm the rare status</td><td>CR - Confirm the rare status</td></tr><tr><td style=\"white-space:nowrap\">KwMs1DNVA0R<a name=\"dhis2-data-elements-cs-KwMs1DNVA0R\"> </a></td><td>CR - TUMOURID</td><td>CR - TUMOURID</td></tr><tr><td style=\"white-space:nowrap\">OrVAWBySU43<a name=\"dhis2-data-elements-cs-OrVAWBySU43\"> </a></td><td>CR - Previous tumor number</td><td>CR - Previous tumor number</td></tr><tr><td style=\"white-space:nowrap\">EMoLghRDW4A<a name=\"dhis2-data-elements-cs-EMoLghRDW4A\"> </a></td><td>CR - Patient ID</td><td>CR - Patient ID</td></tr><tr><td style=\"white-space:nowrap\">fID2of7Q8Jj<a name=\"dhis2-data-elements-cs-fID2of7Q8Jj\"> </a></td><td>CR - Source: Tumor number</td><td>CR - Source: Tumor number</td></tr><tr><td style=\"white-space:nowrap\">TgjO873BZTu<a name=\"dhis2-data-elements-cs-TgjO873BZTu\"> </a></td><td>CR - Source date</td><td>CR - Source date</td></tr><tr><td style=\"white-space:nowrap\">Mqz5dPrwWho<a name=\"dhis2-data-elements-cs-Mqz5dPrwWho\"> </a></td><td>CR - Source Type</td><td>CR - Source Type</td></tr><tr><td style=\"white-space:nowrap\">HxMFZcIIZpL<a name=\"dhis2-data-elements-cs-HxMFZcIIZpL\"> </a></td><td>CR - TUMOURIDSOURCETABLE</td><td>CR - TUMOURIDSOURCETABLE</td></tr><tr><td style=\"white-space:nowrap\">Ks2WWWWCuzq<a name=\"dhis2-data-elements-cs-Ks2WWWWCuzq\"> </a></td><td>CR - Date last contact</td><td>CR - Date last contact</td></tr><tr><td style=\"white-space:nowrap\">nMpcjKFF5zt<a name=\"dhis2-data-elements-cs-nMpcjKFF5zt\"> </a></td><td>CR - Status</td><td>CR - Status</td></tr><tr><td style=\"white-space:nowrap\">hCJqPZcw2n6<a name=\"dhis2-data-elements-cs-hCJqPZcw2n6\"> </a></td><td>CR - Date of death</td><td>CR - Date of death</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-data-elements-cs>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "Dhis2DataElementsCS"] ; # 
+  fhir:title [ fhir:v "DHIS2 Data Elements"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Code system for 47 unique DHIS2 data elements from all selected programs"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "47"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "c6EnHSAMUat" ] ;
+     fhir:display [ fhir:v "CR - Incidence date" ] ;
+     fhir:definition [ fhir:v "CR - Incidence date" ]
+  ] [
+     fhir:code [ fhir:v "tasm9QG8HaF" ] ;
+     fhir:display [ fhir:v "CR - Age" ] ;
+     fhir:definition [ fhir:v "CR - Age" ]
+  ] [
+     fhir:code [ fhir:v "xcUBzN5QFXu" ] ;
+     fhir:display [ fhir:v "CR - Address" ] ;
+     fhir:definition [ fhir:v "CR - Address" ]
+  ] [
+     fhir:code [ fhir:v "KgDQLAkC5ql" ] ;
+     fhir:display [ fhir:v "CR - Tumor number" ] ;
+     fhir:definition [ fhir:v "CR - Tumor number" ]
+  ] [
+     fhir:code [ fhir:v "LCSApBii8CI" ] ;
+     fhir:display [ fhir:v "CR - Site" ] ;
+     fhir:definition [ fhir:v "CR - Site" ]
+  ] [
+     fhir:code [ fhir:v "zw6Vwqnhvmh" ] ;
+     fhir:display [ fhir:v "CR - Topography" ] ;
+     fhir:definition [ fhir:v "CR - Topography" ]
+  ] [
+     fhir:code [ fhir:v "UkyyY1xukJg" ] ;
+     fhir:display [ fhir:v "CR - Morphology" ] ;
+     fhir:definition [ fhir:v "CR - Morphology" ]
+  ] [
+     fhir:code [ fhir:v "MMIuwJdjx8B" ] ;
+     fhir:display [ fhir:v "CR - Behaviour" ] ;
+     fhir:definition [ fhir:v "CR - Behaviour" ]
+  ] [
+     fhir:code [ fhir:v "uoyoNWrexbY" ] ;
+     fhir:display [ fhir:v "CR - Basis diagnosis" ] ;
+     fhir:definition [ fhir:v "CR - Basis diagnosis" ]
+  ] [
+     fhir:code [ fhir:v "ZMD8dwB3zOZ" ] ;
+     fhir:display [ fhir:v "CR - Grade" ] ;
+     fhir:definition [ fhir:v "CR - Grade" ]
+  ] [
+     fhir:code [ fhir:v "FlGHlAuG4Ly" ] ;
+     fhir:display [ fhir:v "CR - Checks: Run checks" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Run checks" ]
+  ] [
+     fhir:code [ fhir:v "nFJ2MJ8Vxuj" ] ;
+     fhir:display [ fhir:v "CR - Run Topography Morphology check" ] ;
+     fhir:definition [ fhir:v "CR - Run Topography Morphology check" ]
+  ] [
+     fhir:code [ fhir:v "rqpqtJZto2L" ] ;
+     fhir:display [ fhir:v "CR - Run Multiple primary check" ] ;
+     fhir:definition [ fhir:v "CR - Run Multiple primary check" ]
+  ] [
+     fhir:code [ fhir:v "mxfPEKn6kFt" ] ;
+     fhir:display [ fhir:v "CR - Checks: Rare Age Morphology" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Rare Age Morphology" ]
+  ] [
+     fhir:code [ fhir:v "rPvQffpxaEs" ] ;
+     fhir:display [ fhir:v "CR - Checks: Rare Age Topography" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Rare Age Topography" ]
+  ] [
+     fhir:code [ fhir:v "Laax6wSBp2G" ] ;
+     fhir:display [ fhir:v "CR - Checks: Rare Age Topography Morphology" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Rare Age Topography Morphology" ]
+  ] [
+     fhir:code [ fhir:v "U8v95tUnazC" ] ;
+     fhir:display [ fhir:v "CR - Checks: Rare Basis" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Rare Basis" ]
+  ] [
+     fhir:code [ fhir:v "doB0rv08MIc" ] ;
+     fhir:display [ fhir:v "CR - Checks: Invalid Grade" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Invalid Grade" ]
+  ] [
+     fhir:code [ fhir:v "FH09UKj7HMC" ] ;
+     fhir:display [ fhir:v "CR - Checks: Rare Sex Morphology" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Rare Sex Morphology" ]
+  ] [
+     fhir:code [ fhir:v "wAmyuRZNNXC" ] ;
+     fhir:display [ fhir:v "CR - Checks: Invalid Sex Topography" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Invalid Sex Topography" ]
+  ] [
+     fhir:code [ fhir:v "ugeBdJzYHVW" ] ;
+     fhir:display [ fhir:v "CR - Checks: Rare Topography Behaviour" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Rare Topography Behaviour" ]
+  ] [
+     fhir:code [ fhir:v "fdvzxz58nEE" ] ;
+     fhir:display [ fhir:v "CR - Checks: Rare Topography Morphology" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Rare Topography Morphology" ]
+  ] [
+     fhir:code [ fhir:v "VBkjlEwG4BE" ] ;
+     fhir:display [ fhir:v "CR - Checks: Multiple primary test result" ] ;
+     fhir:definition [ fhir:v "CR - Checks: Multiple primary test result" ]
+  ] [
+     fhir:code [ fhir:v "jTW2ljvoIc6" ] ;
+     fhir:display [ fhir:v "CR - Rare" ] ;
+     fhir:definition [ fhir:v "CR - Rare" ]
+  ] [
+     fhir:code [ fhir:v "TXtHNzrfmki" ] ;
+     fhir:display [ fhir:v "CR - Invalid" ] ;
+     fhir:definition [ fhir:v "CR - Invalid" ]
+  ] [
+     fhir:code [ fhir:v "RBu5b3A68mq" ] ;
+     fhir:display [ fhir:v "CR - Morphology Family" ] ;
+     fhir:definition [ fhir:v "CR - Morphology Family" ]
+  ] [
+     fhir:code [ fhir:v "XR1U9dr60xI" ] ;
+     fhir:display [ fhir:v "CR - Topography Morphology key" ] ;
+     fhir:definition [ fhir:v "CR - Topography Morphology key" ]
+  ] [
+     fhir:code [ fhir:v "oZyJlKscN6G" ] ;
+     fhir:display [ fhir:v "CR - Present in the MUST list" ] ;
+     fhir:definition [ fhir:v "CR - Present in the MUST list" ]
+  ] [
+     fhir:code [ fhir:v "DyVH5Q3Qf0Q" ] ;
+     fhir:display [ fhir:v "CR - Present in the MUST-NOT list" ] ;
+     fhir:definition [ fhir:v "CR - Present in the MUST-NOT list" ]
+  ] [
+     fhir:code [ fhir:v "yt3gq8onyKb" ] ;
+     fhir:display [ fhir:v "CR - Morphology group" ] ;
+     fhir:definition [ fhir:v "CR - Morphology group" ]
+  ] [
+     fhir:code [ fhir:v "eGWudq2aGpY" ] ;
+     fhir:display [ fhir:v "CR - Previous morphology group" ] ;
+     fhir:definition [ fhir:v "CR - Previous morphology group" ]
+  ] [
+     fhir:code [ fhir:v "dTbQZsduHT7" ] ;
+     fhir:display [ fhir:v "CR - Previous morphology group (multiple)" ] ;
+     fhir:definition [ fhir:v "CR - Previous morphology group (multiple)" ]
+  ] [
+     fhir:code [ fhir:v "RmzIYvxiBm4" ] ;
+     fhir:display [ fhir:v "CR - Topography group" ] ;
+     fhir:definition [ fhir:v "CR - Topography group" ]
+  ] [
+     fhir:code [ fhir:v "FyzoZsxRjjz" ] ;
+     fhir:display [ fhir:v "CR - Previous topography group" ] ;
+     fhir:definition [ fhir:v "CR - Previous topography group" ]
+  ] [
+     fhir:code [ fhir:v "IhLiguJKuzz" ] ;
+     fhir:display [ fhir:v "CR - Previous topography group (multiple)" ] ;
+     fhir:definition [ fhir:v "CR - Previous topography group (multiple)" ]
+  ] [
+     fhir:code [ fhir:v "n4IHuWceDlW" ] ;
+     fhir:display [ fhir:v "CR - Morphology result" ] ;
+     fhir:definition [ fhir:v "CR - Morphology result" ]
+  ] [
+     fhir:code [ fhir:v "z3JSu92EQhg" ] ;
+     fhir:display [ fhir:v "CR - Confirm the rare status" ] ;
+     fhir:definition [ fhir:v "CR - Confirm the rare status" ]
+  ] [
+     fhir:code [ fhir:v "KwMs1DNVA0R" ] ;
+     fhir:display [ fhir:v "CR - TUMOURID" ] ;
+     fhir:definition [ fhir:v "CR - TUMOURID" ]
+  ] [
+     fhir:code [ fhir:v "OrVAWBySU43" ] ;
+     fhir:display [ fhir:v "CR - Previous tumor number" ] ;
+     fhir:definition [ fhir:v "CR - Previous tumor number" ]
+  ] [
+     fhir:code [ fhir:v "EMoLghRDW4A" ] ;
+     fhir:display [ fhir:v "CR - Patient ID" ] ;
+     fhir:definition [ fhir:v "CR - Patient ID" ]
+  ] [
+     fhir:code [ fhir:v "fID2of7Q8Jj" ] ;
+     fhir:display [ fhir:v "CR - Source: Tumor number" ] ;
+     fhir:definition [ fhir:v "CR - Source: Tumor number" ]
+  ] [
+     fhir:code [ fhir:v "TgjO873BZTu" ] ;
+     fhir:display [ fhir:v "CR - Source date" ] ;
+     fhir:definition [ fhir:v "CR - Source date" ]
+  ] [
+     fhir:code [ fhir:v "Mqz5dPrwWho" ] ;
+     fhir:display [ fhir:v "CR - Source Type" ] ;
+     fhir:definition [ fhir:v "CR - Source Type" ]
+  ] [
+     fhir:code [ fhir:v "HxMFZcIIZpL" ] ;
+     fhir:display [ fhir:v "CR - TUMOURIDSOURCETABLE" ] ;
+     fhir:definition [ fhir:v "CR - TUMOURIDSOURCETABLE" ]
+  ] [
+     fhir:code [ fhir:v "Ks2WWWWCuzq" ] ;
+     fhir:display [ fhir:v "CR - Date last contact" ] ;
+     fhir:definition [ fhir:v "CR - Date last contact" ]
+  ] [
+     fhir:code [ fhir:v "nMpcjKFF5zt" ] ;
+     fhir:display [ fhir:v "CR - Status" ] ;
+     fhir:definition [ fhir:v "CR - Status" ]
+  ] [
+     fhir:code [ fhir:v "hCJqPZcw2n6" ] ;
+     fhir:display [ fhir:v "CR - Date of death" ] ;
+     fhir:definition [ fhir:v "CR - Date of death" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

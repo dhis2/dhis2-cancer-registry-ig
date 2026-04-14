@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMultiplePrimaryTestVS.schema.json",
+  "title": "CR - Multiple primary test value set Schema",
+  "description": "JSON Schema for CR - Multiple primary test value set ValueSet codes. Generated from FHIR expansions using IRI format.",
+  "type": "string",
+  "enum": [
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMultiplePrimaryTestCS#DUPLICATE_PRIMARY",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMultiplePrimaryTestCS#MULTIPLE_PRIMARY",
+    "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMultiplePrimaryTestCS#UNKNOWN_TOPOGRAPHY"
+  ],
+  "narrative": "This schema validates IRI-formatted codes for the CR - Multiple primary test value set ValueSet. Each enum value includes the system URI in the format {systemuri}#{code} to match JSON-LD enumeration IRIs. Display values are available at https://dhis2.org/fhir/cancer-registry/ValueSet-CRMultiplePrimaryTestVS.displays.json. For a complete listing of all ValueSets, see artifacts.html#terminology-value-sets.",
+  "fhir:displays": "https://dhis2.org/fhir/cancer-registry/ValueSet-CRMultiplePrimaryTestVS.displays.json",
+  "fhir:valueSet": "https://dhis2.org/fhir/cancer-registry/ValueSet/CRMultiplePrimaryTestVS",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2026-04-14T08:00:57.680135"
+}

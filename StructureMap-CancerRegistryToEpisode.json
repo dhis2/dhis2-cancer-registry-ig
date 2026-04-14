@@ -1,0 +1,89 @@
+{
+  "resourceType" : "StructureMap",
+  "id" : "CancerRegistryToEpisode",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap CancerRegistryToEpisode</b></p><a name=\"CancerRegistryToEpisode\"> </a><a name=\"hcCancerRegistryToEpisode\"> </a><pre class=\"fml\">\r\n<b>map</b><span style=\"color: navy\"> &quot;</span>https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode<span style=\"color: navy\">&quot; = &quot;</span>CancerRegistryToEpisode<span style=\"color: navy\">&quot;\r\n\r\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Transform: Cancer Registry Enrollment to EpisodeOfCare</span>\r\n\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"StructureDefinition-CancerRegistry.html\" title=\"Cancer Registry\">https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry</a><span style=\"color: navy\">&quot; </span><b>alias </b>CancerRegistry <b>as </b><b>source</b>\r\n<b>uses</b><span style=\"color: navy\"> &quot;</span><a href=\"http://hl7.org/fhir/R4/episodeofcare.html\" title=\"EpisodeOfCare\">http://hl7.org/fhir/StructureDefinition/EpisodeOfCare</a><span style=\"color: navy\">&quot; </span><b>alias </b>EpisodeOfCare <b>as </b><b>target</b>\r\n\r\n<b>group </b>CancerRegistryToEpisode<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>CancerRegistry, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>EpisodeOfCare<span style=\"color: navy\">)</span><span style=\"color: navy\"> {\r\n</span>  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.meta<b> as </b><span style=\"color: maroon\">meta</span><b> then</b><span style=\"color: navy\"> {\r\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>meta.profile = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode'</span> <i>&quot;setprofile&quot;</i><span style=\"color: navy\">;</span>\r\n  <span style=\"color: navy\">}</span> <i>&quot;setmeta&quot;</i><span style=\"color: navy\">;</span>\r\n  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.status = <span style=\"color: blue\">'active'</span> <i>&quot;setstatus&quot;</i><span style=\"color: navy\">;</span>\r\n<span style=\"color: navy\">// </span><span style=\"color: green\">The patient reference must be set by the orchestrating engine.</span>\r\n<span style=\"color: #b36b00\" title=\"This element was not defined prior to R5\">// src.crPatientId -&gt; tgt.patient (Reference resolution is external)</span>\r\n<span style=\"color: navy\">// </span><span style=\"color: green\">Period start represents enrollment date — set from the source system context.</span>\r\n<span style=\"color: navy\">}\r\n\r\n</span></pre></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToEpisode",
+  "version" : "0.1.0",
+  "name" : "CancerRegistryToEpisode",
+  "title" : "Transform: Cancer Registry Enrollment to EpisodeOfCare",
+  "status" : "draft",
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Transform: Cancer Registry Enrollment to EpisodeOfCare",
+  "structure" : [{
+    "url" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry",
+    "mode" : "source",
+    "alias" : "CancerRegistry"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare",
+    "mode" : "target",
+    "alias" : "EpisodeOfCare"
+  }],
+  "group" : [{
+    "name" : "CancerRegistryToEpisode",
+    "typeMode" : "none",
+    "input" : [{
+      "name" : "src",
+      "type" : "CancerRegistry",
+      "mode" : "source"
+    },
+    {
+      "name" : "tgt",
+      "type" : "EpisodeOfCare",
+      "mode" : "target"
+    }],
+    "rule" : [{
+      "name" : "setmeta",
+      "source" : [{
+        "context" : "src"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "meta",
+        "variable" : "meta"
+      }],
+      "rule" : [{
+        "name" : "setprofile",
+        "source" : [{
+          "context" : "src"
+        }],
+        "target" : [{
+          "context" : "meta",
+          "contextType" : "variable",
+          "element" : "profile",
+          "transform" : "copy",
+          "parameter" : [{
+            "valueString" : "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-cancer-registration-episode"
+          }]
+        }]
+      }]
+    },
+    {
+      "name" : "setstatus",
+      "source" : [{
+        "context" : "src"
+      }],
+      "target" : [{
+        "context" : "tgt",
+        "contextType" : "variable",
+        "element" : "status",
+        "transform" : "copy",
+        "parameter" : [{
+          "valueString" : "active"
+        }]
+      }]
+    }]
+  }]
+}

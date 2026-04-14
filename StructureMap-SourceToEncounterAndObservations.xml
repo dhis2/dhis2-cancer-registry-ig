@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureMap xmlns="http://hl7.org/fhir">
+  <id value="SourceToEncounterAndObservations"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureMap SourceToEncounterAndObservations</b></p><a name="SourceToEncounterAndObservations"> </a><a name="hcSourceToEncounterAndObservations"> </a><pre class="fml">
+<b>map</b><span style="color: navy"> &quot;</span>https://dhis2.org/fhir/cancer-registry/StructureMap/SourceToEncounterAndObservations<span style="color: navy">&quot; = &quot;</span>SourceToEncounterAndObservations<span style="color: navy">&quot;
+
+</span><span style="color: navy">// </span><span style="color: green">Transform: Source Stage to CRSourceEncounter + Observations</span>
+
+<b>uses</b><span style="color: navy"> &quot;</span><a href="StructureDefinition-Source.html" title="Source">https://dhis2.org/fhir/cancer-registry/StructureDefinition/Source</a><span style="color: navy">&quot; </span><b>alias </b>Source <b>as </b><b>source</b>
+<b>uses</b><span style="color: navy"> &quot;</span><a href="http://hl7.org/fhir/R4/bundle.html" title="Bundle">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style="color: navy">&quot; </span><b>alias </b>Bundle <b>as </b><b>target</b>
+
+<b>group </b>SourceToBundle<span style="color: navy">(</span><b>source</b> <span style="color: maroon">src</span><span style="color: navy"> : </span>Source, <b>target</b> <span style="color: maroon">tgt</span><span style="color: navy"> : </span>Bundle<span style="color: navy">)</span><span style="color: navy"> {
+</span>  src<span style="color: navy"><b> -&gt; </b></span>tgt.type = <span style="color: blue">'transaction'</span> <i>&quot;setbundletype&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Create the Encounter resource</span>
+  src<span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Encounter'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">enc</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>enc.meta<b> as </b><span style="color: maroon">meta</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>meta.profile = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-encounter'</span> <i>&quot;setencprofile&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;setencmeta&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span>enc.status = <span style="color: blue">'finished'</span> <i>&quot;setencstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span>enc.class<b> as </b><span style="color: maroon">cls</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cls.system = <span style="color: blue">'http://terminology.hl7.org/CodeSystem/v3-ActCode'</span> <i>&quot;setclssystem&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cls.code = <span style="color: blue">'AMB'</span> <i>&quot;setclscode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;setencclass&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span>enc.type<b> as </b><span style="color: maroon">tp</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>tp.coding<b> as </b><span style="color: maroon">coding</span><b> then</b><span style="color: navy"> {
+</span>        src<span style="color: navy"><b> -&gt; </b></span>coding.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type'</span> <i>&quot;settypesystem&quot;</i><span style="color: navy">;</span>
+        src<span style="color: navy"><b> -&gt; </b></span>coding.code = <span style="color: blue">'source'</span> <i>&quot;settypecode&quot;</i><span style="color: navy">;</span>
+      <span style="color: navy">}</span> <i>&quot;settypecoding&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;setenctype&quot;</i><span style="color: navy">;</span>
+    src.crSourceDate<b> as </b><span style="color: maroon">dt</span><span style="color: navy"><b> -&gt; </b></span> enc.period<b> as </b><span style="color: maroon">p</span><span style="color: navy">, </span> p.start = <span style="color: maroon">dt</span> <i>&quot;setencperiod&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createencounter&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Source Type Observation</span>
+  src.crSourceType<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;srctypestatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;srctypecodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'source-type'</span> <i>&quot;srctypecodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;srctypecode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS'</span> <i>&quot;srctypevalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;srctypevalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;srctypevalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createsourcetype&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">// </span><span style="color: green">Source Tumor Number Observation</span>
+  src.crSourceTumorNumber<b> as </b><span style="color: maroon">val</span><span style="color: navy"><b> -&gt; </b></span> tgt.entry<b> as </b><span style="color: maroon">entry</span><span style="color: navy">, </span> entry.resource = <b>create</b><span style="color: navy">(</span><span style="color: blue">'Observation'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">obs</span><b> then</b><span style="color: navy"> {
+</span>    src<span style="color: navy"><b> -&gt; </b></span>obs.status = <span style="color: blue">'final'</span> <i>&quot;srctnstatus&quot;</i><span style="color: navy">;</span>
+    src<span style="color: navy"><b> -&gt; </b></span> obs.code<b> as </b><span style="color: maroon">c</span><span style="color: navy">, </span> c.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      src<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>&quot;srctncodesys&quot;</i><span style="color: navy">;</span>
+      src<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: blue">'source-tumor-number'</span> <i>&quot;srctncodeval&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;srctncode&quot;</i><span style="color: navy">;</span>
+    val<span style="color: navy"><b> -&gt; </b></span> obs.value = <b>create</b><span style="color: navy">(</span><span style="color: blue">'CodeableConcept'</span><span style="color: navy">)</span><b> as </b><span style="color: maroon">cc</span><span style="color: navy">, </span> cc.coding<b> as </b><span style="color: maroon">cd</span><b> then</b><span style="color: navy"> {
+</span>      val<span style="color: navy"><b> -&gt; </b></span>cd.system = <span style="color: blue">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS'</span> <i>&quot;srctnvalsys&quot;</i><span style="color: navy">;</span>
+      val<span style="color: navy"><b> -&gt; </b></span>cd.code = <span style="color: maroon">val</span> <i>&quot;srctnvalcode&quot;</i><span style="color: navy">;</span>
+    <span style="color: navy">}</span> <i>&quot;srctnvalue&quot;</i><span style="color: navy">;</span>
+  <span style="color: navy">}</span> <i>&quot;createsourcetumornumber&quot;</i><span style="color: navy">;</span>
+<span style="color: navy">}
+
+</span></pre></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/StructureMap/SourceToEncounterAndObservations"/>
+  <version value="0.1.0"/>
+  <name value="SourceToEncounterAndObservations"/>
+  <title value="Transform: Source Stage to CRSourceEncounter + Observations"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Transform: Source Stage to CRSourceEncounter + Observations"/>
+  <structure>
+    <url value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/Source"/>
+    <mode value="source"/>
+    <alias value="Source"/>
+  </structure>
+  <structure>
+    <url value="http://hl7.org/fhir/StructureDefinition/Bundle"/>
+    <mode value="target"/>
+    <alias value="Bundle"/>
+  </structure>
+  <group>
+    <name value="SourceToBundle"/>
+    <typeMode value="none"/>
+    <input>
+      <name value="src"/>
+      <type value="Source"/>
+      <mode value="source"/>
+    </input>
+    <input>
+      <name value="tgt"/>
+      <type value="Bundle"/>
+      <mode value="target"/>
+    </input>
+    <rule>
+      <name value="setbundletype"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="type"/>
+        <transform value="copy"/>
+        <parameter>
+          <valueString value="transaction"/>
+        </parameter>
+      </target>
+    </rule>
+    <rule>
+      <name value="createencounter"/>
+      <source>
+        <context value="src"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="enc"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Encounter"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="setencmeta"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="enc"/>
+          <contextType value="variable"/>
+          <element value="meta"/>
+          <variable value="meta"/>
+        </target>
+        <rule>
+          <name value="setencprofile"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="meta"/>
+            <contextType value="variable"/>
+            <element value="profile"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-source-encounter"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+      <rule>
+        <name value="setencstatus"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="enc"/>
+          <contextType value="variable"/>
+          <element value="status"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="finished"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="setencclass"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="enc"/>
+          <contextType value="variable"/>
+          <element value="class"/>
+          <variable value="cls"/>
+        </target>
+        <rule>
+          <name value="setclssystem"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="cls"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="setclscode"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="cls"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="AMB"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+      <rule>
+        <name value="setenctype"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="enc"/>
+          <contextType value="variable"/>
+          <element value="type"/>
+          <variable value="tp"/>
+        </target>
+        <rule>
+          <name value="settypecoding"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="tp"/>
+            <contextType value="variable"/>
+            <element value="coding"/>
+            <variable value="coding"/>
+          </target>
+          <rule>
+            <name value="settypesystem"/>
+            <source>
+              <context value="src"/>
+            </source>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="system"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"/>
+              </parameter>
+            </target>
+          </rule>
+          <rule>
+            <name value="settypecode"/>
+            <source>
+              <context value="src"/>
+            </source>
+            <target>
+              <context value="coding"/>
+              <contextType value="variable"/>
+              <element value="code"/>
+              <transform value="copy"/>
+              <parameter>
+                <valueString value="source"/>
+              </parameter>
+            </target>
+          </rule>
+        </rule>
+      </rule>
+      <rule>
+        <name value="setencperiod"/>
+        <source>
+          <context value="src"/>
+          <element value="crSourceDate"/>
+          <variable value="dt"/>
+        </source>
+        <target>
+          <context value="enc"/>
+          <contextType value="variable"/>
+          <element value="period"/>
+          <variable value="p"/>
+        </target>
+        <target>
+          <context value="p"/>
+          <contextType value="variable"/>
+          <element value="start"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueId value="dt"/>
+          </parameter>
+        </target>
+      </rule>
+    </rule>
+    <rule>
+      <name value="createsourcetype"/>
+      <source>
+        <context value="src"/>
+        <element value="crSourceType"/>
+        <variable value="val"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="obs"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Observation"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="srctypestatus"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="obs"/>
+          <contextType value="variable"/>
+          <element value="status"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="final"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="srctypecode"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="obs"/>
+          <contextType value="variable"/>
+          <element value="code"/>
+          <variable value="c"/>
+        </target>
+        <target>
+          <context value="c"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="cd"/>
+        </target>
+        <rule>
+          <name value="srctypecodesys"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="srctypecodeval"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="source-type"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+      <rule>
+        <name value="srctypevalue"/>
+        <source>
+          <context value="val"/>
+        </source>
+        <target>
+          <context value="obs"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <variable value="cc"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="CodeableConcept"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="cc"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="cd"/>
+        </target>
+        <rule>
+          <name value="srctypevalsys"/>
+          <source>
+            <context value="val"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="srctypevalcode"/>
+          <source>
+            <context value="val"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueId value="val"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+    </rule>
+    <rule>
+      <name value="createsourcetumornumber"/>
+      <source>
+        <context value="src"/>
+        <element value="crSourceTumorNumber"/>
+        <variable value="val"/>
+      </source>
+      <target>
+        <context value="tgt"/>
+        <contextType value="variable"/>
+        <element value="entry"/>
+        <variable value="entry"/>
+      </target>
+      <target>
+        <context value="entry"/>
+        <contextType value="variable"/>
+        <element value="resource"/>
+        <variable value="obs"/>
+        <transform value="create"/>
+        <parameter>
+          <valueString value="Observation"/>
+        </parameter>
+      </target>
+      <rule>
+        <name value="srctnstatus"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="obs"/>
+          <contextType value="variable"/>
+          <element value="status"/>
+          <transform value="copy"/>
+          <parameter>
+            <valueString value="final"/>
+          </parameter>
+        </target>
+      </rule>
+      <rule>
+        <name value="srctncode"/>
+        <source>
+          <context value="src"/>
+        </source>
+        <target>
+          <context value="obs"/>
+          <contextType value="variable"/>
+          <element value="code"/>
+          <variable value="c"/>
+        </target>
+        <target>
+          <context value="c"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="cd"/>
+        </target>
+        <rule>
+          <name value="srctncodesys"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="srctncodeval"/>
+          <source>
+            <context value="src"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="source-tumor-number"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+      <rule>
+        <name value="srctnvalue"/>
+        <source>
+          <context value="val"/>
+        </source>
+        <target>
+          <context value="obs"/>
+          <contextType value="variable"/>
+          <element value="value"/>
+          <variable value="cc"/>
+          <transform value="create"/>
+          <parameter>
+            <valueString value="CodeableConcept"/>
+          </parameter>
+        </target>
+        <target>
+          <context value="cc"/>
+          <contextType value="variable"/>
+          <element value="coding"/>
+          <variable value="cd"/>
+        </target>
+        <rule>
+          <name value="srctnvalsys"/>
+          <source>
+            <context value="val"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="system"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueString value="https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS"/>
+            </parameter>
+          </target>
+        </rule>
+        <rule>
+          <name value="srctnvalcode"/>
+          <source>
+            <context value="val"/>
+          </source>
+          <target>
+            <context value="cd"/>
+            <contextType value="variable"/>
+            <element value="code"/>
+            <transform value="copy"/>
+            <parameter>
+              <valueId value="val"/>
+            </parameter>
+          </target>
+        </rule>
+      </rule>
+    </rule>
+  </group>
+</StructureMap>

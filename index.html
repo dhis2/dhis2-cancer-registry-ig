@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Home - DHIS2 Cancer Registry Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+    <link href="assets/css/fa-all.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/who.css" rel="stylesheet"/>
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+<!-- Placeholder for child template CSS declarations -->
+<!-- <link href="assets/css/colors.css" rel="stylesheet"/>! -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+
+      <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+        <div id="stripe"> </div>
+        <div class="container">  <!-- container -->
+          <!-- HEADER CONTENT -->
+  
+          <nav class="navbar navbar-inverse">
+            <!--status-bar-->
+            <div class="container">
+              <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+                <span class="icon-bar"> </span>
+              </button>
+              <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+              <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="system-design.html">System Design</a>
+  </li>
+  <li>
+    <a href="data-quality-checks.html">Data Quality Checks</a>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles &amp; Mappings</a>
+  </li>
+  <li>
+    <a href="deployment.html">Deployment</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+              </div>  <!-- /.nav-collapse -->
+
+              <div class="sf_colsIn col-md-8  navbar-right-container" data-sf-element="LanguageSelectorSearch" data-placeholder-label="Language Selector and Search" style="display: flex; justify-content: flex-end; align-items: center;">
+                <!-- This div will be pushed to the right -->
+                <div class="language-selector" style="margin-left: auto; background-color: #00477d; color: white;">
+                  <i class="fa fa-language fa-lg"></i>
+                  <label for="language-selector"> </label>
+                  <select onChange="openLink(value)" id="language-selector" name="language-selector">
+                    <option disabled selected>Select language</option>
+                    <option value="en" class="selected">English</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+                <!-- Search Content -->
+              </div>
+            </div>  <!-- /.container -->
+          </nav>  <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+        </div>  <!-- /container -->
+      </div>  <!-- /segment-navbar -->
+      
+
+      <div class="container" style=" justify-content: space-between; align-items: left;">
+
+        <!-- Left logo - typically the publisher's logo - project or affiliate -->
+<div id="project-nav">
+    <a id="project-logo" no-external="true" href="https://dhis2.org/integration/fhir/">
+      <img height="60" alt="Project home" src="assets/images/dhis2.png"/>
+    </a>
+  </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="80" alt="FHIR website" src="assets/images/fhir.png"/> </a>
+  </div>
+
+<!-- search icon - if you want -->
+<!--
+  <div id="hl7-search">
+    <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+-->
+
+        <div id="ig-status" class="ig-status-draft">
+          <p><span style="font-size:12pt;font-weight:bold">DHIS2 Cancer Registry Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">DHIS2 Cancer Registry Implementation Guide, published by DHIS2. This guide is not an authorized publication; it is the continuous build for version 0.1.0  built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href='https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main'>https://github.com/dhis2/dhis2-cancer-registry-ig/tree/main</a> and changes regularly. See the <a href='https://dhis2.org/fhir/cancer-registry/history.html'>Directory of published versions</a><br/><span data-smart-ci-extra="1" style="font-size:.85em;">Built from commit <a href="https://github.com/dhis2/dhis2-cancer-registry-ig/commit/e2510df70ce53dcdb33212803a8e6476f5e60c09"><code>e2510df7</code></a>.</span></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+
+
+
+
+
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://dhis2.org/fhir/cancer-registry/ImplementationGuide/dhis2.cancer.registry<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://dhis2.org/fhir/cancer-registry/ImplementationGuide/dhis2.cancer.registry"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://dhis2.org/fhir/cancer-registry/ImplementationGuide/dhis2.cancer.registry|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2026-04-14
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">DHIS2CancerRegistryIG</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#summary" id="markdown-toc-summary">Summary</a></li>
+  <li><a href="#about-this-implementation-guide" id="markdown-toc-about-this-implementation-guide">About this Implementation Guide</a></li>
+  <li><a href="#background" id="markdown-toc-background">Background</a></li>
+  <li><a href="#use-case" id="markdown-toc-use-case">Use Case</a></li>
+  <li><a href="#intended-users" id="markdown-toc-intended-users">Intended Users</a></li>
+  <li><a href="#key-resources" id="markdown-toc-key-resources">Key Resources</a></li>
+  <li><a href="#disclaimer" id="markdown-toc-disclaimer">Disclaimer</a></li>
+</ul>
+
+</div>
+<h3 id="summary">Summary</h3>
+
+<p>This implementation guide provides a FHIR-based representation of the <a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">DHIS2 Cancer Registry metadata package</a>, a toolkit designed to support population-based cancer registries in strengthening their routine data management processes and improving the quality, completeness, and timeliness of cancer case registration.</p>
+
+<p>The DHIS2 Cancer Registry tracker is aligned with <a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">CanReg5</a> data standards for individual-level cancer case registration, as defined by the <a href="https://www.iarc.who.int/">International Agency for Research on Cancer (IARC)</a>. It includes FHIR logical models, terminology (code systems and value sets), and questionnaires that represent the tracker program configuration, including embedded data quality control checks based on CanReg5 validation logic.</p>
+
+<p>The toolkit has been developed with financial support from <a href="https://www.vitalstrategies.org/">Vital Strategies</a> and technical guidance from IARC.</p>
+
+<div class="note-to-balloters">
+
+  <p><strong>Note:</strong> This implementation guide is under active development. Content is provided for demonstration and review purposes and should not be considered a final, authorised publication.</p>
+
+</div>
+
+<h3 id="about-this-implementation-guide">About this Implementation Guide</h3>
+
+<p>This implementation guide is structured as follows:</p>
+
+<ul>
+  <li><strong><a href="index.html">Home</a></strong> — Overview, key links, and background context for the Cancer Registry toolkit.</li>
+  <li><strong><a href="system-design.html">System Design</a></strong> — Description of the DHIS2 Tracker program structure, including enrollment, tumor, source, and follow-up stages with their data elements and sections.</li>
+  <li><strong><a href="data-quality-checks.html">Data Quality Checks</a></strong> — Detailed description of the CanReg5-aligned data quality checks implemented as program rules, covering age, sex, topography, morphology, behaviour, grade, basis of diagnosis, and multiple primary testing.</li>
+  <li><strong><a href="profiles.html">Profiles &amp; Mappings</a></strong> — FHIR resource profiles, extensions, conceptual mappings, and FML StructureMaps that define how DHIS2 Cancer Registry data maps to standard FHIR resources.</li>
+  <li><strong><a href="deployment.html">Deployment</a></strong> — Links to the demo instance, metadata downloads, the CanReg5 export application, and guidance for local adaptation.</li>
+  <li><strong><a href="references.html">References</a></strong> — Key publications, standards, and resources referenced in this guide.</li>
+  <li><strong><a href="artifacts.html">Artifacts</a></strong> — Complete listing of FHIR artifacts defined in this implementation guide, including logical models, code systems, value sets, and questionnaires.</li>
+</ul>
+
+<h3 id="background">Background</h3>
+
+<p>Cancer represents one of the leading causes of morbidity and mortality worldwide, with the global burden increasingly concentrated in low- and middle-income countries (LMICs) where health systems are often least equipped to respond. Reliable, high-quality data on cancer incidence, case characteristics, and outcomes are essential for informing national cancer control planning, allocating resources, monitoring trends over time, and evaluating the impact of prevention and treatment programmes. Population-based cancer registries are the primary instrument for generating this evidence.</p>
+
+<p>Individual-level cancer case registration offers significant advantages over aggregate reporting. A case-based approach allows for flexible disaggregation by tumour site, morphology, age, sex, geographic origin, and other clinically and epidemiologically relevant variables. It also enables longitudinal follow-up of registered cases, supports deduplication of records across multiple reporting sources, and facilitates the application of systematic data quality checks.</p>
+
+<p>The DHIS2 Cancer Registry tracker is designed to address challenges faced by population-based cancer registries in many LMICs by leveraging the DHIS2 platform — already widely deployed in national health information systems — to support individual-level cancer case registration aligned with CanReg5 data standards.</p>
+
+<h3 id="use-case">Use Case</h3>
+
+<p>The system is built around the DHIS2 Tracker data model. Registry staff can record and manage individual cancer cases drawn from multiple notification sources — including hospital records, pathology and cytology laboratory reports, and death certificates — and consolidate them into a single verified registry record. The tracker program supports the capture of core data elements required for population-based cancer registration, including patient demographics, tumour characteristics, basis of diagnosis, and source of notification.</p>
+
+<p>A key feature of the system design is the implementation of systematic data quality control checks at the point of data entry, supporting registries in maintaining the standards of data quality required for valid epidemiological analysis and international comparability. For more details, see the <a href="data-quality-checks.html">Data Quality Checks</a> page.</p>
+
+<blockquote>
+  <p><strong>Warning:</strong> The toolkit is intended as a baseline configuration, fully aligned with CanReg5 standards for streamlined data transfer into CanReg5. System administrators may need to localise the program by adding new data elements or attributes, but modification of the baseline configuration is strongly discouraged, as this would likely break the alignment with CanReg5 and program rule logic of the data quality checks.</p>
+</blockquote>
+
+<h3 id="intended-users">Intended Users</h3>
+
+<p>The DHIS2 Cancer Registry system design is intended to meet the needs of users at all levels of the cancer registry system:</p>
+
+<ul>
+  <li><strong>Cancer registry managers &amp; staff</strong> (national &amp; sub-national) — data users responsible for overseeing the completeness and quality of cancer case registration, monitoring registry operations, and using registry data to support cancer control planning and reporting.</li>
+  <li><strong>Registry data entry staff</strong> — users responsible for the day-to-day capture and management of individual cancer cases within the tracker program.</li>
+  <li><strong>Cancer programme data managers</strong> — users responsible for overseeing data collection workflows, data quality assurance, and reporting functions.</li>
+  <li><strong>System admins / HMIS focal points</strong> — Ministry of Health staff and/or core DHIS2 team responsible for maintaining the DHIS2 system and supporting local adaptation.</li>
+  <li><strong>Implementing partners and technical assistance providers</strong> — organisations providing technical support, including IARC, HISP Groups, and other partners.</li>
+</ul>
+
+<h3 id="key-resources">Key Resources</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Resource</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>System Design Guide</td>
+      <td><a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/design.html">docs.dhis2.org — Cancer Registry Design</a></td>
+    </tr>
+    <tr>
+      <td>Installation Guide</td>
+      <td><a href="https://docs.dhis2.org/en/implement/health/non-communicable-diseases/cancer-registry/installation.html">docs.dhis2.org — Cancer Registry Installation</a></td>
+    </tr>
+    <tr>
+      <td>Demo Instance</td>
+      <td><a href="https://implement.im.dhis2.org/cancer-registry-global/">implement.im.dhis2.org/cancer-registry-global</a></td>
+    </tr>
+    <tr>
+      <td>Metadata Downloads</td>
+      <td><a href="https://dhis2.org/metadata-downloads/">dhis2.org/metadata-downloads</a></td>
+    </tr>
+    <tr>
+      <td>CanReg5 Export Application</td>
+      <td><a href="https://github.com/dhis2/cancer-registry-app">github.com/dhis2/cancer-registry-app</a></td>
+    </tr>
+    <tr>
+      <td>CanReg5 Software (IARC)</td>
+      <td><a href="http://www.iacr.com.fr/index.php?option=com_content&amp;view=article&amp;id=9:canreg5&amp;catid=68&amp;Itemid=445">IACR — CanReg5</a></td>
+    </tr>
+    <tr>
+      <td>CanReg5 Source Code</td>
+      <td><a href="https://github.com/IARC-CSU/CanReg5/tree/release/R45">github.com/IARC-CSU/CanReg5</a></td>
+    </tr>
+    <tr>
+      <td>IARC Cancer Registration Standards</td>
+      <td><a href="https://publications.iarc.who.int/Book-And-Report-Series/Iarc-Scientific-Publications/Cancer-Registration-Principles-And-Methods-2021">Cancer Registration: Principles and Methods (IARC Scientific Publications No. 160)</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="disclaimer">Disclaimer</h3>
+
+<p>The specification herewith documented is a draft working specification and may not be used for any implementation purposes. This draft is provided without warranty of completeness or consistency, and the official publication supersedes this draft. No liability can be inferred from the use or misuse of this specification or its consequences.</p>
+
+
+
+
+</div>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
+
+<script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+<script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/window-hash.js"> </script>
+<a name="bottom"> </a>
+<div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+<div class="container">  <!-- container -->
+
+<div class="inner-wrapper">
+  <p>
+    IG &#169; 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="http://dhis2.org">DHIS2</a>.  Package dhis2.cancer.registry#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 14, 2026 07:58+0000">2026-04-14</span>
+    <br/>
+    <span style="color: var(--footer-highlight-text-color)">
+                Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+| <a style="color: #81BEF7" target="_blank" href="https://dhis2.org/fhir/cancer-registry/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+    </span>
+  </p>
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-footer -->
+
+<div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+<div class="container">  <!-- container -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-post-footer -->
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="assets/js/respond.min.js"> </script>
+<script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+<script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+<script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+<!-- Analytics Below
+================================================== -->
+
+
+
+

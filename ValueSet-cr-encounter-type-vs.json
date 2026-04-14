@@ -1,0 +1,28 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "cr-encounter-type-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet cr-encounter-type-vs</b></p><a name=\"cr-encounter-type-vs\"> </a><a name=\"hccr-encounter-type-vs\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-cr-encounter-type.html\"><code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/cr-encounter-type-vs",
+  "version" : "0.1.0",
+  "name" : "CREncounterTypeVS",
+  "title" : "Cancer Registry Encounter Types Value Set",
+  "status" : "draft",
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Value set of encounter types for cancer registration stages.",
+  "compose" : {
+    "include" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"
+    }]
+  }
+}

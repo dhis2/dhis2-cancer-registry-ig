@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ExampleVitalStatus"/>
+  <meta>
+    <profile value="https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-vital-status-observation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ExampleVitalStatus</b></p><a name="ExampleVitalStatus"> </a><a name="hcExampleVitalStatus"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-cr-vital-status-observation.html">Vital Status</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes vital-status}">Vital Status</span></p><p><b>subject</b>: <a href="Patient-ExampleCRPatient.html">Jane Doe  Female, DoB: 1970-03-15 ( Medical record number)</a></p><p><b>encounter</b>: <a href="Encounter-ExampleFollowUpEncounter.html">Encounter: status = finished; class = ambulatory (ActCode#AMB); type = Follow-up Contact; period = 2026-01-01 --&gt; (ongoing)</a></p><p><b>effective</b>: 2026-01-01</p><p><b>value</b>: <span title="Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/CRVitalStatusCS 1}">Alive</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"/>
+      <code value="vital-status"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/ExampleCRPatient"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/ExampleFollowUpEncounter"/>
+  </encounter>
+  <effectiveDateTime value="2026-01-01"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="https://dhis2.org/fhir/cancer-registry/CodeSystem/CRVitalStatusCS"/>
+      <code value="1"/>
+      <display value="Alive"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

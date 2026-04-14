@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CRGradeCS"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRGradeCS</b></p><a name=\"CRGradeCS\"> </a><a name=\"hcCRGradeCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">1<a name=\"CRGradeCS-1\"> </a></td><td>Grade I (1)</td></tr><tr><td style=\"white-space:nowrap\">2<a name=\"CRGradeCS-2\"> </a></td><td>Grade II (2)</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"CRGradeCS-3\"> </a></td><td>Grade III (3)</td></tr><tr><td style=\"white-space:nowrap\">4<a name=\"CRGradeCS-4\"> </a></td><td>Grade IV (4)</td></tr><tr><td style=\"white-space:nowrap\">5<a name=\"CRGradeCS-5\"> </a></td><td>T-Cell (5)</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"CRGradeCS-6\"> </a></td><td>B-Cell (6)</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"CRGradeCS-7\"> </a></td><td>Null cell (7)</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"CRGradeCS-8\"> </a></td><td>NK cell (8)</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"CRGradeCS-9\"> </a></td><td>Unknown/Not Stated/NA (9)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CRGradeCS"] ; # 
+  fhir:title [ fhir:v "CR - Grade"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Codes 1-4 represent histological grade (well differentiated to undifferentiated/anaplastic). Codes 5-8 are reserved for lymphomas and leukaemias (T-cell, B-cell, Null cell, NK cell). Code 9 represents unknown/not stated. Grade is mandatory only when behaviour is malignant (3). These codes are used in the Grade data quality check."] ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "9"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "1" ] ;
+     fhir:display [ fhir:v "Grade I (1)" ]
+  ] [
+     fhir:code [ fhir:v "2" ] ;
+     fhir:display [ fhir:v "Grade II (2)" ]
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "Grade III (3)" ]
+  ] [
+     fhir:code [ fhir:v "4" ] ;
+     fhir:display [ fhir:v "Grade IV (4)" ]
+  ] [
+     fhir:code [ fhir:v "5" ] ;
+     fhir:display [ fhir:v "T-Cell (5)" ]
+  ] [
+     fhir:code [ fhir:v "6" ] ;
+     fhir:display [ fhir:v "B-Cell (6)" ]
+  ] [
+     fhir:code [ fhir:v "7" ] ;
+     fhir:display [ fhir:v "Null cell (7)" ]
+  ] [
+     fhir:code [ fhir:v "8" ] ;
+     fhir:display [ fhir:v "NK cell (8)" ]
+  ] [
+     fhir:code [ fhir:v "9" ] ;
+     fhir:display [ fhir:v "Unknown/Not Stated/NA (9)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

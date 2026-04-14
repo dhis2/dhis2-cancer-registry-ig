@@ -1,0 +1,1742 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TumorToEncounterAndObservations"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap TumorToEncounterAndObservations</b></p><a name=\"TumorToEncounterAndObservations\"> </a><a name=\"hcTumorToEncounterAndObservations\"> </a><pre class=\"fml\">#xD;\n<b>map</b><span style=\"color: navy\"> \"</span>https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations<span style=\"color: navy\">\" = \"</span>TumorToEncounterAndObservations<span style=\"color: navy\">\"#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Transform: Tumor Stage to CRTumorEncounter + Observations</span>#xD;\n#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-Tumor.html\" title=\"Tumor\">https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor</a><span style=\"color: navy\">\" </span><b>alias </b>Tumor <b>as </b><b>source</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"http://hl7.org/fhir/R4/bundle.html\" title=\"Bundle\">http://hl7.org/fhir/StructureDefinition/Bundle</a><span style=\"color: navy\">\" </span><b>alias </b>Bundle <b>as </b><b>target</b>#xD;\n#xD;\n<b>group </b>TumorToBundle<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>Tumor, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>Bundle<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.type = <span style=\"color: blue\">'transaction'</span> <i>\"setbundletype\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Create the Encounter resource</span>#xD;\n  src<span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Encounter'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">enc</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.meta<b> as </b><span style=\"color: maroon\">meta</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>meta.profile = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter'</span> <i>\"setencprofile\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"setencmeta\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.status = <span style=\"color: blue\">'finished'</span> <i>\"setencstatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.class<b> as </b><span style=\"color: maroon\">cls</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cls.system = <span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/v3-ActCode'</span> <i>\"setclssystem\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cls.code = <span style=\"color: blue\">'AMB'</span> <i>\"setclscode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"setencclass\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span>enc.type<b> as </b><span style=\"color: maroon\">tp</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>tp.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>        src<span style=\"color: navy\"><b> -&gt; </b></span>coding.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type'</span> <i>\"settypesystem\"</i><span style=\"color: navy\">;</span>#xD;\n        src<span style=\"color: navy\"><b> -&gt; </b></span>coding.code = <span style=\"color: blue\">'tumor'</span> <i>\"settypecode\"</i><span style=\"color: navy\">;</span>#xD;\n      <span style=\"color: navy\">}</span> <i>\"settypecoding\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"setenctype\"</i><span style=\"color: navy\">;</span>#xD;\n    src.crIncidenceDate<b> as </b><span style=\"color: maroon\">dt</span><span style=\"color: navy\"><b> -&gt; </b></span> enc.period<b> as </b><span style=\"color: maroon\">p</span><span style=\"color: navy\">, </span> p.start = <span style=\"color: maroon\">dt</span> <i>\"setencperiod\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createencounter\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Topography Observation</span>#xD;\n  src.crTopography<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"topostatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"topocodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'topography'</span> <i>\"topocodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"topocode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS'</span> <i>\"topovalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"topovalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"topovalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createtopography\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Morphology Observation</span>#xD;\n  src.crMorphology<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"morphstatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"morphcodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'morphology'</span> <i>\"morphcodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"morphcode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS'</span> <i>\"morphvalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"morphvalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"morphvalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createmorphology\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Behaviour Observation</span>#xD;\n  src.crBehaviour<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"behavstatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"behavcodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'behaviour'</span> <i>\"behavcodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"behavcode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS'</span> <i>\"behavvalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"behavvalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"behavvalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createbehaviour\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Grade Observation (LOINC code)</span>#xD;\n  src.crGrade<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"gradestatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'http://loinc.org'</span> <i>\"gradecodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'33732-9'</span> <i>\"gradecodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"gradecode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS'</span> <i>\"gradevalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"gradevalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"gradevalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"creategrade\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Basis of Diagnosis Observation</span>#xD;\n  src.crBasisDiagnosis<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"basisstatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"basiscodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'basis-of-diagnosis'</span> <i>\"basiscodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"basiscode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS'</span> <i>\"basisvalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"basisvalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"basisvalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createbasis\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Site Observation</span>#xD;\n  src.crSite<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"sitestatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"sitecodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'site'</span> <i>\"sitecodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"sitecode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS'</span> <i>\"sitevalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"sitevalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"sitevalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createsite\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Incidence Date Observation</span>#xD;\n  src.crIncidenceDate<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"incdatestatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"incdatecodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'incidence-date'</span> <i>\"incdatecodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"incdatecode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'dateTime'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">dt</span><span style=\"color: navy\">, </span> dt.value = <span style=\"color: maroon\">val</span> <i>\"incdatevalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createincidencedate\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Age at Incidence Observation</span>#xD;\n  src.crAge<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"agestatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"agecodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'age-at-incidence'</span> <i>\"agecodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"agecode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'integer'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">i</span><span style=\"color: navy\">, </span> i.value = <span style=\"color: maroon\">val</span> <i>\"agevalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createage\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Tumor Number Observation</span>#xD;\n  src.crTumorNumber<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"tnstatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"tncodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'tumor-number'</span> <i>\"tncodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"tncode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS'</span> <i>\"tnvalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"tnvalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"tnvalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createtumornumber\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">// </span><span style=\"color: green\">Address Observation</span>#xD;\n  src.crAddress<b> as </b><span style=\"color: maroon\">val</span><span style=\"color: navy\"><b> -&gt; </b></span> tgt.entry<b> as </b><span style=\"color: maroon\">entry</span><span style=\"color: navy\">, </span> entry.resource = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'Observation'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">obs</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>obs.status = <span style=\"color: blue\">'final'</span> <i>\"addrstatus\"</i><span style=\"color: navy\">;</span>#xD;\n    src<span style=\"color: navy\"><b> -&gt; </b></span> obs.code<b> as </b><span style=\"color: maroon\">c</span><span style=\"color: navy\">, </span> c.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes'</span> <i>\"addrcodesys\"</i><span style=\"color: navy\">;</span>#xD;\n      src<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: blue\">'address'</span> <i>\"addrcodeval\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"addrcode\"</i><span style=\"color: navy\">;</span>#xD;\n    val<span style=\"color: navy\"><b> -&gt; </b></span> obs.value = <b>create</b><span style=\"color: navy\">(</span><span style=\"color: blue\">'CodeableConcept'</span><span style=\"color: navy\">)</span><b> as </b><span style=\"color: maroon\">cc</span><span style=\"color: navy\">, </span> cc.coding<b> as </b><span style=\"color: maroon\">cd</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.system = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS'</span> <i>\"addrvalsys\"</i><span style=\"color: navy\">;</span>#xD;\n      val<span style=\"color: navy\"><b> -&gt; </b></span>cd.code = <span style=\"color: maroon\">val</span> <i>\"addrvalcode\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"addrvalue\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"createaddress\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span></pre></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/StructureMap/TumorToEncounterAndObservations>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "TumorToEncounterAndObservations"] ; # 
+  fhir:title [ fhir:v "Transform: Tumor Stage to CRTumorEncounter + Observations"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Transform: Tumor Stage to CRTumorEncounter + Observations"] ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor"^^xsd:anyURI ;
+       fhir:l <https://dhis2.org/fhir/cancer-registry/StructureDefinition/Tumor>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "Tumor" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Bundle"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/Bundle>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "Bundle" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "TumorToBundle" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "Tumor" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:type [ fhir:v "Bundle" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "setbundletype" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "type" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "transaction"
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createencounter" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "enc" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Encounter"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "setencmeta" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "enc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "meta" ] ;
+           fhir:variable [ fhir:v "meta" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "setencprofile" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "meta" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "profile" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-tumor-encounter"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "setencstatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "enc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "finished"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "setencclass" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "enc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "class" ] ;
+           fhir:variable [ fhir:v "cls" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "setclssystem" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cls" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "setclscode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cls" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "AMB"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "setenctype" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "enc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "type" ] ;
+           fhir:variable [ fhir:v "tp" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "settypecoding" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "tp" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "coding" ] ;
+             fhir:variable [ fhir:v "coding" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "settypesystem" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "src" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "coding" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "system" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [
+                   a fhir:String ;
+                   fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-encounter-type"
+                 ]
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "settypecode" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "src" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "coding" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "code" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [
+                   a fhir:String ;
+                   fhir:v "tumor"
+                 ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "setencperiod" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "crIncidenceDate" ] ;
+           fhir:variable [ fhir:v "dt" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "enc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "period" ] ;
+           fhir:variable [ fhir:v "p" ]
+         ] [
+           fhir:context [ fhir:v "p" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "start" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:Id ;
+               fhir:v "dt"
+             ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createtopography" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crTopography" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "topostatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "topocode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "topocodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "topocodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "topography"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "topovalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "topovalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTopographyCS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "topovalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createmorphology" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crMorphology" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "morphstatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "morphcode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "morphcodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "morphcodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "morphology"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "morphvalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "morphvalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "morphvalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createbehaviour" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crBehaviour" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "behavstatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "behavcode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "behavcodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "behavcodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "behaviour"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "behavvalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "behavvalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBehaviourCS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "behavvalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "creategrade" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crGrade" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "gradestatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "gradecode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "gradecodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "http://loinc.org"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "gradecodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "33732-9"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "gradevalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "gradevalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "gradevalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createbasis" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crBasisDiagnosis" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "basisstatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "basiscode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "basiscodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "basiscodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "basis-of-diagnosis"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "basisvalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "basisvalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRBasisDiagnosisCS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "basisvalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createsite" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crSite" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "sitestatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "sitecode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "sitecodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "sitecodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "site"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "sitevalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "sitevalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRSiteCS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "sitevalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createincidencedate" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crIncidenceDate" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "incdatestatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "incdatecode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "incdatecodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "incdatecodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "incidence-date"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "incdatevalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "dt" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "dateTime"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "dt" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:Id ;
+               fhir:v "val"
+             ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createage" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crAge" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "agestatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "agecode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "agecodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "agecodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "age-at-incidence"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "agevalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "i" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "integer"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "i" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:Id ;
+               fhir:v "val"
+             ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createtumornumber" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crTumorNumber" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "tnstatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "tncode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "tncodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "tncodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "tumor-number"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "tnvalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "tnvalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRTumorNumberCS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "tnvalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "createaddress" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crAddress" ] ;
+         fhir:variable [ fhir:v "val" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "entry" ] ;
+         fhir:variable [ fhir:v "entry" ]
+       ] [
+         fhir:context [ fhir:v "entry" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "resource" ] ;
+         fhir:variable [ fhir:v "obs" ] ;
+         fhir:transform [ fhir:v "create" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Observation"
+           ]
+         ] )
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "addrstatus" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "status" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "final"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "addrcode" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "code" ] ;
+           fhir:variable [ fhir:v "c" ]
+         ] [
+           fhir:context [ fhir:v "c" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "addrcodesys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "addrcodeval" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "src" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "address"
+               ]
+             ] )
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "addrvalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "val" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "obs" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:variable [ fhir:v "cc" ] ;
+           fhir:transform [ fhir:v "create" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "CodeableConcept"
+             ]
+           ] )
+         ] [
+           fhir:context [ fhir:v "cc" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "coding" ] ;
+           fhir:variable [ fhir:v "cd" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "addrvalsys" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "system" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:String ;
+                 fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRAddressCS"
+               ]
+             ] )
+           ] )
+         ] [
+           fhir:name [ fhir:v "addrvalcode" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "val" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "cd" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "code" ] ;
+             fhir:transform [ fhir:v "copy" ] ;
+             fhir:parameter ( [
+               fhir:value [
+                 a fhir:Id ;
+                 fhir:v "val"
+               ]
+             ] )
+           ] )
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

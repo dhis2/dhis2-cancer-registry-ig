@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/base/StructureDefinition-FollowUp.schema.json",
+  "title": "Follow up",
+  "description": "Follow-up stage of the DHIS2 Cancer Registry tracker program. This repeatable stage records the follow-up status of the registered patient over time, capturing the date of last contact, the vital status, and, in cases where the status is death, the date of death. This stage is not associated with a specific tumor or source.",
+  "type": "object",
+  "properties": {
+    "resourceType": {
+      "type": "string",
+      "const": "FollowUp",
+      "description": "Resource type identifier for FollowUp logical model"
+    },
+    "@context": {
+      "description": "JSON-LD context for this logical model with ValueSet vocabularies",
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "URI reference to external JSON-LD context"
+        },
+        {
+          "type": "object",
+          "description": "Inline JSON-LD context",
+          "properties": {
+            "@version": {
+              "type": "number",
+              "const": 1.1
+            },
+            "fhir": {
+              "type": "string",
+              "const": "http://hl7.org/fhir/"
+            }
+          },
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        {
+          "type": "array",
+          "description": "Array of JSON-LD context objects/URIs",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "@type": {
+      "type": "string",
+      "description": "JSON-LD type identifier for FollowUp logical model",
+      "examples": [
+        "LogicalModel-FollowUp"
+      ]
+    },
+    "crDateLastContact": {
+      "type": "string",
+      "format": "date",
+      "description": "CR - Date last contact"
+    },
+    "crStatus": {
+      "oneOf": [
+        {
+          "type": "string",
+          "description": "Code from ValueSet CRVitalStatusVS (plain string)"
+        },
+        {
+          "type": "object",
+          "description": "Code from ValueSet CRVitalStatusVS (JSON-LD structure)",
+          "properties": {
+            "@type": {
+              "type": "string",
+              "const": "http://smart.who.int/base/ValueSet-CRVitalStatusVS.jsonld",
+              "description": "JSON-LD type reference to ValueSet CRVitalStatusVS"
+            },
+            "@id": {
+              "type": "string",
+              "format": "uri",
+              "description": "Full IRI of the code from ValueSet CRVitalStatusVS"
+            }
+          },
+          "required": [
+            "@type",
+            "@id"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "CR - Status"
+    },
+    "crDateOfDeath": {
+      "type": "string",
+      "format": "date",
+      "description": "CR - Date of death"
+    }
+  },
+  "required": [
+    "resourceType"
+  ],
+  "resourceDefinition": "https://dhis2.org/fhir/cancer-registry/StructureDefinition/FollowUp",
+  "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base",
+  "jsonld:valuesets": [
+    "CRVitalStatusVS"
+  ],
+  "jsonld:contextTemplate": {
+    "@version": 1.1,
+    "fhir": "http://hl7.org/fhir/",
+    "CRVitalStatusVS": "http://smart.who.int/base/ValueSet-CRVitalStatusVS.jsonld"
+  }
+}

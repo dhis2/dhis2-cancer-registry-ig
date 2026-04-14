@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/Observation/ExampleMorphology> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ExampleMorphology"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-morphology-observation"^^xsd:anyURI ;
+       fhir:l <https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-morphology-observation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ExampleMorphology</b></p><a name=\"ExampleMorphology\"> </a><a name=\"hcExampleMorphology\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-cr-morphology-observation.html\">Morphology</a></p></div><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes morphology}\">Morphology</span></p><p><b>subject</b>: <a href=\"Patient-ExampleCRPatient.html\">Jane Doe  Female, DoB: 1970-03-15 ( Medical record number)</a></p><p><b>encounter</b>: <a href=\"Encounter-ExampleTumorEncounter.html\">Encounter: extension = false; status = finished; class = ambulatory (ActCode#AMB); type = Tumor Registration; period = 2026-01-01 --&gt; (ongoing)</a></p><p><b>effective</b>: 2026-01-01</p><p><b>value</b>: <span title=\"Codes:{https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS 8500}\">Infiltrating duct carcinoma, NOS (C50._) (8500)</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"^^xsd:anyURI ;
+         fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes>
+       ] ;
+       fhir:code [ fhir:v "morphology" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <https://dhis2.org/fhir/cancer-registry/Patient/ExampleCRPatient> ;
+     fhir:reference [ fhir:v "Patient/ExampleCRPatient" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:l <https://dhis2.org/fhir/cancer-registry/Encounter/ExampleTumorEncounter> ;
+     fhir:reference [ fhir:v "Encounter/ExampleTumorEncounter" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2026-01-01"^^xsd:date
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS"^^xsd:anyURI ;
+         fhir:l <https://dhis2.org/fhir/cancer-registry/CodeSystem/CRMorphology4CS>
+       ] ;
+       fhir:code [ fhir:v "8500" ] ;
+       fhir:display [ fhir:v "Infiltrating duct carcinoma, NOS (C50._) (8500)" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

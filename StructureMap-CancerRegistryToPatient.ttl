@@ -1,0 +1,312 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient> a fhir:StructureMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "CancerRegistryToPatient"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureMap CancerRegistryToPatient</b></p><a name=\"CancerRegistryToPatient\"> </a><a name=\"hcCancerRegistryToPatient\"> </a><pre class=\"fml\">#xD;\n<b>map</b><span style=\"color: navy\"> \"</span>https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient<span style=\"color: navy\">\" = \"</span>CancerRegistryToPatient<span style=\"color: navy\">\"#xD;\n#xD;\n</span><span style=\"color: navy\">// </span><span style=\"color: green\">Transform: Cancer Registry Enrollment to Patient</span>#xD;\n#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"StructureDefinition-CancerRegistry.html\" title=\"Cancer Registry\">https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry</a><span style=\"color: navy\">\" </span><b>alias </b>CancerRegistry <b>as </b><b>source</b>#xD;\n<b>uses</b><span style=\"color: navy\"> \"</span><a href=\"http://hl7.org/fhir/R4/patient.html\" title=\"Patient\">http://hl7.org/fhir/StructureDefinition/Patient</a><span style=\"color: navy\">\" </span><b>alias </b>Patient <b>as </b><b>target</b>#xD;\n#xD;\n<b>group </b>CancerRegistryToPatient<span style=\"color: navy\">(</span><b>source</b> <span style=\"color: maroon\">src</span><span style=\"color: navy\"> : </span>CancerRegistry, <b>target</b> <span style=\"color: maroon\">tgt</span><span style=\"color: navy\"> : </span>Patient<span style=\"color: navy\">)</span><span style=\"color: navy\"> {#xD;\n</span>  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.meta<b> as </b><span style=\"color: maroon\">meta</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src<span style=\"color: navy\"><b> -&gt; </b></span>meta.profile = <span style=\"color: blue\">'https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient'</span> <i>\"setprofile\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setmeta\"</i><span style=\"color: navy\">;</span>#xD;\n  src.crPatientId<b> as </b><span style=\"color: maroon\">patientId</span><span style=\"color: navy\"><b> -&gt; </b></span>tgt.identifier<b> as </b><span style=\"color: maroon\">ident</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    patientId<span style=\"color: navy\"><b> -&gt; </b></span>ident.value = <span style=\"color: maroon\">patientId</span> <i>\"setidvalue\"</i><span style=\"color: navy\">;</span>#xD;\n    patientId<span style=\"color: navy\"><b> -&gt; </b></span>ident.type<b> as </b><span style=\"color: maroon\">idType</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>      patientId<span style=\"color: navy\"><b> -&gt; </b></span>idType.coding<b> as </b><span style=\"color: maroon\">coding</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>        patientId<span style=\"color: navy\"><b> -&gt; </b></span>coding.system = <span style=\"color: blue\">'http://terminology.hl7.org/CodeSystem/v2-0203'</span> <i>\"setidsystem\"</i><span style=\"color: navy\">;</span>#xD;\n        patientId<span style=\"color: navy\"><b> -&gt; </b></span>coding.code = <span style=\"color: blue\">'MR'</span> <i>\"setidcode\"</i><span style=\"color: navy\">;</span>#xD;\n      <span style=\"color: navy\">}</span> <i>\"settypecoding\"</i><span style=\"color: navy\">;</span>#xD;\n    <span style=\"color: navy\">}</span> <i>\"setidtype\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setidentifier\"</i><span style=\"color: navy\">;</span>#xD;\n  src<span style=\"color: navy\"><b> -&gt; </b></span>tgt.name<b> as </b><span style=\"color: maroon\">name</span><b> then</b><span style=\"color: navy\"> {#xD;\n</span>    src.familyName<b> as </b><span style=\"color: maroon\">fn</span><span style=\"color: navy\"><b> -&gt; </b></span>name.family = <span style=\"color: maroon\">fn</span> <i>\"setfamily\"</i><span style=\"color: navy\">;</span>#xD;\n    src.givenName<b> as </b><span style=\"color: maroon\">gn</span><span style=\"color: navy\"><b> -&gt; </b></span>name.given = <span style=\"color: maroon\">gn</span> <i>\"setgiven\"</i><span style=\"color: navy\">;</span>#xD;\n  <span style=\"color: navy\">}</span> <i>\"setname\"</i><span style=\"color: navy\">;</span>#xD;\n  src.crSex<b> as </b><span style=\"color: maroon\">sex</span><b> where </b>sex = '1'<span style=\"color: navy\"><b> -&gt; </b></span>tgt.gender = <span style=\"color: blue\">'male'</span> <i>\"sexmale\"</i><span style=\"color: navy\">;</span>#xD;\n  src.crSex<b> as </b><span style=\"color: maroon\">sex</span><b> where </b>sex = '2'<span style=\"color: navy\"><b> -&gt; </b></span>tgt.gender = <span style=\"color: blue\">'female'</span> <i>\"sexfemale\"</i><span style=\"color: navy\">;</span>#xD;\n  src.crSex<b> as </b><span style=\"color: maroon\">sex</span><b> where </b>sex = '9'<span style=\"color: navy\"><b> -&gt; </b></span>tgt.gender = <span style=\"color: blue\">'unknown'</span> <i>\"sexunknown\"</i><span style=\"color: navy\">;</span>#xD;\n  src.dateOfBirth<b> as </b><span style=\"color: maroon\">dob</span><span style=\"color: navy\"><b> -&gt; </b></span>tgt.birthDate = <span style=\"color: maroon\">dob</span> <i>\"setbirthdate\"</i><span style=\"color: navy\">;</span>#xD;\n<span style=\"color: navy\">}#xD;\n#xD;\n</span></pre></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient"^^xsd:anyURI ;
+     fhir:l <https://dhis2.org/fhir/cancer-registry/StructureMap/CancerRegistryToPatient>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "CancerRegistryToPatient"] ; # 
+  fhir:title [ fhir:v "Transform: Cancer Registry Enrollment to Patient"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2026-04-14T07:58:39+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "DHIS2"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "DHIS2" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://dhis2.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Transform: Cancer Registry Enrollment to Patient"] ; # 
+  fhir:structure ( [
+     fhir:url [
+       fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry"^^xsd:anyURI ;
+       fhir:l <https://dhis2.org/fhir/cancer-registry/StructureDefinition/CancerRegistry>
+     ] ;
+     fhir:mode [ fhir:v "source" ] ;
+     fhir:alias [ fhir:v "CancerRegistry" ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Patient"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/Patient>
+     ] ;
+     fhir:mode [ fhir:v "target" ] ;
+     fhir:alias [ fhir:v "Patient" ]
+  ] ) ; # 
+  fhir:group ( [
+     fhir:name [ fhir:v "CancerRegistryToPatient" ] ;
+     fhir:typeMode [ fhir:v "none" ] ;
+     fhir:input ( [
+       fhir:name [ fhir:v "src" ] ;
+       fhir:type [ fhir:v "CancerRegistry" ] ;
+       fhir:mode [ fhir:v "source" ]
+     ] [
+       fhir:name [ fhir:v "tgt" ] ;
+       fhir:type [ fhir:v "Patient" ] ;
+       fhir:mode [ fhir:v "target" ]
+     ] ) ;
+     fhir:rule ( [
+       fhir:name [ fhir:v "setmeta" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "meta" ] ;
+         fhir:variable [ fhir:v "meta" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "setprofile" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "meta" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "profile" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:String ;
+               fhir:v "https://dhis2.org/fhir/cancer-registry/StructureDefinition/cr-patient"
+             ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "setidentifier" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crPatientId" ] ;
+         fhir:variable [ fhir:v "patientId" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "identifier" ] ;
+         fhir:variable [ fhir:v "ident" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "setidvalue" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "patientId" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "ident" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "value" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:Id ;
+               fhir:v "patientId"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "setidtype" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "patientId" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "ident" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "type" ] ;
+           fhir:variable [ fhir:v "idType" ]
+         ] ) ;
+         fhir:rule ( [
+           fhir:name [ fhir:v "settypecoding" ] ;
+           fhir:source ( [
+             fhir:context [ fhir:v "patientId" ]
+           ] ) ;
+           fhir:target ( [
+             fhir:context [ fhir:v "idType" ] ;
+             fhir:contextType [ fhir:v "variable" ] ;
+             fhir:element [ fhir:v "coding" ] ;
+             fhir:variable [ fhir:v "coding" ]
+           ] ) ;
+           fhir:rule ( [
+             fhir:name [ fhir:v "setidsystem" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "patientId" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "coding" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "system" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [
+                   a fhir:String ;
+                   fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"
+                 ]
+               ] )
+             ] )
+           ] [
+             fhir:name [ fhir:v "setidcode" ] ;
+             fhir:source ( [
+               fhir:context [ fhir:v "patientId" ]
+             ] ) ;
+             fhir:target ( [
+               fhir:context [ fhir:v "coding" ] ;
+               fhir:contextType [ fhir:v "variable" ] ;
+               fhir:element [ fhir:v "code" ] ;
+               fhir:transform [ fhir:v "copy" ] ;
+               fhir:parameter ( [
+                 fhir:value [
+                   a fhir:String ;
+                   fhir:v "MR"
+                 ]
+               ] )
+             ] )
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "setname" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "name" ] ;
+         fhir:variable [ fhir:v "name" ]
+       ] ) ;
+       fhir:rule ( [
+         fhir:name [ fhir:v "setfamily" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "familyName" ] ;
+           fhir:variable [ fhir:v "fn" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "name" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "family" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:Id ;
+               fhir:v "fn"
+             ]
+           ] )
+         ] )
+       ] [
+         fhir:name [ fhir:v "setgiven" ] ;
+         fhir:source ( [
+           fhir:context [ fhir:v "src" ] ;
+           fhir:element [ fhir:v "givenName" ] ;
+           fhir:variable [ fhir:v "gn" ]
+         ] ) ;
+         fhir:target ( [
+           fhir:context [ fhir:v "name" ] ;
+           fhir:contextType [ fhir:v "variable" ] ;
+           fhir:element [ fhir:v "given" ] ;
+           fhir:transform [ fhir:v "copy" ] ;
+           fhir:parameter ( [
+             fhir:value [
+               a fhir:Id ;
+               fhir:v "gn"
+             ]
+           ] )
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "sexmale" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crSex" ] ;
+         fhir:variable [ fhir:v "sex" ] ;
+         fhir:condition [ fhir:v "sex = '1'" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "gender" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "male"
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "sexfemale" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crSex" ] ;
+         fhir:variable [ fhir:v "sex" ] ;
+         fhir:condition [ fhir:v "sex = '2'" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "gender" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "female"
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "sexunknown" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "crSex" ] ;
+         fhir:variable [ fhir:v "sex" ] ;
+         fhir:condition [ fhir:v "sex = '9'" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "gender" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:String ;
+             fhir:v "unknown"
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:name [ fhir:v "setbirthdate" ] ;
+       fhir:source ( [
+         fhir:context [ fhir:v "src" ] ;
+         fhir:element [ fhir:v "dateOfBirth" ] ;
+         fhir:variable [ fhir:v "dob" ]
+       ] ) ;
+       fhir:target ( [
+         fhir:context [ fhir:v "tgt" ] ;
+         fhir:contextType [ fhir:v "variable" ] ;
+         fhir:element [ fhir:v "birthDate" ] ;
+         fhir:transform [ fhir:v "copy" ] ;
+         fhir:parameter ( [
+           fhir:value [
+             a fhir:Id ;
+             fhir:v "dob"
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

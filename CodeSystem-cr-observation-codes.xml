@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cr-observation-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem cr-observation-codes</b></p><a name="cr-observation-codes"> </a><a name="hccr-observation-codes"> </a><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">topography<a name="cr-observation-codes-topography"> </a></td><td>Topography</td><td>ICD-O-3 topography code indicating the anatomical site of the primary tumour.</td></tr><tr><td style="white-space:nowrap">morphology<a name="cr-observation-codes-morphology"> </a></td><td>Morphology</td><td>ICD-O-3 morphology code (4-digit histological type) of the neoplasm.</td></tr><tr><td style="white-space:nowrap">behaviour<a name="cr-observation-codes-behaviour"> </a></td><td>Behaviour</td><td>ICD-O-3 behaviour code of the neoplasm (0=benign, 1=uncertain, 2=in situ, 3=malignant).</td></tr><tr><td style="white-space:nowrap">basis-of-diagnosis<a name="cr-observation-codes-basis-of-diagnosis"> </a></td><td>Basis of Diagnosis</td><td>How the cancer diagnosis was established. Coded according to the ICD-O-3 basis of diagnosis classification (codes 0–9).</td></tr><tr><td style="white-space:nowrap">site<a name="cr-observation-codes-site"> </a></td><td>Site</td><td>Higher-level anatomical site grouping derived from the ICD-O-3 topography.</td></tr><tr><td style="white-space:nowrap">incidence-date<a name="cr-observation-codes-incidence-date"> </a></td><td>Incidence Date</td><td>Date of incidence (diagnosis date) of the cancer case.</td></tr><tr><td style="white-space:nowrap">age-at-incidence<a name="cr-observation-codes-age-at-incidence"> </a></td><td>Age at Incidence</td><td>Age of the patient at the date of incidence.</td></tr><tr><td style="white-space:nowrap">address<a name="cr-observation-codes-address"> </a></td><td>Address</td><td>Administrative address code of the patient at incidence.</td></tr><tr><td style="white-space:nowrap">tumor-number<a name="cr-observation-codes-tumor-number"> </a></td><td>Tumor Number</td><td>Sequential tumor number within the patient's registration.</td></tr><tr><td style="white-space:nowrap">vital-status<a name="cr-observation-codes-vital-status"> </a></td><td>Vital Status</td><td>Follow-up vital status of the registered cancer patient (alive, dead, or unknown).</td></tr><tr><td style="white-space:nowrap">date-of-death<a name="cr-observation-codes-date-of-death"> </a></td><td>Date of Death</td><td>Date of death of the patient.</td></tr><tr><td style="white-space:nowrap">source-type<a name="cr-observation-codes-source-type"> </a></td><td>Source Type</td><td>Type of documentation source that notified the cancer registry about a case (e.g. hospital, laboratory, death certificate).</td></tr><tr><td style="white-space:nowrap">source-tumor-number<a name="cr-observation-codes-source-tumor-number"> </a></td><td>Source Tumor Number</td><td>Tumor number that this source notification relates to.</td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/CodeSystem/cr-observation-codes"/>
+  <version value="0.1.0"/>
+  <name value="CRObservationCodesCS"/>
+  <title value="Cancer Registry Observation Codes"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Code system defining observation type codes for cancer registry observations. Used where no standard LOINC code exists for cancer-registry-specific concepts."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="13"/>
+  <concept>
+    <code value="topography"/>
+    <display value="Topography"/>
+    <definition value="ICD-O-3 topography code indicating the anatomical site of the primary tumour."/>
+  </concept>
+  <concept>
+    <code value="morphology"/>
+    <display value="Morphology"/>
+    <definition value="ICD-O-3 morphology code (4-digit histological type) of the neoplasm."/>
+  </concept>
+  <concept>
+    <code value="behaviour"/>
+    <display value="Behaviour"/>
+    <definition value="ICD-O-3 behaviour code of the neoplasm (0=benign, 1=uncertain, 2=in situ, 3=malignant)."/>
+  </concept>
+  <concept>
+    <code value="basis-of-diagnosis"/>
+    <display value="Basis of Diagnosis"/>
+    <definition value="How the cancer diagnosis was established. Coded according to the ICD-O-3 basis of diagnosis classification (codes 0–9)."/>
+  </concept>
+  <concept>
+    <code value="site"/>
+    <display value="Site"/>
+    <definition value="Higher-level anatomical site grouping derived from the ICD-O-3 topography."/>
+  </concept>
+  <concept>
+    <code value="incidence-date"/>
+    <display value="Incidence Date"/>
+    <definition value="Date of incidence (diagnosis date) of the cancer case."/>
+  </concept>
+  <concept>
+    <code value="age-at-incidence"/>
+    <display value="Age at Incidence"/>
+    <definition value="Age of the patient at the date of incidence."/>
+  </concept>
+  <concept>
+    <code value="address"/>
+    <display value="Address"/>
+    <definition value="Administrative address code of the patient at incidence."/>
+  </concept>
+  <concept>
+    <code value="tumor-number"/>
+    <display value="Tumor Number"/>
+    <definition value="Sequential tumor number within the patient's registration."/>
+  </concept>
+  <concept>
+    <code value="vital-status"/>
+    <display value="Vital Status"/>
+    <definition value="Follow-up vital status of the registered cancer patient (alive, dead, or unknown)."/>
+  </concept>
+  <concept>
+    <code value="date-of-death"/>
+    <display value="Date of Death"/>
+    <definition value="Date of death of the patient."/>
+  </concept>
+  <concept>
+    <code value="source-type"/>
+    <display value="Source Type"/>
+    <definition value="Type of documentation source that notified the cancer registry about a case (e.g. hospital, laboratory, death certificate)."/>
+  </concept>
+  <concept>
+    <code value="source-tumor-number"/>
+    <display value="Source Tumor Number"/>
+    <definition value="Tumor number that this source notification relates to."/>
+  </concept>
+</CodeSystem>

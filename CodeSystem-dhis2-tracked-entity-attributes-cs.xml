@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dhis2-tracked-entity-attributes-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dhis2-tracked-entity-attributes-cs</b></p><a name="dhis2-tracked-entity-attributes-cs"> </a><a name="hcdhis2-tracked-entity-attributes-cs"> </a><p>This  code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">hDEhIMZe07x<a name="dhis2-tracked-entity-attributes-cs-hDEhIMZe07x"> </a></td><td>CR - Patient ID</td><td>CR - Patient ID</td></tr><tr><td style="white-space:nowrap">nJsmdQXRoze<a name="dhis2-tracked-entity-attributes-cs-nJsmdQXRoze"> </a></td><td>GEN - Family name</td><td>Family name or last name of the person or case.</td></tr><tr><td style="white-space:nowrap">sB1IHYu2xQT<a name="dhis2-tracked-entity-attributes-cs-sB1IHYu2xQT"> </a></td><td>GEN - Given name</td><td>Given name or first name of the person or case.</td></tr><tr><td style="white-space:nowrap">m7GEZG8cyCO<a name="dhis2-tracked-entity-attributes-cs-m7GEZG8cyCO"> </a></td><td>CR - Sex</td><td>CR - Sex</td></tr><tr><td style="white-space:nowrap">NI0QRzJvQ0k<a name="dhis2-tracked-entity-attributes-cs-NI0QRzJvQ0k"> </a></td><td>GEN - Date of birth</td><td>Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated.</td></tr></table></div>
+  </text>
+  <url value="https://dhis2.org/fhir/cancer-registry/CodeSystem/dhis2-tracked-entity-attributes-cs"/>
+  <version value="0.1.0"/>
+  <name value="Dhis2TrackedEntityAttributesCS"/>
+  <title value="DHIS2 Tracked Entity Attributes"/>
+  <status value="draft"/>
+  <date value="2026-04-14T07:58:39+00:00"/>
+  <publisher value="DHIS2"/>
+  <contact>
+    <name value="DHIS2"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://dhis2.org"/>
+    </telecom>
+  </contact>
+  <description value="Code system for 5 unique DHIS2 tracked entity attributes"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="hDEhIMZe07x"/>
+    <display value="CR - Patient ID"/>
+    <definition value="CR - Patient ID"/>
+  </concept>
+  <concept>
+    <code value="nJsmdQXRoze"/>
+    <display value="GEN - Family name"/>
+    <definition value="Family name or last name of the person or case."/>
+  </concept>
+  <concept>
+    <code value="sB1IHYu2xQT"/>
+    <display value="GEN - Given name"/>
+    <definition value="Given name or first name of the person or case."/>
+  </concept>
+  <concept>
+    <code value="m7GEZG8cyCO"/>
+    <display value="CR - Sex"/>
+    <definition value="CR - Sex"/>
+  </concept>
+  <concept>
+    <code value="NI0QRzJvQ0k"/>
+    <display value="GEN - Date of birth"/>
+    <definition value="Date of birth. This field can also be used when the date of birth is estimated, in conjunction with another attribute that indicates whether the birth date is estimated."/>
+  </concept>
+</CodeSystem>

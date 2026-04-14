@@ -1,0 +1,43 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "CRPlaceholderSourceTypeCS",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablecodesystem",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem CRPlaceholderSourceTypeCS</b></p><a name=\"CRPlaceholderSourceTypeCS\"> </a><a name=\"hcCRPlaceholderSourceTypeCS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablecodesystem.html\">CRMI Shareable CodeSystem</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablecodesystem.html\">CRMI Publishable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">PLACEHOLDER_1<a name=\"CRPlaceholderSourceTypeCS-PLACEHOLDER_1\"> </a></td><td>Placeholder - 1</td></tr><tr><td style=\"white-space:nowrap\">PLACEHOLDER_2<a name=\"CRPlaceholderSourceTypeCS-PLACEHOLDER_2\"> </a></td><td>Placeholder - 2</td></tr><tr><td style=\"white-space:nowrap\">PLACEHOLDER_X<a name=\"CRPlaceholderSourceTypeCS-PLACEHOLDER_X\"> </a></td><td>Placeholder - X</td></tr></table></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRPlaceholderSourceTypeCS",
+  "version" : "0.1.0",
+  "name" : "CRPlaceholderSourceTypeCS",
+  "title" : "CR - Placeholder: Source type",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Placeholder source type codes for the Source stage. These values must be customised prior to implementation to reflect the source types relevant to the local registry context (e.g. hospital records, pathology laboratory reports, death certificates).",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "PLACEHOLDER_1",
+    "display" : "Placeholder - 1"
+  },
+  {
+    "code" : "PLACEHOLDER_2",
+    "display" : "Placeholder - 2"
+  },
+  {
+    "code" : "PLACEHOLDER_X",
+    "display" : "Placeholder - X"
+  }]
+}

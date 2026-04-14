@@ -1,0 +1,34 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "CRGradeVS",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-shareablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-publishablevalueset",
+    "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-computablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet CRGradeVS</b></p><a name=\"CRGradeVS\"> </a><a name=\"hcCRGradeVS\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-shareablevalueset.html\">CRMI Shareable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-publishablevalueset.html\">CRMI Publishable ValueSet</a>, <a href=\"http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-computablevalueset.html\">CRMI Computable ValueSet</a></p></div><ul><li>Include all codes defined in <a href=\"CodeSystem-CRGradeCS.html\"><code>https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span></li></ul></div>"
+  },
+  "url" : "https://dhis2.org/fhir/cancer-registry/ValueSet/CRGradeVS",
+  "version" : "0.1.0",
+  "name" : "CRGradeVS",
+  "title" : "CR - Grade value set",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-04-14T07:58:39+00:00",
+  "publisher" : "DHIS2",
+  "contact" : [{
+    "name" : "DHIS2",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://dhis2.org"
+    }]
+  }],
+  "description" : "Value set of tumour grade and differentiation codes aligned with the CanReg5 ICD-O-3.2 grade dictionary. Includes histological grades 1-4, lymphoma/leukaemia-specific codes 5-8, and unknown (9). Grade is mandatory only when behaviour is malignant (3).",
+  "compose" : {
+    "include" : [{
+      "system" : "https://dhis2.org/fhir/cancer-registry/CodeSystem/CRGradeCS"
+    }]
+  }
+}
